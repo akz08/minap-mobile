@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[App Team 7]]></title>
-  <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
+  <title><![CDATA[Category: short | App Team 7]]></title>
+  <link href="http://akz08.github.io/minap-mobile/blog/categories/short/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
   <updated>2013-11-06T00:38:27+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
