@@ -1,13 +1,11 @@
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en-GB">
 <head>
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
-	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
 	<title>First steps  | App Team 7</title>
 
-<meta name="author" content="David, Kamil, Ke"> 
+	<meta name="author" content="David, Kamil, Ke">
 
 <meta name="description" content="A blog documenting the development process for App Team 7 for GC02"> <meta name="keywords" content="">
 
@@ -19,75 +17,29 @@
 	<link href="/minap-mobile/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
-
-<script language="Javascript" type="text/javascript">
-$(document).ready(
-  function() {
-    (function($) {
-      $(".fancybox[data-content-id]").each(function() {
-        this.href = $(this).data('content-id');
-      });
-      $(".fancybox").fancybox({
-        beforeLoad: function() {
-          var el, 
-              id = $(this.element).data('title-id');
-
-          if (id) {
-            el = $('#' + id);
-
-            if (el.length) {
-              this.title = el.html();
-            }
-          }
-          if ($(this).data('content')) {
-            this.content = $(this).data('content');
-          }
-        },
-        helpers: {
-          title: {
-            type: 'inside'
-          }
-        }
-      });
-    })(jQuery);
-  }
-);
-</script>
-
 	
 </head>
 
 
+
 <body>
 	<header id="header" class="inner"><h1><a href="/minap-mobile/">App Team 7</a></h1>
-<h4>A GC02 Blog</h4>
+<span class="tagline">A GC02 Blog</span>
 <nav id="main-nav"><ul>
-	<li><a href="/minap-mobile/">Blog</a></li>
 	<li><a href="/minap-mobile/about">About</a></li>
-	<li><a href="/minap-mobile/portfolio">Portfolio</a></li>
-	<li><a href="/minap-mobile/archives">Archive</a></li>
+	<li><a href="/minap-mobile/archives">Archives</a></li>
+	<li><a href="/minap-mobile/contact">Contact</a></li>
 </ul>
 </nav>
 <nav id="mobile-nav">
 	<div class="alignleft menu">
 		<a class="button">Menu</a>
 		<div class="container"><ul>
-	<li><a href="/minap-mobile/">Blog</a></li>
 	<li><a href="/minap-mobile/about">About</a></li>
-	<li><a href="/minap-mobile/portfolio">Portfolio</a></li>
-	<li><a href="/minap-mobile/archives">Archive</a></li>
+	<li><a href="/minap-mobile/archives">Archives</a></li>
+	<li><a href="/minap-mobile/contact">Contact</a></li>
 </ul>
 </div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:akz08.github.io/minap-mobile">
-			</form>
-		</div>
 	</div>
 </nav>
 
@@ -95,13 +47,9 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">First Steps</h2>
-	<div class="entry-content"><p>First blog post! We will hopefully be documenting here how we work our way to developing a (hopefully) successful mobile medical data collection app. Stay tuned&hellip;</p>
-</div>
-
-
-<div class="meta">
-	<div class="date">
+	<header>
+		<h2 class="title">First Steps</h2>
+		<div class="meta date">
 
 
 
@@ -114,46 +62,48 @@ $(document).ready(
 
 
 <time datetime="2013-11-06T00:28:00+00:00" pubdate data-updated="true">Nov 6<span>th</span>, 2013</time></div>
-	
-
-<div class="tags">
-
-	<a class='category' href='/minap-mobile/blog/categories/first/'>first</a>, <a class='category' href='/minap-mobile/blog/categories/short/'>short</a>
-
+	</header>
+	<div class="entry-content"><p>First blog post! We will hopefully be documenting here how we work our way to developing a (hopefully) successful mobile medical data collection app. Stay tuned&hellip;</p>
 </div>
+	
 
+</article>
 
 	
-</div></article>
-
 	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+		<ul>
+			<li>
+  <a href="https://twitter.com/intent/tweet?text=First steps by @&url=http://akz08.github.io/minap-mobile/blog/2013/11/06/first-steps/" title="Share First steps on Twitter">
+    <img src="/minap-mobile/images/social/twitter.png" />
+  </a>
+</li>
+
+			<li>
+  <a href="https://www.facebook.com/sharer.php?u=http://akz08.github.io/minap-mobile/blog/2013/11/06/first-steps/" title="Share First steps on Facebook">
+    <img src="/minap-mobile/images/social/facebook.png" />
+  </a>
+</li>
+
+			<li>
+  <a href="https://plus.google.com/share?url=http://akz08.github.io/minap-mobile/blog/2013/11/06/first-steps/" title="Share First steps on Google Plus">
+    <img src="/minap-mobile/images/social/google.png" />
+  </a>
+</li>
+
+		</ul>
 	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
-</div>
 
 
+
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
+	<footer id="footer" class="inner">&copy; 2013
 
     David, Kamil, Ke
 
-<br>
-Powered by Octopress.
 </footer>
 	<script src="/minap-mobile/javascripts/slash.js"></script>
-<script src="/minap-mobile/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
+<script src="/minap-mobile/javascripts/hyphenator.js"></script>
+
 
 
 
