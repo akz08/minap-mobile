@@ -1,4 +1,4 @@
-Minap Mobile App
+MINAP Mobile App
 ============
 
 Mobile app repository for MINAP project from UCL
