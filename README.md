@@ -1,7 +1,9 @@
 MINAP Mobile App
 ============
 
-Mobile app repository for MINAP project from UCL
+Mobile app repository for the MINAP project from UCL.
+
+The project is being undertaken over the period of approximately 3 months from November 2013.
 
 [Wiki here][1]
 
