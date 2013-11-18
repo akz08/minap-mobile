@@ -1,4 +1,4 @@
-package com.team7.minap.model.validation;
+package com.team7.minap.validation;
 
 public class Validation {
 	

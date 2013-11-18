@@ -1,4 +1,4 @@
-package com.team7.minap.model.xml;
+package com.team7.minap.xml;
 
 public class Xml {
 	private static void parseXML(String XMLfile) {

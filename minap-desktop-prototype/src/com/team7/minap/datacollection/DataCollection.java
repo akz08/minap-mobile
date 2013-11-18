@@ -1,6 +1,6 @@
 package com.team7.minap.datacollection;
 
-import com.team7.minap.model.validation.*;
+import com.team7.minap.validation.*;
 
 public class DataCollection {
 	private Validation valid; 
