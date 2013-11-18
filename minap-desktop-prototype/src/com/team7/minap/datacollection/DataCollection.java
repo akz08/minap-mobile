@@ -8,4 +8,20 @@ public class DataCollection {
 	private static void openPath() {
 		// if validation reveals a new path to follow
 	}
+	
+	private static void typeCheck() {
+		
+	}
+	
+	private static void formatCheck() {
+		
+	}
+	
+	private static void rangeCheck() {
+		
+	}
+	
+	private static void dateCheck() {
+		
+	}	
 }
