@@ -1,5 +1,5 @@
 package com.team7.minap.network;
 
-public class DummyNetwork {
+public class Network {
 
 }
