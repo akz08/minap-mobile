@@ -43,7 +43,5 @@ public class Authentication {
 		return isAuthenticated;
 	}
 	
-	private static void signOut() {
-		// Close network connection, return to sign on page
-	}
+	
 }
