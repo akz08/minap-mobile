@@ -8,17 +8,17 @@ package com.team7.minap.authentication;
 
 import com.team7.minap.network.Network;
 
-public class Authentication {
+public class Authenticator {
 	private static String userName;
 	private static String passWord;
 	private static Network net;
 	private static boolean isAuthenticated = false;
 	
-	private Authentication(Network n) {
+	private Authenticator(Network n) {
 		net = n;
 	}
 	
-	private Authentication(String user, String pass, Network n) {
+	private Authenticator(String user, String pass, Network n) {
 		userName = user;
 		passWord = pass;
 		net = n;

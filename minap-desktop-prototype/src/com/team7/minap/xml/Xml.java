@@ -1,3 +1,7 @@
+/**
+ * XML parsers go here. 
+ */
+
 package com.team7.minap.xml;
 
 public class Xml {
