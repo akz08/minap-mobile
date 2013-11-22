@@ -97,7 +97,7 @@ public class Patient {
 		// assume calculators are valid
 		// once last calculator is entered, bmiScore should be pushed to appropriate field
 		// if (calculators are filled or not empty		
-		bmiScore = height / weight; // <- temporary placeholder calculation
+		//bmiScore = height(cm) / weight(kg); // <- temporary placeholder calculation
 		// set bmi field to bmiScore
 	}
 }
