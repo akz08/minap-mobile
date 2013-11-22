@@ -10,6 +10,8 @@
 package com.team7.minap.datacollection;
 
 import java.util.Date;
+import java.lang.Double;
+import com.team7.minap.validation.Validation;
 
 public class Patient {
 	private static String caseNumber;
@@ -22,7 +24,8 @@ public class Patient {
 	creatinine, haemoglobin, peakTroponin;
 	
 	// temporary constants
-	private static double CHOLES = 100;
+	private static double MIN_CHOLES = 2.5;
+	private static double MAX_CHOLES = 25;
 	/**
 	 * Start of long code fields
 	 */
@@ -52,17 +55,25 @@ public class Patient {
 	 * @param lastName
 	 */
 	public static void setSurname(String lastName) {
-		//check type first.
-		surname = lastName;
+		//check type first. Needs actual parameters
+		if (Validation.typeCheck(lastName, lastName))
+				surname = lastName;
 	}
 	
+	/**
+	 * Model all range check fields after setSerumCholesterol method. Validation is done.	
+	 * @param cholesterol
+	 */
 	public static void setSerumCholesterol(double cholesterol) {
-		//check type first.
-		// validate input first then set to variable
-		if (cholesterol > CHOLES)
-			serumCholesterol = cholesterol;
-		// else
-			//do validation.rangecheck.
+		//check type first 
+		// use Double.valueOf(var) instanceof Double on validation
+//		String targetType = "Double", varType;
+		double value1 = cholesterol;
+		if (Validation.typeCheck(String varType, String targetType)) {
+			if(Validation.rangeCheck(MIN_CHOLES, MAX_CHOLES, cholesterol));	
+				serumCholesterol = cholesterol;
+		}
+		
 	}
 	
 	public static void setDOB(Date date) {
@@ -73,6 +84,9 @@ public class Patient {
 		 * else 
 		 * call Validation.dobCheck.
 		 */
+		if(Validation.dateCheck(Date oldDate, Date newDate, Date date)){
+			
+		}
 	}
 	
 	//Sample getters
