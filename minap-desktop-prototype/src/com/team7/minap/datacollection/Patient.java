@@ -58,6 +58,7 @@ public class Patient {
 		//check type first. Needs actual parameters
 		if (Validation.typeCheck(lastName, lastName))
 				surname = lastName;
+				String surnameDone = "yes";
 	}
 	
 	/**
@@ -68,25 +69,25 @@ public class Patient {
 		//check type first 
 		// use Double.valueOf(var) instanceof Double on validation
 //		String targetType = "Double", varType;
+		String targetType = "double";
 		double value1 = cholesterol;
 		if (Validation.typeCheck(String varType, String targetType)) {
 			if(Validation.rangeCheck(MIN_CHOLES, MAX_CHOLES, cholesterol));	
 				serumCholesterol = cholesterol;
 				// then set some boolean to true preparing for submission.
+				String serumCholesterolDone = "yes";
 		}
 		
 	}
 	
 	public static void setDOB(Date date) {
-		//check type first.
-		/*
-		 * if date taken in is between 20 and 120 years prior to Date.now()
-		 * set dob to date
-		 * else 
-		 * call Validation.dobCheck.
-		 */
+		//check type first.		
 		if(Validation.dateCheck(Date oldDate, Date newDate, Date date)){
-			
+			/*
+			 * if date taken in is between 20 and 120 years prior to Date.now()
+			 * set dob to date
+			 */
+			String dobDone = "yes";
 		}
 	}
 	
