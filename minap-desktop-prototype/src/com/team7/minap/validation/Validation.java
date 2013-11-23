@@ -61,7 +61,7 @@ public class Validation {
 		}
 		
 	//==================================	
-		if (tType == vType){
+		if (tType.equals(vType)){
 			return true;
 		}
 		else{// if type taken in is not what is expected

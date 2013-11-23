@@ -72,6 +72,7 @@ public class Patient {
 		if (Validation.typeCheck(String varType, String targetType)) {
 			if(Validation.rangeCheck(MIN_CHOLES, MAX_CHOLES, cholesterol));	
 				serumCholesterol = cholesterol;
+				// then set some boolean to true preparing for submission.
 		}
 		
 	}
