@@ -19,7 +19,7 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.JLayeredPane;
 
-public class GUI {
+public class Page1 {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -32,7 +32,7 @@ public class GUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI window = new GUI();
+					Page1 window = new Page1();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class GUI {
 	/**
 	 * Create the application.
 	 */
-	public GUI() {
+	public Page1() {
 		initialize();
 	}
 
@@ -53,8 +53,7 @@ public class GUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setPreferredSize(new Dimension(480, 640));
+		frame.setBounds(0, 0, 480, 640);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -63,34 +62,34 @@ public class GUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel LoginPage = new JPanel();
-		LoginPage.setForeground(Color.LIGHT_GRAY);
-		LoginPage.setPreferredSize(new Dimension(480, 640));
-		LoginPage.setBounds(0, 0, 480, 640);
-		frame.getContentPane().add(LoginPage);
-		LoginPage.setLayout(null);
+		JPanel loginPage = new JPanel();
+		loginPage.setForeground(Color.LIGHT_GRAY);
+		loginPage.setPreferredSize(new Dimension(480, 640));
+		loginPage.setBounds(0, 0, 480, 640);
+		frame.getContentPane().add(loginPage);
+		loginPage.setLayout(null);
 		
 		textField = new JTextField();
 		textField.setBounds(177, 269, 174, 28);
-		LoginPage.add(textField);
+		loginPage.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(177, 229, 174, 28);
-		LoginPage.add(textField_1);
+		loginPage.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Username");
 		lblNewLabel.setBounds(104, 235, 62, 16);
-		LoginPage.add(lblNewLabel);
+		loginPage.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
 		lblNewLabel_1.setBounds(104, 275, 59, 16);
-		LoginPage.add(lblNewLabel_1);
+		loginPage.add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.setBounds(160, 353, 148, 29);
-		LoginPage.add(btnNewButton);
+		loginPage.add(btnNewButton);
 		
 		//windowbuilder sucks!
 		frame.pack();
