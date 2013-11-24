@@ -64,27 +64,27 @@ public class Page7 {
 		lblWhatIsYour.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		
 		JLabel lblInitalDiagnosis = new JLabel("Inital Diagnosis");
-		lblInitalDiagnosis.setBounds(154, 6, 148, 53);
+		lblInitalDiagnosis.setBounds(154, 6, 159, 53);
 		navigationPage.add(lblInitalDiagnosis);
 		lblInitalDiagnosis.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("1. Definite myocardial infarction");
-		rdbtnNewRadioButton.setBounds(99, 115, 295, 23);
+		rdbtnNewRadioButton.setBounds(100, 111, 295, 23);
 		navigationPage.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnAcuteCoronary = new JRadioButton("2. Acute coronary syndorme");
-		rdbtnAcuteCoronary.setBounds(99, 144, 295, 23);
+		rdbtnAcuteCoronary.setBounds(100, 146, 295, 23);
 		navigationPage.add(rdbtnAcuteCoronary);
 		rdbtnAcuteCoronary.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnChestPain = new JRadioButton("3. Chest pain? cause");
-		rdbtnChestPain.setBounds(99, 176, 295, 23);
+		rdbtnChestPain.setBounds(100, 181, 295, 23);
 		navigationPage.add(rdbtnChestPain);
 		rdbtnChestPain.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnOtherIntialDiagnosis = new JRadioButton("4. Other intial diagnosis");
-		rdbtnOtherIntialDiagnosis.setBounds(99, 206, 295, 23);
+		rdbtnOtherIntialDiagnosis.setBounds(100, 222, 295, 23);
 		navigationPage.add(rdbtnOtherIntialDiagnosis);
 		rdbtnOtherIntialDiagnosis.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
@@ -94,11 +94,11 @@ public class Page7 {
 		lblAdmissionAfterTreatment.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		
 		JButton btnYes = new JButton("Yes");
-		btnYes.setBounds(90, 306, 117, 29);
+		btnYes.setBounds(91, 307, 117, 29);
 		navigationPage.add(btnYes);
 		
 		JButton btnNo = new JButton("No");
-		btnNo.setBounds(249, 303, 117, 29);
+		btnNo.setBounds(243, 307, 117, 29);
 		navigationPage.add(btnNo);
 		
 		JLabel lblProcedurePerformedAt = new JLabel("Procedure performed at the Interventional Hospital?");
