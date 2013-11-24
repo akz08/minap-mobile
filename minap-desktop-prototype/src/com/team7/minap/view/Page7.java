@@ -53,80 +53,80 @@ public class Page7 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel navigationPage = new JPanel();
-		navigationPage.setBounds(0, 6, 480, 640);
-		frame.getContentPane().add(navigationPage);
-		navigationPage.setLayout(null);
+		JPanel intialDiagnosis = new JPanel();
+		intialDiagnosis.setBounds(0, 6, 480, 640);
+		frame.getContentPane().add(intialDiagnosis);
+		intialDiagnosis.setLayout(null);
 		
 		JLabel lblWhatIsYour = new JLabel("What is your working diagnosis?");
 		lblWhatIsYour.setBounds(100, 63, 260, 53);
-		navigationPage.add(lblWhatIsYour);
+		intialDiagnosis.add(lblWhatIsYour);
 		lblWhatIsYour.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		
 		JLabel lblInitalDiagnosis = new JLabel("Inital Diagnosis");
 		lblInitalDiagnosis.setBounds(154, 6, 159, 53);
-		navigationPage.add(lblInitalDiagnosis);
+		intialDiagnosis.add(lblInitalDiagnosis);
 		lblInitalDiagnosis.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("1. Definite myocardial infarction");
 		rdbtnNewRadioButton.setBounds(100, 111, 295, 23);
-		navigationPage.add(rdbtnNewRadioButton);
+		intialDiagnosis.add(rdbtnNewRadioButton);
 		rdbtnNewRadioButton.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnAcuteCoronary = new JRadioButton("2. Acute coronary syndorme");
 		rdbtnAcuteCoronary.setBounds(100, 146, 295, 23);
-		navigationPage.add(rdbtnAcuteCoronary);
+		intialDiagnosis.add(rdbtnAcuteCoronary);
 		rdbtnAcuteCoronary.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnChestPain = new JRadioButton("3. Chest pain? cause");
 		rdbtnChestPain.setBounds(100, 181, 295, 23);
-		navigationPage.add(rdbtnChestPain);
+		intialDiagnosis.add(rdbtnChestPain);
 		rdbtnChestPain.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JRadioButton rdbtnOtherIntialDiagnosis = new JRadioButton("4. Other intial diagnosis");
 		rdbtnOtherIntialDiagnosis.setBounds(100, 222, 295, 23);
-		navigationPage.add(rdbtnOtherIntialDiagnosis);
+		intialDiagnosis.add(rdbtnOtherIntialDiagnosis);
 		rdbtnOtherIntialDiagnosis.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		
 		JLabel lblAdmissionAfterTreatment = new JLabel("Admission after treatment for STEMI elsewhere?");
 		lblAdmissionAfterTreatment.setBounds(43, 272, 383, 23);
-		navigationPage.add(lblAdmissionAfterTreatment);
+		intialDiagnosis.add(lblAdmissionAfterTreatment);
 		lblAdmissionAfterTreatment.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		
 		JButton btnYes = new JButton("Yes");
 		btnYes.setBounds(91, 307, 117, 29);
-		navigationPage.add(btnYes);
+		intialDiagnosis.add(btnYes);
 		
 		JButton btnNo = new JButton("No");
 		btnNo.setBounds(243, 307, 117, 29);
-		navigationPage.add(btnNo);
+		intialDiagnosis.add(btnNo);
 		
 		JLabel lblProcedurePerformedAt = new JLabel("Procedure performed at the Interventional Hospital?");
 		lblProcedurePerformedAt.setBounds(61, 344, 365, 36);
-		navigationPage.add(lblProcedurePerformedAt);
+		intialDiagnosis.add(lblProcedurePerformedAt);
 		lblProcedurePerformedAt.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(100, 391, 260, 27);
-		navigationPage.add(comboBox);
+		intialDiagnosis.add(comboBox);
 		
 		JLabel lblInterventionalCentre = new JLabel("Interventional Centre");
 		lblInterventionalCentre.setBounds(43, 437, 153, 29);
-		navigationPage.add(lblInterventionalCentre);
+		intialDiagnosis.add(lblInterventionalCentre);
 		lblInterventionalCentre.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setBounds(208, 440, 178, 27);
-		navigationPage.add(comboBox_1);
+		intialDiagnosis.add(comboBox_1);
 		
 		JLabel lblDateOfReturn = new JLabel("Date of Return");
 		lblDateOfReturn.setBounds(43, 478, 105, 36);
-		navigationPage.add(lblDateOfReturn);
+		intialDiagnosis.add(lblDateOfReturn);
 		lblDateOfReturn.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.setBounds(189, 485, 171, 27);
-		navigationPage.add(comboBox_2);
+		intialDiagnosis.add(comboBox_2);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.addActionListener(new ActionListener() {
@@ -134,7 +134,7 @@ public class Page7 {
 			}
 		});
 		btnLogout.setBounds(363, 6, 117, 29);
-		navigationPage.add(btnLogout);
+		intialDiagnosis.add(btnLogout);
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.addActionListener(new ActionListener() {
@@ -142,15 +142,15 @@ public class Page7 {
 			}
 		});
 		btnBack.setBounds(0, 561, 117, 53);
-		navigationPage.add(btnBack);
+		intialDiagnosis.add(btnBack);
 		
 		JButton btnNavigation = new JButton("Navigation");
 		btnNavigation.setBounds(185, 561, 117, 53);
-		navigationPage.add(btnNavigation);
+		intialDiagnosis.add(btnNavigation);
 		
 		JButton btnNext = new JButton("Next");
 		btnNext.setBounds(357, 561, 117, 53);
-		navigationPage.add(btnNext);
+		intialDiagnosis.add(btnNext);
 		btnNo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
