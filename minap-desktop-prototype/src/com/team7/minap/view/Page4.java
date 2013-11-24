@@ -45,26 +45,26 @@ public class Page4 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 480, 640);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
+		JPanel searchResults = new JPanel();
+		searchResults.setBounds(0, 0, 480, 640);
+		frame.getContentPane().add(searchResults);
+		searchResults.setLayout(null);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBounds(363, 6, 117, 29);
-		panel.add(btnLogout);
+		searchResults.add(btnLogout);
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBounds(0, 569, 117, 42);
-		panel.add(btnBack);
+		searchResults.add(btnBack);
 		
 		JLabel lblSearchResults = new JLabel("      Search Results");
 		lblSearchResults.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		lblSearchResults.setBounds(133, 118, 195, 61);
-		panel.add(lblSearchResults);
+		searchResults.add(lblSearchResults);
 		
 		JButton btnNewSearch = new JButton("New Search");
 		btnNewSearch.setBounds(295, 439, 117, 42);
-		panel.add(btnNewSearch);
+		searchResults.add(btnNewSearch);
 	}
 }

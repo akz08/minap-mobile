@@ -47,19 +47,19 @@ public class Page3 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 480, 640);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
+		JPanel searchPage = new JPanel();
+		searchPage.setBounds(0, 0, 480, 640);
+		frame.getContentPane().add(searchPage);
+		searchPage.setLayout(null);
 		
 		textField = new JTextField();
 		textField.setBounds(107, 238, 269, 41);
-		panel.add(textField);
+		searchPage.add(textField);
 		textField.setColumns(10);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBounds(357, 6, 117, 29);
-		panel.add(btnLogout);
+		searchPage.add(btnLogout);
 		
 		JButton btnSearch = new JButton("Search!");
 		btnSearch.addActionListener(new ActionListener() {
@@ -67,7 +67,7 @@ public class Page3 {
 			}
 		});
 		btnSearch.setBounds(179, 291, 113, 43);
-		panel.add(btnSearch);
+		searchPage.add(btnSearch);
 		
 		JButton btnShowallrecrods = new JButton("Show All Recrods");
 		btnShowallrecrods.addActionListener(new ActionListener() {
@@ -75,11 +75,11 @@ public class Page3 {
 			}
 		});
 		btnShowallrecrods.setBounds(163, 392, 144, 51);
-		panel.add(btnShowallrecrods);
+		searchPage.add(btnShowallrecrods);
 		
 		JButton btnBack = new JButton("Back");
 		btnBack.setBounds(0, 575, 117, 41);
-		panel.add(btnBack);
+		searchPage.add(btnBack);
 	}
 
 }

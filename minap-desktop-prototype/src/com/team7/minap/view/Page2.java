@@ -44,10 +44,10 @@ public class Page2 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 480, 640);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
+		JPanel mainPage = new JPanel();
+		mainPage.setBounds(0, 0, 480, 640);
+		frame.getContentPane().add(mainPage);
+		mainPage.setLayout(null);
 		
 		JButton createNewRecord = new JButton("Create New Record");
 		createNewRecord.addActionListener(new ActionListener() {
@@ -55,15 +55,15 @@ public class Page2 {
 			}
 		});
 		createNewRecord.setBounds(111, 195, 251, 75);
-		panel.add(createNewRecord);
+		mainPage.add(createNewRecord);
 		
 		JButton readRecord = new JButton("Read Record");
 		readRecord.setBounds(111, 331, 251, 75);
-		panel.add(readRecord);
+		mainPage.add(readRecord);
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBounds(357, 6, 117, 29);
-		panel.add(btnLogout);
+		mainPage.add(btnLogout);
 	}
 
 }
