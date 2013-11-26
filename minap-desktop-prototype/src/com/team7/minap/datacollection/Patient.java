@@ -14,40 +14,49 @@ import java.lang.Double;
 import com.team7.minap.validation.Validation;
 
 public class Patient {
+	/* Page 0: Patient Info */
 	private static String caseNumber;
-	private static String surname, forename, nhsNumber, postCode, gpCode, ambulanceJobNumber, interventionalCode, 
-	referringHospital;
-	private static Date dob, symptomOnset, callHelp, firstArrival, ambulanceArrival, hospitalArrival, 
-	reperfusionTreatment, cardiacArrest, nonInterventionArrival, insulinStart, dischargeDate, 
-	investigationReferral, daycaseTransfer, angio, localIntervention, dateReturnReferringHospital;
-	private static double serumCholesterol, bpSystolic, heartRate, serumGlucose, height, weight, 
-	creatinine, haemoglobin, peakTroponin;
+	private static String surname, forename, nhsNumber, postCode, hospitalID; 
+	private static Date dob, admissionDate;
 	
-	// temporary constants
-	private static double MIN_CHOLES = 2.5;
-	private static double MAX_CHOLES = 25;
-	/**
-	 * Start of long code fields
-	 */
-	private static String gender, adminStatus, ethnicity, initialDiagnosis, ecgTreatment, aspirinGiven,
-	prevAMI, prevAngina, hypertension, hyperCholes, perVascularDisease, cerebroVascular, asthmaCOPD, 
-	renalFailure, heartFailure, cardiacRaised, smoking, diabetes, prevPCI, prevCABG, admitConsultant, 
-	ecgPerformed, betaBlocker, aceiARBUse, statin, leftVEF, familyCHD, cardioCare, infarctionSite, ecgqrsDuration, 
-	thienopyridineUse, admissionMethod, locationSTEMI, killip, stressEcho, iReperfusionNotGiven, treatmentDelay, 
-	iReperfusionGiven, arrestLocation, presentingRhythm, arrestOutcome, admissionWard,unfractionedHeparin, 
-	lmwHeparin, thienopyridineInhibitor, ivAgent, ivBetaBlocker, calciumBlocker, 
-	ivNitrate, oralNitrate, potassiumModulator, warfarin, aceiARB, thiazideDiuretic, loopDiuretic, thromboDrug, 
-	troponinAssay, fondaparinux, initialReperfusion, hyperglycemiaManagement, diabeticTherapyDischarge, 
-	oralBetaBlocker, aldosAntagonist, bivalirudin, nonInterventionAssessment, interventionAssessment, 
-	intendedProcedure, procedurePerformed, noAngio, noIntervention, dischargeDiagnosis, bleedingComplication, 
-	deathInHospital, dischargeBetaBlocker, dischageACEARB, dischargeStatin, dischageAspirin, cardiacRehab, 
-	exerciseTest, echoCardio, radioNuclideStudy, coronaryAngio, coronaryIntervention, dischargeDestination, 
-	followedUpBy, reInfarction, dischargeThienopyridine, dischargeAldosterone, procedurePerformedAt, angioDelay,
-	dischargeTicagrelor, highRiskSTEMI, smokingCessation, dietaryAdvice; 
+	/* Page 1: Initial Diagnosis */
+	public static String interventionalCenter;
+	public static boolean admissionAfterSTEMI = false;
+	public static Date referringHospitalReturn;
+	// long/short code fields
+	private static String initialDiagnosis, hiRisknSTEMI, interventionalHospitalProcedure; 
 	
-	private static double bmiScore; // double might be int CHECK
-	private static int graceScore;
+	/* Page 2: Demographics */
+	public static String gpCode, postalCode, nhsVerification;
+	// long/short code fields
+	private static String gender, ethnicity, admissionMethod, admissionWard, admissionConsultant,
+	admissionStatus, firstECGPerformed;
+
+	/* Page 3: Initial reperfusion */
+	public static String invertentionalCentreCode;
+	// long / short code fields
+	public static String initialReperfusion, reperfusionNotGiven, ecgDetermineTreatment, locationAtSTEMI,
+	ecgQRSComplex, infarctionSite;
 	
+	/* Page 4: Angiography */
+	public static boolean angioPerformed = false, patientReturnExpected = false;
+	public static Date referralDate, angioDate, localIntervention, daycaseTransfer, angioReferHospitalReturn;
+	public static String angioCentreCode;
+	// long / short code fields
+	public static String angioDelay, coronaryIntervention;
+	
+	/* Page 5: Examinations */
+	public static double systolicBP, heartRate, height, weight;
+	// calculated fields
+	public static double BMI, GRACE;
+	// long / short code fields
+	public static String killipClass;
+	
+	/* Page 6: Medical History */
+	// long / short code fields
+	public static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
+	hyperCholesterolaemia, peripheralVascularDisease, ashtmaCOPD, chronicRenalFailure, heartFailure,
+	smokingStatus, diabetes, previousPCI, previousCABG, familyCHD;
 	// Sample setters
 	
 	/**
