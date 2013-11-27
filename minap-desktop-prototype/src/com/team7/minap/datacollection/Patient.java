@@ -8,6 +8,7 @@
  */
 
 package com.team7.minap.datacollection;
+import com.team7.minap.utils.Algorithms;
 
 import java.util.Date;
 import java.lang.Double;
@@ -322,28 +323,145 @@ public class Patient {
 	
 	
 	/* Page 3: Initial reperfusion */
-	public static String invertentionalCentreCode;
+	private static String invertentionalCentreCode;//4.20
 	// long / short code fields
-	public static String initialReperfusion, reperfusionNotGiven, ecgDetermineTreatment, locationAtSTEMI,
-	ecgQRSComplex, infarctionSite;
+	private static byte initialReperfusion,/*3.39, options*/ reperfusionNotGiven, /*3.08, options*/ ecgDetermineTreatment,/*2.03, options*/ locationAtSTEMI,/*2.40, options*/
+	ecgQRSComplex, /*2.37, options*/infarctionSite;/*2.36, options*/
+	
+	//setter start here!
+	public static void setInvertentionalCentreCode (String iCentreCode){//4.20 set invertentionalCentreCode
+		iCentreCode = invertentionalCentreCode;
+	}
+	
+	public static void setInitialReperfusion (byte iReperfusion){//3.39, options, Initial reperfusion treatment
+		iReperfusion = initialReperfusion;
+		//if initialReperfusion = 0, field 2.03 2.40 2.37 3.08 show
+		//if initialReperfusion = 1, field 2.03 2.36 2.37 2.40 show
+		//if initialReperfusion = 2, same with option 1
+		//if initialReperfusion = 3, field 2.03 2.40 2.37 3.08 4.20 show
+		//if initialReperfusion = 4, same with option 3
+		//if initialReperfusion = 9, same with option 1
+	}
+	
+	public static void setReperfusionNotGiven (byte rNotGiven){//3.08,options,Reason reperfusion treatment not given
+		rNotGiven = reperfusionNotGiven;
+	}
+	
+	public static void setEcgDetermineTreatment (byte eDetermineTreatment){//2.03,options,ECG determining treatment
+		eDetermineTreatment = ecgDetermineTreatment;
+	}
+	
+	public static void setLocationAtSTEMI (byte lAtSTEMI){//2.40,options,Patient location at time of STEMI
+		lAtSTEMI = locationAtSTEMI;
+	}
+	
+	public static void setEcgQRSComplex (byte eQRSComplex){//2.37,options,ECG QRS complex duration
+		eQRSComplex = ecgQRSComplex;
+	}
+	
+	public static void setInfarctionSite (byte iSite) {//2.36,options,Site of infarction
+		iSite = infarctionSite;
+	}
+	//setter end here!
 	
 	/* Page 4: Angiography */
-	public static boolean angioPerformed = false, patientReturnExpected = false;
-	public static Date referralDate, angioDate, localIntervention, daycaseTransfer, angioReferHospitalReturn;
-	public static String angioCentreCode;
+	private static boolean angioPerformed = false,/*no field no. provided*/ patientReturnExpected = false;/*no field no. provided*/
+	private static Date referralDate, /*4.15 date*/angioDate,/*4.18 date*/ localInterventionDate, /*4.19 date*/daycaseTransferDate,/*4.17 date*/ angioReferHospitalReturnDate;/*4.26 date*/
 	// long / short code fields
-	public static String angioDelay, coronaryIntervention;
+	private static byte angioDelay,/*4.30 options*/ coronaryIntervention,/*4.14 options*/ coronaryAngiography;/*4.13, options*/
+	 
+	//setter start here!
+	public static void setAngioPerformed (boolean aPerformed){//Was angio performed during the admission? Y/N
+		aPerformed = angioPerformed;
+		// if yes, field 4.15, 4.30 show, field 4.13 with options 1-4 show.
+		// if no, field 4.13 with options 5-9 show
+	}
+	
+	public static void setCoronaryAngiography(byte cAngiography){// 4.13, options Coronary Angiography
+		cAngiography = coronaryAngiography;
+		//if options 1 or 2 was chosen, 4.14, 4.18, 4.19 show, and interventional centre show as well
+		//if options 3 or 3 was chosen, 4.14 and interventional centre show, boolean patientReturnExpected show
+	}
+	
+	public static void setPatienReturnExpected (boolean pReturnExpected){//The patient expected to return return admission Y/N
+		pReturnExpected = patientReturnExpected;
+		//if yes, 4.17 and 4.26 show
+		//if no, compications show(another box but not within Lucia's requirement)
+	}
+	
+	public static void setReferralDate (Date rDate){//4.15, date, Date/time of referral for investigation/intervention
+		rDate = referralDate;
+	}
+	
+	public static void setAngioDate (Date aDate){//4.18, data, Angio date/time
+		aDate = angioDate;
+	}
+	
+	public static void setLocalInterventionDate (Date lInterventionDate){//4.19, date, Local intervention date
+		lInterventionDate = localInterventionDate;
+	}
+	
+	public static void setDaycaseTransferDate (Date dTransferDate){//4.17,date, Daycase transfer date
+		dTransferDate = daycaseTransferDate;
+	
+	}
+	
+	public static void setAngioReferHospitalReturnDate (Date aReferHospitalReturnDate){//4.26, date, Date of return to referring hospital
+		aReferHospitalReturnDate = angioReferHospitalReturnDate;
+	}
+	
+	public static void setAngioDelay (byte aDelay){//4.30, options, Delay to performance of angiogram 
+		aDelay = angioDelay;
+	}
+	
+	public static void setCoronaryIntervention (byte cIntervention){//4.14,options,Coronary intervention
+		cIntervention = coronaryIntervention;
+	}
+	//setter end here!
 	
 	/* Page 5: Examinations */
-	public static double systolicBP, heartRate, height, weight;
+	private static double systolicBP,/*2.20, n3 */ heartRate, /*2.21, n3 */height,/*2.29, n3 */ weight;/*2.30, n3.1 */
 	// calculated fields
-	public static double BMI, GRACE;
+	private static double BMI, GRACE;
 	// long / short code fields
-	public static String killipClass;
+	private static byte killipClass;/*2.41, options */
+	
+	//setters start here!
+	public static void setSystolicBP (double sBP){//2.20, n3, systolic blood pressure
+		sBP = systolicBP;
+	}
+	
+	public static void setHeartRate (double hRate){//2.21, n3,Heart rate
+		hRate = heartRate;
+	}
+	
+	public static void setHeight (double h){//2.29, n3, Height in cms to derive BMI.
+		h = height;
+	}
+	
+	public static void setWeight(double w){//2.30, n3, Weight in cms to derive BMI.
+		w = weight;
+	}
+	
+	public static void setKillipClass (byte kClass){//2.41, options, Killip class 
+		kClass = killipClass;
+	}
+	//setters end here!
+	
+	//getters start here!
+	public static void getBMI (double h,double w){
+		BMI = Algorithms.calculateBMI(h,w);
+	}
+	
+//	public static void getGRACE (){
+//		
+//	}
+	
+	//getters end here!
 	
 	/* Page 6: Medical History */
 	// long / short code fields
-	public static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
+	private static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
 	hyperCholesterolaemia, peripheralVascularDisease, ashtmaCOPD, chronicRenalFailure, heartFailure,
 	smokingStatus, diabetes, previousPCI, previousCABG, familyCHD;
 	// Sample setters
