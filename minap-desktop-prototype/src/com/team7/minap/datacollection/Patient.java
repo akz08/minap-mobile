@@ -33,28 +33,101 @@ public class Patient {
 	admissionStatus, firstECGPerformed;
 
 	/* Page 3: Initial reperfusion */
-	public static String invertentionalCentreCode;
+	private static String invertentionalCentreCode;//no field no. given
 	// long / short code fields
-	public static String initialReperfusion, reperfusionNotGiven, ecgDetermineTreatment, locationAtSTEMI,
-	ecgQRSComplex, infarctionSite;
+	private static String initialReperfusion,/*3.39, options*/ reperfusionNotGiven, /*3.08, options*/ ecgDetermineTreatment,/*2.03, options*/ locationAtSTEMI,/*2.40, options*/
+	ecgQRSComplex, /*2.37, options*/infarctionSite;/*2.36, options*/
+	
+	//setter start here!
+	public static void setInvertentionalCentreCode (String iCentreCode){//set invertentionalCentreCode
+		iCentreCode = invertentionalCentreCode;
+	}
+	
+	public static void setInitialReperfusion (String iReperfusion){//3.39, options, Initial reperfusion treatment
+		iReperfusion = initialReperfusion;
+	}
+	
+	public static void setReperfusionNotGiven (String rNotGiven){//3.08,options,Reason reperfusion treatment not given
+		rNotGiven = reperfusionNotGiven;
+	}
+	
+	public static void setEcgDetermineTreatment (String eDetermineTreatment){//2.03,options,ECG determining treatment
+		eDetermineTreatment = ecgDetermineTreatment;
+	}
+	
+	public static void setLocationAtSTEMI (String lAtSTEMI){//2.40,options,Patient location at time of STEMI
+		lAtSTEMI = locationAtSTEMI;
+	}
+	
+	public static void setEcgQRSComplex (String eQRSComplex){//2.37,options,ECG QRS complex duration
+		eQRSComplex = ecgQRSComplex;
+	}
+	
+	public static void setInfarctionSite (String iSite) {//2.36,options,Site of infarction
+		iSite = infarctionSite;
+	}
+	//setter end here!
 	
 	/* Page 4: Angiography */
-	public static boolean angioPerformed = false, patientReturnExpected = false;
-	public static Date referralDate, angioDate, localIntervention, daycaseTransfer, angioReferHospitalReturn;
-	public static String angioCentreCode;
+	private static boolean angioPerformed = false,/*no field no. provided*/ patientReturnExpected = false;/*no field no. provided*/
+	private static Date referralDate, /*4.15 date*/angioDate,/*4.18 date*/ localInterventionDate, /*4.19 date*/daycaseTransferDate,/*4.17 date*/ angioReferHospitalReturnDate;/*4.26 date*/
+	private static String angioCentreCode;/*no field no. provided*/
 	// long / short code fields
-	public static String angioDelay, coronaryIntervention;
+	private static String angioDelay,/*4.30 options*/ coronaryIntervention;/*4.14 options*/
+	 
+	//setter start here!
+	public static void setAngioPerformed (boolean aPerformed){//Was angio performed during the admission? Y/N
+		aPerformed = angioPerformed;
+	}
+	
+	public static void setPatienReturnExpected (boolean pReturnExpected){//The patient expected to return return admission Y/N
+		pReturnExpected = patientReturnExpected;
+	}
+	
+	public static void setReferralDate (Date rDate){//4.15, date, Date/time of referral for investigation/intervention
+		rDate = referralDate;
+	}
+	
+	public static void setAngioDate (Date aDate){//4.18, data, Angio date/time
+		aDate = angioDate;
+	}
+	
+	public static void setLocalInterventionDate (Date lInterventionDate){//4.19, date, Local intervention date
+		lInterventionDate = localInterventionDate;
+	}
+	
+	public static void setDaycaseTransferDate (Date dTransferDate){//4.17,date, Daycase transfer date
+		dTransferDate = daycaseTransferDate;
+	
+	}
+	
+	public static void setAngioReferHospitalReturnDate (Date aReferHospitalReturnDate){//4.26, date, Date of return to referring hospital
+		aReferHospitalReturnDate = angioReferHospitalReturnDate;
+	}
+	
+	public static void setAngioCentreCode (String aCentreCode){//???
+		aCentreCode = angioCentreCode;
+	}
+	
+	public static void setAngioDelay (String aDelay){//4.30, options, Delay to performance of angiogram 
+		aDelay = angioDelay;
+	}
+	
+	public static void setCoronaryIntervention (String cIntervention){//4.14,options,Coronary intervention
+		cIntervention = coronaryIntervention;
+	}
+	//setter end here!
 	
 	/* Page 5: Examinations */
-	public static double systolicBP, heartRate, height, weight;
+	private static double systolicBP, heartRate, height, weight;
 	// calculated fields
-	public static double BMI, GRACE;
+	private static double BMI, GRACE;
 	// long / short code fields
-	public static String killipClass;
+	private static String killipClass;
 	
 	/* Page 6: Medical History */
 	// long / short code fields
-	public static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
+	private static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
 	hyperCholesterolaemia, peripheralVascularDisease, ashtmaCOPD, chronicRenalFailure, heartFailure,
 	smokingStatus, diabetes, previousPCI, previousCABG, familyCHD;
 	// Sample setters
