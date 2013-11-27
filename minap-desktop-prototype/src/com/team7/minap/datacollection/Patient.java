@@ -34,13 +34,13 @@ public class Patient {
 	admissionStatus, firstECGPerformed;
 
 	/* Page 3: Initial reperfusion */
-	private static String invertentionalCentreCode;//no field no. given
+	private static String invertentionalCentreCode;//4.20
 	// long / short code fields
 	private static byte initialReperfusion,/*3.39, options*/ reperfusionNotGiven, /*3.08, options*/ ecgDetermineTreatment,/*2.03, options*/ locationAtSTEMI,/*2.40, options*/
 	ecgQRSComplex, /*2.37, options*/infarctionSite;/*2.36, options*/
 	
 	//setter start here!
-	public static void setInvertentionalCentreCode (String iCentreCode){//set invertentionalCentreCode
+	public static void setInvertentionalCentreCode (String iCentreCode){//4.20 set invertentionalCentreCode
 		iCentreCode = invertentionalCentreCode;
 	}
 	
@@ -78,15 +78,20 @@ public class Patient {
 	/* Page 4: Angiography */
 	private static boolean angioPerformed = false,/*no field no. provided*/ patientReturnExpected = false;/*no field no. provided*/
 	private static Date referralDate, /*4.15 date*/angioDate,/*4.18 date*/ localInterventionDate, /*4.19 date*/daycaseTransferDate,/*4.17 date*/ angioReferHospitalReturnDate;/*4.26 date*/
-	private static String angioCentreCode;/*no field no. provided*/
 	// long / short code fields
-	private static byte angioDelay,/*4.30 options*/ coronaryIntervention;/*4.14 options*/
+	private static byte angioDelay,/*4.30 options*/ coronaryIntervention,/*4.14 options*/ coronaryAngiography;/*4.13, options*/
 	 
 	//setter start here!
 	public static void setAngioPerformed (boolean aPerformed){//Was angio performed during the admission? Y/N
 		aPerformed = angioPerformed;
-		// if yes, field 4.15, 4.30 show, field 4.14 with options 1-4 show.
-		// if no, field 4.14 with options 5-9 show
+		// if yes, field 4.15, 4.30 show, field 4.13 with options 1-4 show.
+		// if no, field 4.13 with options 5-9 show
+	}
+	
+	public static void setCoronaryAngiography(byte cAngiography){// 4.13, options Coronary Angiography
+		cAngiography = coronaryAngiography;
+		//if options 1 or 2 was chosen, 4.14, 4.18, 4.19 show, and interventional centre show as well
+		//if options 3 or 3 was chosen, 4.14 and interventional centre show, boolean patientReturnExpected show
 	}
 	
 	public static void setPatienReturnExpected (boolean pReturnExpected){//The patient expected to return return admission Y/N
@@ -116,18 +121,12 @@ public class Patient {
 		aReferHospitalReturnDate = angioReferHospitalReturnDate;
 	}
 	
-	public static void setAngioCentreCode (String aCentreCode){//???
-		aCentreCode = angioCentreCode;
-	}
-	
 	public static void setAngioDelay (byte aDelay){//4.30, options, Delay to performance of angiogram 
 		aDelay = angioDelay;
 	}
 	
 	public static void setCoronaryIntervention (byte cIntervention){//4.14,options,Coronary intervention
 		cIntervention = coronaryIntervention;
-		//if options 1 or 2 was chosen, 4.14, 4.18, 4.19 show, and interventional centre show as well
-		//if options 3 or 3 was chosen, 4.14 and interventional centre show, boolean patientReturnExpected show
 	}
 	//setter end here!
 	
