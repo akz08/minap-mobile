@@ -172,10 +172,70 @@ public class Patient {
 	
 	/* Page 6: Medical History */
 	// long / short code fields
-	private static String previousAMI, hyperTension, cerebrovascularDisease, previousAngina,
-	hyperCholesterolaemia, peripheralVascularDisease, ashtmaCOPD, chronicRenalFailure, heartFailure,
-	smokingStatus, diabetes, previousPCI, previousCABG, familyCHD;
-	// Sample setters
+	private static byte previousAMI,/*2.05 options*/ hyperTension,/*2.07 options*/ cerebrovascularDisease,/*2.10 options*/ previousAngina,/*2.06 options*/
+	hyperCholesterolaemia,/*2.08 options*/ peripheralVascularDisease,/*2.09 options*/ ashtmaCOPD,/*2.11 options*/ chronicRenalFailure,/*2.12 options*/ heartFailure,/*2.13 options*/
+	smokingStatus,/*2.16 options*/ diabetes,/*2.17 options*/ previousPCI,/*2.18 options*/ previousCABG,/*2.19 options*/ familyCHD;/*2.32 options*/
+	
+	// Setters start here!
+	public static void setPreviousAMI(byte pAMI){//2.05, options, Previous AMI
+		pAMI = previousAMI;
+	}
+	
+	public static void setHyperTension (byte hTension){//2.07, options, Hypertension
+		hTension = hyperTension;
+	}
+	
+	public static void setCerebrovascularDisease (byte cDisease){//2.10, options, Cerebrovascular disease
+		cDisease = cerebrovascularDisease;
+	}
+	
+	public static void setPreviousAngina (byte pAngina){//2.06, option, Previous angina
+		pAngina = previousAngina;
+	}
+	
+	public static void setHyperCholesterolaemia (byte hCholesterolaemia){//2.08, options, Hypercholesterolaemia
+		hCholesterolaemia = hyperCholesterolaemia;
+	}
+	
+	public static void setPeripheralVascularDisease (byte pVascularDisease){//2.09, options, Peripheral vascular disease
+		pVascularDisease = peripheralVascularDisease;
+	}
+	
+	public static void setAshtmaCOPD (byte aCOPD){//2.11, options, Asthma or COPD
+		aCOPD = ashtmaCOPD;
+	}
+	
+	public static void setChronicRenalFailure (byte cRenalFailure){//2.12,options, Chronic renal failure
+		cRenalFailure = chronicRenalFailure;
+	}
+	
+	public static void setHeartFailure (byte hFailure){//2.13, options, Heart failure
+		hFailure = heartFailure;
+	}
+	
+	public static void setSmokingStatus (byte sStatus){//2.16, options, Smoking status
+		sStatus = smokingStatus;
+	}
+	
+	public static void setDiabetes (byte diabete){//2.17, options, Diabetes
+		diabete = diabetes;
+	}
+	
+	public static void setPreviousPCI (byte pPCI){//2.18, options, PreviousPCI
+		pPCI = previousPCI;
+	}
+	
+	public static void setPreviousCABG (byte pCABG){//2.19, options, PreviousCABG
+		pCABG = previousCABG;
+	}
+	
+	public static void setFamilyCHD (byte fCHD){//2.39, options, FamilyCHD
+		fCHD = familyCHD;
+	}
+	
+	
+	
+//==================================================================	
 	
 	/**
 	 * setSurname takes in a String that is then set to Patient's surname variable
