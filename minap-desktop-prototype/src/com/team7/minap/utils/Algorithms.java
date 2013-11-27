@@ -5,9 +5,9 @@ package com.team7.minap.utils;
 
 public class Algorithms {
 	
-	public double calculateBMI() {
-		//bmiScore = height(cm) / weight(kg);
-		return 0.0;
+	public static double calculateBMI(double h, double w) {
+		double bmi = w / h * h;
+		return bmi;
 	}
 	
 	public int calculateGRACE() {
