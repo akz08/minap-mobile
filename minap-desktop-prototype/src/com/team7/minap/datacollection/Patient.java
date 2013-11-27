@@ -46,6 +46,12 @@ public class Patient {
 	
 	public static void setInitialReperfusion (byte iReperfusion){//3.39, options, Initial reperfusion treatment
 		iReperfusion = initialReperfusion;
+		//if initialReperfusion = 0, field 2.03 2.40 2.37 3.08 show
+		//if initialReperfusion = 1, field 2.03 2.36 2.37 2.40 show
+		//if initialReperfusion = 2, same with option 1
+		//if initialReperfusion = 3, field 2.03 2.40 2.37 3.08 4.20 show
+		//if initialReperfusion = 4, same with option 3
+		//if initialReperfusion = 9, same with option 1
 	}
 	
 	public static void setReperfusionNotGiven (byte rNotGiven){//3.08,options,Reason reperfusion treatment not given
@@ -79,10 +85,14 @@ public class Patient {
 	//setter start here!
 	public static void setAngioPerformed (boolean aPerformed){//Was angio performed during the admission? Y/N
 		aPerformed = angioPerformed;
+		// if yes, field 4.15, 4.30 show, field 4.14 with options 1-4 show.
+		// if no, field 4.14 with options 5-9 show
 	}
 	
 	public static void setPatienReturnExpected (boolean pReturnExpected){//The patient expected to return return admission Y/N
 		pReturnExpected = patientReturnExpected;
+		//if yes, 4.17 and 4.26 show
+		//if no, compications show(another box but not within Lucia's requirement)
 	}
 	
 	public static void setReferralDate (Date rDate){//4.15, date, Date/time of referral for investigation/intervention
@@ -116,6 +126,8 @@ public class Patient {
 	
 	public static void setCoronaryIntervention (byte cIntervention){//4.14,options,Coronary intervention
 		cIntervention = coronaryIntervention;
+		//if options 1 or 2 was chosen, 4.14, 4.18, 4.19 show, and interventional centre show as well
+		//if options 3 or 3 was chosen, 4.14 and interventional centre show, boolean patientReturnExpected show
 	}
 	//setter end here!
 	
