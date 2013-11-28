@@ -6,6 +6,9 @@
  */
 package com.team7.minap.datacollection.values;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 public class PatientCaseRecordNumber extends Value {
 	
 	private static String caseNumber; // 1.02
@@ -17,7 +20,20 @@ public class PatientCaseRecordNumber extends Value {
 	
 	public static void setCaseNumber(String cNumber) {
 		// length check
-		if (cNumber.length() == VAL_LENGTH)
-		caseNumber = cNumber;
+		if (cNumber.length() == VAL_LENGTH && cNumber.matches("[a-zA-Z0-9]*"))
+			caseNumber = cNumber;
+		else
+			System.err.println("Invalid Length - Must be 10 Characters long");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String entry;
+		System.out.println("Enter a Patient Case Record Number (Valid Entries: 10 digit alphanumeric strings)");
+		Scanner sc = new Scanner(System.in);
+		entry = sc.nextLine();
+		setCaseNumber(entry);
+		System.out.println("Patient Case Record Number: " + caseNumber);
+		sc.close();
 	}
 }

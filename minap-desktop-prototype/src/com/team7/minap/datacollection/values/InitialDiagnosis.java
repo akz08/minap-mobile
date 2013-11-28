@@ -11,11 +11,11 @@
 	 */
 
 package com.team7.minap.datacollection.values;
-
+import java.util.Scanner;
 public class InitialDiagnosis extends Value {
 
 	private static byte initialDiagnosis;
-	private static String diagnosisLongCode;
+	private static String diagnosisLongCode; // to set field's long code value
 	
 	public InitialDiagnosis() {
 		super("2.01", "This is a working diagnosis whose primary purpose is to identify those patients with a diagnosis of definite ST elevation MI. "
@@ -35,13 +35,18 @@ public class InitialDiagnosis extends Value {
 			}
 		}
 		else
-			System.out.println("Invalid Entry");
+			System.err.println("Invalid Entry");
 		// set additional fields to visible here
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		byte entry;
+		System.out.println("Enter an Initial Diagnosis (Valid Entries: 1, 3, 4, 5)");
+		Scanner sc = new Scanner(System.in);
+		entry = sc.nextByte();
+		setInitialDiagnosis(entry);
+		System.out.println("Initial Diagnosis: " + initialDiagnosis + " - " + diagnosisLongCode);
+		sc.close();
 	}
-
 }
