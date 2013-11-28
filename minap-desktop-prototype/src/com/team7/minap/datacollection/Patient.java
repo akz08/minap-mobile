@@ -365,6 +365,7 @@ public class Patient {
 	//setter end here!
 	
 	/* Page 4: Angiography */
+	// interventional centre field 4.20 also needed here, variable created in pervious page.
 	private static boolean angioPerformed = false,/*no field no. provided*/ patientReturnExpected = false;/*no field no. provided*/
 	private static Date referralDate, /*4.15 date*/angioDate,/*4.18 date*/ localInterventionDate, /*4.19 date*/daycaseTransferDate,/*4.17 date*/ angioReferHospitalReturnDate;/*4.26 date*/
 	// long / short code fields
