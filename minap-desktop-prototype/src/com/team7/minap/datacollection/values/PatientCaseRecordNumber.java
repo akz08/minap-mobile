@@ -36,4 +36,5 @@ public class PatientCaseRecordNumber extends Value {
 		System.out.println("Patient Case Record Number: " + caseNumber);
 		sc.close();
 	}
+	// addded comment
 }
