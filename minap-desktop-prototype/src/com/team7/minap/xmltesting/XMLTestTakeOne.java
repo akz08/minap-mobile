@@ -28,25 +28,25 @@ public class XMLTestTakeOne {
     private Vector readXMLFile(String file) throws Exception {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = dbf.newDocumentBuilder();
-        Document doc = builder.parse(file); // 获取到xml文件
-        // 下面开始读取
-        Element root = doc.getDocumentElement(); // 获取根元素
-        NodeList students = root.getElementsByTagName("学生");
+        Document doc = builder.parse(file); // 获取到xml文件 // 
+        // 下面开始读取 //start reading 
+        Element root = doc.getDocumentElement(); // 获取根元素 
+        NodeList students = root.getElementsByTagName("student");
         students_Vector = new Vector();
         for (int i = 0; i < students.getLength(); i++) {
-            // 一次取得每一个学生元素
+            // 一次取得每一个student元素
             Element ss = (Element) students.item(i);
 
-            // 创建一个学生的实例
+            // 创建一个student的实例
             student stu = new student();
-            stu.setSex(ss.getAttribute("性别"));
+            stu.setgender(ss.getAttribute("gender"));
 
-            NodeList names = ss.getElementsByTagName("姓名");
+            NodeList names = ss.getElementsByTagName("name");
             Element e = (Element) names.item(0);
             Node t = e.getFirstChild();
             stu.setName(t.getNodeValue());
 
-            NodeList ages = ss.getElementsByTagName("年龄");
+            NodeList ages = ss.getElementsByTagName("age");
             e = (Element) ages.item(0);
             t = e.getFirstChild();
             stu.setAge(Integer.parseInt(t.getNodeValue()));
@@ -66,22 +66,22 @@ public class XMLTestTakeOne {
         Document doc = builder.parse(inputStream); //
         // 下面开始读取
         Element root = doc.getDocumentElement(); // 获取根元素
-        NodeList students = root.getElementsByTagName("学生");
+        NodeList students = root.getElementsByTagName("student");
         students_Vector = new Vector();
         for (int i = 0; i < students.getLength(); i++) {
-            // 一次取得每一个学生元素
+            // 一次取得每一个student元素
             Element ss = (Element) students.item(i);
 
-            // 创建一个学生的实例
+            // 创建一个student的实例
             student stu = new student();
-            stu.setSex(ss.getAttribute("性别"));
+            stu.setgender(ss.getAttribute("gender"));
 
-            NodeList names = ss.getElementsByTagName("姓名");
+            NodeList names = ss.getElementsByTagName("name");
             Element e = (Element) names.item(0);
             Node t = e.getFirstChild();
             stu.setName(t.getNodeValue());
 
-            NodeList ages = ss.getElementsByTagName("年龄");
+            NodeList ages = ss.getElementsByTagName("age");
             e = (Element) ages.item(0);
             t = e.getFirstChild();
             stu.setAge(Integer.parseInt(t.getNodeValue()));
@@ -129,26 +129,26 @@ public class XMLTestTakeOne {
         }
         Document doc = builder.newDocument();
 
-        Element root = doc.createElement("学生花名册");
+        Element root = doc.createElement("studentnamelist");
         doc.appendChild(root); // 将根元素添加到文档上
 
-        // 获取学生信息
+        // 获取student信息
         for (int i = 0; i < students_Vector.size(); i++) {
             student s = (student) students_Vector.get(i);
-            // 创建一个学生
-            Element stu = doc.createElement("学生");
-            stu.setAttribute("性别", s.getSex());
+            // 创建一个student
+            Element stu = doc.createElement("student");
+            stu.setAttribute("gender", s.getgender());
             root.appendChild(stu);// 添加属性
 
-            // 创建文本姓名节点
-            Element name = doc.createElement("姓名");
+            // 创建文本name节点
+            Element name = doc.createElement("name");
             stu.appendChild(name);
             Text tname = doc.createTextNode(s.getName());
             name.appendChild(tname);
 
-            // 创建文本年龄节点
-            Element age = doc.createElement("年龄");
-            stu.appendChild(age); // 将age添加到学生节点上
+            // 创建文本age节点
+            Element age = doc.createElement("age");
+            stu.appendChild(age); // 将age添加到student节点上
             Text tage = doc.createTextNode(String.valueOf(s.getAge()));
             age.appendChild(tage); // 将文本节点放在age节点上
         }
@@ -165,7 +165,7 @@ public class XMLTestTakeOne {
      * 主函数
      */
     public static void main(String args[]) {
-        String str = "test.xml";
+        String str = "test.xml";//文件位置
         XMLTestTakeOne t = new XMLTestTakeOne();
         System.out.println("解析原始XML文件：");
         try {
@@ -174,7 +174,7 @@ public class XMLTestTakeOne {
             while (it.hasNext()) {
                 student s = (student) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
-                        + s.getSex());
+                        + s.getgender());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -189,7 +189,7 @@ public class XMLTestTakeOne {
             while (it.hasNext()) {
                 student s = (student) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
-                        + s.getSex());
+                        + s.getgender());
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -199,7 +199,7 @@ public class XMLTestTakeOne {
 }
 
 class student {
-    private String sex;
+    private String gender;
     private String name;
     private int age;
 
@@ -211,12 +211,12 @@ class student {
         this.age = age;
     }
 
-    public void setSex(String s) {
-        sex = s;
+    public void setgender(String s) {
+        gender = s;
     }
 
-    public String getSex() {
-        return sex;
+    public String getgender() {
+        return gender;
     }
 
     public void setName(String n) {
