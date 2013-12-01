@@ -14,7 +14,7 @@ package com.team7.minap.datacollection.values;
 import java.util.Scanner;
 public class InitialDiagnosis extends Value {
 
-	private static byte initialDiagnosis;
+	private static byte initialDiagnosis; // Field 2.01
 	private static String diagnosisLongCode; // to set field's long code value
 	
 	public InitialDiagnosis() {

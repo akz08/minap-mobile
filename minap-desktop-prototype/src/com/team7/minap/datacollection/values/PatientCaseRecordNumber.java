@@ -7,7 +7,6 @@
 package com.team7.minap.datacollection.values;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class PatientCaseRecordNumber extends Value {
 	
@@ -26,6 +25,10 @@ public class PatientCaseRecordNumber extends Value {
 			System.err.println("Invalid Length - Must be 10 Characters long");
 	}
 	
+	public static String getCaseNumber(){
+		return caseNumber;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String entry;
@@ -36,5 +39,4 @@ public class PatientCaseRecordNumber extends Value {
 		System.out.println("Patient Case Record Number: " + caseNumber);
 		sc.close();
 	}
-	// addded comment
 }
