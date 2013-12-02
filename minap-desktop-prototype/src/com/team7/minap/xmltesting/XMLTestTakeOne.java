@@ -23,7 +23,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
 public class XMLTestTakeOne {
-    Vector students_Vector;
+    Vector patients_Vector;
 
     private Vector readXMLFile(String file) throws Exception {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -31,14 +31,14 @@ public class XMLTestTakeOne {
         Document doc = builder.parse(file); // 获取到xml文件 // 
         // 下面开始读取 //start reading 
         Element root = doc.getDocumentElement(); // 获取根元素 
-        NodeList students = root.getElementsByTagName("student");
-        students_Vector = new Vector();
-        for (int i = 0; i < students.getLength(); i++) {
-            // 一次取得每一个student元素
-            Element ss = (Element) students.item(i);
+        NodeList patients = root.getElementsByTagName("patient");
+        patients_Vector = new Vector();
+        for (int i = 0; i < patients.getLength(); i++) {
+            // 一次取得每一个patient元素
+            Element ss = (Element) patients.item(i);
 
-            // 创建一个student的实例
-            student stu = new student();
+            // 创建一个patient的实例
+            patient stu = new patient();
             stu.setgender(ss.getAttribute("gender"));
 
             NodeList names = ss.getElementsByTagName("name");
@@ -51,9 +51,9 @@ public class XMLTestTakeOne {
             t = e.getFirstChild();
             stu.setAge(Integer.parseInt(t.getNodeValue()));
 
-            students_Vector.add(stu);
+            patients_Vector.add(stu);
         }
-        return students_Vector;
+        return patients_Vector;
     }
 
     /**
@@ -66,14 +66,14 @@ public class XMLTestTakeOne {
         Document doc = builder.parse(inputStream); //
         // 下面开始读取
         Element root = doc.getDocumentElement(); // 获取根元素
-        NodeList students = root.getElementsByTagName("student");
-        students_Vector = new Vector();
-        for (int i = 0; i < students.getLength(); i++) {
-            // 一次取得每一个student元素
-            Element ss = (Element) students.item(i);
+        NodeList patients = root.getElementsByTagName("patient");
+        patients_Vector = new Vector();
+        for (int i = 0; i < patients.getLength(); i++) {
+            // 一次取得每一个patient元素
+            Element ss = (Element) patients.item(i);
 
-            // 创建一个student的实例
-            student stu = new student();
+            // 创建一个patient的实例
+            patient stu = new patient();
             stu.setgender(ss.getAttribute("gender"));
 
             NodeList names = ss.getElementsByTagName("name");
@@ -86,9 +86,9 @@ public class XMLTestTakeOne {
             t = e.getFirstChild();
             stu.setAge(Integer.parseInt(t.getNodeValue()));
 
-            students_Vector.add(stu);
+            patients_Vector.add(stu);
         }
-        return students_Vector;
+        return patients_Vector;
     }
 
     // 将Document内容 写入XML字符串并返回
@@ -129,14 +129,14 @@ public class XMLTestTakeOne {
         }
         Document doc = builder.newDocument();
 
-        Element root = doc.createElement("studentnamelist");
+        Element root = doc.createElement("patientnamelist");
         doc.appendChild(root); // 将根元素添加到文档上
 
-        // 获取student信息
-        for (int i = 0; i < students_Vector.size(); i++) {
-            student s = (student) students_Vector.get(i);
-            // 创建一个student
-            Element stu = doc.createElement("student");
+        // 获取patient信息
+        for (int i = 0; i < patients_Vector.size(); i++) {
+            patient s = (patient) patients_Vector.get(i);
+            // 创建一个patient
+            Element stu = doc.createElement("patient");
             stu.setAttribute("gender", s.getgender());
             root.appendChild(stu);// 添加属性
 
@@ -148,7 +148,7 @@ public class XMLTestTakeOne {
 
             // 创建文本age节点
             Element age = doc.createElement("age");
-            stu.appendChild(age); // 将age添加到student节点上
+            stu.appendChild(age); // 将age添加到patient节点上
             Text tage = doc.createTextNode(String.valueOf(s.getAge()));
             age.appendChild(tage); // 将文本节点放在age节点上
         }
@@ -172,7 +172,7 @@ public class XMLTestTakeOne {
             Vector v = t.readXMLFile(str);
             Iterator it = v.iterator();
             while (it.hasNext()) {
-                student s = (student) it.next();
+                patient s = (patient) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
                         + s.getgender());
             }
@@ -187,7 +187,7 @@ public class XMLTestTakeOne {
             Iterator it = v.iterator();
             System.out.println("\n解析生成的XML字符串：");
             while (it.hasNext()) {
-                student s = (student) it.next();
+                patient s = (patient) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
                         + s.getgender());
             }
@@ -198,7 +198,7 @@ public class XMLTestTakeOne {
     }
 }
 
-class student {
+class patient {
     private String gender;
     private String name;
     private int age;

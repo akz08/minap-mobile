@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<patientnamelist>
+     <patient gender = "male">
+         <name>John</name>
+         <age>14</age>
+     </patient>
+     <patient gender = "female">
+         <name>Jane</name>
+         <age>16</age>
+     </patient>
+</patientnamelist>
