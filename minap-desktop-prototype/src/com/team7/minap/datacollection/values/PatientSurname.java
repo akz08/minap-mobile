@@ -2,6 +2,7 @@
  * Takes in an alphanumeric string that represents a patient's surname(s).
  * sName must be no more than 35 characters long. This field is encrypted
  * @param sName
+ * @author david
  */
 	
 package com.team7.minap.datacollection.values;
@@ -24,6 +25,10 @@ public class PatientSurname extends Value {
 		else
 			System.err.println("Invalid Length - Must be 35 Characters long");
 		
+	}
+	
+	public static String getSurname() {
+		return surname;
 	}
 	
 	public static void main(String[] args) {
