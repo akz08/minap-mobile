@@ -137,7 +137,7 @@ public class XMLTestTakeOne {
             patient s = (patient) patients_Vector.get(i);
             // 创建一个patient
             Element stu = doc.createElement("patient");
-            stu.setAttribute("gender", s.getgender());
+            stu.setAttribute("gender", s.getGender());
             root.appendChild(stu);// 添加属性
 
             // 创建文本name节点
@@ -174,8 +174,9 @@ public class XMLTestTakeOne {
             while (it.hasNext()) {
                 patient s = (patient) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
-                        + s.getgender());
+                        + s.getGender());
             }
+            
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -189,7 +190,7 @@ public class XMLTestTakeOne {
             while (it.hasNext()) {
                 patient s = (patient) it.next();
                 System.out.println(s.getName() + "\t" + s.getAge() + "\t"
-                        + s.getgender());
+                        + s.getGender());
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -215,7 +216,7 @@ class patient {
         gender = s;
     }
 
-    public String getgender() {
+    public String getGender() {
         return gender;
     }
 

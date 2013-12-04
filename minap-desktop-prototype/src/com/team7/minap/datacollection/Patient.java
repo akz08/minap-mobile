@@ -519,7 +519,7 @@ public class Patient {
 		pCABG = previousCABG;
 	}
 	
-	public static void setFamilyCHD (byte fCHD){//2.39, options, FamilyCHD
+	public static void setFamilyCHD (byte fCHD){//2.32, options, FamilyCHD
 		fCHD = familyCHD;
 	}
 	
