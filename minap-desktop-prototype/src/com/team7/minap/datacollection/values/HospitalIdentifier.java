@@ -6,6 +6,6 @@ public class HospitalIdentifier extends Value {
 		super("1.01", "The identifier allocated to the hospital by NICOR. Valid hospital identifiers are listed in a separate file.");
 	
 	}
-	
+	// Default value is user's own hospital
 }
 	

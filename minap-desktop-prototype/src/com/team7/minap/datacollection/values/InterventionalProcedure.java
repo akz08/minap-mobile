@@ -49,7 +49,7 @@ public class InterventionalProcedure extends Value {
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextByte();
 		setInterventionalProcedure(entry);
-		System.out.println("Initial Diagnosis: " + interventionalProcedure + " - " + procedureLongCode);
+		System.out.println("Intervetional Procedure: " + interventionalProcedure + " - " + procedureLongCode);
 		sc.close();
 	}
 }

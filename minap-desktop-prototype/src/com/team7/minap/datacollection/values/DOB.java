@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class DOB extends Value {
 	
 	private static Date dob; // field 1.06
-	private static final String DATE_FORMAT = "01/01/1880"; // set valid date format string (i.e. string version of VALID_SINCE
+	private static final String DATE_FORMAT = "01/01/1900"; // set valid date format string (i.e. string version of VALID_SINCE
 	private static Date now = new Date(); // to compare when setting a date in setDOB
 	static SimpleDateFormat sd = new SimpleDateFormat("dd/mm/yyyy"); // date formatter
 
@@ -29,7 +29,7 @@ public class DOB extends Value {
 		if (bDate.after(VALID_SINCE) && bDate.before(now))
 			dob = bDate;
 		else
-			System.err.print("Invalid Date");
+			System.err.print("Invalid Date - Patient must be older than 20 years of age");
 	}
 	
 	public static void main(String[] args) throws ParseException {

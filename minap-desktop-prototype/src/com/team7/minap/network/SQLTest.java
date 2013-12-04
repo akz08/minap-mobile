@@ -23,10 +23,12 @@ public class SQLTest {
         Connection connection = null;
         Statement statement = null; 
         
-        String query = "SELECT * FROM patient";
+        String query = "SELECT * from patient";
+        String query2 = "UPDATE patient SET Forename='Jane' WHERE PatientCaseRecordNo='1234567890'";
         try {
             connection = SqlConnector.getConnection();
             statement = connection.createStatement();
+            statement.executeUpdate(query2);
             rs = statement.executeQuery(query);
  
             if (rs.next()) {

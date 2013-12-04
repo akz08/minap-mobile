@@ -43,7 +43,7 @@ public class Gender extends Value {
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextByte();
 		setPatientGender(entry);
-		System.out.println("Initial Diagnosis: " + patientGender + " - " + genderLongCode);
+		System.out.println("Gender: " + patientGender + " - " + genderLongCode);
 		sc.close();
 	}
 }

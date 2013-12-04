@@ -24,7 +24,7 @@ public class NHSNumber extends Value{
 		if (nhsNum.length() == VAL_LENGTH && nhsNum.matches("[0-9]+"))
 			nhsNumber = nhsNum;
 		else
-			System.err.println("Invalid Length - Must be 10 Characters long");
+			System.err.println("Invalid Length - Must be 10 digits long");
 		
 	}
 	
