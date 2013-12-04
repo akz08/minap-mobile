@@ -11,7 +11,7 @@ public class Height extends Value {
 	public static void setHeight (double h){
 		if (0.00<=h && h<=999.99){
 			h = height;
-			}
+		}
 		else{
 			System.out.println("Invalid Entry");
 		// set additional fields to visible here

@@ -11,7 +11,7 @@ public class Weight extends Value {
 	public static void setWeight (double w){
 		if (0.00<=w && w<=999.99){
 			w = weight;
-			}
+		}
 		else{
 			System.out.println("Invalid Entry");
 		// set additional fields to visible here
