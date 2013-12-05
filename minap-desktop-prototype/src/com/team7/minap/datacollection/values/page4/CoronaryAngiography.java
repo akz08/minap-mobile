@@ -11,7 +11,7 @@ public class CoronaryAngiography extends Value {
 	}
 	public static void setCoronaryAngiography(byte cAngiography) {
 		// check if valid entry
-		if (cAngiography == 1 || cAngiography == 2 || cAngiography == 3 || cAngiography == 4 || cAngiography == 8 || cAngiography == 9) {
+		if (cAngiography == 1 || cAngiography == 2 || cAngiography == 3 || cAngiography == 4 || cAngiography == 5 || cAngiography == 6 || cAngiography == 7 || cAngiography == 8 || cAngiography == 9) {
 			cAngiography = coronaryAngiography;
 			switch (coronaryAngiography) {
 			case 1 : coronaryAngiographyLongCode = "Protocol driven investigation performed in this hospital"; break; //Angiography indicated on basis of risk factors.
