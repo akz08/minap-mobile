@@ -28,7 +28,7 @@ public class NHSNumber extends Value{
 		
 	}
 	
-	public static String getForename() {
+	public static String getNHSNum() {
 		return nhsNumber;
 	}
 	
@@ -39,7 +39,7 @@ public class NHSNumber extends Value{
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextLine();
 		setNHSNum(entry);
-		System.out.println("Patient Case Record Number: " + nhsNumber);
+		System.out.println("Patient NHS Number: " + nhsNumber);
 		sc.close();
 	}
 }

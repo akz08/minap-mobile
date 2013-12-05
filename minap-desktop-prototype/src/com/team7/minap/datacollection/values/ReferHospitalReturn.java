@@ -31,6 +31,10 @@ public class ReferHospitalReturn extends Value {
 			System.err.print("Invalid Date");
 	}
 	
+	public static Date getRDate() {
+		return rDate;
+	}
+	
 	public static void main(String[] args) throws ParseException {
 		// Testing main method
 		String entry;

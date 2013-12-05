@@ -16,7 +16,7 @@ package com.team7.minap.datacollection.values;
 import java.util.Scanner;
 public class PatientEthnicity extends Value {
 
-	private static byte ethnicity; // Field 4.29
+	private static byte ethnicity; // Field 1.13
 	private static String ethnicLongCode; // to set field's long code value
 	
 	public PatientEthnicity() {
@@ -40,6 +40,10 @@ public class PatientEthnicity extends Value {
 		else
 			System.err.println("Invalid Entry");
 		// set additional fields to visible here
+	}
+	
+	public static byte getEthnicity() {
+		return ethnicity;
 	}
 	
 	public static void main(String[] args) {

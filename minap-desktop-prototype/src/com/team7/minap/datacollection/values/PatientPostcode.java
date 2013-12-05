@@ -1,5 +1,5 @@
-/** Field 1.10 - Patient postcode
- * Takes in an alphanumeric string that represents a patient's postcode.
+/** Field 1.10 - Patient post code
+ * Takes in an alphanumeric string that represents a patient's post code.
  * pCode must be 8 characters long. This field is encrypted.
  * @param pCode
  * @author david
@@ -18,7 +18,7 @@ public class PatientPostcode extends Value{
 				+ "as their main permanent residence. Use pseudo postcodes for visitors.");
 	}
 	
-	public static void setForename(String pCode) {
+	public static void setPostcode(String pCode) {
 		// length check
 		if (pCode.length() <= VAL_LENGTH && (pCode.matches("[a-zA-Z]+[0-9]+[a-zA-Z]*[ ][0-9][a-zA-Z]+") || pCode.matches("zz99")))
 			postCode = pCode;
@@ -27,7 +27,7 @@ public class PatientPostcode extends Value{
 		
 	}
 	
-	public static String getGPCode() {
+	public static String getPostcode() {
 		return postCode;
 	}
 	
@@ -37,7 +37,7 @@ public class PatientPostcode extends Value{
 		System.out.println("Enter a Patient's postcode (Valid Entries: a string of 8 alphanumeric characters)");
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextLine();
-		setForename(entry);
+		setPostcode(entry);
 		System.out.println("Patient Case Record Number: " + postCode);
 		sc.close();
 	}

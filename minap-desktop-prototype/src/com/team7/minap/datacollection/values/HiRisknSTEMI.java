@@ -13,11 +13,11 @@ package com.team7.minap.datacollection.values;
 import java.util.Scanner;
 public class HiRisknSTEMI extends Value {
 
-	private static byte hiRisknSTEMI; // Field 2.01
+	private static byte hiRisknSTEMI; // Field 4.32
 	private static String nSTEMILongCode; // to set field's long code value
 	
 	public HiRisknSTEMI() {
-		super("2.01", "Patients clinically suspected as having a non-ST elevation acute coronary syndrome (NSTEACS) "
+		super("4.32", "Patients clinically suspected as having a non-ST elevation acute coronary syndrome (NSTEACS) "
 				+ "with on-going or recurrent chest pain/discomfort believed to be of cardiac origin, together with "
 				+ "at least one of the following: Persistent ECG changes of ST depression >1mm, or transient ST elevation; "
 				+ "Pathological T wave inversion in V1-V4 suggesting an 'LAD syndrome'; Dynamic T wave inversion >2mm in two "
@@ -46,6 +46,10 @@ public class HiRisknSTEMI extends Value {
 		// set additional fields to visible here
 	}
 	
+	public static byte getHiRisknSTEMI() {
+		return hiRisknSTEMI;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		byte entry;
@@ -53,7 +57,7 @@ public class HiRisknSTEMI extends Value {
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextByte();
 		setHiRisknSTEMI(entry);
-		System.out.println("Initial Diagnosis: " + hiRisknSTEMI + " - " + nSTEMILongCode);
+		System.out.println("High Risk nSTEMI: " + hiRisknSTEMI + " - " + nSTEMILongCode);
 		sc.close();
 	}
 }

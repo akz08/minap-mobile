@@ -30,6 +30,10 @@ public class AdmissionDate extends Value {
 			System.err.print("Invalid Date");
 	}
 	
+	public static Date getADate() {
+		return aDate;
+	}
+	
 	public static void main(String[] args) throws ParseException {
 		// Testing main method
 		String entry;

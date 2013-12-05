@@ -42,6 +42,10 @@ public class InterventionalProcedure extends Value {
 		// set additional fields to visible here
 	}
 	
+	public static byte getInterventionalProcedure() {
+		return interventionalProcedure;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		byte entry;
@@ -49,7 +53,7 @@ public class InterventionalProcedure extends Value {
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextByte();
 		setInterventionalProcedure(entry);
-		System.out.println("Intervetional Procedure: " + interventionalProcedure + " - " + procedureLongCode);
+		System.out.println("Interventional Procedure: " + interventionalProcedure + " - " + procedureLongCode);
 		sc.close();
 	}
 }

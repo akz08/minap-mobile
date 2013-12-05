@@ -1,7 +1,7 @@
 /** Field 1.05 - Patient forename
  * Takes in an alphanumeric string that represents a patient's forename(s).
  * fName must be no more than 35 characters long. This field is encrypted
- * @param sName
+ * @param fName
  * @author david
  */
 package com.team7.minap.datacollection.values;
@@ -32,11 +32,11 @@ public class PatientForename extends Value{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String entry;
-		System.out.println("Enter a Patient's surname (Valid Entries: a string of 35 or less alphanumeric characters)");
+		System.out.println("Enter a Patient's forename (Valid Entries: a string of 35 or less alphanumeric characters)");
 		Scanner sc = new Scanner(System.in);
 		entry = sc.nextLine();
 		setForename(entry);
-		System.out.println("Patient Case Record Number: " + forename);
+		System.out.println("Patient Forename: " + forename);
 		sc.close();
 	}
 }

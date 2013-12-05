@@ -36,6 +36,10 @@ public class Gender extends Value {
 		// set additional fields to visible here
 	}
 	
+	public static byte getPatientGender() {
+		return patientGender;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		byte entry;

@@ -39,6 +39,10 @@ public class InitialDiagnosis extends Value {
 		// set additional fields to visible here
 	}
 	
+	public static byte getInitialDiagnosis() {
+		return initialDiagnosis;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		byte entry;
