@@ -391,23 +391,28 @@ public class Patient {
 	}
 	
 	public static void setReferralDate (Date rDate){//4.15, date, Date/time of referral for investigation/intervention
+													//Data value must fall between 1st Jan 2000 and today's date.
 		rDate = referralDate;
 	}
 	
 	public static void setAngioDate (Date aDate){//4.18, data, Angio date/time
+												//Data value must fall between 1st Jan 2000 and today's date.
 		aDate = angioDate;
 	}
 	
 	public static void setLocalInterventionDate (Date lInterventionDate){//4.19, date, Local intervention date
+																		//Data value must fall between 1st Jan 2000 and today's date.
 		lInterventionDate = localInterventionDate;
 	}
 	
 	public static void setDaycaseTransferDate (Date dTransferDate){//4.17,date, Daycase transfer date
+																	//Data value must fall between 1st Jan 2000 and today's date.
 		dTransferDate = daycaseTransferDate;
 	
 	}
 	
 	public static void setAngioReferHospitalReturnDate (Date aReferHospitalReturnDate){//4.26, date, Date of return to referring hospital
+																						//Data value must fall between 1st Jan 2000 and today's date.
 		aReferHospitalReturnDate = angioReferHospitalReturnDate;
 	}
 	
