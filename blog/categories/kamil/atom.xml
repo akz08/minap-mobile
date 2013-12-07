@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: short | App Team 7]]></title>
-  <link href="http://akz08.github.io/minap-mobile/blog/categories/short/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Kamil | App Team 7]]></title>
+  <link href="http://akz08.github.io/minap-mobile/blog/categories/kamil/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
   <updated>2013-12-07T13:46:56+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
@@ -23,15 +23,6 @@
 <p>All posts will be tagged with the name of the author, with the tags always being visible when viewing the &lsquo;Archives&rsquo; section of this blog. You can always return to the main view by clicking (or tapping) on the title at the top of the page.</p>
 
 <p><img src="./images/click_title.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First steps]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/11/06/first-steps/"/>
-    <updated>2013-11-06T00:28:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/11/06/first-steps</id>
-    <content type="html"><![CDATA[<p>First blog post! We will hopefully be documenting here how we work our way to developing a (hopefully) successful mobile medical data collection app. Stay tuned&hellip;</p>
 ]]></content>
   </entry>
   
