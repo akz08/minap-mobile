@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://akz08.github.io/minap-mobile/sitemap.xml 
