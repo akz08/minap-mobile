@@ -24,10 +24,6 @@ public class Hypertension extends Value{
 			System.out.println("Invalid Entry");
 		// set additional fields to visible here
 	}
-	
-	public static void main(String[] args) {
-		
 
-	}
 
 }
