@@ -16,7 +16,7 @@ public class AngioDelay extends Value {
 			switch (angioDelay) {
 			case 0 : angioDelayLongCode = "None"; break; //Angiogram performed within 96 hours from arrival at the first hospital
 			case 1 : angioDelayLongCode = "Delay due to comorbid clinical condition/ competing clinical issue"; break; //For example an infection, barrier nursing, active bleeding.
-			case 2 : angioDelayLongCode = "Capacity issues"; break;//Might include delayed transfer to the interventional hospital 																													//The hospital may be within or outside your own Trust.
+			case 2 : angioDelayLongCode = "Capacity issues"; break;//Might include delayed transfer to the interventional hospital 		
 			case 3 : angioDelayLongCode = "Patient preference"; break;
 			case 8 : angioDelayLongCode = "Other"; break;
 			case 9 : angioDelayLongCode = "Unknown"; break;
