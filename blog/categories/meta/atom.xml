@@ -4,7 +4,7 @@
   <title><![CDATA[Category: meta | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/meta/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2013-12-13T18:39:05+00:00</updated>
+  <updated>2013-12-13T18:50:01+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Running Commentary]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/running-commentary/"/>
+    <updated>2013-12-13T18:46:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/13/running-commentary</id>
+    <content type="html"><![CDATA[<p>Comments are now enabled on all posts!</p>
+
+<p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gearing up]]></title>
