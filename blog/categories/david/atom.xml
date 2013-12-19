@@ -4,7 +4,7 @@
   <title><![CDATA[Category: David | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/david/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2013-12-13T19:00:35+00:00</updated>
+  <updated>2013-12-19T14:25:22+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Looking Inside]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/15/looking-inside/"/>
+    <updated>2013-12-15T14:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/15/looking-inside</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for David&rsquo;s blog post for current web app analysis.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coming Out]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out/"/>
+    <updated>2013-12-14T12:09:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for David&rsquo;s blog post for client &amp; project background.</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Meet Julie]]></title>
@@ -113,104 +131,6 @@
 <p>Coding took place throughout most of these four days. During coding breaks, the team worked on the project report, Gantt chart, data dictionary, or UML specifications.</p>
 
 <p>On Sunday, November 24th, at 4:52 P.M., the team gathered all it sources and turned the project in for marking.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Week 2]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/11/18/week-2/"/>
-    <updated>2013-11-18T09:25:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/11/18/week-2</id>
-    <content type="html"><![CDATA[<h3>Monday &ndash; Nov. 11</h3>
-
-<hr />
-
-<p>The entirety of today&rsquo;s meeting was given to the development of an XML structure for the application. While an XML schema was previously designed, actual coding proved problematic.</p>
-
-<h3>Tuesday &ndash; Nov. 12</h3>
-
-<hr />
-
-<p>As with yesterday&rsquo;s meeting, the team continued to work on an XML solution.</p>
-
-<p>On a brighter note, there may be a different way to get the Domino side of the client&rsquo;s application to the product.</p>
-
-<h3>Wednesday &ndash; Nov. 13</h3>
-
-<hr />
-
-<p>Today&rsquo;s meeting was less formal. XML continues to be worked on. The team requested a meeting with the client in order to present early GUI designs and, if possible, speak to the current application&rsquo;s developer. The client soon set a meeting for Friday 15th.</p>
-
-<h3>Thursday &ndash; Nov. 14</h3>
-
-<hr />
-
-<p>XML was set aside for this meeting as the team focused on getting a better grip on the GUI designs as well as developing questions and talking points for tomorrow&rsquo;s meeting with the client.</p>
-
-<h3>Friday &ndash; Nov. 15</h3>
-
-<hr />
-
-<p>Meeting with client.</p>
-
-<p>While the majority of the GUI design was deemed appropriate, a navigation screen will likely have to be entirely redesigned as it could prove unwieldy for handheld platforms.</p>
-
-<p>The client also provided further insight to the processes behind the current application in use as well as the background of the client&rsquo;s company. Unfortunately, the current application&rsquo;s developer was not able to join the team. A meeting has been set for Tuesday 19th.</p>
-
-<p>The team also agreed to help develop a survey to find the extent of the usefulness of the proposed product as well as to provide further information about use cases for the current application.</p>
-
-<p>The app dev team will complete University tasks for the product during the weekend and start the coding process on Monday 18th.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Week 1]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/11/11/week-1/"/>
-    <updated>2013-11-11T10:45:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/11/11/week-1</id>
-    <content type="html"><![CDATA[<h3>Monday &ndash; Nov. 4</h3>
-
-<hr />
-
-<p>Working off Friday&rsquo;s rough sketch, the app dev team fleshed out the specifications for the product. Architectural Decisions were put in place as well as a Client &ndash; Server interaction diagram.</p>
-
-<p>The team then moved on to decide the structure of the XML files that will be used in the product&rsquo;s backend SQL Database. The frontend was also touched upon as GUIs were sketched and then integrated into the model.</p>
-
-<h3>Tuesday &ndash; Nov. 5</h3>
-
-<hr />
-
-<p>The software Domingo was seen as a plausible option to network the client&rsquo;s Domino server to the app team&rsquo;s Java product. A short run-through at the beginning of this day quickly showed that more information would be needed.</p>
-
-<p>The app dev team then proceeded to install and familiarize themselves with GitHub and its workings related to both Eclipse and other application.</p>
-
-<p>The bulk of the meeting was then spent on converting Monday&rsquo;s sketches into classes and deciding how these mock Classes would interact with each other based on the current software&rsquo;s documents provided by the client. Along the way, the team encountered some unclear points that were, at the end of the meeting, communicated to the client asking for clarification.</p>
-
-<h3>Wednesday &ndash; Nov. 6</h3>
-
-<hr />
-
-<p>Today&rsquo;s meeting started with a discussion of the requirements for this project as outlined in the University&rsquo;s email. It was deemed that the app dev team was on the right track as per said requirements. This was followed by discussing the client&rsquo;s reply to the previous meeting&rsquo;s questions.</p>
-
-<p>Clarifications noted, the team moved on to set up a collaborative coding environment. The applications Trello, WeChat and WindowBuilder for Eclipse were installed on the necessary terminals for each team member. Team roles were also assigned.</p>
-
-<p>Class construction followed. Possible methods for classes were discussed and written down. Inheritance was discussed and XML configuration was delved further into.</p>
-
-<h3>Thursday &ndash; Nov. 7</h3>
-
-<hr />
-
-<p>The meeting started with some further discussion into Domingo and the possible limitations of it. The JDBC Java library was then seen into as a possible way to have the XML configuration files &ldquo;talk&rdquo; to the SQL end of the product.</p>
-
-<p>Logical steps for the product were then discussed; from communication with the Domino server, to the display of a GUI on the chosen platform and back to the Domino server as a write operation.</p>
-
-<h3>Friday &ndash; Nov. 8</h3>
-
-<hr />
-
-<p>Domingo has proven to be unrealiable as a solution to the team&rsquo;s need for a way to communicate with the client&rsquo;s Domino server. A different way to meet this goal must be found.</p>
-
-<p>The app dev team then agreed to hold the next meeting on Monday the 11th</p>
 ]]></content>
   </entry>
   

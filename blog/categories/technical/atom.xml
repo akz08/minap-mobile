@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: technical | App Team 7]]></title>
+  <link href="http://akz08.github.io/minap-mobile/blog/categories/technical/atom.xml" rel="self"/>
+  <link href="http://akz08.github.io/minap-mobile/"/>
+  <updated>2013-12-19T14:25:22+00:00</updated>
+  <id>http://akz08.github.io/minap-mobile/</id>
+  <author>
+    <name><![CDATA[David, Kamil, Ke]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Platform Choice]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice/"/>
+    <updated>2013-12-18T18:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 18/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+</feed>

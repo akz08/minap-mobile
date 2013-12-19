@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCI | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/hci/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2013-12-13T19:00:35+00:00</updated>
+  <updated>2013-12-19T14:25:22+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -14,21 +14,47 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Meet Julie]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/02/meet-julie/"/>
-    <updated>2013-12-02T17:39:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/02/meet-julie</id>
-    <content type="html"><![CDATA[<p>In order to get a better grasp on the usability and usage of the project. The team would like to introduce our persona, Julie.</p>
-
-<p><img class="<a" src="href="http://placekitten.com/200/200">http://placekitten.com/200/200</a>" title="Place Kitten" ></p>
-
-<p>Julie is a 28-year-old Nurse working in the General Hospital (MINAP Code: YYY). She is in charge of admitting and taking care of all types of patients at General Hospital.</p>
-
-<p>Due to budget constraints, Julie cares for multiple patients at the same time gathering data for other organizations in addition to MINAP. Since entering a patient&rsquo;s data for MINAP&rsquo;s web application requires being physically in front of a computer as well as time to complete the record, Julie finds the whole process &ldquo;unwieldy&rdquo;.</p>
-
-<p>Julie is tech-savvy in that she owns a smartphone, she has never used it for work, though. However, as she has some time with the patient while they are being admitted, Julie wonders if she could at least flag the patient for later input to MINAP&rsquo;s database through her smartphone.</p>
-
-<p>As she checks in a new patient, Julie wonders&hellip; &ldquo;Is there an app for that?&rdquo;</p>
+    <title type="html"><![CDATA[Playing With Paper]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
+    <updated>2013-12-20T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post detailing the process of UI paper prototyping and client feedback.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android UI Elements]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements/"/>
+    <updated>2013-12-19T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android Design]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
+    <updated>2013-12-19T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finding Competition]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition/"/>
+    <updated>2013-12-17T14:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 3/12, pending addition of new competitor app.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Looking Deeper]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper/"/>
+    <updated>2013-12-16T14:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post looking into information organisation and design conventions used in current web app.</em></p>
 ]]></content>
   </entry>
   

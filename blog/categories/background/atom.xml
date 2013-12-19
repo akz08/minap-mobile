@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: background | App Team 7]]></title>
+  <link href="http://akz08.github.io/minap-mobile/blog/categories/background/atom.xml" rel="self"/>
+  <link href="http://akz08.github.io/minap-mobile/"/>
+  <updated>2013-12-19T14:25:22+00:00</updated>
+  <id>http://akz08.github.io/minap-mobile/</id>
+  <author>
+    <name><![CDATA[David, Kamil, Ke]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Coming Out]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out/"/>
+    <updated>2013-12-14T12:09:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for David&rsquo;s blog post for client &amp; project background.</em></p>
+]]></content>
+  </entry>
+  
+</feed>

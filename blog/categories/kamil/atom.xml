@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Kamil | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/kamil/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2013-12-13T19:00:35+00:00</updated>
+  <updated>2013-12-19T14:25:22+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -14,26 +14,47 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Running Commentary]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/running-commentary/"/>
-    <updated>2013-12-13T18:46:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/13/running-commentary</id>
-    <content type="html"><![CDATA[<p>Comments are now enabled on all posts!</p>
-
-<p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
+    <title type="html"><![CDATA[Playing With Paper]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
+    <updated>2013-12-20T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
+    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post detailing the process of UI paper prototyping and client feedback.</em></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Gearing up]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/02/gearing-up/"/>
-    <updated>2013-12-02T16:02:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/02/gearing-up</id>
-    <content type="html"><![CDATA[<p>With the final deadline fast approaching (Jan 21st) and the holiday season nearing (and the introduction of the new HCI coursework requirements), David will be taking a break from writing up weekly posts on meeting minutes. All of the team will be pitching in to write up individual posts relating to their work being done.</p>
-
-<p>All posts will be tagged with the name of the author, with the tags always being visible when viewing the &lsquo;Archives&rsquo; section of this blog. You can always return to the main view by clicking (or tapping) on the title at the top of the page.</p>
-
-<p><img src="./images/click_title.png"></p>
+    <title type="html"><![CDATA[Android UI Elements]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements/"/>
+    <updated>2013-12-19T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android Design]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
+    <updated>2013-12-19T14:02:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Platform Choice]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice/"/>
+    <updated>2013-12-18T18:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 18/12, pending review.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Finding Competition]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition/"/>
+    <updated>2013-12-17T14:01:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition</id>
+    <content type="html"><![CDATA[<p><em>First draft completed 3/12, pending addition of new competitor app.</em></p>
 ]]></content>
   </entry>
   
