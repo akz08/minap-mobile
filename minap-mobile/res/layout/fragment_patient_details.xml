@@ -6,8 +6,8 @@
 <LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:orientation="vertical" >
     
 	<LinearLayout
@@ -40,6 +40,7 @@
 		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_nhs_number"
 		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
 	    	/>
 	    <EditText 
 	        android:id="@+id/nhs_number"
@@ -54,6 +55,7 @@
 		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_date_of_birth"
 		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
 	    	/>
 	    <TextView 
 	        android:id="@+id/date_of_birth"
@@ -67,6 +69,7 @@
 		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_admission_date_time"
 		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
 	    	/>
 	    <LinearLayout
 		    android:layout_width="match_parent"
@@ -94,6 +97,7 @@
 		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_hospital"
 		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
 	    	/>
 	    <Spinner 
 	        android:id="@+id/hospitals_spinner"
@@ -113,6 +117,8 @@
          android:text="@string/confirm"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
+         android:layout_marginTop="8dp"
+         android:layout_marginBottom="8dp"
          />
     
 </LinearLayout>
