@@ -264,7 +264,41 @@
 <time datetime="2013-12-15T14:01:00+00:00" pubdate data-updated="true">Dec 15<span>th</span>, 2013</time></div>
 	</header>
 	<div class="entry-content">
-		<p><em>Placeholder text for David&rsquo;s blog post for current web app analysis.</em></p>
+		<h3>Current Solution Analysis</h3>
+
+<p>MINAP&rsquo;s participants use a web application for data capture. The web application is limited in its use to the Windows platform as well as to the Internet Explorer (ver 9 and below) web browser. While hospitals and clinics have this in mind, and thus have their equipment ready for these limitations, newer participants may need to go out of their way to accommodate MINAP&rsquo;s needs.</p>
+
+<h3>Logging in</h3>
+
+<p><img src="/minap-mobile/images/login.png" title="Login Screen" ></p>
+
+<p>Authorised users are given a set of credentials unique to them. These credentials then create a session that keeps track of both the user and the user&rsquo;s workplace throughout the data capture process and are automatically filled in to the appropriate fields in the web application.</p>
+
+<p><img src="/minap-mobile/images/legal.png" title="Legal Start Screen" ></p>
+
+<p>If the user&rsquo;s log in details are cleared against MINAP&rsquo;s users database, a legal disclaimer page will be shown in order to protect the sensitive data about to be used.</p>
+
+<h3>Data Capture</h3>
+
+<p><img src="/minap-mobile/images/initial-diagnosis.png" title="Initial Diagnosis Screen" ></p>
+
+<p>Data Capture itself can take several minutes to an hour depending on the patient&rsquo;s information. The navigation buttons along the left side of the screen are of no concern for this project. The right side of the screen will display the patient&rsquo;s demographic information as well as identifying the user that created the record in use across the top half.</p>
+
+<p>Each pages&#8217; bottom half will display the controls necessary to capture the patient&rsquo;s information. Controls that may be used include (but are not limited to) text fields, buttons, radio buttons, dropdown lists, and calendar input boxes. Data validation can happen once exiting the particular field or page, or when saving the record. In addition each field contains a tool tip for the information that it captures as well as the corresponding field number in MINAP&rsquo;s dataset.</p>
+
+<p>Navigation-wise, each page has at least three buttons: &ldquo;Save&rdquo; places all data onto a permanent record (it will not, however, navigate or indicate in any way that the saving has taken place); &ldquo;Close&rdquo; will end the data capture without saving progress (a message box will inform the user of this), the user will then be directed to a listing of all patients entered into the system. The other three buttons: &ldquo;Next&rdquo;, &ldquo;Back&rdquo; and what MINAP refers to as the &ldquo;Compass&rdquo; need further looking into.</p>
+
+<p><img src="/minap-mobile/images/compass-screen.png" title="Compass Screen" ></p>
+
+<p>The &ldquo;Compass&rdquo; is, in essence, a navigation map. Pressing this button will bring the user to a flow-diagram-like display of the pages that are available for data capture. The user can then navigate directly to the page desired provided it is available. If the &ldquo;Compass&rdquo; is not used, the web app has a linear way of navigating through screens. &ldquo;Next&rdquo; and &ldquo;Back&rdquo; will fulfill the expected functions in this linear way. It should be noted that if the user accessed a page via the &ldquo;Compass&rdquo; page, pressing &ldquo;Back&rdquo; will not bring up the &ldquo;Compass&rdquo;, but the page that precedes the current display in the previously mentioned linear navigation.</p>
+
+<p>It must be mentioned that throughout the data capture process, the decisions made across certain field or fields will trigger the appearance of one or more fields and even entire pages for further capture.</p>
+
+<h3>Conclusions</h3>
+
+<p>While the web app MINAP currently uses has served its purpose, it could stand to receive an update. There are areas that are no longer obscure to its users only because of their current use of the app. As a group, we had a tough time getting to know the finer details of the system and even our client had to, at times, consul with her coworkers in order to answer some of out questions.</p>
+
+<p>In our solution, we must do away with as many of these gray areas and make our solution as intuitive as possible without losing major functionality.</p>
 
 		
 		
