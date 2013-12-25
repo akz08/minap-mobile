@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class PatientDetailsFragment extends Fragment {
 	
 	private static final String DIALOG_DATE = "date";
+	private static final String DIALOG_TIME = "time";
 	
 	Spinner mHospitalSpinner;
 	Button mConfirmButton;
@@ -39,7 +40,8 @@ public class PatientDetailsFragment extends Fragment {
 			public void onClick(View v) {
 				FragmentManager fm = getActivity()
 						.getSupportFragmentManager();
-				DatePickerFragment dialog = new DatePickerFragment();
+				DatePickerFragment dialog = DatePickerFragment
+						.newInstance(getString(R.string.value_date_picker_title_date_of_birth));
 				dialog.show(fm, DIALOG_DATE);
 				
 			}
@@ -52,7 +54,8 @@ public class PatientDetailsFragment extends Fragment {
 			public void onClick(View v) {
 				FragmentManager fm = getActivity()
 						.getSupportFragmentManager();
-				DatePickerFragment dialog = new DatePickerFragment();
+				DatePickerFragment dialog = DatePickerFragment
+						.newInstance(getString(R.string.value_date_picker_title_admission_date));
 				dialog.show(fm, DIALOG_DATE);
 				
 			}
@@ -65,8 +68,9 @@ public class PatientDetailsFragment extends Fragment {
 			public void onClick(View v) {
 				FragmentManager fm = getActivity()
 						.getSupportFragmentManager();
-				DatePickerFragment dialog = new DatePickerFragment();
-				dialog.show(fm, DIALOG_DATE);
+				TimePickerFragment dialog = TimePickerFragment
+						.newInstance(getString(R.string.value_time_picker_title_admission_time));
+				dialog.show(fm, DIALOG_TIME);
 				
 			}
 		});

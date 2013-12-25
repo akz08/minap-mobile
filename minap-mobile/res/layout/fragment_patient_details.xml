@@ -26,6 +26,8 @@
 	        android:layout_height="wrap_content"
 	        android:hint="@string/value_hint_first_name"
 	        android:singleLine="true"
+	        android:inputType="textNoSuggestions"
+	        android:imeOptions="flagNoExtractUi"
 			/>
 	    <EditText 
 	        android:id="@+id/surname"
@@ -33,6 +35,8 @@
 	        android:layout_height="wrap_content"
 	        android:hint="@string/value_hint_surname"
 	        android:singleLine="true"
+	        android:inputType="textNoSuggestions"
+	        android:imeOptions="flagNoExtractUi"
 			/>
 	    
 	    <TextView
