@@ -23,12 +23,19 @@ Data Capture
 
 Data Capture itself can take several minutes to an hour depending on the patient's information. The navigation buttons along the left side of the screen are of no concern for this project. The right side of the screen will display the patient's demographic information as well as identifying the user that created the record in use across the top half.
 
-Each pages' bottom half will display the controls necessary to capture the patient's information. Controls that may be used include (but are not limited to) text fields, buttons, radio buttons, dropdown lists, and calendar input boxes. In addition each field contains a tool tip for the information that it captures as well as the corresponding field number in MINAP's dataset.
+Each pages' bottom half will display the controls necessary to capture the patient's information. Controls that may be used include (but are not limited to) text fields, buttons, radio buttons, dropdown lists, and calendar input boxes. Data validation can happen once exiting the particular field or page, or when saving the record. In addition each field contains a tool tip for the information that it captures as well as the corresponding field number in MINAP's dataset.
 
-Navigation-wise, each page has at least three buttons: "Save" places all data onto a permanent record; "Close" will end the data capture without saving progress (a message box will inform the user of this), the user will then be directed to a listing of all patients entered into the system. The other three buttons: "Next", "Back" and what MINAP refers to as the "Compass" need further looking into.
+Navigation-wise, each page has at least three buttons: "Save" places all data onto a permanent record (it will not, however, navigate or indicate in any way that the saving has taken place); "Close" will end the data capture without saving progress (a message box will inform the user of this), the user will then be directed to a listing of all patients entered into the system. The other three buttons: "Next", "Back" and what MINAP refers to as the "Compass" need further looking into.
 
 [insert compass screencap]
 
 The "Compass" is, in essence, a navigation map. Pressing this button will bring the user to a flow-diagram-like display of the pages that are available for data capture. The user can then navigate directly to the page desired provided it is available. If the "Compass" is not used, the web app has a linear way of navigating through screens. "Next" and "Back" will fulfill the expected functions in this linear way. It should be noted that if the user accessed a page via the "Compass" page, pressing "Back" will not bring up the "Compass", but the page that precedes the current display in the previously mentioned linear navigation.
 
 It must be mentioned that throughout the data capture process, the decisions made across certain field or fields will trigger the appearance of one or more fields and even entire pages for further capture.
+
+Conclusions
+------------
+
+While the web app MINAP currently uses has served its purpose, it could stand to receive an update. There are areas that are no longer obscure to its users only because of their current use of the app. As a group, we had a tough time getting to know the finer details of the system and even our client had to, at times, consul with her coworkers in order to answer some of out questions. 
+
+In our solution, we must do away with as many of these gray areas and make our solution as intuitive as possible without losing major functionality.
