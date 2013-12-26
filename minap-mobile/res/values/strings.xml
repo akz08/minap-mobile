@@ -328,6 +328,8 @@
     <string name="current_patient_name"></string>
     <string name="current_patient_number"></string>
     
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
     <string-array name="navigation_array">
         <item>@string/title_initial_diagnosis</item>
         <item>@string/title_demographics_and_admission</item>
