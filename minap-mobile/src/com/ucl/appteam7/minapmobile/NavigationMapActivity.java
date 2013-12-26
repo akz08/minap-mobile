@@ -6,7 +6,9 @@ public class NavigationMapActivity extends SingleFragmentActivity {
 
 	@Override
 	protected Fragment createFragment() {
-		return new NavigationMapFragment();
+		boolean firstLogin = (boolean)getIntent()
+				.getBooleanExtra(NavigationMapFragment.EXTRA_FIRST_LOGIN, false);
+		return NavigationMapFragment.newInstance(firstLogin);
 	}
 
 }

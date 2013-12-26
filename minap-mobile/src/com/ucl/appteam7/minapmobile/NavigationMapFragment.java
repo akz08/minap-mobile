@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,21 +18,44 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class NavigationMapFragment extends Fragment {
-	// stuff for temporary app drawer
+	public static final String EXTRA_FIRST_LOGIN = "com.ucl.appteam7.minapmobile.EXTRA_FIRST_LOGIN";
+	
+	// stuff for "temporary" app drawer
 	private static final int DRAWER_OPEN_DELAY = 600;
 	
 	 private String[] mNavigationTitles;
 	 private DrawerLayout mDrawerLayout;
 	 private ActionBarDrawerToggle mDrawerToggle;
 	 private ListView mDrawerList;
-	 private boolean mFirstSession = true;
+	 private boolean mFirstLogin;
 	 
-
+	 public static NavigationMapFragment newInstance(boolean firstLogin) {
+		 Bundle args = new Bundle();
+		 args.putBoolean(EXTRA_FIRST_LOGIN, firstLogin);
+		 
+		 NavigationMapFragment fragment = new NavigationMapFragment();
+		 fragment.setArguments(args);
+		 
+		 return fragment;
+	 }
+	 
 	@Override
-	public void onCreate(Bundle savedInstanceState){
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 		
+		if (savedInstanceState != null) {
+			mFirstLogin = savedInstanceState.getBoolean(EXTRA_FIRST_LOGIN);
+		} else {
+			mFirstLogin = (boolean)getArguments().getBoolean(EXTRA_FIRST_LOGIN);
+		}
+	}
+	
+	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+		super.onSaveInstanceState(savedInstanceState);
+		Log.d("tag", Boolean.toString(mFirstLogin));
+		savedInstanceState.putBoolean(EXTRA_FIRST_LOGIN, mFirstLogin);
 	}
 	
 	@Override
@@ -92,10 +116,11 @@ public class NavigationMapFragment extends Fragment {
 	@Override
 	public void onResume() {
 	    super.onResume(); 
+	    // syncing the state of the drawer toggle
 	    mDrawerToggle.syncState();
 	    
 	    // if first session, animate the drawer in
-	    if (mFirstSession) {
+	    if (mFirstLogin) {
 		    mDrawerLayout.postDelayed(new Runnable() {
 		        @Override
 		        public void run() {
@@ -103,7 +128,7 @@ public class NavigationMapFragment extends Fragment {
 		        }
 		    }, DRAWER_OPEN_DELAY);
 		    
-		    // TODO set mFirstSession to be false as part of the saved bundle arguments 
+		    mFirstLogin = false;
 	    }
 	}
 	

@@ -89,6 +89,7 @@ public class PatientDetailsFragment extends Fragment {
 			@Override
 			public void onClick(View view) {
 				Intent intent = new Intent(getActivity(), NavigationMapActivity.class);
+				intent.putExtra(NavigationMapFragment.EXTRA_FIRST_LOGIN, true);
 				startActivity(intent);
 			}
 		});
