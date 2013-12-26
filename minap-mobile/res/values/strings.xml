@@ -328,8 +328,27 @@
     <string name="current_patient_name"></string>
     <string name="current_patient_number"></string>
     
+    <string-array name="navigation_array">
+        <item>@string/title_initial_diagnosis</item>
+        <item>@string/title_demographics_and_admission</item>
+        <item>@string/title_prehospital_events</item>
+        <item>@string/title_initial_reperfusion</item>
+        <item>@string/title_examinations</item>
+        <item>@string/title_medical_history</item>
+        <item>@string/title_angiography</item>
+    </string-array>
+    
     <string name="value_label_working_diagnosis"></string>
     
     <string name="title_navigation_menu"></string>
+    
+    <string name="title_initial_diagnosis">Initial Diagnosis</string>
+    <string name="title_demographics_and_admission">Demographics and Admission</string>
+    <string name="title_prehospital_events">Prehospital Events</string>
+    <string name="title_initial_reperfusion">Initial Reperfusion</string>
+    <string name="title_examinations">Examinations</string>
+    <string name="title_medical_history">Medical History</string>
+    <string name="title_angiography">Angiography</string>
 
+    
 </resources>
