@@ -1,5 +1,6 @@
 package com.ucl.appteam7.minapmobile;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class NavigationMapFragment extends Fragment {
@@ -28,6 +30,7 @@ public class NavigationMapFragment extends Fragment {
 	 private ActionBarDrawerToggle mDrawerToggle;
 	 private ListView mDrawerList;
 	 private boolean mFirstLogin;
+	 Button mEditPatientButton;
 	 
 	 public static NavigationMapFragment newInstance(boolean firstLogin) {
 		 Bundle args = new Bundle();
@@ -101,7 +104,16 @@ public class NavigationMapFragment extends Fragment {
         // set drawer toggle as the DrawerListener
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         
-
+        // add listener to edit button
+        mEditPatientButton = (Button)view.findViewById(R.id.edit_patient_details_button);
+		mEditPatientButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getActivity(), PatientDetailsActivity.class);
+				startActivity(intent);
+			}
+		});
 		
 		return view;
 	}
@@ -166,6 +178,6 @@ public class NavigationMapFragment extends Fragment {
 	 */
 	private void selectItem(int position) {
 		// just close the drawer for now
-		mDrawerLayout.closeDrawer(mDrawerList);
+		mDrawerLayout.closeDrawer(Gravity.LEFT);
 	}
 }
