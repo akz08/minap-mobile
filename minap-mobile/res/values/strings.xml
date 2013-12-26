@@ -321,6 +321,9 @@
     
     <string name="title_navigation_map">Navigation Map</string>
     
+    <string name="save_all">Save all</string>
+    <string name="log_out">Log out</string>
+    
     <string name="current_username"></string>
     <string name="current_patient_name"></string>
     <string name="current_patient_number"></string>
