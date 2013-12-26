@@ -89,7 +89,9 @@ public class PatientDetailsFragment extends Fragment {
 			@Override
 			public void onClick(View view) {
 				Intent intent = new Intent(getActivity(), NavigationMapActivity.class);
-				intent.putExtra(NavigationMapFragment.EXTRA_FIRST_LOGIN, true);
+				// call the model to find out if this is the user's first use
+				boolean firstTimeUser = true;
+				intent.putExtra(NavigationMapFragment.EXTRA_FIRST_LOGIN, firstTimeUser);
 				startActivity(intent);
 			}
 		});
