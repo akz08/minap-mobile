@@ -18,9 +18,10 @@ public class MainActivity extends Activity {
 		DBAdapter db = new DBAdapter(this);
 		
 		// add a test patient
-//		db.open();
-//		db.insertPatient("Smith", new Date());
-//		db.insertPatient("Jones", new Date());
+		db.open();
+		long id = db.insertPatient("Smith", new Date());
+		id = db.insertPatient("Jones", new Date());
+		db.close();
 		
 		// get all patients
 		db.open();
@@ -56,8 +57,8 @@ public class MainActivity extends Activity {
 	// Display test patients 
 	public void DisplayPatient(Cursor c)
 	{
-		Toast.makeText(this, "Surname: " + c.getString(0) + "\n"
-				+ "DOB: " + c.getString(1), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "id: " + c.getString(0) + "\nSurname: " + c.getString(1) + "\n"
+				+ "DOB: " + c.getString(2), Toast.LENGTH_LONG).show();
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
