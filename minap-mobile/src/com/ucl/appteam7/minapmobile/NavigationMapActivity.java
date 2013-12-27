@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class NavigationMapActivity extends SingleFragmentActivityDrawer {
-	public static final String EXTRA_FIRST_LOGIN = "com.ucl.appteam7.minapmobile.EXTRA_FIRST_LOGIN";
+	public static final String EXTRA_OPEN_NAV_DRAWER = "com.ucl.appteam7.minapmobile.EXTRA_OPEN_NAV_DRAWER";
 	private static final int DRAWER_OPEN_DELAY = 600;
 	
 	 private boolean mFirstLogin;
@@ -24,15 +24,15 @@ public class NavigationMapActivity extends SingleFragmentActivityDrawer {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		// Set flag for drawer opening behaviour
+		// set flag for drawer opening behaviour
 		if (savedInstanceState != null) {
-			mFirstLogin = savedInstanceState.getBoolean(EXTRA_FIRST_LOGIN);
+			mFirstLogin = savedInstanceState.getBoolean(EXTRA_OPEN_NAV_DRAWER);
 		} else {
 			mFirstLogin = (boolean)getIntent()
-					.getBooleanExtra(NavigationMapActivity.EXTRA_FIRST_LOGIN, false);
+					.getBooleanExtra(NavigationMapActivity.EXTRA_OPEN_NAV_DRAWER, false);
 		}
 		
-		// Wire up the navigation icon for the drawer
+		// wire up the navigation icon for the drawer
 	    mDrawerToggle = new ActionBarDrawerToggle(
 	    		this, 
 	       		mDrawerLayout,
@@ -77,7 +77,7 @@ public class NavigationMapActivity extends SingleFragmentActivityDrawer {
 	    }
 	}
 	
-	// Handle the events on the action bar
+	// handle the events on the action bar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -88,7 +88,7 @@ public class NavigationMapActivity extends SingleFragmentActivityDrawer {
 
     }
 
-    // Syncing the navigation drawer
+    // syncing the navigation drawer
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);

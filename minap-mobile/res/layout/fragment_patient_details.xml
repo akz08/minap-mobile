@@ -26,7 +26,7 @@
 	        android:layout_height="wrap_content"
 	        android:hint="@string/value_hint_first_name"
 	        android:singleLine="true"
-	        android:inputType="textNoSuggestions"
+	        android:inputType="textNoSuggestions|textPersonName|textCapWords"
 	        android:imeOptions="flagNoExtractUi"
 			/>
 	    <EditText 
@@ -35,7 +35,7 @@
 	        android:layout_height="wrap_content"
 	        android:hint="@string/value_hint_surname"
 	        android:singleLine="true"
-	        android:inputType="textNoSuggestions"
+	        android:inputType="textNoSuggestions|textPersonName|textCapWords"
 	        android:imeOptions="flagNoExtractUi"
 			/>
 	    
@@ -52,6 +52,8 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:hint="@string/value_hint_nhs_number"
+	        android:drawableLeft="@drawable/ic_action_error"
+	        android:maxLength="10"
 	        android:imeOptions="flagNoExtractUi"
 			/>
 	    
