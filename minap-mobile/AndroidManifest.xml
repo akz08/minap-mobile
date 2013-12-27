@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ucl.appteam7.minapmobile.LoginActivity"
+            android:name="com.ucl.appteam7.minapmobile.PatientDetailsActivity"
             android:label="@string/app_name" 
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -23,10 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatientDetailsActivity"
+        <activity android:name=".NavigationMapActivity"
       		android:label="@string/title_patient_details">
     	</activity>
-    	<activity android:name=".NavigationMapActivity"
+    	<activity android:name=".LoginActivity"
     	    android:label="@string/title_navigation_map">
     	</activity>
     </application>

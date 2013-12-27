@@ -91,7 +91,7 @@ public class PatientDetailsFragment extends Fragment {
 				Intent intent = new Intent(getActivity(), NavigationMapActivity.class);
 				// call the model to find out if this is the user's first use
 				boolean firstTimeUser = true;
-				intent.putExtra(NavigationMapFragment.EXTRA_FIRST_LOGIN, firstTimeUser);
+				intent.putExtra(NavigationMapActivity.EXTRA_FIRST_LOGIN, firstTimeUser);
 				startActivity(intent);
 			}
 		});
