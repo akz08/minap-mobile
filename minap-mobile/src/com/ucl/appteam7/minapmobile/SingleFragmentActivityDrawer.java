@@ -87,7 +87,7 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
  	 */
  	private void selectItem(int position) {
  		// just close the drawer for now
- 		mDrawerLayout.closeDrawer(Gravity.LEFT);
+// 		mDrawerLayout.closeDrawer(Gravity.LEFT);
  		
  		// get the title of the selected page
  		String navigationTitle = getResources().getStringArray(R.array.navigation_array)[position];

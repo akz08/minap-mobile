@@ -27,10 +27,12 @@
       		android:label="@string/title_patient_details">
     	</activity>
     	<activity android:name=".NavigationMapActivity"
-    	    android:label="@string/title_navigation_map">
+    	    android:label="@string/title_navigation_map" >
     	</activity>
     	<activity android:name=".InitialDiagnosisActivity"
     	    android:label="@string/title_initial_diagnosis">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
     	</activity>
     </application>
 
