@@ -34,6 +34,36 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NavigationMapActivity" />
     	</activity>
+    	<activity android:name=".DemographicsAndAdmissionActivity"
+    	    android:label="@string/title_demographics_and_admission" >
+             <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
+    	<activity android:name=".PrehospitalEventsActivity"
+    	    android:label="@string/title_prehospital_events" >
+              <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
+    	<activity android:name=".InitialReperfusionActivity"
+    	    android:label="@string/title_initial_reperfusion" >
+               <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
+    	<activity android:name=".ExaminationsActivity"
+    	    android:label="@string/title_examinations" >
+                <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
+    	<activity android:name=".MedicalHistoryActivity"
+    	    android:label="@string/title_medical_history" >
+                 <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
+    	<activity android:name=".AngiographyActivity"
+    	    android:label="@string/title_angiography" >
+                  <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NavigationMapActivity" />
+    	</activity>
     </application>
 
 </manifest>

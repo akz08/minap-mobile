@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class InitialDiagnosisFragment extends Fragment {
+public class DemographicsAndAdmissionFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -17,7 +17,7 @@ public class InitialDiagnosisFragment extends Fragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_initial_diagnosis, parent, false);
+		View view = inflater.inflate(R.layout.fragment_demographics_and_admission, parent, false);
 		
 		// general stuff 
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
