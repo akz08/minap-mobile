@@ -3,10 +3,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
         android:orientation="vertical" >
+        <LinearLayout 
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"> 	        
+            <TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_working_diagnosis"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:drawableRight="@drawable/ic_action_about" 
+		    	/>
+	        <RadioGroup
+	            android:id="@+id/radio_group_working_diagnosis"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical">
+			    <RadioButton
+			        android:id="@+id/radio_working_diagnosis_1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/value_radio_working_diagnosis_1"
+				  	/>
+			    <RadioButton
+			        android:id="@+id/radio_working_diagnosis_3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/value_radio_working_diagnosis_3"
+				  	/>
+			    <RadioButton
+			        android:id="@+id/radio_working_diagnosis_4"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/value_radio_working_diagnosis_4"
+				  	/>
+			    <RadioButton
+			        android:id="@+id/radio_working_diagnosis_5"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/value_radio_working_diagnosis_5"
+				  	/>
+			</RadioGroup>
+        </LinearLayout>
+        
+		
+		<TextView
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/value_label_astemi_admission"
+		    style="?android:listSeparatorTextViewStyle"
+		    android:drawableRight="@drawable/ic_action_about" 
+		    android:layout_marginTop="16dp"
+	    	/>
+		<RadioGroup
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <RadioButton
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/yes"
+			  	/>
+		    <RadioButton
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/no"
+				/>
+		</RadioGroup>
     </LinearLayout>
     
 

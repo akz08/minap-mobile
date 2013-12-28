@@ -330,6 +330,7 @@
     
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_navigation_menu"></string>
     <string name="navigation_value_dummy_user">Marco David/YYY</string>
     <string name="navigation_label_patient_details">Patient NHS Number</string>
     <string name="navigation_value_dummy_patient">924812453</string>
@@ -343,12 +344,27 @@
         <item>@string/title_medical_history</item>
         <item>@string/title_angiography</item>
     </string-array>
+
     
-    <string name="value_label_working_diagnosis"></string>
-    
-    <string name="title_navigation_menu"></string>
     
     <string name="title_initial_diagnosis">Initial Diagnosis</string>
+	<string name="value_label_working_diagnosis">What is your working diagnosis?</string>
+	<string name="value_radio_working_diagnosis_1">1. Definite myocardial infarction</string>
+	<string name="value_radio_working_diagnosis_3">3. Acute coronary syndrome</string>
+	<string name="value_radio_working_diagnosis_4">4. Chest pain ? cause</string>
+	<string name="value_radio_working_diagnosis_5">5. Other initial diagnosis</string>
+	
+	<string name="value_label_high_risk_nstemi">High Risk nSTEMI</string>
+	<string-array name="nstemi_array">
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unkown</item>
+	</string-array>
+	
+	<string name="value_label_astemi_admission">Admission after treatment for STEMI elsewhere?</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+    
     <string name="title_demographics_and_admission">Demographics and Admission</string>
     <string name="title_prehospital_events">Prehospital Events</string>
     <string name="title_initial_reperfusion">Initial Reperfusion</string>

@@ -28,6 +28,7 @@
 	        android:singleLine="true"
 	        android:inputType="textNoSuggestions|textPersonName|textCapWords"
 	        android:imeOptions="flagNoExtractUi"
+	        android:maxLength="35"
 			/>
 	    <EditText 
 	        android:id="@+id/surname"
@@ -37,6 +38,7 @@
 	        android:singleLine="true"
 	        android:inputType="textNoSuggestions|textPersonName|textCapWords"
 	        android:imeOptions="flagNoExtractUi"
+	        android:maxLength="35"
 			/>
 	    
 	    <TextView
