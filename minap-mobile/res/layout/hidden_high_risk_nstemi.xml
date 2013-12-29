@@ -3,19 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
-    
-    <TextView
+	
+	<LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
 		    android:id="@+id/nstemi_label"
-		    android:layout_width="match_parent"
+		    android:layout_width="0dip"
 		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_high_risk_nstemi"
 		    style="?android:listSeparatorTextViewStyle"
-		    android:drawableRight="@drawable/ic_action_about" 
+		    android:layout_weight="1"
 	    	/>
-		<Spinner 
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+	  </LinearLayout>
+
+	<Spinner 
 	        android:id="@+id/nstemi_spinner"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
-
 </LinearLayout>

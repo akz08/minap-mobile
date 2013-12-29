@@ -345,7 +345,7 @@
         <item>@string/title_angiography</item>
     </string-array>
 
-    
+    <string name="button_about_value">information</string>
     
     <string name="title_initial_diagnosis">Initial Diagnosis</string>
 	<string name="value_label_working_diagnosis">What is your working diagnosis?</string>

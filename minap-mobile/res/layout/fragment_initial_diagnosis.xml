@@ -4,24 +4,37 @@
     android:layout_height="match_parent" >
 
    <LinearLayout
+       	android:id="@+id/container"	
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
     	android:paddingRight="16dp"
-        android:orientation="vertical" >
-        <LinearLayout 
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:animateLayoutChanges="true"> 	        
-            <TextView
-			    android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true" >
+        
+      <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="2dp">
+           <!-- add in a margin to give space for the about button -->
+           <TextView
+			    android:layout_width="0dip"
 			    android:layout_height="wrap_content"
 			    android:text="@string/value_label_working_diagnosis"
 			    style="?android:listSeparatorTextViewStyle"
-			    android:drawableRight="@drawable/ic_action_about" 
+			    android:layout_weight="1"
 		    	/>
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+	  </LinearLayout>
+            
 	        <RadioGroup
 	            android:id="@+id/radio_group_working_diagnosis"
 			    android:layout_width="fill_parent"
@@ -54,15 +67,28 @@
 			</RadioGroup>
         
         
-		
-		<TextView
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:text="@string/value_label_astemi_admission"
-		    style="?android:listSeparatorTextViewStyle"
-		    android:drawableRight="@drawable/ic_action_about" 
-		    android:layout_marginTop="16dp"
-	    	/>
+		<LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+			<TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_astemi_admission"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+			 <ImageButton
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:contentDescription="@string/button_about_value"
+	               android:src="@drawable/ic_action_about" 
+	               android:background="@drawable/button_about_value"
+	               android:layout_gravity="bottom"
+	               android:layout_marginBottom="1dp"
+	               />
+		 </LinearLayout>
 		<RadioGroup
 		    android:id="@+id/radio_group_astemi_admission"
 		    android:layout_width="fill_parent"
@@ -79,7 +105,7 @@
 		        android:text="@string/no"
 				/>
 		</RadioGroup>
-		</LinearLayout>
+		
     </LinearLayout>
     
 
