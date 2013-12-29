@@ -30,18 +30,12 @@ public class InitialDiagnosisFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_initial_diagnosis, parent, false);
 		
-		// general stuff 
-		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
-
-		// Populate the nSTEMI spinner
-//		mNstemiSpinner = (Spinner)view.findViewById(R.id.nstemi_spinner);
-//		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.nstemi_array, android.R.layout.simple_spinner_item);
-//		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//		mNstemiSpinner.setAdapter(adapter);
-		
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
 		final ViewGroup newView = (ViewGroup) inflater.inflate(R.layout.hidden_high_risk_nstemi, mContainerView, false);
 		
+		// general stuff 
+		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+
 		// Wire up radio buttons for nSTEMI
 		mWorkingDiagnosisRadioGroup = (RadioGroup)view.findViewById(R.id.radio_group_working_diagnosis);
 		mWorkingDiagnosisRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -55,7 +49,21 @@ public class InitialDiagnosisFragment extends Fragment {
 					break;
 				case R.id.radio_working_diagnosis_3:
 //					Log.d("radio", "3");
-					mContainerView.addView(newView, 2);
+					// find index of final radio group
+					int debugViewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_astemi_admission));
+					Log.d("initial index", Integer.toString(debugViewIndex));
+					
+					int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_working_diagnosis));
+					mContainerView.addView(newView, viewIndex + 1);
+					
+					// update the index of final radio group
+					debugViewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_astemi_admission));
+					Log.d("initial index", Integer.toString(debugViewIndex));
+					// Populate the nSTEMI spinner
+					mNstemiSpinner = (Spinner)getView().findViewById(R.id.nstemi_spinner);
+					ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.nstemi_array, android.R.layout.simple_spinner_item);
+					adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+					mNstemiSpinner.setAdapter(adapter);
 					break;
 				case R.id.radio_working_diagnosis_4:
 					mContainerView.removeView(newView);

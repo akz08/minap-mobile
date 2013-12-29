@@ -52,7 +52,7 @@
 			        android:text="@string/value_radio_working_diagnosis_5"
 				  	/>
 			</RadioGroup>
-        </LinearLayout>
+        
         
 		
 		<TextView
@@ -64,6 +64,7 @@
 		    android:layout_marginTop="16dp"
 	    	/>
 		<RadioGroup
+		    android:id="@+id/radio_group_astemi_admission"
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal">
@@ -78,6 +79,7 @@
 		        android:text="@string/no"
 				/>
 		</RadioGroup>
+		</LinearLayout>
     </LinearLayout>
     
 
