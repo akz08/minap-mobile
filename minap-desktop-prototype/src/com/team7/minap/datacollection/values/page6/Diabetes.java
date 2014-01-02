@@ -10,7 +10,7 @@ public class Diabetes extends Value {
 	}
 	public static void setDiabetes(byte diabete) {
 		// check if valid entry
-		if (diabete == 0 || diabete == 1 || diabete == 2 || diabete == 3 || diabete == 4 || diabete == 9) {
+		if (diabete == 0 || diabete == 1 || diabete == 2 || diabete == 3 || diabete == 5 || diabete == 9) {
 			diabete = diabetes;
 			switch (diabetes) {
 			case 0 : diabetesLongCode = "Not diabetic"; break; //Not known diabetic.
