@@ -4,7 +4,7 @@
   <title><![CDATA[App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2013-12-26T23:19:35+00:00</updated>
+  <updated>2014-01-02T22:31:05+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -53,7 +53,31 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition/"/>
     <updated>2013-12-17T14:01:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 3/12, pending addition of new competitor app.</em></p>
+    <content type="html"><![CDATA[<p><em>First draft completed 3/12</em></p>
+
+<p>Medical data entry applications are a new concept (and also likely to be distributed solely within the company), so direct competitors are hard to come by on all major mobile app stores. One element of our app solution that could be used as a basis for finding similar solutions is the navigation panel. On a 1024 x 768 desktop browser, the user can easily read all the text and possible pathways at a glance. Directly mapping this onto a small device (smartphone) would yield unreadable text if naively shrunk to fit the screen; enabling a simple zoom-in and out approach would require too much scrolling in arbitrary directions to view the complete navigation map.</p>
+
+<p>To get some ideas on how we could best represent this tree-navigation structure, we had a look through the apps on our own smartphones. Interestingly enough, a language learning app had the closest representation of the current MINAP navigation tree.</p>
+
+<h3>Duolingo</h3>
+
+<p>Duolingo, a language learning mobile app, relies on a central &lsquo;learning tree&rsquo; to show the user&rsquo;s progress of language learning.
+<img src="http://akz08.github.io/minap-mobile/images/duolingo-main.png" title="Duolingo main screen" >
+The user progresses through different levels, clearly separated by horizontal rules, containing individual units of activities. Each unit is an icon, associated with a short description of its associated meaning. Colour is used to signify the ability to access the units: with greyscale to mean inactive, and a coloured icon to mean active. User progress in the units are indicated as well, through use of fractions and &lsquo;level bars&rsquo; (which is puzzling), using colours and greyscale again to indicate level of completeness. As with most modern designs, Duolingo has done away with scroll bars to signify the ability to scroll downwards, but overcomes this problem by having an icon &lsquo;peeking&rsquo; out from the bottom of the screen &ndash; indicating that there is more content below.</p>
+
+<p>Due to the working environment that our app would be used in, we need to ensure a professional look &ndash; so we can&rsquo;t use vibrant colours and iconography as extensively as Duolingo. However, the use of very distinct colours to indicate level of completeness and access could be adopted for quick recognition of the completion &lsquo;status&rsquo; of each page on the navigation map, to suit the quick nature of patient record creation intended in our mobile app. The current (MINAP) web app employs the same colouring strategy, though using more subtle hues, compatible with the more relaxed and slow process of data entry at the computer.</p>
+
+<p>Additionally, the organisation of levels in Duolingo lack a sense of coherence, with the utilitarian grey divider not conveying any sign of connection between the different levels. The MINAP web app has the problem of dealing with &lsquo;levels&rsquo; containing up to 7 pages, which unfortunately won&rsquo;t fit with Duolingo&rsquo;s method of mapping.</p>
+
+<h3>Reddit Sync</h3>
+
+<p>Reddit Sync is a (3rd-party) mobile client app for a popular online community sharing website, Reddit. Its primary purpose is for consuming content quickly and giving feedback on posted content by votes or comments. The app makes heavy use of the card metaphor, with card metadata and actionable items prominently featured.
+<img class="left" src="http://akz08.github.io/minap-mobile/images/reddit-sync-main.png" title="Reddit Sync main screen" >
+What I found most interesting about Reddit Sync however, was its use of the Android navigation drawer. Reddit is divided into separate interest groups/sections called &lsquo;subreddits&rsquo;, which contain posts related to a particular topic. These sections are analogous to the pages in the MINAP dataset, and could be used as a quick alternative way (a navigation list) to traverse through the many pages.
+<img src="http://akz08.github.io/minap-mobile/images/sync-drawer.png" title="Reddit Sync navigation drawer" ></p>
+
+<p>One other interesting feature is how the app deals with multiple logins. It is common practice on Reddit for users to manage multiple accounts for their different online personas. Reddit Sync prominently displays your currently logged in username at the top of the navigation drawer, with a &lsquo;spinner&rsquo; &ndash; an Android signifier indicating the ability to choose between several options. Touching this spinner allows the user to switch between accounts on the fly. Such an interface could be useful in the near future to allow MINAP users to switch between accounts registered to different hospitals under their name.
+<img src="http://akz08.github.io/minap-mobile/images/sync-spinner.png" title="Reddit Sync user spinner" ></p>
 ]]></content>
   </entry>
   
