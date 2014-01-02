@@ -18,10 +18,10 @@ public class MainActivity extends Activity {
 		DBAdapter db = new DBAdapter(this);
 		
 		// add a test patient
-		db.open();
-		long id = db.insertPatient("Smith", new Date());
-		id = db.insertPatient("Jones", new Date());
-		db.close();
+//		db.open();
+//		long id = db.insertPatient("Smith", new Date());
+//		id = db.insertPatient("Jones", new Date());
+//		db.close();
 		
 		// get all patients
 		db.open();
