@@ -4,7 +4,7 @@
   <title><![CDATA[App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-02T22:41:26+00:00</updated>
+  <updated>2014-01-03T16:26:36+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -35,7 +35,47 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
     <updated>2013-12-19T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+    <content type="html"><![CDATA[<p><em>First draft completed 2/12</em></p>
+
+<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
+
+<h3>Simplify My Life</h3>
+
+<h4>Keep it brief:</h4>
+
+<p>Although the core content of the app cannot be changed due to the precise nature of medical data input, we can keep our tutorials short with simple language</p>
+
+<h4>Only show what I need when I need it:</h4>
+
+<p>Breaking down the tasks of using the application strikes me as an area which we could improve on the current app, with a wealth of possible options available to me upon opening the web app. If we expect the app to have more widespread usage, the process of record creation should be fairly intuitive to someone with limited prior knowledge.</p>
+
+<h4>I should always know where I am:</h4>
+
+<p>There are two main &lsquo;modes&rsquo; which our user would be most active in during use: navigation mode, and page data entry mode. It should be clear how the user will navigate back and forth through the app, allowing for multiple possible ways (i.e. back button, or a navigator icon)</p>
+
+<h4>Never lose my stuff:</h4>
+
+<p>Due to security concerns and data protection, we shouldn&rsquo;t retain a local copy of entered data beyond the duration of the session. Despite this, we could &lsquo;autosave&rsquo; the entered data into a &lsquo;draft&rsquo; database on the central server, with visual indicators to let the user know the data has been submitted for storing (the expected web app behaviour is manual saving).</p>
+
+<h4>If it looks the same, it should act the same:</h4>
+
+<p>We should keep in mind what we mean when using Android UI elements (i.e. if it looks like a text box, it should act like one) to ensure they retain the same meaning throughout the app.</p>
+
+<h3>Make Me Amazing</h3>
+
+<h4>Give me tricks that work everywhere:</h4>
+
+<p>Gestures such as swiping from the edge for menus aren&rsquo;t good for a primary interface due to discoverability issues for novice users, but can serve to speed up the workflow of more experienced users.</p>
+
+<h4>It&rsquo;s not my fault:</h4>
+
+<p>When informing the user of validation errors, it would be helpful to consider if the warnings could be reworded for clarity and &lsquo;niceness&rsquo;.</p>
+
+<h4>Make important things fast:</h4>
+
+<p>The ability to switch between pages and the mode of data entry and navigation should be effortless. It should also be relatively easy to check details of the session such as the current logged in username and patient core details.</p>
+
+<p>To make UI decisions easier, I will be aiming to follow these principles as closely as possible in conjunction with the core Android UI elements and more detailed design guidelines which I hope to cover in a future post.</p>
 ]]></content>
   </entry>
   
