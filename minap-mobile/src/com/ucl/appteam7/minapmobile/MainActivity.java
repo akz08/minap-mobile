@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.widget.Toast;
-
 import android.database.Cursor;
+
 public class MainActivity extends Activity {
 
 	@Override
@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		DBAdapter db = new DBAdapter(this);
+		Patient.get().InitialDiagnosis.getInitialDiagnosis();
 		
 		// add a test patient
 //		db.open();

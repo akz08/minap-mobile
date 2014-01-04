@@ -16,7 +16,7 @@ import android.util.Log;
 
 public class DBAdapter {
 	// Database schema : variable name, table column; (return type on separate class) field number
-	// Page 0 : Patient Info
+	// Page 0 : Patient Info - 7 fields
 	public static final String HOSPITAL_IDENTIFIER = "HospitalID"; 		// (String) Field 1.01
 	public static final String RECORD_NO = "RecordNum"; 				// (short) Field 1.02
 	public static final String NHS_NUMBER = "NHSNumber"; 				// (string) Field 1.03
@@ -25,7 +25,7 @@ public class DBAdapter {
 	public static final String PATIENT_DOB = "PatientDOB"; 				// (Date) Field 1.06
 	public static final String ADMISSION_DATE = "AdminDate"; 			// (Date) No field number
 	
-	// Page 1 - Initial Diagnosis
+	// Page 1 - Initial Diagnosis - 6 fields
 	public static final String INITIAL_DIAGNOSIS = "InitialDiagosis"; 						// (byte) Field 2.01
 	public static final String ADMISSION_AFTER_NSTEMI = "AdminStemi"; 						// (boolean) No field number
 	public static final String HIGH_RISK_NSTEMI = "HiRisknSTEMI"; 							// (byte) Field 4.32
@@ -33,7 +33,7 @@ public class DBAdapter {
 	public static final String RETURN_TO_REFERRING_HOSPITAL = "ReferHospitalReturn"; 		// (Date) Field 4.26
 	public static final String INTERVENTIONAL_CENTRE_CODE_ID = "InterventionCentreCode";	/** (String) No Field number */
 	
-	// Page 2 - Demographics and admission
+	// Page 2 - Demographics and admission - 10 fields
 	public static final String PATIENT_GENDER = "Gender"; 						// (byte) Field 1.07
 	public static final String PATIENT_ETHNICITY = "Ethnicity"; 				// (byte) Field 1.13
 	public static final String ADMISSION_METHOD = "AdminMethod"; 				// (byte) Field 2.39
@@ -45,7 +45,7 @@ public class DBAdapter {
 	public static final String PLACE_FIRST_12_LEAD_ECG_PERFORMED = "FirstECG"; 	// (byte) : Field 2.22
 	public static final String NHS_VERIFICATION = "NHSVerif";					/** (string) no field number */	
 	
-	// Page 3 - Initial Reperfusion
+	// Page 3 - Initial Reperfusion - 7 fields
 	public static final String INITIAL_REPERFUSION_TREATMENT = "InitialReperfusionTreat"; 	// (byte) field 3.39
 	public static final String REPERFUSION_NOT_GIVEN = "ReperNotGiven"; 					// (byte) Field 3.08
 	public static final String ECG_DETERMINING_TREATMENT = "ECGDetermineTreat"; 			// (byte) Field 2.03
@@ -54,7 +54,7 @@ public class DBAdapter {
 	public static final String INTERVENTIONAL_CENTRE_CODE = "InterventionCentreCode"; 		// (string) Field 4.20
 	public static final String INFARCTION_SITE = "InfarctionSite"; 							// (byte) Field 2.36
 	
-	// Page 4 - Angiography
+	// Page 4 - Angiography - 10 fields
 	public static final String CORONARY_ANGIO = "CoronaryAngio";							// (byte) Field 4.13
 	public static final String REFERRAL_DATE = "ReferralDate";			 					// (Date) Field 4.15
 	public static final String ANGIO_PERFORM_DELAY = "AngioDelay";							// (byte) Field 4.30
@@ -66,15 +66,16 @@ public class DBAdapter {
 	public static final String DAYCASE_TRANSFER = "DaycaseTransfer";						// (Date) Field 4.17
 	public static final String REFERRING_RETURN = "ReferringHospitalReturn";				// (Date) Field 4.26
 	
-	// Page 5 - Examinations
+	// Page 5 - Examinations - 7 fields
 	public static final String SYSTOLIC = "SystolicBP";				// (short) Field 2.20
 	public static final String HEART_RATE = "HeartRate";			// (short) Field 2.21
 	public static final String KILLIP_CLASS = "KillipClass";		// (byte) Field 2.41
-	public static final String BMI = "BMI";							/** Missing algorithm */
+	public static final String BMI = "BMI";							// (double) No field number
 	public static final String HEIGHT = "Height";					// (short) Field 2.29
 	public static final String WEIGHT = "Weight"; 					// (short) Field 2.30
+	public static final String GRACE_SCORE = "GraceScore";			/** Missing algorithm */
 	
-	// Page 6 - Medical History
+	// Page 6 - Medical History - 14 fields
 	public static final String PREVIOUS_AMI = "PrevAMI";				// (byte) Field 2.05
 	public static final String HYPERTENSION = "Hypertension";			// (byte) Field 2.07
 	public static final String CEREBROVASCULAR = "CerebroDisease";		// (byte) Field 2.10
@@ -90,17 +91,17 @@ public class DBAdapter {
 	public static final String RENAL_FAILURE = "RenalFailure";			// (byte) Field 2.12
 	public static final String FAMILY_CHD = "FamilyCHD";				// (byte) Field 2.32
 	
-	public static final String TAG = "DBAdapter";
-	
 	// Database information
+	public static final String TAG = "DBAdapter";
 	private static final String DATABASE_NAME = "minap";
 	private static final String TABLE_NAME = "patient";
-	private static final int DATABASE_VERSION = 1;
+	private static final int DATABASE_VERSION = 3;
 	// Database creation SQL Statement
 	private static final String DATABASE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" +
-			RECORD_NO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-			PATIENT_SURNAME + " TEXT NOT NULL, " +
-			PATIENT_DOB + " DATE NOT NULL);";
+			RECORD_NO + " INTEGER PRIMARY KEY AUTOINCREMENT, " + 	// 1.02
+			PATIENT_FORENAME + " TEXT NOT NULL, " + 				// 1.05
+			PATIENT_SURNAME + " TEXT NOT NULL, " + 					// 1.04
+			PATIENT_DOB + " DATE NOT NULL);";						// 1.06
 	
 	// Context for this session
 	private final Context context;
