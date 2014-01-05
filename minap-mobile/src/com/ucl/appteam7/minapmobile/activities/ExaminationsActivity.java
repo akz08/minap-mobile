@@ -1,4 +1,6 @@
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.activities;
+
+import com.ucl.appteam7.minapmobile.fragments.ExaminationsFragment;
 
 import android.support.v4.app.Fragment;
 

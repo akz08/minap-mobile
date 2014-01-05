@@ -4,9 +4,12 @@
  * by Bill Phillips and Brian Hardy 
  */
 
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.fragments;
 
 import java.util.Date;
+
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.R.layout;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

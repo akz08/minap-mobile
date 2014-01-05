@@ -1,4 +1,9 @@
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.activities;
+
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.R.drawable;
+import com.ucl.appteam7.minapmobile.R.string;
+import com.ucl.appteam7.minapmobile.fragments.NavigationMapFragment;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

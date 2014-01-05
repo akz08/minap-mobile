@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.ucl.appteam7.minapmobile.LoginActivity"
+            android:name="com.ucl.appteam7.minapmobile.activities.LoginActivity"
             android:label="@string/app_name" 
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -23,46 +23,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatientDetailsActivity"
+        <activity android:name=".activities.PatientDetailsActivity"
       		android:label="@string/title_patient_details">
     	</activity>
-    	<activity android:name=".NavigationMapActivity"
+    	<activity android:name=".activities.NavigationMapActivity"
     	    android:label="@string/title_navigation_map" >
     	</activity>
-    	<activity android:name=".InitialDiagnosisActivity"
+    	<activity android:name=".activities.InitialDiagnosisActivity"
     	    android:label="@string/title_initial_diagnosis">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".DemographicsAndAdmissionActivity"
+    	<activity android:name=".activities.DemographicsAndAdmissionActivity"
     	    android:label="@string/title_demographics_and_admission" >
              <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".PrehospitalEventsActivity"
+    	<activity android:name=".activities.PrehospitalEventsActivity"
     	    android:label="@string/title_prehospital_events" >
               <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".InitialReperfusionActivity"
+    	<activity android:name=".activities.InitialReperfusionActivity"
     	    android:label="@string/title_initial_reperfusion" >
                <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".ExaminationsActivity"
+    	<activity android:name=".activities.ExaminationsActivity"
     	    android:label="@string/title_examinations" >
                 <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".MedicalHistoryActivity"
+    	<activity android:name=".activities.MedicalHistoryActivity"
     	    android:label="@string/title_medical_history" >
                  <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
-    	<activity android:name=".AngiographyActivity"
+    	<activity android:name=".activities.AngiographyActivity"
     	    android:label="@string/title_angiography" >
                   <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".NavigationMapActivity" />
+                android:value=".activities.NavigationMapActivity" />
     	</activity>
     </application>
 

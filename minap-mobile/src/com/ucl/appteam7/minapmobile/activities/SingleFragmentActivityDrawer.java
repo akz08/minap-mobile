@@ -4,8 +4,13 @@
  * by Bill Phillips and Brian Hardy 
  */
 
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.activities;
 
+
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.R.array;
+import com.ucl.appteam7.minapmobile.R.id;
+import com.ucl.appteam7.minapmobile.R.layout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -112,8 +117,8 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
  	 * @return activity class name of the given page title
  	 */
  	private String wrangleStringToClass(String input) {
- 		// TODO: make this not so hard-coded
- 		String output = "com.ucl.appteam7.minapmobile.";
+ 		// TODO: make this class path not so hard-coded
+ 		String output = "com.ucl.appteam7.minapmobile.activities.";
 
 		String[] inputStringArray = input.split(" ");
 

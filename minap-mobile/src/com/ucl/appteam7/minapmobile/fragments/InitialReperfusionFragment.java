@@ -1,4 +1,7 @@
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.fragments;
+
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
