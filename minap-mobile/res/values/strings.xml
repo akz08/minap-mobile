@@ -25,9 +25,12 @@
     <string name="value_hint_nhs_number">NHS number</string>
     <string name="value_label_date_of_birth">Date of birth</string>
     <string name="value_date_picker_title_date_of_birth">Date of birth:</string>
+    <string name="value_hint_date_of_birth">e.g. 10 April 1990</string>
     <string name="value_label_admission_date_time">Admission Date/Time</string>
     <string name="value_date_picker_title_admission_date">Admission date:</string>
+    <string name="value_hint_admission_date">e.g. 01 Jan 2014</string>
     <string name="value_time_picker_title_admission_time">Admission time:</string>
+    <string name="value_hint_admission_time">e.g. 12:34 PM</string>
     <string name="value_label_hospital">Hospital</string>
     <string-array name="hospitals_array">
 		<item>ADD. Addenbrooke\'s Hospital</item>	
