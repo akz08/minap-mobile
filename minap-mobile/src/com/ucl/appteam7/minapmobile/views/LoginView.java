@@ -9,10 +9,8 @@
 package com.ucl.appteam7.minapmobile.views;
 
 import com.ucl.appteam7.minapmobile.R;
-import com.ucl.appteam7.minapmobile.activities.PatientDetailsActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +20,23 @@ public class LoginView extends RelativeLayout {
 
 	private Button mLoginButton;
 	
+	// interface to send events from the view to the controller
+	public static interface ViewListener {
+		public void onLogin();
+	}
+	
+	// listener reference for sending events
+	private ViewListener viewListener;
+	public void setViewListener(ViewListener viewListener) {
+		this.viewListener = viewListener;
+	}
+	
+	// constructor for xml layouts
 	public LoginView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
 	
+	// hook up objects from the xml layout
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();mLoginButton = (Button)findViewById(R.id.login_button);
@@ -33,7 +44,7 @@ public class LoginView extends RelativeLayout {
 			
 			@Override
 			public void onClick(View view) {
-				// TODO: call viewListener. open patient details - or something to that effect
+				viewListener.onLogin();
 			}
 		});
 	}
