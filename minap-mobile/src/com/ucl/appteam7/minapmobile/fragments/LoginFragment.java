@@ -13,7 +13,6 @@ import com.ucl.appteam7.minapmobile.views.LoginView;
 
 public class LoginFragment extends Fragment {
 
-//	Button mLoginButton;
 	private LoginView view;
 	
 	@Override
@@ -29,6 +28,7 @@ public class LoginFragment extends Fragment {
 		return view;
 	}
 
+	// receive events from view
 	private LoginView.ViewListener viewListener = new LoginView.ViewListener() {
 		
 		@Override
