@@ -44,6 +44,21 @@
 	    <TextView
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
+		    android:text="@string/value_label_hospital_number"
+		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
+	    	/>
+	    <EditText 
+			android:inputType="number"
+		    android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/value_hint_hospital_number"
+	        android:imeOptions="flagNoExtractUi"
+			/>
+	    
+	    <TextView
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
 		    android:text="@string/value_label_nhs_number"
 		    style="?android:listSeparatorTextViewStyle"
 		    android:layout_marginTop="16dp"
@@ -113,13 +128,6 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
-	    <EditText 
-			android:inputType="number"
-		    android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:hint="@string/value_hint_hospital_number"
-	        android:imeOptions="flagNoExtractUi"
-			/>
 	</LinearLayout>
 	
 	<Button
