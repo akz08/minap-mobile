@@ -1,10 +1,6 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
 import com.ucl.appteam7.minapmobile.R;
-import com.ucl.appteam7.minapmobile.R.array;
-import com.ucl.appteam7.minapmobile.R.id;
-import com.ucl.appteam7.minapmobile.R.layout;
-import com.ucl.appteam7.minapmobile.R.string;
 import com.ucl.appteam7.minapmobile.activities.NavigationMapActivity;
 
 import android.content.Intent;

@@ -8,9 +8,6 @@ package com.ucl.appteam7.minapmobile.activities;
 
 
 import com.ucl.appteam7.minapmobile.R;
-import com.ucl.appteam7.minapmobile.R.array;
-import com.ucl.appteam7.minapmobile.R.id;
-import com.ucl.appteam7.minapmobile.R.layout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,7 +17,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;

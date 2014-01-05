@@ -1,8 +1,6 @@
 package com.ucl.appteam7.minapmobile.activities;
 
 import com.ucl.appteam7.minapmobile.R;
-import com.ucl.appteam7.minapmobile.R.layout;
-import com.ucl.appteam7.minapmobile.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
