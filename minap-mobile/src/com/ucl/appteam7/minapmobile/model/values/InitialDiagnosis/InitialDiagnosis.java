@@ -10,7 +10,7 @@
  * @author david  
  */
 
-package com.ucl.appteam7.minapmobile.page1;
+package com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis;
 
 import com.ucl.appteam7.minapmobile.Value;
 
@@ -42,6 +42,7 @@ public class InitialDiagnosis extends Value {
 	}
 	
 	public String getInitialDiagnosis() {
+		// Convert byte to string for db operations
 		String retu = Byte.toString(initialDiagnosis);
 		return retu;
 	}

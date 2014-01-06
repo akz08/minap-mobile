@@ -6,7 +6,7 @@
 
 package com.ucl.appteam7.minapmobile;
 
-import com.ucl.appteam7.minapmobile.page1.*;
+import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;
 
 public class Patient {
 	
