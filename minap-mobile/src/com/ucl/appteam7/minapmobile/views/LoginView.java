@@ -39,7 +39,8 @@ public class LoginView extends RelativeLayout {
 	// hook up objects from the xml layout
 	@Override
 	protected void onFinishInflate() {
-		super.onFinishInflate();mLoginButton = (Button)findViewById(R.id.login_button);
+		super.onFinishInflate();
+		mLoginButton = (Button)findViewById(R.id.login_button);
 		mLoginButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
