@@ -12,14 +12,18 @@
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:orientation="vertical">
-	    <TextView
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:text="@string/login_label_username"
-		    style="?android:listSeparatorTextViewStyle"
-	    	/>
+    
+        <ImageView
+            android:id="@+id/login_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/button_bg_round_default"
+            />
+        
 	    <EditText 
 	        android:id="@+id/username"
+	        android:layout_marginTop="20dp"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:hint="@string/login_hint_username"
@@ -27,15 +31,10 @@
 	        android:inputType="textNoSuggestions"
 	        android:imeOptions="flagNoExtractUi"
 			/>
-	    <TextView
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="@string/login_label_password"
-	        style="?android:listSeparatorTextViewStyle"
-	        android:layout_marginTop="16dp"
-	        />
+
 	     <EditText 
 	        android:id="@+id/password"
+	        android:layout_marginTop="16dp"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:inputType="textPassword"
@@ -43,16 +42,16 @@
 	        android:singleLine="true"
 	        android:imeOptions="flagNoExtractUi"
 			/>
+		     
+		 <Button
+	         android:id="@+id/login_button"
+	         android:layout_marginTop="16dp"
+	         android:text="@string/login"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         />
 	</LinearLayout>
        
-     <Button
-         android:id="@+id/login_button"
-         android:text="@string/login"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="8dp"
-         android:layout_marginBottom="8dp"
-		 android:layout_alignParentBottom="true"
-         />
+     
 
 </com.ucl.appteam7.minapmobile.views.LoginView>
