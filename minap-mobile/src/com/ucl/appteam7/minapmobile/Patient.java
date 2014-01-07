@@ -6,6 +6,7 @@
 
 package com.ucl.appteam7.minapmobile;
 
+import com.ucl.appteam7.minapmobile.model.values.PatientInfo.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;
 
 public class Patient {
@@ -31,6 +32,15 @@ public class Patient {
 	}
 	
 	// Declare all fields to patient
+	// Patient Info
+	HospitalIdentifier HospitalIdentifier = new HospitalIdentifier();
+	PatientCaseRecordNumber RecordNumber = new PatientCaseRecordNumber();
+	NHSNumber NHSNumber = new NHSNumber();
+	PatientSurname Surname = new PatientSurname();
+	PatientForename Forename = new PatientForename();
+	DOB DOB = new DOB();
+	AdmissionDate AdmissionDate = new AdmissionDate();
+	
+	// Initial Diagnosis
 	InitialDiagnosis InitialDiagnosis = new InitialDiagnosis();
-
 }

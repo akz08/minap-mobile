@@ -122,14 +122,14 @@ public class DBAdapter {
 	public static final String TAG = "DBAdapter";
 	private static final String DATABASE_NAME = "minap";
 	private static final String TABLE_NAME = "patient";
-	private static final int DATABASE_VERSION = 7; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
+	private static final int DATABASE_VERSION = 8; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
 	
 	// Database creation SQL Statement
 	private static final String DATABASE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" +
 			RECORD_NO + 							" TEXT PRIMARY KEY, " + 	// 1.02 - START PATIENT INFO PAGE
 			PATIENT_FORENAME + 						" TEXT NOT NULL, " + 						// 1.05
 			PATIENT_SURNAME + 						" TEXT NOT NULL, " + 						// 1.04
-			PATIENT_DOB + 							" DATE NOT NULL, " +						// 1.06
+			PATIENT_DOB + 							" TEXT NOT NULL, " +						// 1.06
 			NHS_NUMBER + 							" TEXT NOT NULL, " +		 				// 1.03
 			HOSPITAL_IDENTIFIER + 					" TEXT NOT NULL, " +						// 1.01
 			ADMISSION_DATE  + 						" TEXT NOT NULL, " +						/** NO FIELD NUMBER */
@@ -246,13 +246,12 @@ public class DBAdapter {
 	/** Database helper methods */
 	
 	// Create a new Patient record returns boolean flag - WILL ALWAYS HAPPEN ON PATIENT INFORMATION PAGE
-	public boolean insertPatient(String id, String forename, String surname, Date dob, String nhs, String hId, String admDate) {
+	public boolean insertPatient(String id, String forename, String surname, String dob, String nhs, String hId, String admDate) {
 		ContentValues initialValues = new ContentValues();
 		initialValues.put(RECORD_NO, id);
 		initialValues.put(PATIENT_FORENAME, forename);
 		initialValues.put(PATIENT_SURNAME, surname);
-		String dobtext = dob.toString();
-		initialValues.put(PATIENT_DOB, dobtext);
+		initialValues.put(PATIENT_DOB, dob);
 		initialValues.put(NHS_NUMBER, nhs);
 		initialValues.put(HOSPITAL_IDENTIFIER, hId);
 		initialValues.put(ADMISSION_DATE, admDate);
@@ -260,15 +259,16 @@ public class DBAdapter {
 	}
 	
 	// Update Patient Info Page by id returns boolean flag - WILL UPDATE ALL FIELDS ON PAGE
-	public boolean updatePatientInfo(String id, String forename, String surname, Date dob, String nhs, String hId, String admDate) {
+	public boolean updatePatientInfo(String oldid, String newid, String forename, String surname, String dob, String nhs, String hId, String admDate) {
 		ContentValues updateInfo = new ContentValues();
+		updateInfo.put(RECORD_NO, newid);
 		updateInfo.put(PATIENT_FORENAME, forename);
 		updateInfo.put(PATIENT_SURNAME, surname);
-		updateInfo.put(PATIENT_DOB, dob.toString());
+		updateInfo.put(PATIENT_DOB, dob);
 		updateInfo.put(NHS_NUMBER, nhs);
 		updateInfo.put(HOSPITAL_IDENTIFIER, hId);
 		updateInfo.put(ADMISSION_DATE, admDate);
-		return db.update(TABLE_NAME, updateInfo, RECORD_NO + "= '" + id + "'", null) > 0;
+		return db.update(TABLE_NAME, updateInfo, RECORD_NO + "= '" + oldid + "'", null) > 0;
 	}
 	
 	// Select * from Patient Info Page by id returns cursor containing selected record
