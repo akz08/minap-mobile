@@ -96,11 +96,13 @@
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal">
 		    <RadioButton
+		        android:id="@+id/radio_astemi_admission_yes"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="@string/yes"
 			  	/>
 		    <RadioButton
+		        android:id="@+id/radio_astemi_admission_no"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="@string/no"

@@ -368,6 +368,12 @@
 	<string name="value_label_astemi_admission">Admission after treatment for STEMI elsewhere?</string>
 	<string name="yes">Yes</string>
 	<string name="no">No</string>
+	
+	<string name="value_label_procedure_at_interventional_hospital">Procedure performed at the Interventional Hospital?</string>
+	
+	<string name="value_label_interventional_centre">Interventional Centre</string>
+	
+	<string name="value_label_date_of_return">Date of Return</string>
     
     <string name="title_demographics_and_admission">Demographics and Admission</string>
     <string name="title_prehospital_events">Prehospital Events</string>

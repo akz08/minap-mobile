@@ -18,7 +18,8 @@ public class InitialDiagnosisFragment extends Fragment {
 	Spinner mNstemiSpinner;
 //	RadioGroup mWorkingDiagnosisRadioGroup;
 	private ViewGroup mContainerView;
-	private ViewGroup newView;
+	private ViewGroup mHiddenHighRiskNstemi;
+	private ViewGroup mHiddenGroupAdmissionElsewhere;
 	
 	private InitialDiagnosisView view;
 	
@@ -34,7 +35,8 @@ public class InitialDiagnosisFragment extends Fragment {
 		view = (InitialDiagnosisView)View.inflate(getActivity(), R.layout.fragment_initial_diagnosis, null);
 		view.setViewListener(viewListener);
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
-		newView = (ViewGroup) inflater.inflate(R.layout.hidden_high_risk_nstemi, mContainerView, false);
+		mHiddenHighRiskNstemi = (ViewGroup) inflater.inflate(R.layout.hidden_high_risk_nstemi, mContainerView, false);
+		mHiddenGroupAdmissionElsewhere = (ViewGroup) inflater.inflate(R.layout.hidden_group_admission_elsewhere, mContainerView, false);
 		
 		// setup action bar
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -45,20 +47,33 @@ public class InitialDiagnosisFragment extends Fragment {
 	private InitialDiagnosisView.ViewListener viewListener = new InitialDiagnosisView.ViewListener() {
 
 		@Override
-		public void hideAdmissionStemi() {
-			mContainerView.removeView(newView);
+		public void hideAdmissionHighRisk() {
+			mContainerView.removeView(mHiddenHighRiskNstemi);
 		}
 
 		@Override
-		public void showAdmissionStemi() {
+		public void showAdmissionHighRisk() {
+			// add the hidden view
 			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_working_diagnosis));
-			mContainerView.addView(newView, viewIndex + 1);
+			mContainerView.addView(mHiddenHighRiskNstemi, viewIndex + 1);
 			
 			// Populate the nSTEMI spinner
 			mNstemiSpinner = (Spinner)getView().findViewById(R.id.nstemi_spinner);
 			ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.nstemi_array, android.R.layout.simple_spinner_item);
 			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			mNstemiSpinner.setAdapter(adapter);
+		}
+
+		@Override
+		public void showAdmissionElsewhere() {
+			// add the hidden view
+			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_astemi_admission));
+			mContainerView.addView(mHiddenGroupAdmissionElsewhere, viewIndex + 1);
+		}
+
+		@Override
+		public void hideAdmissionElsewhere() {
+			mContainerView.removeView(mHiddenGroupAdmissionElsewhere);
 		}
 		
 	};

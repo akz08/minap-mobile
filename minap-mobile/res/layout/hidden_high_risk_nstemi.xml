@@ -12,6 +12,7 @@
 		    android:id="@+id/nstemi_label"
 		    android:layout_width="0dip"
 		    android:layout_height="wrap_content"
+		    android:layout_marginTop="8dp"
 		    android:text="@string/value_label_high_risk_nstemi"
 		    style="?android:listSeparatorTextViewStyle"
 		    android:layout_weight="1"

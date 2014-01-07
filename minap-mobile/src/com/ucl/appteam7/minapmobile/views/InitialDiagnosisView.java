@@ -1,20 +1,25 @@
 package com.ucl.appteam7.minapmobile.views;
 
-import com.ucl.appteam7.minapmobile.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.ScrollView;
+
+import com.ucl.appteam7.minapmobile.R;
 
 public class InitialDiagnosisView extends ScrollView {
 	
 	private RadioGroup mWorkingDiagnosisRadioGroup;
+	private RadioGroup mAstemiAdmissionRadioGroup;
+	private RadioButton mAstemiAdmissionRadioNo;
 	
 	public static interface ViewListener {
-		public void hideAdmissionStemi();
-		public void showAdmissionStemi();
+		public void showAdmissionHighRisk();
+		public void hideAdmissionHighRisk();
+		public void showAdmissionElsewhere();
+		public void hideAdmissionElsewhere();
 	}
 	
 	private ViewListener viewListener;
@@ -38,19 +43,39 @@ public class InitialDiagnosisView extends ScrollView {
 				
 				switch(checkedId) {
 				case R.id.radio_working_diagnosis_1:
-					viewListener.hideAdmissionStemi();
+					viewListener.hideAdmissionHighRisk();
 					break;
 				case R.id.radio_working_diagnosis_3:
-					viewListener.showAdmissionStemi();
+					viewListener.showAdmissionHighRisk();
 					break;
 				case R.id.radio_working_diagnosis_4:
-					viewListener.hideAdmissionStemi();
+					viewListener.hideAdmissionHighRisk();
 					break;
 				case R.id.radio_working_diagnosis_5:
-					viewListener.hideAdmissionStemi();
+					viewListener.hideAdmissionHighRisk();
 					break;
 				}
 				
+			}
+		});
+		
+		// set default to no
+		mAstemiAdmissionRadioNo = (RadioButton)findViewById(R.id.radio_astemi_admission_no);
+		mAstemiAdmissionRadioNo.setChecked(true);
+		
+		mAstemiAdmissionRadioGroup = (RadioGroup)findViewById(R.id.radio_group_astemi_admission);
+		mAstemiAdmissionRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				
+				switch(checkedId) {
+				case R.id.radio_astemi_admission_yes:
+					viewListener.showAdmissionElsewhere();
+					break;
+				case R.id.radio_astemi_admission_no:
+					viewListener.hideAdmissionElsewhere();
+					break;
+				}
 			}
 		});
 	}
