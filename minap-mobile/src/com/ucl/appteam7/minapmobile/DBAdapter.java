@@ -122,7 +122,7 @@ public class DBAdapter {
 	public static final String TAG = "DBAdapter";
 	private static final String DATABASE_NAME = "minap";
 	private static final String TABLE_NAME = "patient";
-	private static final int DATABASE_VERSION = 8; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
+	private static final int DATABASE_VERSION = 10; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
 	
 	// Database creation SQL Statement
 	private static final String DATABASE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" +

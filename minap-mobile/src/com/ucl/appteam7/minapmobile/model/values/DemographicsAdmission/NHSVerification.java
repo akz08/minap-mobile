@@ -1,7 +1,7 @@
-/** No Field number - NHS verificationication
- * Takes in a single number (as a byte) that represents the patient's NHS verificationication status
+/** No Field number - NHS verification
+ * Takes in a single number (as a byte) that represents the patient's NHS verification status
  * This field's valid options are
- * 1 - Number present and verificationied
+ * 1 - Number present and verified
  * 2 - Number present but not traced
  * 3 - Trace required
  * 4 - Trace attempted - No match or multiple match found
@@ -31,7 +31,7 @@ public class NHSVerification extends Value {
 		if (verif >= 1 && verif <= 8) {
 			verification = verif;
 			switch (verification) {
-			case 1 : verificationLongCode = "Number present and verificationied"; break;
+			case 1 : verificationLongCode = "Number present and verified"; break;
 			case 2 : verificationLongCode = "Number present but not traced"; break;
 			case 3 : verificationLongCode = "Trace required"; break;
 			case 4 : verificationLongCode = "Trace attempted - No match or multiple match found"; break;

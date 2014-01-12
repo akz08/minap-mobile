@@ -9,6 +9,7 @@ package com.ucl.appteam7.minapmobile;
 import com.ucl.appteam7.minapmobile.model.values.PatientInfo.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;
 import com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission.*;
+import com.ucl.appteam7.minapmobile.model.values.InitialReperfusion.*;
 
 public class Patient {
 	
@@ -34,7 +35,6 @@ public class Patient {
 	
 	// Declare all fields to patient
 	
-	InterventionalCentreCode InterventionalCentreCode = new InterventionalCentreCode(); // used on Initial Diagnosis, Initial Reperfusion and Angiography
 	// Patient Info
 	HospitalIdentifier HospitalIdentifier = new HospitalIdentifier();
 	PatientCaseRecordNumber RecordNumber = new PatientCaseRecordNumber();
@@ -50,6 +50,7 @@ public class Patient {
 	HiRisknSTEMI HighRisknSTEMI = new HiRisknSTEMI();
 	InterventionalProcedure InterventionalProcedure = new InterventionalProcedure();
 	ReferHospitalReturn ReferHospitalReturn = new ReferHospitalReturn();
+	InterventionalCentreCode InterventionalCentreCode = new InterventionalCentreCode(); // used on Initial Diagnosis, Initial Reperfusion and Angiography
 	
 	// Demographics and Admission
 	Gender Gender = new Gender();
@@ -62,4 +63,13 @@ public class Patient {
 	AdminStatus AdminStatus = new AdminStatus();
 	FirstECG FirstECG = new FirstECG();
 	NHSVerification NHSVerification = new NHSVerification();
+	
+	// Initial Reperfusion
+	InitialReperfusion InitialReperfusion = new InitialReperfusion();
+	ReperfusionNotGiven ReperfusionNotGiven = new ReperfusionNotGiven();
+	EcgDetermineTreatment ECGTreatment = new EcgDetermineTreatment();
+	EcgQRSComplex ECG_QRSComplex = new EcgQRSComplex();
+	LocationAtSTEMI LocationSTEMI = new LocationAtSTEMI();
+	InterventionalCentreCode ReperfusionCentreCode = new InterventionalCentreCode();
+	InfarctionSite InfarctionSite = new InfarctionSite();
 }
