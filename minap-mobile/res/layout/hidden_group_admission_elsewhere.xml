@@ -17,6 +17,7 @@
 		    android:layout_weight="1"
 	    	/>
            <ImageButton
+               android:id="@+id/about_procedure_at_interventional_hospital"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:contentDescription="@string/button_about_value"
@@ -45,6 +46,7 @@
 		    android:layout_weight="1"
 	    	/>
            <ImageButton
+               android:id="@+id/about_interventional_centre"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:contentDescription="@string/button_about_value"
@@ -73,6 +75,7 @@
 		    android:layout_weight="1"
 	    	/>
            <ImageButton
+               android:id="@+id/about_date_of_return"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:contentDescription="@string/button_about_value"

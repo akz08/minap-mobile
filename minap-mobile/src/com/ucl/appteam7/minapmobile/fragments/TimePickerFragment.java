@@ -15,15 +15,15 @@ public class TimePickerFragment extends DialogFragment {
 	private String mTitle;
 	
 	// Initialize the fragment and accept a 'starting' title
-		public static TimePickerFragment newInstance(String title) {
-			Bundle args = new Bundle();
-			args.putSerializable(EXTRA_TIME_TITLE, title);
-			
-			TimePickerFragment fragment = new TimePickerFragment();
-			fragment.setArguments(args);
-			
-			return fragment;
-		}
+	public static TimePickerFragment newInstance(String title) {
+		Bundle args = new Bundle();
+		args.putSerializable(EXTRA_TIME_TITLE, title);
+		
+		TimePickerFragment fragment = new TimePickerFragment();
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
 	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
