@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.ucl.appteam7.minapmobile.MinapMobile;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.PatientDetailsActivity;
 import com.ucl.appteam7.minapmobile.views.LoginView;
@@ -19,6 +21,15 @@ public class LoginFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
+		// If first run, show disclaimer/legal-ese stuff
+		if(((MinapMobile) getActivity().getApplication()).getFirstRun()) {
+			((MinapMobile) getActivity().getApplication()).setRunned();
+			
+			Toast.makeText(getActivity(), "first run!", Toast.LENGTH_LONG).show();
+			
+		} else {
+			Toast.makeText(getActivity(), "NOT the first run!", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	@Override
