@@ -10,6 +10,7 @@ import com.ucl.appteam7.minapmobile.model.values.PatientInfo.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;
 import com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialReperfusion.*;
+import com.ucl.appteam7.minapmobile.model.values.Angiography.*;
 
 public class Patient {
 	
@@ -72,4 +73,17 @@ public class Patient {
 	LocationAtSTEMI LocationSTEMI = new LocationAtSTEMI();
 	InterventionalCentreCode ReperfusionCentreCode = new InterventionalCentreCode();
 	InfarctionSite InfarctionSite = new InfarctionSite();
+	
+	// Angiography
+	CoronaryAngiography CoronaryAngiography = new CoronaryAngiography();
+	ReferralDate ReferralDate = new ReferralDate();
+	AngioDelay AngioDelay = new AngioDelay();
+	AngioDate AngioDate = new AngioDate();
+	InterventionalCentreCode AngioCentreCode = new InterventionalCentreCode();
+	LocalInterventionDate InterventionDate = new LocalInterventionDate();
+	CoronaryIntervention CoronaryIntervention = new CoronaryIntervention();
+	ReturnExpected ReturnExpected = new ReturnExpected();
+	DaycaseTransferDate DaycaseTransfer = new DaycaseTransferDate();
+	ReferHospitalReturnDate ReferReturnDate = new ReferHospitalReturnDate();
+
 }
