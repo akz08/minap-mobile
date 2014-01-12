@@ -356,6 +356,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     </string-array>
 
     <string name="button_about_value">information</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
     
     <string name="title_initial_diagnosis">Initial Diagnosis</string>
 	<string name="value_label_working_diagnosis">What is your working diagnosis?</string>

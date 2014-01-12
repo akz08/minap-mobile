@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.ucl.appteam7.minapmobile.views.InitialDiagnosisView
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:fillViewport="true" >
 
    <LinearLayout
        	android:id="@+id/container"	
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
     	android:paddingRight="16dp"
@@ -95,8 +96,10 @@
 		<RadioGroup
 		    android:id="@+id/radio_group_astemi_admission"
 		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal">
+		    android:layout_height="0dip"
+		    android:orientation="horizontal"
+		    android:layout_weight="1.0">
+			 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
 		    <RadioButton
 		        android:id="@+id/radio_astemi_admission_yes"
 		        android:layout_width="wrap_content"
@@ -110,6 +113,35 @@
 		        android:text="@string/no"
 				/>
 		</RadioGroup>
+		
+  
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_vertical">	
+		    <Button
+	         android:id="@+id/back_button"
+	         android:text="@string/back"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:enabled="false"
+	         android:drawableLeft="@drawable/ic_action_previous_item"
+	         />
+			<Button
+	         android:id="@+id/next_button"
+	         android:text="@string/next"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:drawableRight="@drawable/ic_action_next_item"
+	         />
+		</LinearLayout>
 		
     </LinearLayout>
     

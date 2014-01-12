@@ -1,5 +1,6 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.activities.DemographicsAndAdmissionActivity;
 import com.ucl.appteam7.minapmobile.views.InitialDiagnosisView;
 
 public class InitialDiagnosisFragment extends Fragment {
@@ -184,6 +186,13 @@ public class InitialDiagnosisFragment extends Fragment {
 			AboutDialogFragment dialog = AboutDialogFragment
 					.newInstance("Dummy Title", "dummy content");
 			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void nextPage() {
+			// simply go to the next page
+			Intent intent = new Intent(getActivity(), DemographicsAndAdmissionActivity.class);
+			startActivity(intent);
 		}
 		
 	};

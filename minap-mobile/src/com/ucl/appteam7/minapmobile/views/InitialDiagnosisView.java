@@ -3,10 +3,10 @@ package com.ucl.appteam7.minapmobile.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
 
@@ -20,6 +20,8 @@ public class InitialDiagnosisView extends ScrollView {
 	
 	private ImageButton mAboutWorkingDiagnosisButton;
 	private ImageButton mAboutAstemiAdmissionButton;
+	
+	private Button mNextPage;
 	
 	public static interface ViewListener {
 		public void showAdmissionHighRisk();
@@ -35,6 +37,8 @@ public class InitialDiagnosisView extends ScrollView {
 		public void showAboutProcedureAtInterventionalHospital();
 		public void showAboutInterventionalCentre();
 		public void showAboutDateOfReturn();
+		
+		public void nextPage();
 	}
 	
 	private ViewListener viewListener;
@@ -113,6 +117,15 @@ public class InitialDiagnosisView extends ScrollView {
 			}
 		});
 		
-		
+		// wire up page navigation button
+		mNextPage = (Button)findViewById(R.id.next_button);
+		mNextPage.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.nextPage();
+				
+			}
+		});
 	}
 }
