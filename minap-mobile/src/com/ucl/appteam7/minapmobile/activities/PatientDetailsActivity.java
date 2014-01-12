@@ -8,7 +8,10 @@ public class PatientDetailsActivity extends SingleFragmentActivity {
 
 	@Override
 	protected Fragment createFragment() {
-		return new PatientDetailsFragment();
+		// pass along the intent to the fragment
+		boolean focusHospitalNumber = (Boolean)getIntent()
+				.getBooleanExtra(PatientDetailsFragment.EXTRA_FOCUS_HOSPITAL_NUMBER, false);
+		return PatientDetailsFragment.newInstance(focusHospitalNumber);
 	}
 
 }

@@ -7,8 +7,6 @@
 package com.ucl.appteam7.minapmobile.activities;
 
 
-import com.ucl.appteam7.minapmobile.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -23,16 +21,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.fragments.PatientDetailsFragment;
+
 
 
 public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
+	
 	public static final String TAG = "com.ucl.appteam7.minapmobile.activitydrawer";
 	protected abstract Fragment createFragment();
 	
 	 private String[] mNavigationTitles;
 	 protected DrawerLayout mDrawerLayout;
 	 protected ActionBarDrawerToggle mDrawerToggle;
-	 private ListView mDrawerList;
+	 protected ListView mDrawerList;
 	 Button mEditPatientButton;
 	
     @Override
@@ -68,10 +70,13 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
         mEditPatientButton.setOnClickListener(new View.OnClickListener() {
         	@Override
         	public void onClick(View view) {
+        		// open patient details with focus on hospital number field
         		Intent intent = new Intent(SingleFragmentActivityDrawer.this, PatientDetailsActivity.class);
+        		intent.putExtra(PatientDetailsFragment.EXTRA_FOCUS_HOSPITAL_NUMBER, true);
      			startActivity(intent);
      		}
         });
+        
     }
     
  	private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -104,8 +109,9 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
  			e.printStackTrace();
  		}
  		
+
  	}
- 	
+
  	/**
  	 * Modify page titles defined in strings.cml navigation_array to convention used for activity class naming
  	 * 

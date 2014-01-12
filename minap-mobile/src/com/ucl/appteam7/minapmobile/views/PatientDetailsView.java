@@ -11,12 +11,13 @@ import android.widget.TextView;
 import com.ucl.appteam7.minapmobile.R;
 
 public class PatientDetailsView extends ScrollView {
-	
+		
 //	private Spinner mHospitalSpinner;
 	private Button mConfirmButton;
 	private TextView mDateOfBirthTextView;
 	private TextView mAdmissionDateTextView;
 	private TextView mAdmissionTimeTextView;
+	private TextView mHospitalCRN;
 	
 	// interface to send events from the view to the controller
 	public static interface ViewListener {
@@ -24,6 +25,11 @@ public class PatientDetailsView extends ScrollView {
 		public void onBirthDate();
 		public void onAdmissionDate();
 		public void onAdmissionTime();
+	}
+	
+	public void setFocusHospitalCRN() {
+		mHospitalCRN = (TextView)findViewById(R.id.hospital_number);
+		mHospitalCRN.requestFocus();
 	}
 	
 	// listener reference for sending events

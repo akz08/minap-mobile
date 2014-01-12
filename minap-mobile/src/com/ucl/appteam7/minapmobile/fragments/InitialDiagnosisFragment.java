@@ -1,5 +1,6 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
@@ -27,7 +28,7 @@ public class InitialDiagnosisFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
-		
+
 	}
 	
 	@Override

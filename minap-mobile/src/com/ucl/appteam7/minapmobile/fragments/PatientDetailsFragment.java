@@ -15,17 +15,29 @@ import com.ucl.appteam7.minapmobile.activities.NavigationMapActivity;
 import com.ucl.appteam7.minapmobile.views.PatientDetailsView;
 
 public class PatientDetailsFragment extends Fragment {
-	
+	public static final String EXTRA_FOCUS_HOSPITAL_NUMBER = "com.ucl.appteam7.minapmobile.EXTRA_FOCUS_HOSPITAL_NUMBER";
+
 	private static final String DIALOG_DATE = "date";
 	private static final String DIALOG_TIME = "time";
 	
 	private PatientDetailsView view;
 	
-	Spinner mHospitalSpinner;
+	private Spinner mHospitalSpinner;
 
+	public static PatientDetailsFragment newInstance(boolean focusHospitalNumber) {
+		// get the extra from the bundle
+		Bundle args = new Bundle();
+		args.putBoolean(EXTRA_FOCUS_HOSPITAL_NUMBER, focusHospitalNumber);
+		
+		PatientDetailsFragment fragment = new PatientDetailsFragment();
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);		
 	}
 	
 	@Override
@@ -39,8 +51,18 @@ public class PatientDetailsFragment extends Fragment {
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mHospitalSpinner.setAdapter(adapter);
-
+		
 		return view;
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		// retrieve flag from bundle if hospital number should be focused
+		boolean focusHospitalNumber = (boolean)getArguments().getBoolean(EXTRA_FOCUS_HOSPITAL_NUMBER);
+		if (focusHospitalNumber) {
+			view.setFocusHospitalCRN();
+		}	
 	}
 	
 	// receive events from view

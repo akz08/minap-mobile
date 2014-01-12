@@ -1,8 +1,10 @@
 package com.ucl.appteam7.minapmobile.activities;
 
-import com.ucl.appteam7.minapmobile.fragments.InitialDiagnosisFragment;
-
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
+
+import com.ucl.appteam7.minapmobile.fragments.InitialDiagnosisFragment;
 
 public class InitialDiagnosisActivity extends SingleFragmentActivityDrawer {
 	// temporary variables
@@ -12,13 +14,5 @@ public class InitialDiagnosisActivity extends SingleFragmentActivityDrawer {
 	protected Fragment createFragment() {
 		return new InitialDiagnosisFragment();
 	}
-	
-	//temporary
-//	@Override
-//	public void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		mContainerView = (ViewGroup) findViewById(R.id.nstemi_label);
-//	}
-	
 
 }

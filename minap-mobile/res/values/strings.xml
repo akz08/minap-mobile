@@ -336,7 +336,7 @@
     <string name="drawer_close">Close navigation drawer</string>
     <string name="title_navigation_menu"></string>
     <string name="navigation_value_dummy_user">Marco David/YYY</string>
-    <string name="navigation_label_patient_details">Patient NHS Number</string>
+    <string name="navigation_label_patient_details">Hospital CRN</string>
     <string name="navigation_value_dummy_patient">924812453</string>
     <string name="navigation_label_quick_navigation">Quick Navigation</string>
     <string-array name="navigation_array">
