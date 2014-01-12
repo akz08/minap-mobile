@@ -3,6 +3,7 @@ package com.ucl.appteam7.minapmobile.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,20 +16,27 @@ import com.ucl.appteam7.minapmobile.views.LoginView;
 
 public class LoginFragment extends Fragment {
 
+	private static final String DIALOG_LEGAL = "legal";
+	
 	private LoginView view;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
-		// If first run, show disclaimer/legal-ese stuff
-		if(((MinapMobile) getActivity().getApplication()).getFirstRun()) {
-			((MinapMobile) getActivity().getApplication()).setRunned();
+//		if(((MinapMobile) getActivity().getApplication()).getFirstRun()) {
+//			((MinapMobile) getActivity().getApplication()).setRunned();
+		
+		// If not yet agreed to disclaimer, show disclaimer/legal-ese stuff
+		if(!((MinapMobile) getActivity().getApplication()).hasAgreed()) {
 			
-			Toast.makeText(getActivity(), "first run!", Toast.LENGTH_LONG).show();
+			FragmentManager fm = getActivity()
+								.getSupportFragmentManager();
+			LegalDialogFragment dialog = new LegalDialogFragment();
+			dialog.show(fm, DIALOG_LEGAL);
 			
 		} else {
-			Toast.makeText(getActivity(), "NOT the first run!", Toast.LENGTH_LONG).show();
+			// user has agreed, so do nothing - for now
 		}
 	}
 	

@@ -5,10 +5,16 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     
-    <string name="legal_label"></string>
-    <string name="legal_contents"></string>
-    <string name="accept_and_continue"></string>
-    <string name="close"></string>
+    <string name="legal_label">Legal Disclaimer</string>
+    <string name="legal_contents">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+
+Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+\n \n
+Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+\n \n
+Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.</string>
+    <string name="accept">Accept</string>
+    <string name="close">Close</string>
     <string name="login">Log in</string>
     <string name="login_label_username">Username</string>
     <string name="login_hint_username">username</string>

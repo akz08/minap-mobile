@@ -14,6 +14,7 @@ import com.testflightapp.lib.TestFlight;
 
 public class MinapMobile extends Application {
 	private static final String FIRST_RUN = "firstRun";
+	private static final String LEGAL_AGREED = "legalAgreed";
 	
 	SharedPreferences mPrefs;
 	
@@ -38,6 +39,16 @@ public class MinapMobile extends Application {
 	public void setRunned() {
 		SharedPreferences.Editor edit = mPrefs.edit();
 		edit.putBoolean(FIRST_RUN,  false);
+		edit.commit();
+	}
+	
+	public boolean hasAgreed() {
+		return mPrefs.getBoolean(LEGAL_AGREED, false);
+	}
+	
+	public void setAgreed() {
+		SharedPreferences.Editor edit = mPrefs.edit();
+		edit.putBoolean(LEGAL_AGREED, true);
 		edit.commit();
 	}
 }
