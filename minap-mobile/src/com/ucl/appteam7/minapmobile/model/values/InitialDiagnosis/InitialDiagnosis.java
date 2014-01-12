@@ -25,7 +25,7 @@ public class InitialDiagnosis extends Value {
 				+ "Do not change Initial diagnosis on the basis of further ECGs or enzymes/markers. (See 2.03 ECG determining treatment).");
 	}
 	
-	public static void setInitialDiagnosis(byte iniDiagnosis) {
+	public static boolean setInitialDiagnosis(byte iniDiagnosis) {
 		// check if valid entry
 		if (iniDiagnosis == 1 || iniDiagnosis == 3 || iniDiagnosis == 4 || iniDiagnosis == 5) {
 			initialDiagnosis = iniDiagnosis;
@@ -35,16 +35,20 @@ public class InitialDiagnosis extends Value {
 			case 4 : diagnosisLongCode = "Chest pain ? cause"; break;
 			case 5 : diagnosisLongCode = "Other initial diagnosis"; break;
 			}
+			return true;
 		}
 		else
-			System.err.println("Invalid Entry");
+			return false;
 		// set additional fields to visible here
 	}
 	
 	public String getInitialDiagnosis() {
 		// Convert byte to string for db operations
-		String retu = Byte.toString(initialDiagnosis);
-		return retu;
+		return Byte.toString(initialDiagnosis) + " - " + diagnosisLongCode;
+	}
+	
+	public String getInitialLongCode(){
+		return diagnosisLongCode;
 	}
 }
 

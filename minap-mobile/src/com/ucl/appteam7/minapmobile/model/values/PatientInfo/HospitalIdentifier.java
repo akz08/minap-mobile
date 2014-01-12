@@ -1,12 +1,6 @@
 /** Field 1.01 - Hospital Identifier
- * Takes in a single number (as a byte) that represents the patient's initial diagnosis.
- * This field's valid options are 
- * 1 - Definite Myocardial Infarction
- * 3 - Acute Coronary Syndrome
- * 4 - Chest pain? cause
- * 5 - Other Initial Diagnosis.
- * If option 3 (Acute Coronary Syndrome) is chosen, field 4.32 (High Risk nSTEMI) becomes visible
- * @param iniDiagnosis
+ * Takes in 3 character String that represents the Hospital's Code
+ * @param hospId
  * @author david  
  */
 
