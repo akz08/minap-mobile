@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -38,6 +42,7 @@ public class PatientDetailsFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);		
+		
 	}
 	
 	@Override
@@ -109,4 +114,18 @@ public class PatientDetailsFragment extends Fragment {
 			
 		}
 	};
+	
+
+	
+	// hook up options menu
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.menu_item_save:
+				
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
 }

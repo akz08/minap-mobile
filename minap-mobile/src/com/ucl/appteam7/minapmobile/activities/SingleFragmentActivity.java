@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NavUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();
@@ -30,4 +34,24 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
                 .commit();
         }
     }
+    
+	// create options menu for logout, settings, help
+ 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.fragment_general, menu);
+		return true;
+		
+	}
+ 	
+ 	@Override
+ 	public boolean onOptionsItemSelected(MenuItem item) {
+ 		switch (item.getItemId()) {
+ 			case android.R.id.home:
+// 				NavUtils.navigateUpFromSameTask(this);
+ 				return true;
+ 			default:
+ 				return super.onOptionsItemSelected(item);
+ 		}
+ 	}
 }

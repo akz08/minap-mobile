@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -24,9 +25,6 @@ public class LoginFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
-//		if(((MinapMobile) getActivity().getApplication()).getFirstRun()) {
-//			((MinapMobile) getActivity().getApplication()).setRunned();
-		
 		// If not yet agreed to disclaimer, show disclaimer/legal-ese stuff
 		if(!((MinapMobile) getActivity().getApplication()).hasAgreed()) {
 			
@@ -38,6 +36,13 @@ public class LoginFragment extends Fragment {
 		} else {
 			// user has agreed, so do nothing - for now
 		}
+		
+		// If first time, show a tutorial
+		if(((MinapMobile) getActivity().getApplication()).getFirstRun()) {
+			((MinapMobile) getActivity().getApplication()).setRunned();
+			//TODO: open up a tutorial
+		}
+		
 	}
 	
 	@Override
@@ -59,4 +64,6 @@ public class LoginFragment extends Fragment {
 			
 		}
 	};
+	
+	
 }

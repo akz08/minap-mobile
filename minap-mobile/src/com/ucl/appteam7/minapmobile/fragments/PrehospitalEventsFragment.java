@@ -26,16 +26,5 @@ public class PrehospitalEventsFragment extends Fragment {
 
 		return view;
 	}
-	
-	// general stuff
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-			case android.R.id.home:
-				NavUtils.navigateUpFromSameTask(getActivity());
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
-		}
-	}
+
 }

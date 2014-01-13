@@ -13,8 +13,12 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NavUtils;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -132,5 +136,26 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
 		}
 		output = output.concat("Activity");
 		return output;
+ 	}
+ 	
+ 	
+ 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.fragment_general, menu);
+		return true;
+		
+	}
+ 	
+ // setup action bar
+ 	@Override
+ 	public boolean onOptionsItemSelected(MenuItem item) {
+ 		switch (item.getItemId()) {
+ 			case android.R.id.home:
+ 				NavUtils.navigateUpFromSameTask(this);
+ 				return true;
+ 			default:
+ 				return super.onOptionsItemSelected(item);
+ 		}
  	}
 }
