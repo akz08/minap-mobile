@@ -14,7 +14,6 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NavUtils;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -28,6 +27,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.fragments.LogOutDialogFragment;
 import com.ucl.appteam7.minapmobile.fragments.PatientDetailsFragment;
 
 
@@ -36,6 +36,8 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
 	
 	public static final String TAG = "com.ucl.appteam7.minapmobile.activitydrawer";
 	protected abstract Fragment createFragment();
+	
+	private static final String DIALOG_LOG_OUT = "log out";
 	
 	 private String[] mNavigationTitles;
 	 protected DrawerLayout mDrawerLayout;
@@ -156,10 +158,11 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
  		
  		switch (item.getItemId()) {
  			case R.id.menu_item_log_out:
- 				// Simple link to login page
- 				intent = new Intent(this, LoginActivity.class);
- 				startActivity(intent);
- 				Toast.makeText(this, R.string.logging_out, Toast.LENGTH_SHORT).show();
+ 				// Open log out dialog
+ 				FragmentManager fm = this
+				.getSupportFragmentManager();
+ 				LogOutDialogFragment dialog = new LogOutDialogFragment();
+ 				dialog.show(fm, DIALOG_LOG_OUT);
  				return true;
  			case R.id.menu_item_help:
  				// search code taken from Google's Navigation Drawer Example

@@ -18,10 +18,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.fragments.LogOutDialogFragment;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();
 
+    private static final String DIALOG_LOG_OUT = "log out";
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +55,11 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
  		
  		switch (item.getItemId()) {
  			case R.id.menu_item_log_out:
- 				// Simple link to login page
- 				intent = new Intent(this, LoginActivity.class);
- 				startActivity(intent);
- 				Toast.makeText(this, R.string.logging_out, Toast.LENGTH_SHORT).show();
+ 				// Open log out dialog
+ 				FragmentManager fm = this
+				.getSupportFragmentManager();
+ 				LogOutDialogFragment dialog = new LogOutDialogFragment();
+ 				dialog.show(fm, DIALOG_LOG_OUT);
  				return true;
  			case R.id.menu_item_help:
  				// search code taken from Google's Navigation Drawer Example

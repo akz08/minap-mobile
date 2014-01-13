@@ -336,6 +336,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="saving">Saved</string>
     <string name="saving_all">Saved all pages</string>
     <string name="log_out">Log out</string>
+    <string name="log_out_label">Are you sure you want to log out?</string>
+    <string name="log_out_confirm_text">You\'ll lose all unsaved data if you log out. Are you sure you want to do this?</string>
     <string name="logging_out">Logged out</string>
     <string name="settings">Settings</string>
     <string name="help">Help</string>

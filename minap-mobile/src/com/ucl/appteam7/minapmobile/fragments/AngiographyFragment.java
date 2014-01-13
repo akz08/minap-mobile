@@ -23,7 +23,7 @@ public class AngiographyFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_angiography, parent, false);
 		
-		// general stuff 
+		// wiring up action bar icon for ancestral navigation
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		return view;
