@@ -6,16 +6,18 @@
 
 package com.ucl.appteam7.minapmobile.activities;
 
-import com.ucl.appteam7.minapmobile.R;
-
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.ucl.appteam7.minapmobile.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();
@@ -46,9 +48,25 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
  	
  	@Override
  	public boolean onOptionsItemSelected(MenuItem item) {
+ 		Intent intent;
+ 		
  		switch (item.getItemId()) {
- 			case android.R.id.home:
-// 				NavUtils.navigateUpFromSameTask(this);
+ 			case R.id.menu_item_log_out:
+ 				// Simple link to login page
+ 				intent = new Intent(this, LoginActivity.class);
+ 				startActivity(intent);
+ 				Toast.makeText(this, R.string.logging_out, Toast.LENGTH_SHORT).show();
+ 				return true;
+ 			case R.id.menu_item_help:
+ 				// search code taken from Google's Navigation Drawer Example
+ 	            intent = new Intent(Intent.ACTION_WEB_SEARCH);
+ 	            intent.putExtra(SearchManager.QUERY, "how to use an android app");
+ 	            // catch event that there's no activity to handle intent
+ 	            if (intent.resolveActivity(getPackageManager()) != null) {
+ 	                startActivity(intent);
+ 	            } else {
+ 	                Toast.makeText(this, R.string.browser_not_available, Toast.LENGTH_LONG).show();
+ 	            }
  				return true;
  			default:
  				return super.onOptionsItemSelected(item);

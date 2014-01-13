@@ -100,6 +100,7 @@
 		    android:orientation="horizontal"
 		    android:layout_weight="1.0">
 			 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
+			 <!-- it's a bit of hack, and won't work if the layout inflated below isn't big enough -->
 		    <RadioButton
 		        android:id="@+id/radio_astemi_admission_yes"
 		        android:layout_width="wrap_content"
