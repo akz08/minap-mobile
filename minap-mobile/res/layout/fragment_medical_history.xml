@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:fillViewport="true" >
+
+ 	<LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true" >
+        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="2dp"
+           android:layout_weight="1.0">
+         	<!-- add in a margin to give space for the about button -->
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="placeholder text"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+
+		</LinearLayout>
+
+        <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_vertical">	
+		    <Button
+	         android:id="@+id/back_button"
+	         android:text="@string/back"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:drawableLeft="@drawable/ic_action_previous_item"
+	         />
+			<Button
+	         android:id="@+id/next_button"
+	         android:text="@string/next"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:drawableRight="@drawable/ic_action_next_item"
+	         />
+		</LinearLayout>
+    </LinearLayout>
     
 
-</LinearLayout>
+</ScrollView>

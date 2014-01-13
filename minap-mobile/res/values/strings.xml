@@ -333,6 +333,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     
     <string name="save_all">Save all</string>
     <string name="save">Save</string>
+    <string name="saving">Saved</string>
+    <string name="saving_all">Saved all pages</string>
     <string name="log_out">Log out</string>
     <string name="logging_out">Logged out</string>
     <string name="settings">Settings</string>

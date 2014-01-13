@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class NavigationMapFragment extends Fragment {
@@ -38,7 +39,14 @@ public class NavigationMapFragment extends Fragment {
 	
 	@Override 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		return super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.menu_item_save_all:
+			//TODO: save all pages to server
+			Toast.makeText(getActivity(), R.string.saving_all, Toast.LENGTH_SHORT).show();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+	}
 	}
 	
 }

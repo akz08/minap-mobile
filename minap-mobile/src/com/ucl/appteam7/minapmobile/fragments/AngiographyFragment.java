@@ -1,16 +1,16 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
-import com.ucl.appteam7.minapmobile.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.ucl.appteam7.minapmobile.R;
 
 public class AngiographyFragment extends Fragment {
 	@Override
@@ -42,7 +42,8 @@ public class AngiographyFragment extends Fragment {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.menu_item_save:
-				NavUtils.navigateUpFromSameTask(getActivity());
+				//TODO: save items on page to server
+				Toast.makeText(getActivity(), R.string.saving, Toast.LENGTH_SHORT).show();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
