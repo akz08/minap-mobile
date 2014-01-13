@@ -14,6 +14,7 @@ import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NavUtils;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -157,6 +158,10 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
  		Intent intent;
  		
  		switch (item.getItemId()) {
+ 			// set up ancestral navigation
+	 		case android.R.id.home:
+	 			NavUtils.navigateUpFromSameTask(this);
+	 			return true;
  			case R.id.menu_item_log_out:
  				// Open log out dialog
  				FragmentManager fm = this
