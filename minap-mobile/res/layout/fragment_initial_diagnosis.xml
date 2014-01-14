@@ -122,8 +122,8 @@
 		    android:layout_height="wrap_content"
 		    android:gravity="center_vertical">	
 		    <Button
-	         android:id="@+id/back_button"
-	         android:text="@string/back"
+	         android:id="@+id/previous_page_button"
+	         android:text="@string/previous_page"
 	         android:layout_width="0dip"
 	         android:layout_weight="1.0"
 	         android:layout_height="wrap_content"
@@ -133,8 +133,8 @@
 	         android:drawableLeft="@drawable/ic_action_previous_item"
 	         />
 			<Button
-	         android:id="@+id/next_button"
-	         android:text="@string/next"
+	         android:id="@+id/next_page_button"
+	         android:text="@string/next_page"
 	         android:layout_width="0dip"
 	         android:layout_weight="1.0"
 	         android:layout_height="wrap_content"

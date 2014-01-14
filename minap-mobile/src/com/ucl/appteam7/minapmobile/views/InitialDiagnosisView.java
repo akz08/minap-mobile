@@ -38,6 +38,7 @@ public class InitialDiagnosisView extends ScrollView {
 		public void showAboutInterventionalCentre();
 		public void showAboutDateOfReturn();
 		
+		// navigation buttons
 		public void nextPage();
 	}
 	
@@ -118,7 +119,7 @@ public class InitialDiagnosisView extends ScrollView {
 		});
 		
 		// wire up page navigation button
-		mNextPage = (Button)findViewById(R.id.next_button);
+		mNextPage = (Button)findViewById(R.id.next_page_button);
 		mNextPage.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
