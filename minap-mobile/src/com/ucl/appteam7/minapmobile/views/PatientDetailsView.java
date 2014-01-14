@@ -28,7 +28,7 @@ public class PatientDetailsView extends ScrollView {
 	}
 	
 	public void setFocusHospitalCRN() {
-		mHospitalCRN = (TextView)findViewById(R.id.hospital_number);
+		mHospitalCRN = (TextView)findViewById(R.id.hospital_number_edit_text);
 		mHospitalCRN.requestFocus();
 	}
 	
@@ -49,7 +49,7 @@ public class PatientDetailsView extends ScrollView {
 			super.onFinishInflate();
 			
 			// Add on-click listeners to date and time TextViews
-			mDateOfBirthTextView = (TextView)findViewById(R.id.date_of_birth);
+			mDateOfBirthTextView = (TextView)findViewById(R.id.date_of_birth_textspinner);
 			mDateOfBirthTextView.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
@@ -58,7 +58,7 @@ public class PatientDetailsView extends ScrollView {
 				}
 			});
 			
-			mAdmissionDateTextView = (TextView)findViewById(R.id.admission_date);
+			mAdmissionDateTextView = (TextView)findViewById(R.id.admission_date_textspinner);
 			mAdmissionDateTextView.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
@@ -67,7 +67,7 @@ public class PatientDetailsView extends ScrollView {
 				}
 			});
 			
-			mAdmissionTimeTextView = (TextView)findViewById(R.id.admission_time);
+			mAdmissionTimeTextView = (TextView)findViewById(R.id.admission_time_textspinner);
 			mAdmissionTimeTextView.setOnClickListener(new View.OnClickListener() {
 				
 				@Override

@@ -5,6 +5,9 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     
+    <string name="yes">Yes</string>
+	<string name="no">No</string>
+    
     <string name="legal_label">Legal Disclaimer</string>
     <string name="legal_contents">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
 
@@ -349,6 +352,7 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="current_patient_name"></string>
     <string name="current_patient_number"></string>
     
+    <!-- Navigation Drawer -->
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="title_navigation_menu"></string>
@@ -366,11 +370,14 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
         <item>@string/title_angiography</item>
     </string-array>
 
+    <!-- General Page -->
     <string name="button_about_value">information</string>
     <string name="next_page">Next</string>
     <string name="previous_page">Back</string>
     
+    <!-- Initial Diagnosis -->
     <string name="title_initial_diagnosis">Initial Diagnosis</string>
+	
 	<string name="value_label_working_diagnosis">What is your working diagnosis?</string>
 	<string name="value_radio_working_diagnosis_1">1. Definite myocardial infarction</string>
 	<string name="value_radio_working_diagnosis_3">3. Acute coronary syndrome</string>
@@ -385,8 +392,6 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	</string-array>
 	
 	<string name="value_label_astemi_admission">Admission after treatment for STEMI elsewhere?</string>
-	<string name="yes">Yes</string>
-	<string name="no">No</string>
 	
 	<string name="value_label_procedure_at_interventional_hospital">Procedure performed at the Interventional Hospital?</string>
 	
@@ -394,11 +399,46 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	
 	<string name="value_label_date_of_return">Date of Return</string>
     
+	<!-- Demographics and Admission -->
     <string name="title_demographics_and_admission">Demographics and Admission</string>
+       
+    <string name="value_label_gender">Gender</string>
+    
+    <string name="value_label_patient_ethnicity">Patient Ethnicity</string>
+    
+    <string name="value_label_admission_method">Admission Method</string>
+    
+    <string name="value_label_admission_ward">Admission Ward</string>
+    
+    <string name="value_label_admitting_consultant">Admitting Consultant</string>
+    
+    <string name="value_label_referral_hospital">Referral Hospital</string>
+    
+    <string name="value_label_gp_pct_code">GP Code / PCT Code</string>
+    <string name="value_hint_gp_code">GP code</string>
+    
+    <string name="value_label_postcode">Postcode</string>
+    <string name="value_hint_postcode">postcode</string>
+    
+    <string name="value_label_admin_status">Administrative Status</string>
+    
+    <string name="value_label_place_ecg_performed">Place 1st 12 lead ECG performed</string>
+    
+    <string name="value_label_nhs_verification_status">NHS Verification Status</string>
+ 
+    <!-- Prehospital Events -->
     <string name="title_prehospital_events">Prehospital Events</string>
+   
+    <!-- Initial Reperfusion -->
     <string name="title_initial_reperfusion">Initial Reperfusion</string>
+    
+    <!-- Examinations -->
     <string name="title_examinations">Examinations</string>
+    
+    <!-- Medical History -->
     <string name="title_medical_history">Medical History</string>
+    
+    <!-- Angiography -->
     <string name="title_angiography">Angiography</string>
 
     
