@@ -12,6 +12,7 @@ import com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialReperfusion.*;
 import com.ucl.appteam7.minapmobile.model.values.Angiography.*;
 import com.ucl.appteam7.minapmobile.model.values.Examinations.*;
+import com.ucl.appteam7.minapmobile.model.values.MedicalHistory.*;
 
 public class Patient {
 	
@@ -94,4 +95,20 @@ public class Patient {
 	Height Height = new Height();
 	Weight Weight = new Weight();
 	BMI BMI = new BMI();
+	
+	// Medical History
+	PreviousAMI PreviousAMI = new PreviousAMI();
+	Hypertension Hypertension = new Hypertension();
+	CerebrovascularDisease Cerebrovascular = new CerebrovascularDisease();
+	PreviousPCI PreviousPCI = new PreviousPCI();
+	SmokingStatus Smoking = new SmokingStatus();
+	Diabetes Diabetes = new Diabetes();
+	PreviousAngina PreviousAngina = new PreviousAngina();
+	Hypercholesterolaemia HyperCholesterol = new Hypercholesterolaemia();
+	AsthmaOrCOPD AshtmaCOPD = new AsthmaOrCOPD();
+	PreviousCABG PreviousCABG = new PreviousCABG();
+	HeartFailure HeartFailure = new HeartFailure();
+	PeripheralVascularDisease PeripheralVascular = new PeripheralVascularDisease();
+	ChronicRenalFailure RenalFailure = new ChronicRenalFailure();
+	FamilyCHD FamilyCHD = new FamilyCHD();
 }

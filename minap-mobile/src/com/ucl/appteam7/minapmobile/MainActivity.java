@@ -181,7 +181,91 @@ public class MainActivity extends Activity {
 //			Toast.makeText(this, patient.BMI.getBMI(), Toast.LENGTH_LONG).show();
 //		else
 //			Toast.makeText(this, "invalid bmi", Toast.LENGTH_LONG).show();
+//		
+		// Previous AMI Class
+		if (patient.PreviousAMI.setPreviousAMI((byte)1))
+			Toast.makeText(this, patient.PreviousAMI.getPreviousAMI(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid prevAMI", Toast.LENGTH_LONG).show();
 		
+		// Hypertension
+		if (patient.Hypertension.setHyperTension((byte)1))
+			Toast.makeText(this, patient.Hypertension.getHyperTension(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid hypertension", Toast.LENGTH_LONG).show();
+		
+		// Cerebrovascular disease
+		if (patient.Cerebrovascular.setCerebrovascular((byte)1))
+			Toast.makeText(this, patient.Cerebrovascular.getCerebrovascular(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid cerebrovascular", Toast.LENGTH_LONG).show();
+		
+		// Previous PCI
+		if (patient.PreviousPCI.setPreviousPCI((byte)1))
+			Toast.makeText(this, patient.PreviousPCI.getPreviousPCI(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid prevPCI", Toast.LENGTH_LONG).show();
+		
+		// Smoking status
+		if (patient.Smoking.setSmokingStatus((byte)1))
+			Toast.makeText(this, patient.Smoking.getSmokingStatus(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid smoking", Toast.LENGTH_LONG).show();
+
+		// dibetes
+		if (patient.Diabetes.setDiabetes((byte)1))
+			Toast.makeText(this, patient.Diabetes.getDiabetes(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid diabetes", Toast.LENGTH_LONG).show();
+		
+		// previous angina
+		if (patient.PreviousAngina.setPreviousAngina((byte)1))
+			Toast.makeText(this, patient.PreviousAngina.getPreviousAngina(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid angina", Toast.LENGTH_LONG).show();
+		
+		// hypercholes
+		if (patient.HyperCholesterol.setHyperCholesterol((byte)1))
+			Toast.makeText(this, patient.HyperCholesterol.getHyperCholesterol(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid choles", Toast.LENGTH_LONG).show();
+
+		// asthma
+		if (patient.AshtmaCOPD.setAsthmaCOPD((byte)1))
+			Toast.makeText(this, patient.AshtmaCOPD.getAsthmaCOPD(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid asthma", Toast.LENGTH_LONG).show();
+		
+		// cabg
+		if (patient.PreviousCABG.setPreviousCABG((byte)1))
+			Toast.makeText(this, patient.PreviousCABG.getPreviousCABG(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid asthma", Toast.LENGTH_LONG).show();
+		
+		// heart failure
+		if (patient.HeartFailure.setHeartFailure((byte)1))
+			Toast.makeText(this, patient.HeartFailure.getHeartFailure(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid heartfailure", Toast.LENGTH_LONG).show();
+		
+		// peripheral vascular
+		if (patient.PeripheralVascular.setPeripheralVascularDisease((byte)1))
+			Toast.makeText(this, patient.PeripheralVascular.getPeripheralVascularDisease(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid peripheral", Toast.LENGTH_LONG).show();
+		
+		// renal failure
+		if (patient.RenalFailure.setRenalFailure((byte)1))
+			Toast.makeText(this, patient.RenalFailure.getRenalFailure(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid renal", Toast.LENGTH_LONG).show();
+		
+		// chd
+		if (patient.FamilyCHD.setFamilyCHD((byte)1))
+			Toast.makeText(this, patient.FamilyCHD.getFamilyCHD(), Toast.LENGTH_LONG).show();
+		else
+			Toast.makeText(this, "invalid renal", Toast.LENGTH_LONG).show();
+
 		// add a test patient info, update with first page
 //		db.open();
 //		db.insertPatient(patient.RecordNumber.getCaseNumber(), patient.Forename.getForename(), patient.Surname.getSurname(), patient.DOB.getDOB(), patient.NHSNumber.getNHSNum(), patient.HospitalIdentifier.getHospitalIdentifier(), patient.AdmissionDate.getADate());
@@ -199,7 +283,7 @@ public class MainActivity extends Activity {
 //		if (db.updateInitialReperfusion(patient.RecordNumber.getCaseNumber(), patient.InitialReperfusion.getInitialReperfusion(), patient.ReperfusionNotGiven.getReperfusionNotGiven(), patient.ECGTreatment.getECGTreatment(), patient.ECG_QRSComplex.getECGQRSComplex(), patient.LocationSTEMI.getSTEMILocation(), patient.ReperfusionCentreCode.getInterventionalCentre(), patient.InfarctionSite.getInfarctionSite()))
 //		if (db.updateAngiography(patient.RecordNumber.getCaseNumber(), patient.CoronaryAngiography.getCoronaryAngiography(), patient.ReferralDate.getReferralDate(), patient.AngioDelay.getAngioDelay(), patient.AngioDate.getAngioDate(), patient.AngioCentreCode.getInterventionalCentre(), patient.InterventionDate.getInterventionDate(), patient.CoronaryIntervention.getCoronaryIntervention(), patient.ReturnExpected.getReturnExpected(), patient.DaycaseTransfer.getDaycaseDate(), patient.ReferReturnDate.getReturnDate()))
 //		if (db.updateExaminations(patient.RecordNumber.getCaseNumber(), patient.Systolic.getSystolicBP(), patient.HeartRate.getHeartRate(), patient.Killip.getKillipClass(), patient.BMI.getBMI(), patient.Height.getHeight(), patient.Weight.getWeight(), "grace"))
-		if (db.updateMedicalHistory(patient.RecordNumber.getCaseNumber(), "ami", "tension", "cerebro", "pci", "smoke", "diabetes", "angina", "choles", "asthma", "cabg", "heart", "vascular", "renal", "chd"))
+		if (db.updateMedicalHistory(patient.RecordNumber.getCaseNumber(), patient.PreviousAMI.getPreviousAMI(), patient.Hypertension.getHyperTension(), patient.Cerebrovascular.getCerebrovascular(), patient.PreviousPCI.getPreviousPCI(), patient.Smoking.getSmokingStatus(), patient.Diabetes.getDiabetes(), patient.PreviousAngina.getPreviousAngina(), patient.HyperCholesterol.getHyperCholesterol(), patient.AshtmaCOPD.getAsthmaCOPD(), patient.PreviousCABG.getPreviousCABG(), patient.HeartFailure.getHeartFailure(), patient.PeripheralVascular.getPeripheralVascularDisease(), patient.RenalFailure.getRenalFailure(), patient.FamilyCHD.getFamilyCHD()))
 			Toast.makeText(this, "Update Successful", Toast.LENGTH_LONG).show();
 		else
 			Toast.makeText(this, "Update failed", Toast.LENGTH_LONG).show();
@@ -287,28 +371,28 @@ public class MainActivity extends Activity {
 //							"\nDaycase Transfer: " + c.getString(38) +
 //							"\nRefer Return: " + c.getString(39), Toast.LENGTH_LONG).show();
 //		
-		Toast.makeText(this, "\nSystolic: " + c.getString(40) +
-							"\nHeart Rate: " + c.getString(41) +
-							"\nKillip: " + c.getString(42) +
-							"\nBMI: " + c.getString(43) +
-							"\nHeight: " + c.getString(44) +
-							"\nWeight: " + c.getString(45) +
-							"\nGrace Score: " + c.getString(46), Toast.LENGTH_LONG).show();
+//		Toast.makeText(this, "\nSystolic: " + c.getString(40) +
+//							"\nHeart Rate: " + c.getString(41) +
+//							"\nKillip: " + c.getString(42) +
+//							"\nBMI: " + c.getString(43) +
+//							"\nHeight: " + c.getString(44) +
+//							"\nWeight: " + c.getString(45) +
+//							"\nGrace Score: " + c.getString(46), Toast.LENGTH_LONG).show();
 //		
-//		Toast.makeText(this, "\nPrev AMI: " + c.getString(47) +
-//							"\nHypertension: " + c.getString(48) +
-//							"\nCerebro: " + c.getString(49) +
-//							"\nPrev PCI: " + c.getString(50) +
-//							"\nSmoking: " + c.getString(51) +
-//							"\nDiabetes: " + c.getString(52) +
-//							"\nPrev Angina: " + c.getString(53) +
-//							"\nHypercholesterol:" + c.getString(54) +
-//							"\nAsthma: " + c.getString(55) +
-//							"\nCABG: " + c.getString(56) +
-//							"\nHeart Failure: " + c.getString(57) +
-//							"\nVascular: " + c.getString(58) +
-//							"\nRenal Failure: " + c.getString(59) +
-//							"\nCHD: " + c.getString(60), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "\nPrev AMI: " + c.getString(47) +
+							"\nHypertension: " + c.getString(48) +
+							"\nCerebro: " + c.getString(49) +
+							"\nPrev PCI: " + c.getString(50) +
+							"\nSmoking: " + c.getString(51) +
+							"\nDiabetes: " + c.getString(52) +
+							"\nPrev Angina: " + c.getString(53) +
+							"\nHypercholesterol:" + c.getString(54) +
+							"\nAsthma: " + c.getString(55) +
+							"\nCABG: " + c.getString(56) +
+							"\nHeart Failure: " + c.getString(57) +
+							"\nVascular: " + c.getString(58) +
+							"\nRenal Failure: " + c.getString(59) +
+							"\nCHD: " + c.getString(60), Toast.LENGTH_LONG).show();
 	}
 	
 	@Override
