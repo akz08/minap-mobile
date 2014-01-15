@@ -11,6 +11,7 @@ import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;
 import com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialReperfusion.*;
 import com.ucl.appteam7.minapmobile.model.values.Angiography.*;
+import com.ucl.appteam7.minapmobile.model.values.Examinations.*;
 
 public class Patient {
 	
@@ -85,5 +86,12 @@ public class Patient {
 	ReturnExpected ReturnExpected = new ReturnExpected();
 	DaycaseTransferDate DaycaseTransfer = new DaycaseTransferDate();
 	ReferHospitalReturnDate ReferReturnDate = new ReferHospitalReturnDate();
-
+	
+	// Examinations
+	SystolicBP Systolic = new SystolicBP();
+	HeartRate HeartRate = new HeartRate();
+	KillipClass Killip = new KillipClass();
+	Height Height = new Height();
+	Weight Weight = new Weight();
+	BMI BMI = new BMI();
 }
