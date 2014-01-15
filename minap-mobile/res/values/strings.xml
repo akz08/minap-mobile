@@ -42,6 +42,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="value_hint_admission_time">e.g. 12:34 PM</string>
     <string name="value_label_hospital">Hospital</string>
     <string-array name="hospitals_array">
+        <!-- set empty item as default. seems hacky, but good enough-->
+        <item></item>
 		<item>ADD. Addenbrooke\'s Hospital</item>	
 		<item>AEI. Royal Albert Edward Infirmary</item>
 		<item>AHX. Ashford Hospital - Middlesex</item>
