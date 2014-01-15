@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical" >
-	
+    
 	<LinearLayout 
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -12,12 +12,12 @@
 		    android:layout_width="0dip"
 		    android:layout_height="wrap_content"
 		    android:layout_marginTop="8dp"
-		    android:text="@string/value_label_high_risk_nstemi"
+		    android:text="@string/value_label_site_of_infarction"
 		    style="?android:listSeparatorTextViewStyle"
 		    android:layout_weight="1"
 	    	/>
            <ImageButton
-               android:id="@+id/about_high_risk_nstemi"
+               android:id="@+id/about_site_of_infarction"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:contentDescription="@string/button_about_value"
@@ -28,8 +28,9 @@
 	  </LinearLayout>
 
 	<Spinner 
-	        android:id="@+id/nstemi_spinner"
+	        android:id="@+id/site_of_infarction_spinner"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />
+
 </LinearLayout>

@@ -374,6 +374,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="button_about_value">information</string>
     <string name="next_page">Next</string>
     <string name="previous_page">Back</string>
+    <string name="value_hint_date">date</string>
+    <string name="value_hint_time">time</string>
     
     <!-- Initial Diagnosis -->
     <string name="title_initial_diagnosis">Initial Diagnosis</string>
@@ -429,9 +431,48 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <!-- Prehospital Events -->
     <string name="title_prehospital_events">Prehospital Events</string>
    
+    <string name="value_label_onset_of_symptoms">Onset of Symptoms</string>
+    
+    <string name="value_label_call_for_help">Call For Help</string>
+    
+    <string name="value_label_arrival_first_responder">Arrival of 1st Responder</string>
+    
+    <string name="value_label_arrival_ambulance">Arrival of Ambulance</string>
+    
+    <string name="value_label_ambulance_trust_code">Ambulance Trust Code</string>
+    
+    <string name="value_label_ambulance_prf_cad_number">Ambulance PRF/CAD Number</string>
+    <string name="value_hint_ambulance_prf_cad_number">ambulance PRF/CAD number</string>
+    
+    <string name="value_label_ambulance_job_number">Ambulance Job Number</string>
+    <string name="value_hint_ambulance_job_number">ambulance job number</string>
+    
     <!-- Initial Reperfusion -->
     <string name="title_initial_reperfusion">Initial Reperfusion</string>
     
+    <string name="value_label_select_initial_reperfusion_treatment">Select Initial Reperfusion Treatment</string>
+	<string name="value_radio_initial_reperfusion_treatment_0">0. None</string>
+	<string name="value_radio_initial_reperfusion_treatment_1">1. Thrombolytic treatment</string>
+    <string name="value_radio_initial_reperfusion_treatment_2">2. pPCI in house</string>
+	<string name="value_radio_initial_reperfusion_treatment_3">3. Referred for consideration for pPCI elsewhere</string>
+	<string name="value_radio_initial_reperfusion_treatment_4">4. pPCI already was performed at the interventional hospital</string>
+	<string name="value_radio_initial_reperfusion_treatment_9">9. Unknown</string>
+	
+    <string name="value_label_reason_treatment_not_given">Reason Treatment not Given</string>
+    
+    <!-- Interventional Centre also exists under Initial Diagnosis -->
+    <!-- <string name="value_label_interventional_centre">Interventional Centre</string> -->
+    
+    <string name="value_label_ecg_determining_treatment">ECG Determining Treatment</string>
+    
+    <string name="value_label_patient_location_time_stemi_onset">Patient location at time of STEMI onset</string>
+    
+    <string name="value_label_site_of_infarction">Site of Infarction</string>
+    
+    <string name="value_label_ecg_qrs_duration">ECG QRS Complex Duration</string>
+    
+    
+	
     <!-- Examinations -->
     <string name="title_examinations">Examinations</string>
     

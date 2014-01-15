@@ -334,6 +334,7 @@
 	        />    
 		<!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
 
+		<!-- page navigation buttons -->
         <LinearLayout
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"

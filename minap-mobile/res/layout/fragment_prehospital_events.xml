@@ -14,25 +14,289 @@
         android:orientation="vertical"
         android:animateLayoutChanges="true" >
         
+ 	    <!-- Dates -->
+ 	    
         <LinearLayout 
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
-           android:layout_marginTop="2dp"
-           android:layout_weight="1.0">
+           android:layout_marginTop="2dp">
          	<!-- add in a margin to give space for the about button -->
           
           <TextView
 			    android:layout_width="0dip"
 			    android:layout_height="wrap_content"
-			    android:text="placeholder text"
+			    android:text="@string/value_label_onset_of_symptoms"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_onset_of_symptoms"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/onset_of_symptoms_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/onset_of_symptoms_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_call_for_help"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_call_for_help"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/call_for_help_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/call_for_help_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_arrival_first_responder"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_arrival_first_responder"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/arrival_first_responder_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/arrival_first_responder_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_arrival_ambulance"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_arrival_ambulance"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/arrival_ambulance_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/arrival_ambulance_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+	    <!-- Ambulance -->
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_ambulance_trust_code"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_ambulance_trust_code"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/ambulance_trust_code_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_ambulance_prf_cad_number"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_ambulance_prf_cad_number"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+	    <EditText 
+	        android:id="@+id/ambulance_prf_cad_number_edit_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/value_hint_ambulance_prf_cad_number"
+	        android:singleLine="true"
+	        android:inputType="textNoSuggestions"
+	        android:imeOptions="flagNoExtractUi"
+	        android:maxLength="7"
+			/>        
+        <!-- find out and replace max length -->
+        
+       <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_ambulance_job_number"
 			    style="?android:listSeparatorTextViewStyle"
 			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
 		    	/>
 
 		</LinearLayout>
-
+		
+	    <EditText 
+	        android:id="@+id/ambulance_job_number_edit_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/value_hint_ambulance_job_number"
+	        android:singleLine="true"
+	        android:inputType="textNoSuggestions"
+	        android:imeOptions="flagNoExtractUi"
+	        android:maxLength="7"
+			/>        
+        <!-- find out and replace max length -->
+        
+        
+        <!-- page navigation buttons -->
+        
         <LinearLayout
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
