@@ -488,6 +488,34 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <!-- Medical History -->
     <string name="title_medical_history">Medical History</string>
     
+    <string name="value_label_previous_ami">Previous AMI</string>
+    
+    <string name="value_label_hypertension">Hypertension</string>
+    
+    <string name="value_label_cerebrovascular_disease">Cerebrovascular Disease</string>
+    
+    <string name="value_label_previous_pci">Previous PCI</string>
+    
+    <string name="value_label_smoking_status">Smoking Status</string>
+    
+    <string name="value_label_diabetes">Diabetes</string>
+    
+    <string name="value_label_previous_angina">Previous Angina</string>
+    
+    <string name="value_label_hypercholesterolaemia">Hypercholesterolaemia</string>
+    
+    <string name="value_label_asthma_copd">Asthma/COPD</string>
+    
+    <string name="value_label_previous_cabg">Previous CABG</string>
+    
+    <string name="value_label_heart_failure">Heart Failure</string>
+    
+    <string name="value_label_peripheral_vascular_disease">Peripheral Vascular Disease</string>
+    
+    <string name="value_label_chronic_renal_failure">Chronic Renal Failure</string>
+    
+    <string name="value_label_family_history_of_chd">Family History of CHD</string>
+    
     <!-- Angiography -->
     <string name="title_angiography">Angiography</string>
 
