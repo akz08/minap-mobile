@@ -73,6 +73,7 @@
 			    android:layout_height="wrap_content"
 			    android:text="@string/value_label_call_for_help"
 			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
 		    	/>
 		 <ImageButton
@@ -118,6 +119,7 @@
 			    android:layout_height="wrap_content"
 			    android:text="@string/value_label_arrival_first_responder"
 			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
 		    	/>
 		 <ImageButton
@@ -163,6 +165,7 @@
 			    android:layout_height="wrap_content"
 			    android:text="@string/value_label_arrival_ambulance"
 			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
 		    	/>
 		 <ImageButton

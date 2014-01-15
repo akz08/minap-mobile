@@ -34,7 +34,10 @@
 	            android:id="@+id/radio_group_initial_reperfusion_treatment"
 			    android:layout_width="match_parent"
 			    android:layout_height="wrap_content"
-			    android:orientation="vertical">
+			    android:orientation="vertical"
+			    android:layout_weight="1.0">
+				 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
+				 <!-- it's a bit of hack, and won't work if the layout inflated below isn't big enough -->
 			    <RadioButton
 			        android:id="@+id/radio_initial_reperfusion_treatment_0"
 			        android:layout_width="wrap_content"

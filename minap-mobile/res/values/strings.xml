@@ -390,6 +390,7 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	
 	<string name="value_label_high_risk_nstemi">High Risk nSTEMI</string>
 	<string-array name="nstemi_array">
+	    <item></item>
 	    <item>0. No</item>
 	    <item>1. Yes</item>
 	    <item>9. Unkown</item>
@@ -473,10 +474,16 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     
     <string name="value_label_ecg_qrs_duration">ECG QRS Complex Duration</string>
     
-    
-	
     <!-- Examinations -->
     <string name="title_examinations">Examinations</string>
+    
+    <string name="value_label_systolic_bp">Systolic BP</string>
+    <string name="value_unit_mmhg">mmHg</string>
+    
+    <string name="value_label_heart_rate_on_admission">Heart Rate on Admission</string>
+    <string name="value_unit_bpm">bpm</string>
+    
+    <string name="value_label_killip_class">Killip class</string>
     
     <!-- Medical History -->
     <string name="title_medical_history">Medical History</string>
