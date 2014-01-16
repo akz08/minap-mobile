@@ -50,6 +50,8 @@ public class InitialDiagnosisFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 		view = (InitialDiagnosisView)View.inflate(getActivity(), R.layout.fragment_initial_diagnosis, null);
 		view.setViewListener(viewListener);
+		
+		// setup hidden views
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
 		mHiddenHighRiskNstemi = (ViewGroup) inflater.inflate(R.layout.hidden_high_risk_nstemi, mContainerView, false);
 		mHiddenGroupAdmissionElsewhere = (ViewGroup) inflater.inflate(R.layout.hidden_group_admission_elsewhere, mContainerView, false);

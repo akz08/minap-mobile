@@ -24,15 +24,17 @@ public class InitialDiagnosisView extends ScrollView {
 	private Button mNextPage;
 	
 	public static interface ViewListener {
+		
+		// hidden values
 		public void showAdmissionHighRisk();
 		public void hideAdmissionHighRisk();
 		public void showAdmissionElsewhere();
 		public void hideAdmissionElsewhere();
 		
+		// about buttons
 		public void showAboutWorkingDiagnosis();
 		public void showAboutAstemiAdmission();
 		
-		// these are for the hidden buttons which are (currently) in the fragment class
 		public void showAboutHighRiskNstemi();
 		public void showAboutProcedureAtInterventionalHospital();
 		public void showAboutInterventionalCentre();

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ import com.ucl.appteam7.minapmobile.activities.PrehospitalEventsActivity;
 import com.ucl.appteam7.minapmobile.views.DemographicsAndAdmissionView;
 
 public class DemographicsAndAdmissionFragment extends Fragment {
+	
+	private static final String DIALOG_ABOUT = "about";
 	
 	private Spinner mGenderSpinner;
 	private Spinner mEthnicitySpinner;
@@ -31,8 +34,20 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 	private Spinner mPlaceEcgSpinner;
 	private Spinner mNhsVerificationSpinner;
 	
+	private ImageButton mAboutGenderButton;
+	private ImageButton mAboutEthnicityButton;
+	private ImageButton mAboutAdmissionMethodButton;
+	private ImageButton mAboutAdmissionWardButton;
+	private ImageButton mAboutAdmittingConsultantButton;
+	private ImageButton mAboutReferralHospitalButton;
+	private ImageButton mAboutGpPctCodeButton;
+	private ImageButton mAboutPostcodeButton;
+	private ImageButton mAboutAdminStatusButton;
+	private ImageButton mAboutPlaceEcgButton;
+	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
+	private ViewGroup mHiddenReferralHospital;
 	
 	private DemographicsAndAdmissionView view;
 	
@@ -46,7 +61,10 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 		view = (DemographicsAndAdmissionView)View.inflate(getActivity(), R.layout.fragment_demographics_and_admission, null);
 		view.setViewListener(viewListener);
+		
+		// Setup hidden views
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
+		mHiddenReferralHospital = (ViewGroup) inflater.inflate(R.layout.hidden_referral_hospital, mContainerView, false);
 		
 		// Populate the Gender spinner
 		mGenderSpinner = (Spinner)view.findViewById(R.id.gender_spinner);
@@ -123,6 +141,94 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 			// simply go to the next page
 			Intent intent = new Intent(getActivity(), PrehospitalEventsActivity.class);
 			startActivity(intent);
+			
+		}
+
+		@Override
+		public void showReferralHospital() {
+			// add the hidden view
+			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.admitting_consultant_spinner));
+			mContainerView.addView(mHiddenReferralHospital, viewIndex + 1);
+			
+			// Populate the Referral Hospital spinner
+			mReferralHospitalSpinner = (Spinner)getView().findViewById(R.id.referral_hospital_spinner);
+			ArrayAdapter<CharSequence> referralAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, R.layout.multiline_spinner_item);
+			referralAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mReferralHospitalSpinner.setAdapter(referralAdapter);
+			
+			// Wire up 'about' buttons
+			mAboutReferralHospitalButton = (ImageButton) view.findViewById(R.id.about_referral_hospital);
+			mAboutReferralHospitalButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					showAboutReferralHospital();
+				}
+			});
+		}
+
+		@Override
+		public void hideReferralHospital() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutGender() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutEthnicity() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutAdmissionMethod() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutAdmissionWard() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutAdmittingConsultant() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutReferralHospital() {
+			
+		}
+		
+		@Override
+		public void showAboutGpPctCode() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutPostcode() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutAdminStatus() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showAboutPlaceEcgPerformed() {
+			// TODO Auto-generated method stub
 			
 		}
 	};
