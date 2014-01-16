@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
@@ -22,10 +23,13 @@ import com.ucl.appteam7.minapmobile.views.InitialDiagnosisView;
 public class InitialDiagnosisFragment extends Fragment {
 	
 	private static final String DIALOG_ABOUT = "about";
+	private static final String DIALOG_DATE = "date";
 	
 	private Spinner mNstemiSpinner;
 	private Spinner mProcedureAtInterventionalHospitalSpinner;
 	private Spinner mInterventionalCentreSpinner;
+	
+	private TextView mDateOfReturnTextView;
 	
 	private ImageButton mAboutHighRiskNstemiButton;
 	private ImageButton mAboutProcedureAtInterventionalHospitalButton;
@@ -110,6 +114,16 @@ public class InitialDiagnosisFragment extends Fragment {
 			ArrayAdapter<CharSequence> centreAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, R.layout.multiline_spinner_item);
 			centreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			mInterventionalCentreSpinner.setAdapter(centreAdapter);
+			
+			// Wire up date TextView
+			mDateOfReturnTextView = (TextView)getView().findViewById(R.id.date_of_return_textspinner);
+			mDateOfReturnTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					onDateReturn();
+				}
+			});
 			
 			// Wire up 'about' buttons
 			mAboutProcedureAtInterventionalHospitalButton = (ImageButton) view.findViewById(R.id.about_procedure_at_interventional_hospital);
@@ -208,6 +222,16 @@ public class InitialDiagnosisFragment extends Fragment {
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
+		@Override
+		public void onDateReturn() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			DatePickerFragment dialog = DatePickerFragment
+					.newInstance(getString(R.string.value_date_picker_title_date_of_return));
+			dialog.show(fm, DIALOG_DATE);
+			
+		}
+		
 		@Override
 		public void nextPage() {
 			// simply go to the next page

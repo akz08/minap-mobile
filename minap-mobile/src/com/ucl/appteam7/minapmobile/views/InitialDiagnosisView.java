@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
 
@@ -31,14 +32,17 @@ public class InitialDiagnosisView extends ScrollView {
 		public void showAdmissionElsewhere();
 		public void hideAdmissionElsewhere();
 		
+		// date dialog
+		public void onDateReturn();
+		
 		// about dialogs
 		public void showAboutWorkingDiagnosis();
 		public void showAboutAstemiAdmission();
+		public void showAboutDateOfReturn();
 		
 		public void showAboutHighRiskNstemi();
 		public void showAboutProcedureAtInterventionalHospital();
 		public void showAboutInterventionalCentre();
-		public void showAboutDateOfReturn();
 		
 		// navigation buttons
 		public void nextPage();

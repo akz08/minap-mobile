@@ -86,7 +86,7 @@
 	  </LinearLayout>
 
 	<TextView 
-	        android:id="@+id/date_of_return"
+	        android:id="@+id/date_of_return_textspinner"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        style="@android:style/Widget.DeviceDefault.Light.Spinner"

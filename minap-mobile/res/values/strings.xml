@@ -413,6 +413,7 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	<!-- assumption that the contents are the same as hospital_array -->
 	
 	<string name="value_label_date_of_return">Date of Return</string>
+	<string name="value_date_picker_title_date_of_return">Date of Return:</string>
 	
 	<!-- Demographics and Admission -->
     <string name="title_demographics_and_admission">Demographics and Admission</string>
