@@ -31,7 +31,7 @@ public class InitialDiagnosisView extends ScrollView {
 		public void showAdmissionElsewhere();
 		public void hideAdmissionElsewhere();
 		
-		// about buttons
+		// about dialogs
 		public void showAboutWorkingDiagnosis();
 		public void showAboutAstemiAdmission();
 		
@@ -56,25 +56,6 @@ public class InitialDiagnosisView extends ScrollView {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		
-		// Wire up visible 'about' information buttons
-		mAboutWorkingDiagnosisButton = (ImageButton)findViewById(R.id.about_working_diagnosis);
-		mAboutWorkingDiagnosisButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				viewListener.showAboutWorkingDiagnosis();
-			}
-		});
-		
-		mAboutAstemiAdmissionButton = (ImageButton)findViewById(R.id.about_astemi_admission);
-		mAboutAstemiAdmissionButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				viewListener.showAboutAstemiAdmission();
-			}
-		});
 		
 		// Wire up radio buttons for nSTEMI
 		mWorkingDiagnosisRadioGroup = (RadioGroup)findViewById(R.id.radio_group_working_diagnosis);
@@ -119,6 +100,26 @@ public class InitialDiagnosisView extends ScrollView {
 				}
 			}
 		});
+		
+		// Wire up visible 'about' information buttons
+		mAboutWorkingDiagnosisButton = (ImageButton)findViewById(R.id.about_working_diagnosis);
+		mAboutWorkingDiagnosisButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutWorkingDiagnosis();
+			}
+		});
+		
+		mAboutAstemiAdmissionButton = (ImageButton)findViewById(R.id.about_astemi_admission);
+		mAboutAstemiAdmissionButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAstemiAdmission();
+			}
+		});
+		
 		
 		// wire up page navigation button
 		mNextPage = (Button)findViewById(R.id.next_page_button);

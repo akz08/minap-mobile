@@ -3,6 +3,7 @@ package com.ucl.appteam7.minapmobile.fragments;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,16 +35,7 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 	private Spinner mPlaceEcgSpinner;
 	private Spinner mNhsVerificationSpinner;
 	
-	private ImageButton mAboutGenderButton;
-	private ImageButton mAboutEthnicityButton;
-	private ImageButton mAboutAdmissionMethodButton;
-	private ImageButton mAboutAdmissionWardButton;
-	private ImageButton mAboutAdmittingConsultantButton;
 	private ImageButton mAboutReferralHospitalButton;
-	private ImageButton mAboutGpPctCodeButton;
-	private ImageButton mAboutPostcodeButton;
-	private ImageButton mAboutAdminStatusButton;
-	private ImageButton mAboutPlaceEcgButton;
 	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
@@ -127,22 +119,6 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 	}
 	
 	private DemographicsAndAdmissionView.ViewListener viewListener = new DemographicsAndAdmissionView.ViewListener() {
-		
-		@Override
-		public void previousPage() {
-			// simply go to the previous page
-			Intent intent = new Intent(getActivity(), InitialDiagnosisActivity.class);
-			startActivity(intent);
-			
-		}
-		
-		@Override
-		public void nextPage() {
-			// simply go to the next page
-			Intent intent = new Intent(getActivity(), PrehospitalEventsActivity.class);
-			startActivity(intent);
-			
-		}
 
 		@Override
 		public void showReferralHospital() {
@@ -169,66 +145,133 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 
 		@Override
 		public void hideReferralHospital() {
-			// TODO Auto-generated method stub
+			mContainerView.removeView(mHiddenReferralHospital);
 			
 		}
 
 		@Override
 		public void showAboutGender() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutEthnicity() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutAdmissionMethod() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutAdmissionWard() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutAdmittingConsultant() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutReferralHospital() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 		
 		@Override
 		public void showAboutGpPctCode() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutPostcode() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutAdminStatus() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutPlaceEcgPerformed() {
-			// TODO Auto-generated method stub
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);			
+			
+		}
+		
+		@Override
+		public void previousPage() {
+			// simply go to the previous page
+			Intent intent = new Intent(getActivity(), InitialDiagnosisActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void nextPage() {
+			// simply go to the next page
+			Intent intent = new Intent(getActivity(), PrehospitalEventsActivity.class);
+			startActivity(intent);
 			
 		}
 	};

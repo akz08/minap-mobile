@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 
@@ -14,6 +15,16 @@ import com.ucl.appteam7.minapmobile.R;
 public class DemographicsAndAdmissionView extends ScrollView {
 	
 	private Spinner mAdmissionMethodSpinner;
+	
+	private ImageButton mAboutGenderButton;
+	private ImageButton mAboutEthnicityButton;
+	private ImageButton mAboutAdmissionMethodButton;
+	private ImageButton mAboutAdmissionWardButton;
+	private ImageButton mAboutAdmittingConsultantButton;	
+	private ImageButton mAboutGpPctCodeButton;
+	private ImageButton mAboutPostcodeButton;
+	private ImageButton mAboutAdminStatusButton;
+	private ImageButton mAboutPlaceEcgButton;
 	
 	private Button mPreviousPage;
 	private Button mNextPage;
@@ -25,7 +36,7 @@ public class DemographicsAndAdmissionView extends ScrollView {
 		public void showReferralHospital();
 		public void hideReferralHospital();
 		
-		// about buttons
+		// about dialogs
 		public void showAboutGender();
 		public void showAboutEthnicity();
 		public void showAboutAdmissionMethod();
@@ -69,6 +80,97 @@ public class DemographicsAndAdmissionView extends ScrollView {
 			}
 			
 			public void onNothingSelected(AdapterView<?> parent) {
+				
+			}
+		});
+		
+		// Wire up visible 'about' information buttons
+		mAboutGenderButton = (ImageButton)findViewById(R.id.about_gender);
+		mAboutGenderButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutGender();
+				
+			}
+		});
+		
+		mAboutEthnicityButton = (ImageButton)findViewById(R.id.about_patient_ethnicity);
+		mAboutEthnicityButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutEthnicity();
+				
+			}
+		});
+		
+		mAboutAdmissionMethodButton = (ImageButton)findViewById(R.id.about_admission_method);
+		mAboutAdmissionMethodButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAdmissionMethod();
+				
+			}
+		});
+		
+		mAboutAdmissionWardButton = (ImageButton)findViewById(R.id.about_admission_ward);
+		mAboutAdmissionWardButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAdmissionWard();
+				
+			}
+		});
+		
+		mAboutAdmittingConsultantButton = (ImageButton)findViewById(R.id.about_admitting_consultant);
+		mAboutAdmittingConsultantButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAdmittingConsultant();
+				
+			}
+		});
+		
+		mAboutGpPctCodeButton = (ImageButton)findViewById(R.id.about_gp_pct_code);
+		mAboutGpPctCodeButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutGpPctCode();
+				
+			}
+		});
+		
+		mAboutPostcodeButton = (ImageButton)findViewById(R.id.about_postcode);
+		mAboutPostcodeButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutPostcode();
+				
+			}
+		});
+		
+		mAboutAdminStatusButton = (ImageButton)findViewById(R.id.about_admin_status);
+		mAboutAdminStatusButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAdminStatus();
+				
+			}
+		});
+		
+		mAboutPlaceEcgButton = (ImageButton)findViewById(R.id.about_place_ecg_performed);
+		mAboutPlaceEcgButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutPlaceEcgPerformed();
 				
 			}
 		});
