@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_angio_datetime"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_angio_datetime"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/angio_datetime_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/angio_datetime_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_interventional_centre"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_interventional_centre"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/interventional_centre_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dip"
+	        />    
+
+</LinearLayout>

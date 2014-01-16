@@ -393,43 +393,329 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	    <item></item>
 	    <item>0. No</item>
 	    <item>1. Yes</item>
-	    <item>9. Unkown</item>
+	    <item>9. Unknown</item>
 	</string-array>
 	
 	<string name="value_label_astemi_admission">Admission after treatment for STEMI elsewhere?</string>
 	
 	<string name="value_label_procedure_at_interventional_hospital">Procedure performed at the Interventional Hospital?</string>
+	<string-array name="procedure_at_interventional_hospital_array">
+	    <item></item>
+	    <item>0. No angio or primary reperfusion treatment performed</item>
+	    <item>1. Angiogram only</item>
+	    <item>3. Rescue angioplasty</item>
+	    <item>4. CABG</item>
+	    <item>5. Thrombolytic treatment</item>
+	    <item>9. Unknown</item>
+	</string-array>
 	
 	<string name="value_label_interventional_centre">Interventional Centre</string>
+	<!-- assumption that the contents are the same as hospital_array -->
 	
 	<string name="value_label_date_of_return">Date of Return</string>
-    
+	
 	<!-- Demographics and Admission -->
     <string name="title_demographics_and_admission">Demographics and Admission</string>
        
     <string name="value_label_gender">Gender</string>
+	<string-array name="gender_array">
+	    <item></item>
+	    <item>0. Not known</item>
+	    <item>1. Male</item>
+	    <item>2. Female</item>
+	    <item>9. Not specified</item>
+	</string-array>
     
     <string name="value_label_patient_ethnicity">Patient Ethnicity</string>
+	<string-array name="patient_ethnicity_array">
+	    <item></item>
+	    <item>1. White</item>
+	    <item>2. Black</item>
+	    <item>3. Asian</item>
+	    <item>5. Mixed</item>
+	    <item>6. Not stated</item>
+	    <item>8. Other</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_admission_method">Admission Method</string>
+	<string-array name="admission_method_array">
+	    <item></item>
+	    <item>1. Direct admission via emergency service</item>
+	    <item>2. Self presenter to this hospital</item>
+	    <item>3. Already in this hospital</item>
+	    <item>4. Inter-hospital transfer for specific treatment</item>
+	    <item>5. Repatriation after coronary intervention</item>
+	    <item>6. Other</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_admission_ward">Admission Ward</string>
+	<string-array name="admission_ward_array">
+	    <item></item>
+	    <item>1. Cardiac care unit</item>
+	    <item>2. Acute admissions unit</item>
+	    <item>3. General medical ward</item>
+	    <item>4. Intensive therapy unit</item>
+	    <item>5. Other</item>
+	    <item>6. Died in A&amp;E</item>
+	    <item>7. Cardiac ward (non CCU)</item>
+	    <item>8. Stepdown ward</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_admitting_consultant">Admitting Consultant</string>
+	<string-array name="admitting_consultant_array">
+	    <item></item>
+	    <item>0. Cardiologist</item>
+	    <item>1. Other general physician</item>
+	    <item>9. Other</item>
+	    <item>99. Unknown</item>
+	</string-array>
     
     <string name="value_label_referral_hospital">Referral Hospital</string>
+	<!-- assumption that the contents are the same as hospital_array -->
     
     <string name="value_label_gp_pct_code">GP Code / PCT Code</string>
     <string name="value_hint_gp_code">GP code</string>
+    <string-array name="pct_code_array">
+        <item></item>
+        <item>Abertawe Bro Morgannwg</item>
+		<item>Aneurin Bevan</item>
+		<item>Anglesey</item>
+		<item>Ashton, Leigh and Wigan Primary Care Trust</item>
+		<item>Ayrshire &amp; Arran</item>
+		<item>Barking and Dagenham Primary Care Trust</item>
+		<item>Barnet Primary Care Trust</item>
+		<item>Barnsley Primary Care Trust</item>
+		<item>Bassetlaw Primary Care Trust</item>
+		<item>Bath and North East Somerset Primary Care Trust</item>
+		<item>Bedfordshire Primary Care Trust</item>
+		<item>Berkshire East Primary Care Trust</item>
+		<item>Berkshire West Primary Care Trust</item>
+		<item>Besti Cadwaladr</item>
+		<item>Bexley Care Trust</item>
+		<item>Birmingham East And North Primary Care Trust</item>
+		<item>Blackburn with Darwen Primary Care Trust</item>
+		<item>Blackpool Primary Care Trust</item>
+		<item>Blaenau Gwent</item>
+		<item>Bolton Primary Care Trust</item>
+		<item>Borders</item>
+		<item>Bournemouth And Poole Primary Care Trust</item>
+		<item>Bradford And Airedale Teaching Primary Care Trust</item>
+		<item>Brent Teaching Primary Care Trust</item>
+		<item>Bridgend</item>
+		<item>Brighton and Hove City Primary Care Trust</item>
+		<item>Bristol Primary Care Trust</item>
+		<item>Bromley Primary Care Trust</item>
+		<item>Buckinghamshire Primary Care Trust</item>
+		<item>Bury Primary Care Trust</item>
+		<item>Caerphilly</item>
+		<item>Calderdale Primary Care Trust</item>
+		<item>Cambridgeshire Primary Care Trust</item>
+		<item>Camden Primary Care Trust</item>
+		<item>Cardiff</item>
+		<item>Cardiff &amp; Vale</item>
+		<item>Carmarthenshire</item>
+		<item>Central And Eastern Cheshire Primary Care Trust</item>
+		<item>Central Lancashire Primary Care Trust</item>
+		<item>Ceredigion</item>
+		<item>City and Hackney Teaching Primary Care Trust</item>
+		<item>Conwy</item>
+		<item>Cornwall And Isles Of Scilly Primary Care Trust</item>
+		<item>County Durham Primary Care Trust</item>
+		<item>Coventry Teaching Primary Care Trust</item>
+		<item>Croydon Primary Care Trust</item>
+		<item>Cumbria Primary Care Trust</item>
+		<item>Cwm Taf</item>
+		<item>Darlington Primary Care Trust</item>
+		<item>Denbighshire</item>
+		<item>Derby City Primary Care Trust</item>
+		<item>Derbyshire County Primary Care Trust</item>
+		<item>Devon Primary Care Trust</item>
+		<item>Doncaster Primary Care Trust</item>
+		<item>Dorset Primary Care Trust</item>
+		<item>Dudley Primary Care Trust</item>
+		<item>Dumfries and Galloway</item>
+		<item>Ealing Primary Care Trust</item>
+		<item>East And North Hertfordshire Primary Care Trust</item>
+		<item>East Lancashire Primary Care Trust</item>
+		<item>East Riding Of Yorkshire Primary Care Trust</item>
+		<item>East Sussex Downs And Weald Primary Care Trust</item>
+		<item>Eastern And Coastal Kent Primary Care Trust</item>
+		<item>Enfield Primary Care Trust</item>
+		<item>Fife</item>
+		<item>Flintshire</item>
+		<item>Forth Valley</item>
+		<item>Gateshead Primary Care Trust</item>
+		<item>Gloucestershire Primary Care Trust</item>
+		<item>Grampian</item>
+		<item>Great Yarmouth And Waveney Primary Care Trust</item>
+		<item>Greater Glasgow &amp; Clyde</item>
+		<item>Greenwich Teaching Primary Care Trust</item>
+		<item>Gwynedd</item>
+		<item>Halton And St Helens Primary Care Trust</item>
+		<item>Hammersmith and Fulham Primary Care Trust</item>
+		<item>Hampshire Primary Care Trust</item>
+		<item>Haringey Teaching Primary Care Trust</item>
+		<item>Harrow Primary Care Trust</item>
+		<item>Hartlepool Primary Care Trust</item>
+		<item>Hastings And Rother Primary Care Trust</item>
+		<item>Havering Primary Care Trust</item>
+		<item>Heart of Birmingham Teaching Primary Care Trust</item>
+		<item>Herefordshire Primary Care Trust</item>
+		<item>Hertfordshire Primary Care Trust</item>
+		<item>Heywood, Middleton And Rochdale Primary Care Trust</item>
+		<item>Highland</item>
+		<item>Hillingdon Primary Care Trust</item>
+		<item>Hounslow Primary Care Trust</item>
+		<item>Hull Teaching Primary Care Trust</item>
+		<item>Hywei Dda</item>
+		<item>Isle Of Wight NHS Primary Care Trust</item>
+		<item>Islington Primary Care Trust</item>
+		<item>Kensington and Chelsea Primary Care Trust</item>
+		<item>Kingston Primary Care Trust</item>
+		<item>Kirklees Primary Care Trust</item>
+		<item>Knowsley Primary Care Trust</item>
+		<item>Lambeth Primary Care Trust</item>
+		<item>Lanarkshire</item>
+		<item>Leeds Primary Care Trust</item>
+		<item>Leicester City Primary Care Trust</item>
+		<item>Leicestershire County And Rutland Primary Care Trust</item>
+		<item>Lewisham Primary Care Trust</item>
+		<item>Lincolnshire Primary Care Trust</item>
+		<item>Liverpool Primary Care Trust</item>
+		<item>Lothian</item>
+		<item>Luton Teaching Primary Care Trust</item>
+		<item>Manchester Primary Care Trust</item>
+		<item>Medway Primary Care Trust</item>
+		<item>Merthyr Tydfil</item>
+		<item>Mid Essex Primary Care Trust</item>
+		<item>Middlesbrough Primary Care Trust</item>
+		<item>Milton Keynes Primary Care Trust</item>
+		<item>Monmouthshire</item>
+		<item>Neath Port Talbot</item>
+		<item>Newcastle Primary Care Trust</item>
+		<item>Newham Primary Care Trust</item>
+		<item>Newport</item>
+		<item>Norfolk Primary Care Trust</item>
+		<item>North East Essex Primary Care Trust</item>
+		<item>North East Lincolnshire Care Trust Plus</item>
+		<item>North East Lincolnshire Primary Care Trust</item>
+		<item>North Lancashire Primary Care Trust</item>
+		<item>North Lincolnshire Primary Care Trust</item>
+		<item>North Somerset Primary Care Trust</item>
+		<item>North Staffordshire Primary Care Trust</item>
+		<item>North Tees Primary Care Trust</item>
+		<item>North Tyneside Primary Care Trust</item>
+		<item>North Yorkshire And York Primary Care Trust</item>
+		<item>Northamptonshire Teaching Primary Care Trust</item>
+		<item>Northumberland Care Trust</item>
+		<item>Nottingham City Primary Care Trust</item>
+		<item>Nottinghamshire County Primary Care Trust</item>
+		<item>Oldham Primary Care Trust</item>
+		<item>Orkney</item>
+		<item>Oxfordshire Primary Care Trust</item>
+		<item>PCT Unavailable</item>
+		<item>Pembrokeshire</item>
+		<item>Peterborough Primary Care Trust</item>
+		<item>Plymouth Teaching Primary Care Trust</item>
+		<item>Portsmouth City Teaching Primary Care Trust</item>
+		<item>Powys</item>
+		<item>Powys Teaching</item>
+		<item>Redbridge Primary Care Trust</item>
+		<item>Redcar And Cleveland Primary Care Trust</item>
+		<item>Rhondda Cynon Taff</item>
+		<item>Richmond and Twickenham Primary Care Trust</item>
+		<item>Rotherham Primary Care Trust</item>
+		<item>Salford Primary Care Trust</item>
+		<item>Sandwell Primary Care Trust</item>
+		<item>Sefton Primary Care Trust</item>
+		<item>Sheffield Primary Care Trust</item>
+		<item>Shetland</item>
+		<item>Shropshire County Primary Care Trust</item>
+		<item>Solihull Care Trust</item>
+		<item>Solihull Primary Care Trust</item>
+		<item>Somerset Primary Care Trust</item>
+		<item>South Birmingham Primary Care Trust</item>
+		<item>South East Essex Primary Care Trust</item>
+		<item>South Gloucestershire Primary Care Trust</item>
+		<item>South Staffordshire Primary Care Trust</item>
+		<item>South Tyneside Primary Care Trust</item>
+		<item>South West Essex Primary Care Trust</item>
+		<item>Southampton City Primary Care Trust</item>
+		<item>Southwark Primary Care Trust</item>
+		<item>Stockport Primary Care Trust</item>
+		<item>Stoke On Trent Primary Care Trust</item>
+		<item>Suffolk Primary Care Trust</item>
+		<item>Sunderland Teaching Primary Care Trust</item>
+		<item>Surrey Primary Care Trust</item>
+		<item>Sutton and Merton Primary Care Trust</item>
+		<item>Swansea</item>
+		<item>Swindon Primary Care Trust</item>
+		<item>Tameside and Glossop Primary Care Trust</item>
+		<item>Tayside</item>
+		<item>Telford and Wrekin Primary Care Trust</item>
+		<item>Torbay Care Trust</item>
+		<item>Torfaen</item>
+		<item>Tower Hamlets Primary Care Trust</item>
+		<item>Trafford Primary Care Trust</item>
+		<item>Vale of Glamorgan</item>
+		<item>Velindre NHS Trust</item>
+		<item>Wakefield District Primary Care Trust</item>
+		<item>Walsall Teaching Primary Care Trust</item>
+		<item>Waltham Forest Primary Care Trust</item>
+		<item>Wandsworth Primary Care Trust</item>
+		<item>Warrington Primary Care Trust</item>
+		<item>Warwickshire Primary Care Trust</item>
+		<item>West Essex Primary Care Trust</item>
+		<item>West Hertfordshire Primary Care Trust</item>
+		<item>West Kent Primary Care Trust</item>
+		<item>West Sussex Primary Care Trust</item>
+		<item>Western Cheshire Primary Care Trust</item>
+		<item>Western Isles</item>
+		<item>Westminster Primary Care Trust</item>
+		<item>Wiltshire Primary Care Trust</item>
+		<item>Wirral Primary Care Trust</item>
+		<item>Wolverhampton City Primary Care Trust</item>
+		<item>Worcestershire Primary Care Trust</item>
+		<item>Wrexham</item>
+    </string-array>
     
     <string name="value_label_postcode">Postcode</string>
     <string name="value_hint_postcode">postcode</string>
     
     <string name="value_label_admin_status">Administrative Status</string>
+	<string-array name="admin_status_array">
+	    <item></item>
+	    <item>1. NHS</item>
+	    <item>2. Private</item>
+	    <item>3. Amenity</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_place_ecg_performed">Place 1st 12 lead ECG performed</string>
+	<string-array name="place_ecg_performed_array">
+	    <item></item>
+	    <item>1. Ambulance</item>
+	    <item>2. In hospital</item>
+	    <item>3. Other healthcare facility</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_nhs_verification_status">NHS Verification Status</string>
+    <!-- the codes on this list has a leading zero on the web app. this should probably be checked -->
+	<string-array name="nhs_verification_status_array">
+	    <item></item>
+	    <item>01. Number present and verified</item>
+	    <item>02. Number present but not traced</item>
+	    <item>03. Trace required</item>
+	    <item>04. Trace attempted - No match or multiple match found</item>
+	    <item>05. Trace needs to be resolved - (NHS Number or patient detail conflict)</item>
+	    <item>06. Trace in progress</item>
+	    <item>07. Number not present and trace not required</item>
+	    <item>08. Trace postponed (baby under six weeks old)</item>
+	</string-array>
  
     <!-- Prehospital Events -->
     <string name="title_prehospital_events">Prehospital Events</string>
@@ -443,6 +729,24 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="value_label_arrival_ambulance">Arrival of Ambulance</string>
     
     <string name="value_label_ambulance_trust_code">Ambulance Trust Code</string>
+	<string-array name="ambulance_trust_code_array">
+	    <item></item>
+	    <item>NIR. Northern Ireland</item>
+	    <item>RB7. Staffordshire</item>
+	    <item>RR2. Isle of Wight</item>
+	    <item>RRU. London</item>
+	    <item>RX5. Great Western</item>
+	    <item>RX6. North East</item>
+	    <item>RX7. North West</item>
+	    <item>RX8. Yorkshire</item>
+	    <item>RX9. East Midlands</item>
+	    <item>RYA. West Midlands</item>
+	    <item>RYC. East of England</item>
+	    <item>RYD. South East Coast</item>
+	    <item>RYE. South Central</item>
+	    <item>RYF. South Western</item>
+	    <item>WEL. Welsh</item>
+	</string-array>
     
     <string name="value_label_ambulance_prf_cad_number">Ambulance PRF/CAD Number</string>
     <string name="value_hint_ambulance_prf_cad_number">ambulance PRF/CAD number</string>
@@ -462,17 +766,64 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	<string name="value_radio_initial_reperfusion_treatment_9">9. Unknown</string>
 	
     <string name="value_label_reason_treatment_not_given">Reason Treatment not Given</string>
+	<string-array name="reason_treatment_not_given_array">
+	    <item></item>
+	    <item>0. None</item>
+	    <item>1. Ineligible ECG</item>
+	    <item>2. Too late</item>
+	    <item>3. Risk of haemorrhage</item>
+	    <item>4. Uncontrolled hypertension</item>
+	    <item>5. Administrative failure</item>
+	    <item>6. Elective decision</item>
+	    <item>7. Patient refused treatment</item>
+	    <item>8. Other</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <!-- Interventional Centre also exists under Initial Diagnosis -->
     <!-- <string name="value_label_interventional_centre">Interventional Centre</string> -->
+	<!-- assumption that the contents are the same as hospital_array -->
     
     <string name="value_label_ecg_determining_treatment">ECG Determining Treatment</string>
+	<string-array name="ecg_determining_treatment_array">
+	    <item></item>
+	    <item>0. No acute changes</item>
+	    <item>1. ST segment elevation</item>
+	    <item>2. Left bundle branch block</item>
+	    <item>3. ST segment depression</item>
+	    <item>4. T wave changes only</item>
+	    <item>5. Other acute abnormality</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_patient_location_time_stemi_onset">Patient location at time of STEMI onset</string>
+	<string-array name="patient_location_time_stemi_onset_array">
+	    <item></item>
+	    <item>1. Onset of STEMI while patient not in hospital (STE on first ECG)</item>
+	    <item>2. STE first recorded on a subsequent ECG in,(or before arrival at) a non-interventional hospital</item>
+	    <item>3. STE first recorded on a subsequent ECG in,(or before arrival at) the interventional hospital</item>
+	    <item>8. Not applicable</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_site_of_infarction">Site of Infarction</string>
+	<string-array name="site_of_infarction_array">
+	    <item></item>
+	    <item>1. Anterior</item>
+	    <item>2. Inferior</item>
+	    <item>3. Posterior</item>
+	    <item>4. Lateral</item>
+	    <item>5. Indeterminate</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_ecg_qrs_duration">ECG QRS Complex Duration</string>
+	<string-array name="ecg_qrs_duration_array">
+	    <item></item>
+	    <item>1. QRS complex duration &gt;= 120 msec</item>
+	    <item>2. QRS complex duration &lt; 120 msec</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <!-- Examinations -->
     <string name="title_examinations">Examinations</string>
@@ -484,40 +835,184 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="value_unit_bpm">bpm</string>
     
     <string name="value_label_killip_class">Killip class</string>
+	<string-array name="killip_class_array">
+	    <item></item>
+	    <item>1. No evidence of heart failure</item>
+	    <item>2. Basal crepitations and/or elevated venous pressure</item>
+	    <item>3. Pulmonary oedema</item>
+	    <item>4. Cardiogenic shock</item>
+	    <item>8. Not applicable</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <!-- Medical History -->
     <string name="title_medical_history">Medical History</string>
     
     <string name="value_label_previous_ami">Previous AMI</string>
+	<string-array name="previous_ami_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
     <string name="value_label_hypertension">Hypertension</string>
-    
+	<string-array name="hypertension_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_cerebrovascular_disease">Cerebrovascular Disease</string>
-    
+	<string-array name="cerebrovascular_disease_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_previous_pci">Previous PCI</string>
-    
+	<string-array name="previous_pci_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_smoking_status">Smoking Status</string>
-    
+	<string-array name="smoking_status_array">
+	    <item></item>
+	    <item>0. Never smoked</item>
+	    <item>1. Ex smoker</item>
+	    <item>2. Current smoker</item>
+	    <item>3. Non smoker - smoking history unknown</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_diabetes">Diabetes</string>
-    
+	<string-array name="diabetes_array">
+	    <item></item>
+	    <item>0. Not diabetic</item>
+	    <item>1. Diabetes (dietary control)</item>
+	    <item>2. Diabetes (oral medicine)</item>
+	    <item>3. Diabetes (insulin)</item>
+	    <item>5. Insulin plus oral medication</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_previous_angina">Previous Angina</string>
-    
+	<string-array name="previous_angina_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_hypercholesterolaemia">Hypercholesterolaemia</string>
-    
+	<string-array name="hypercholesterolaemia_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_asthma_copd">Asthma/COPD</string>
-    
+	<string-array name="asthma_copd_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_previous_cabg">Previous CABG</string>
-    
+	<string-array name="previous_cabg_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_heart_failure">Heart Failure</string>
-    
+	<string-array name="heart_failure_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_peripheral_vascular_disease">Peripheral Vascular Disease</string>
-    
+	<string-array name="peripheral_vascular_disease_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_chronic_renal_failure">Chronic Renal Failure</string>
-    
+	<string-array name="chronic_renal_failure_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <string name="value_label_family_history_of_chd">Family History of CHD</string>
-    
+	<string-array name="family_history_of_chd_array">
+	    <item></item>
+	    <item>0. No</item>
+	    <item>1. Yes</item>
+	    <item>9. Unknown</item>
+	</string-array>
+	
     <!-- Angiography -->
     <string name="title_angiography">Angiography</string>
 
+    <string name="title_warning_angiography">Do not use this page for details of Primary PCI</string>
+    
+    <string name="value_label_angiography_performed">Was angiography performed during this Admission?</string>
+    <string name="value_radio_angiography_performed_1">1. Protocol driven investigation performed in this hospital</string>
+    <string name="value_radio_angiography_performed_2">2. Symptom driven investigation performed in this hospital</string>
+    <string name="value_radio_angiography_performed_3">3. Protocol driven investigation performed at another hospital</string>
+    <string name="value_radio_angiography_performed_4">4. Symptom driven investigation performed at another hospital</string>
+    <string name="value_radio_angiography_performed_5">5. Planned after discharge</string>
+    <string name="value_radio_angiography_performed_6">6. Not applicable</string>
+    <string name="value_radio_angiography_performed_7">7. Patient refused</string>
+    <string name="value_radio_angiography_performed_8">8. Not performed</string>
+    <string name="value_radio_angiography_performed_9">9. Unknown</string>
+    
+    <string name="value_label_datetime_referral_investigation_intervention">Date/time of Referral for Investigation/Intervention</string>
+    
+    <string name="value_label_delay_to_performance_angiogram">Delay to Performance of Angiogram</string>
+	<string-array name="delay_to_performance_angiogram_array">
+	    <item></item>
+	    <item>0. None</item>
+	    <item>1. Delay due to comorbid clinical condition/competing clinical issue</item>
+	    <item>2. Capacity issues</item>
+	    <item>3. Patient preference</item>
+	    <item>8. Other</item>
+	    <item>9. Unknown</item>
+	</string-array>
+    
+    <string name="value_label_angio_datetime">Angio date/time</string>
+    
+	<!-- Interventional Centre also exists under Initial Diagnosis -->
+    <!-- <string name="value_label_interventional_centre">Interventional Centre</string> -->
+	<!-- assumption that the contents are the same as hospital_array -->
+
+    <string name="value_label_date_first_intervention_surgery_locally">Date of First Intervention or Surgery Performed Locally</string>
+    
+    <string name="value_label_coronary_intervention">Coronary Intervention</string>
+	<string-array name="coronary_intervention_array">
+	    <item></item>
+	    <item>1. Percutaneous coronary intervention</item>
+	    <item>2. CABG</item>
+	    <item>4.PCI planned after discharge</item>
+	    <item>5. CABG planned after discharge</item>
+	    <item>6. Not applicable</item>
+	    <item>7. Patient refused</item>
+	    <item>8. Not performed or arranged</item>
+	    <item>9. Unknown</item>
+	</string-array>
     
 </resources>
