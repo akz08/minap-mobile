@@ -7,7 +7,10 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="18" />
-
+    
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -31,41 +34,46 @@
     	    android:label="@string/title_navigation_map" >
     	</activity>
     	<activity android:name=".activities.InitialDiagnosisActivity"
-    	    android:label="@string/title_initial_diagnosis">
+    	    android:label="@string/title_initial_diagnosis"
+    	    android:logo="@drawable/ic_compass">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.DemographicsAndAdmissionActivity"
-    	    android:label="@string/title_demographics_and_admission" >
+    	    android:label="@string/title_demographics_and_admission"
+    	    android:logo="@drawable/ic_compass">
              <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.PrehospitalEventsActivity"
-    	    android:label="@string/title_prehospital_events" >
+    	    android:label="@string/title_prehospital_events" 
+    	    android:logo="@drawable/ic_compass">
               <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.InitialReperfusionActivity"
-    	    android:label="@string/title_initial_reperfusion" >
+    	    android:label="@string/title_initial_reperfusion" 
+    	    android:logo="@drawable/ic_compass">
                <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.ExaminationsActivity"
-    	    android:label="@string/title_examinations" >
+    	    android:label="@string/title_examinations" 
+    	    android:logo="@drawable/ic_compass">
                 <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.MedicalHistoryActivity"
-    	    android:label="@string/title_medical_history" >
+    	    android:label="@string/title_medical_history" 
+    	    android:logo="@drawable/ic_compass">
                  <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     	<activity android:name=".activities.AngiographyActivity"
-    	    android:label="@string/title_angiography" >
+    	    android:label="@string/title_angiography" 
+    	    android:logo="@drawable/ic_compass">
                   <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
     </application>
-	<uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>
