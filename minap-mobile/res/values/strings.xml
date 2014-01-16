@@ -720,13 +720,23 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <!-- Prehospital Events -->
     <string name="title_prehospital_events">Prehospital Events</string>
    
+    <string name="title_warning_prehospital_events">Where the initial diagnosis is not Definite ST Elevation infarction, times of events pre-hospital are not mandatory, although these should always be entered if any Reperfusion treatment is subsequently given.</string>
+    
     <string name="value_label_onset_of_symptoms">Onset of Symptoms</string>
+    <string name="value_date_picker_title_onset_of_symptoms">Date of Onset:</string>
+    <string name="value_time_picker_title_onset_of_symptoms">Time of Onset:</string>
     
     <string name="value_label_call_for_help">Call For Help</string>
+    <string name="value_date_picker_title_call_for_help">Date of Call:</string>
+    <string name="value_time_picker_title_call_for_help">Time of Call:</string>
     
     <string name="value_label_arrival_first_responder">Arrival of 1st Responder</string>
+    <string name="value_date_picker_title_arrival_first_responder">Date of Arrival:</string>
+    <string name="value_time_picker_title_arrival_first_responder">Time of Arrival:</string>
     
     <string name="value_label_arrival_ambulance">Arrival of Ambulance</string>
+    <string name="value_date_picker_title_arrival_ambulance">Date of Arrival:</string>
+    <string name="value_time_picker_title_arrival_ambulance">Time of Arrival:</string>
     
     <string name="value_label_ambulance_trust_code">Ambulance Trust Code</string>
 	<string-array name="ambulance_trust_code_array">

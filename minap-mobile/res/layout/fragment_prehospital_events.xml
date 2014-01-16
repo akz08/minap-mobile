@@ -14,20 +14,29 @@
         android:orientation="vertical"
         android:animateLayoutChanges="true" >
         
+ 	    <TextView 
+	 	        android:layout_width="wrap_content"
+	 	        android:layout_height="0dip"
+	 	        android:text="@string/title_warning_prehospital_events"
+	 	        android:drawableLeft="@drawable/ic_action_warning"
+	 	        android:drawablePadding="4dp"
+	 	        android:layout_marginTop="16dp"
+	 	        android:layout_weight="1"
+	 	        />
+ 	    
  	    <!-- Dates -->
  	    
-        <LinearLayout 
+       <LinearLayout 
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:orientation="horizontal"
-           android:layout_marginTop="2dp">
-         	<!-- add in a margin to give space for the about button -->
-          
+           android:orientation="horizontal">
+        
           <TextView
 			    android:layout_width="0dip"
 			    android:layout_height="wrap_content"
 			    android:text="@string/value_label_onset_of_symptoms"
 			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
 		    	/>
 		 <ImageButton
