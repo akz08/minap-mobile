@@ -9,6 +9,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
@@ -17,6 +19,17 @@ import com.ucl.appteam7.minapmobile.activities.PrehospitalEventsActivity;
 import com.ucl.appteam7.minapmobile.views.DemographicsAndAdmissionView;
 
 public class DemographicsAndAdmissionFragment extends Fragment {
+	
+	private Spinner mGenderSpinner;
+	private Spinner mEthnicitySpinner;
+	private Spinner mAdmissionMethodSpinner;
+	private Spinner mAdmissionWardSpinner;
+	private Spinner mAdmittingConsultantSpinner;
+	private Spinner mReferralHospitalSpinner;
+	private Spinner mPctCodeSpinner;
+	private Spinner mAdminStatusSpinner;
+	private Spinner mPlaceEcgSpinner;
+	private Spinner mNhsVerificationSpinner;
 	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
@@ -34,6 +47,60 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 		view = (DemographicsAndAdmissionView)View.inflate(getActivity(), R.layout.fragment_demographics_and_admission, null);
 		view.setViewListener(viewListener);
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
+		
+		// Populate the Gender spinner
+		mGenderSpinner = (Spinner)view.findViewById(R.id.gender_spinner);
+		ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.gender_array, R.layout.multiline_spinner_item);
+		genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mGenderSpinner.setAdapter(genderAdapter);
+		
+		// Populate the Patient Ethnicity spinner
+		mEthnicitySpinner = (Spinner)view.findViewById(R.id.patient_ethnicity_spinner);
+		ArrayAdapter<CharSequence> ethnicityAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.patient_ethnicity_array, R.layout.multiline_spinner_item);
+		ethnicityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mEthnicitySpinner.setAdapter(ethnicityAdapter);
+		
+		// Populate the Admission Method spinner
+		mAdmissionMethodSpinner = (Spinner)view.findViewById(R.id.admission_method_spinner);
+		ArrayAdapter<CharSequence> methodAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.admission_method_array, R.layout.multiline_spinner_item);
+		methodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdmissionMethodSpinner.setAdapter(methodAdapter);
+		
+		// Populate the Admission Ward spinner
+		mAdmissionWardSpinner = (Spinner)view.findViewById(R.id.admission_ward_spinner);
+		ArrayAdapter<CharSequence> wardAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.admission_ward_array, R.layout.multiline_spinner_item);
+		wardAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdmissionWardSpinner.setAdapter(wardAdapter);
+		
+		// Populate the Admitting Consultant spinner
+		mAdmittingConsultantSpinner = (Spinner)view.findViewById(R.id.admitting_consultant_spinner);
+		ArrayAdapter<CharSequence> consultantAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.admitting_consultant_array, R.layout.multiline_spinner_item);
+		consultantAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdmittingConsultantSpinner.setAdapter(consultantAdapter);
+		
+		// Populate the PCT Code spinner
+		mPctCodeSpinner = (Spinner)view.findViewById(R.id.pct_code_spinner);
+		ArrayAdapter<CharSequence> pctAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.pct_code_array, R.layout.multiline_spinner_item);
+		pctAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mPctCodeSpinner.setAdapter(pctAdapter);
+		
+		// Populate the Administrative Status spinner
+		mAdminStatusSpinner = (Spinner)view.findViewById(R.id.admin_status_spinner);
+		ArrayAdapter<CharSequence> adminAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.admin_status_array, R.layout.multiline_spinner_item);
+		adminAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mAdminStatusSpinner.setAdapter(adminAdapter);
+		
+		// Populate the Place 1st ECG Performed spinner
+		mPlaceEcgSpinner = (Spinner)view.findViewById(R.id.place_ecg_performed_spinner);
+		ArrayAdapter<CharSequence> ecgAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.place_ecg_performed_array, R.layout.multiline_spinner_item);
+		ecgAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mPlaceEcgSpinner.setAdapter(ecgAdapter);
+		
+		// Populate the NHS Verification Status spinner
+		mNhsVerificationSpinner = (Spinner)view.findViewById(R.id.nhs_verification_status_spinner);
+		ArrayAdapter<CharSequence> nhsAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.nhs_verification_status_array, R.layout.multiline_spinner_item);
+		nhsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mNhsVerificationSpinner.setAdapter(nhsAdapter);
 		
 		// setup action bar
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);

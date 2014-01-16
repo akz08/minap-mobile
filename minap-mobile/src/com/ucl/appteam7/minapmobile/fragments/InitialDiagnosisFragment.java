@@ -24,12 +24,15 @@ public class InitialDiagnosisFragment extends Fragment {
 	private static final String DIALOG_ABOUT = "about";
 	
 	private Spinner mNstemiSpinner;
+	private Spinner mProcedureAtInterventionalHospitalSpinner;
+	private Spinner mInterventionalCentreSpinner;
+	
 	private ImageButton mAboutHighRiskNstemiButton;
 	private ImageButton mAboutProcedureAtInterventionalHospitalButton;
 	private ImageButton mAboutInterventionalCentreButton;
 	private ImageButton mAboutDateOfReturnButton;
 
-//	RadioGroup mWorkingDiagnosisRadioGroup;
+	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
 	private ViewGroup mHiddenHighRiskNstemi;
 	private ViewGroup mHiddenGroupAdmissionElsewhere;
@@ -72,9 +75,9 @@ public class InitialDiagnosisFragment extends Fragment {
 			
 			// Populate the nSTEMI spinner
 			mNstemiSpinner = (Spinner)getView().findViewById(R.id.nstemi_spinner);
-			ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.nstemi_array, android.R.layout.simple_spinner_item);
-			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-			mNstemiSpinner.setAdapter(adapter);
+			ArrayAdapter<CharSequence> nStemiAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.nstemi_array, R.layout.multiline_spinner_item);
+			nStemiAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mNstemiSpinner.setAdapter(nStemiAdapter);
 			
 			// Wire up 'about' buttons
 			mAboutHighRiskNstemiButton = (ImageButton) view.findViewById(R.id.about_high_risk_nstemi);
@@ -92,6 +95,19 @@ public class InitialDiagnosisFragment extends Fragment {
 			// add the hidden view
 			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_astemi_admission));
 			mContainerView.addView(mHiddenGroupAdmissionElsewhere, viewIndex + 1);
+			
+			// Populate the Procedure at Interventional Hospital spinner
+			mProcedureAtInterventionalHospitalSpinner = (Spinner)getView().findViewById(R.id.procedure_at_interventional_hospital_spinner);
+			ArrayAdapter<CharSequence> procedureAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.procedure_at_interventional_hospital_array, R.layout.multiline_spinner_item);
+			procedureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mProcedureAtInterventionalHospitalSpinner.setAdapter(procedureAdapter);
+			
+			// Populate the Interventional Centre spinner
+			// NOTE: assumption that the contents are the same as hospitals_array
+			mInterventionalCentreSpinner = (Spinner)getView().findViewById(R.id.interventional_centre_spinner);
+			ArrayAdapter<CharSequence> centreAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, R.layout.multiline_spinner_item);
+			centreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mInterventionalCentreSpinner.setAdapter(centreAdapter);
 			
 			// Wire up 'about' buttons
 			mAboutProcedureAtInterventionalHospitalButton = (ImageButton) view.findViewById(R.id.about_procedure_at_interventional_hospital);

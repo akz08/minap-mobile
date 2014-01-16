@@ -50,8 +50,7 @@ public class PatientDetailsFragment extends Fragment {
 		view = (PatientDetailsView)View.inflate(getActivity(), R.layout.fragment_patient_details, null);
 		view.setViewListener(viewListener);
 		
-		// TODO: try to move populating the spinner to view class
-		// Populate the hospital name spinner
+		// Populate the Hospital Name spinner
 		mHospitalSpinner = (Spinner)view.findViewById(R.id.hospitals_spinner);
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
