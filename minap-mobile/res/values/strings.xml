@@ -994,6 +994,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="value_radio_angiography_performed_9">9. Unknown</string>
     
     <string name="value_label_datetime_referral_investigation_intervention">Date/time of Referral for Investigation/Intervention</string>
+    <string name="value_date_picker_title_referral_investigation_intervention">Date of Referral:</string>
+    <string name="value_time_picker_title_referral_investigation_intervention">Time of Referral:</string>
     
     <string name="value_label_delay_to_performance_angiogram">Delay to Performance of Angiogram</string>
 	<string-array name="delay_to_performance_angiogram_array">
@@ -1007,12 +1009,15 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	</string-array>
     
     <string name="value_label_angio_datetime">Angio date/time</string>
+    <string name="value_date_picker_title_angio_datetime">Date Angio Performed:</string>
+    <string name="value_time_picker_title_angio_datetime">Time Angio Performed:</string>
     
 	<!-- Interventional Centre also exists under Initial Diagnosis -->
     <!-- <string name="value_label_interventional_centre">Interventional Centre</string> -->
 	<!-- assumption that the contents are the same as hospital_array -->
 
     <string name="value_label_date_first_intervention_surgery_locally">Date of First Intervention or Surgery Performed Locally</string>
+    <string name="value_date_picker_title_first_intervention_surgery_locally">Date of First Intervention/Surgery:</string>
     
     <string name="value_label_coronary_intervention">Coronary Intervention</string>
 	<string-array name="coronary_intervention_array">

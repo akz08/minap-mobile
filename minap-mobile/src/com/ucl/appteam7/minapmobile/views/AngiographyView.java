@@ -42,8 +42,21 @@ public class AngiographyView extends ScrollView {
 		public void showPerformedAnotherHospital1();
 		public void hidePerformedAnotherHospital1();
 		
+		// textspinners
+		public void onDateReferral();
+		public void onTimeReferral();
+		public void onAngioDate();
+		public void onAngioTime();
+		public void onDateFirstIntervention();
+		
 		// about dialogs
 		public void showAboutWarningAngiography();
+		
+		public void showAboutAngioDateTime();
+		public void showAboutInterventionalCentre();
+		public void showAboutDateTimeReferral();
+		public void showAboutDelayToAngiogram();
+		public void showAboutDateFirstIntervention();
 		
 		// navigation buttons
 		public void previousPage();

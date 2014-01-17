@@ -59,6 +59,7 @@
 		    android:layout_width="match_parent"
 		    android:layout_height="0dip"
 		    android:orientation="horizontal"
+		    android:layout_marginBottom="8dp"
 		    android:layout_weight="1.0">
 			 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
 			 <!-- it's a bit of hack, and won't work if the layout inflated below isn't big enough -->

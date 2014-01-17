@@ -10,8 +10,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
@@ -21,8 +25,26 @@ import com.ucl.appteam7.minapmobile.views.AngiographyView;
 public class AngiographyFragment extends Fragment {
 	
 	private static final String DIALOG_ABOUT = "about";
+	private static final String DIALOG_DATE = "date";
+	private static final String DIALOG_TIME = "time";
 	
 	private RadioGroup mAngiographyWasPerformedRadioGroup;
+	
+	private Spinner mDelayToAngiogramSpinner;
+	private Spinner mInterventionalCentreSpinner;
+	private Spinner mCoronaryInterventionSpinner;
+	
+	private TextView mDateTimeToReferralDateTextView;
+	private TextView mDateTimeToReferralTimeTextView;
+	private TextView mAngioDateTextView;
+	private TextView mAngioTimeTextView;
+	private TextView mDateFirstInterventionDateTextView;
+	
+	private ImageButton mAboutDateTimeToReferralButton;
+	private ImageButton mAboutDelayToAngiogramButton;
+	private ImageButton mAboutAngioDateTimeButton;
+	private ImageButton mAboutInterventionalCentreButton;
+	private ImageButton mAboutDateFirstInterventionButton;
 	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
@@ -108,6 +130,49 @@ public class AngiographyFragment extends Fragment {
 			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_was_angiography_performed));
 			mContainerView.addView(mHiddenGroupAngiographyPerformed, viewIndex + 1);
 			
+			// Hook up Date/Time of Referral textspinners
+			mDateTimeToReferralDateTextView = (TextView)getView().findViewById(R.id.datetime_referral_investigation_intervention_date_textspinner);
+			mDateTimeToReferralDateTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.onDateReferral();
+				}
+			});
+			
+			mDateTimeToReferralTimeTextView = (TextView)getView().findViewById(R.id.datetime_referral_investigation_intervention_time_textspinner);
+			mDateTimeToReferralTimeTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.onTimeReferral();
+				}
+			});
+			
+			// Populate Delay to Angiogram Spinner
+			mDelayToAngiogramSpinner = (Spinner)getView().findViewById(R.id.delay_to_performance_angiogram_spinner);
+			ArrayAdapter<CharSequence> delayAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.delay_to_performance_angiogram_array, R.layout.multiline_spinner_item);
+			delayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mDelayToAngiogramSpinner.setAdapter(delayAdapter);
+			
+			// Wire up 'about' buttons for the 2 above items
+			mAboutDateTimeToReferralButton = (ImageButton) view.findViewById(R.id.about_datetime_referral_investigation_intervention);
+			mAboutDateTimeToReferralButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					showAboutDateTimeReferral();
+				}
+			});
+			mAboutDelayToAngiogramButton = (ImageButton) view.findViewById(R.id.about_delay_to_performance_angiogram);
+			mAboutDelayToAngiogramButton.setOnClickListener(new View.OnClickListener() {
+					
+				@Override
+				public void onClick(View v) {
+					showAboutDelayToAngiogram();
+				}
+			});
+			
 			// setup (2nd level) radio group that triggers layout display
 			mAngiographyWasPerformedRadioGroup = (RadioGroup)view.findViewById(R.id.radio_group_angiography_performed);
 			mAngiographyWasPerformedRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -166,7 +231,51 @@ public class AngiographyFragment extends Fragment {
 		public void showPerformedThisHospital0() {
 			// add the hidden view
 			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
-			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedThis0, viewIndex + 1);			
+			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedThis0, viewIndex + 1);
+			
+			// wire up angio date/time textspinner
+			mAngioDateTextView = (TextView)getView().findViewById(R.id.angio_datetime_date_textspinner);
+			mAngioDateTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.onAngioDate();
+				}
+			});
+			
+			mAngioTimeTextView = (TextView)getView().findViewById(R.id.angio_datetime_time_textspinner);
+			mAngioTimeTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.onAngioTime();
+				}
+			});
+			
+			// wire up interventional centre spinner
+			mInterventionalCentreSpinner = (Spinner)getView().findViewById(R.id.interventional_centre_spinner);
+			ArrayAdapter<CharSequence> centreAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, R.layout.multiline_spinner_item);
+			centreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mInterventionalCentreSpinner.setAdapter(centreAdapter);
+			
+			// wire up 'about' buttons
+			mAboutAngioDateTimeButton = (ImageButton) view.findViewById(R.id.about_angio_datetime);
+			mAboutAngioDateTimeButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutAngioDateTime();
+				}
+			});
+			
+			mAboutInterventionalCentreButton = (ImageButton) view.findViewById(R.id.about_interventional_centre);
+			mAboutInterventionalCentreButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutInterventionalCentre();
+				}
+			});
 		}
 
 		@Override
@@ -179,6 +288,32 @@ public class AngiographyFragment extends Fragment {
 		public void showPerformedThisHospital1() {
 			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.delay_to_performance_angiogram_spinner));
 			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedThis1, viewIndex + 1);	
+			
+			// wire up date of first intervention/surgery textspinner
+			mDateFirstInterventionDateTextView = (TextView)getView().findViewById(R.id.date_first_intervention_surgery_locally_date_textspinner);
+			mDateFirstInterventionDateTextView.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.onDateFirstIntervention();
+				}
+			});
+			
+			// wire up coronary intervention spinner
+			mCoronaryInterventionSpinner = (Spinner)getView().findViewById(R.id.coronary_intervention_spinner);
+			ArrayAdapter<CharSequence> coronaryAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.coronary_intervention_array, R.layout.multiline_spinner_item);
+			coronaryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mCoronaryInterventionSpinner.setAdapter(coronaryAdapter);
+			
+			// wire up 'about' button for date of first intervention/surgery
+			mAboutDateFirstInterventionButton = (ImageButton) view.findViewById(R.id.about_date_first_intervention_surgery_locally);
+			mAboutDateFirstInterventionButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutDateFirstIntervention();
+				}
+			});
 			
 		}
 
@@ -193,6 +328,21 @@ public class AngiographyFragment extends Fragment {
 			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
 			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedAnother0, viewIndex + 1);
 			
+			// wire up interventional centre spinner
+			mInterventionalCentreSpinner = (Spinner)getView().findViewById(R.id.interventional_centre_spinner);
+			ArrayAdapter<CharSequence> centreAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.hospitals_array, R.layout.multiline_spinner_item);
+			centreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mInterventionalCentreSpinner.setAdapter(centreAdapter);
+			
+			// wire up 'about' button
+			mAboutInterventionalCentreButton = (ImageButton) view.findViewById(R.id.about_interventional_centre);
+			mAboutInterventionalCentreButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutInterventionalCentre();
+				}
+			});
 		}
 
 		@Override
@@ -206,11 +356,116 @@ public class AngiographyFragment extends Fragment {
 			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.delay_to_performance_angiogram_spinner));
 			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedAnother1, viewIndex + 1);	
 			
+			// wire up coronary intervention spinner
+			mCoronaryInterventionSpinner = (Spinner)getView().findViewById(R.id.coronary_intervention_spinner);
+			ArrayAdapter<CharSequence> coronaryAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.coronary_intervention_array, R.layout.multiline_spinner_item);
+			coronaryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+			mCoronaryInterventionSpinner.setAdapter(coronaryAdapter);
 		}
 
 		@Override
 		public void hidePerformedAnotherHospital1() {
 			mHiddenGroupAngiographyPerformed.removeView(mHiddenGroupAngiographyPerformedAnother1);
+			
+		}
+
+		@Override
+		public void showAboutAngioDateTime() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void showAboutInterventionalCentre() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void showAboutDateTimeReferral() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void showAboutDelayToAngiogram() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void showAboutDateFirstIntervention() {
+			// TODO: Replace title and content with calls to the model
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance("Dummy Title", "dummy content");
+			dialog.show(fm, DIALOG_ABOUT);				
+		}
+
+		@Override
+		public void onDateReferral() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			DatePickerFragment dialog = DatePickerFragment
+					.newInstance(getString(R.string.value_date_picker_title_referral_investigation_intervention));
+			dialog.show(fm, DIALOG_DATE);
+			
+		}
+
+		@Override
+		public void onTimeReferral() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			TimePickerFragment dialog = TimePickerFragment
+					.newInstance(getString(R.string.value_time_picker_title_referral_investigation_intervention));
+			dialog.show(fm, DIALOG_TIME);
+			
+		}
+
+		@Override
+		public void onAngioDate() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			DatePickerFragment dialog = DatePickerFragment
+					.newInstance(getString(R.string.value_date_picker_title_angio_datetime));
+			dialog.show(fm, DIALOG_DATE);
+			
+		}
+
+		@Override
+		public void onAngioTime() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			TimePickerFragment dialog = TimePickerFragment
+					.newInstance(getString(R.string.value_time_picker_title_angio_datetime));
+			dialog.show(fm, DIALOG_TIME);
+			
+		}
+
+		@Override
+		public void onDateFirstIntervention() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			DatePickerFragment dialog = DatePickerFragment
+					.newInstance(getString(R.string.value_date_picker_title_first_intervention_surgery_locally));
+			dialog.show(fm, DIALOG_DATE);
 			
 		}
 	};
