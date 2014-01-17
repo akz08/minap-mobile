@@ -65,7 +65,7 @@ public class AngiographyView extends ScrollView {
 		super.onFinishInflate();
 		
 		// wire up angiography performed? radio buttons
-		mAngiographyPerformedRadioGroup = (RadioGroup)findViewById(R.id.radio_group_angiography_performed);
+		mAngiographyPerformedRadioGroup = (RadioGroup)findViewById(R.id.radio_group_was_angiography_performed);
 		mAngiographyPerformedRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			
 			public void onCheckedChanged(RadioGroup group, int checkedId) {

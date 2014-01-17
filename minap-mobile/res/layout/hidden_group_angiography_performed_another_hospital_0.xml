@@ -31,7 +31,7 @@
 		<Spinner 
 	        android:id="@+id/interventional_centre_spinner"
 	        android:layout_width="match_parent"
-	        android:layout_height="0dip"
+	        android:layout_height="wrap_content"
 	        />    
 
 </LinearLayout>

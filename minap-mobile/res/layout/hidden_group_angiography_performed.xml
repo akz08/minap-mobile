@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subcontainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:animateLayoutChanges="true" >
     
 		<RadioGroup
 		    android:id="@+id/radio_group_angiography_performed"
@@ -111,7 +113,7 @@
 		<Spinner 
 	        android:id="@+id/delay_to_performance_angiogram_spinner"
 	        android:layout_width="match_parent"
-	        android:layout_height="0dip"
+	        android:layout_height="wrap_content"
 	        android:layout_weight="1.0"
 	        />    
 		<!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->

@@ -27,6 +27,7 @@ public class AngiographyFragment extends Fragment {
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
 	private ViewGroup mHiddenGroupAngiographyPerformed;
+	private ViewGroup mHiddenGroupAngiographyPerformedContainerView;
 	private ViewGroup mHiddenGroupAngiographyNotPerformed;
 	
 	private ViewGroup mHiddenGroupAngiographyPerformedThis0;
@@ -50,33 +51,15 @@ public class AngiographyFragment extends Fragment {
 		
 		// setup hidden views
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
+		mHiddenGroupAngiographyPerformedContainerView = (ViewGroup) view.findViewById(R.id.subcontainer);
 		mHiddenGroupAngiographyPerformed = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed, mContainerView, false);
 		mHiddenGroupAngiographyNotPerformed = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_not_performed, mContainerView, false);
 		
-		mHiddenGroupAngiographyPerformedThis0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_0, mContainerView, false);
-		mHiddenGroupAngiographyPerformedThis1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_1, mContainerView, false);
+		mHiddenGroupAngiographyPerformedThis0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_0, mHiddenGroupAngiographyPerformedContainerView, false);
+		mHiddenGroupAngiographyPerformedThis1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_1, mHiddenGroupAngiographyPerformedContainerView, false);
 		
-		mHiddenGroupAngiographyPerformedAnother0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_0, mContainerView, false);
-		mHiddenGroupAngiographyPerformedAnother1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_1, mContainerView, false);
-		
-		// setup (2nd level) radio group that triggers layout display
-		mAngiographyWasPerformedRadioGroup = (RadioGroup)view.findViewById(R.id.radio_group_was_angiography_performed);
-		mAngiographyWasPerformedRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				switch(checkedId) {
-				case R.id.radio_angiography_performed_1:
-					break;
-				case R.id.radio_angiography_performed_2:
-					break;
-				case R.id.radio_angiography_performed_3:
-					break;
-				case R.id.radio_angiography_performed_4:
-					break;
-				}
-			}
-
-		});
+		mHiddenGroupAngiographyPerformedAnother0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_0, mHiddenGroupAngiographyPerformedContainerView, false);
+		mHiddenGroupAngiographyPerformedAnother1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_1, mHiddenGroupAngiographyPerformedContainerView, false);
 		
 		// wiring up action bar icon for ancestral navigation
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -108,7 +91,7 @@ public class AngiographyFragment extends Fragment {
 		@Override
 		public void showAngiographyNotPerformed() {
 			// add the hidden view
-			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
+			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_was_angiography_performed));
 			mContainerView.addView(mHiddenGroupAngiographyNotPerformed, viewIndex + 1);
 			
 		}
@@ -122,9 +105,55 @@ public class AngiographyFragment extends Fragment {
 		@Override
 		public void showAngiographyPerformed() {
 			// add the hidden view
-			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
+			int viewIndex = mContainerView.indexOfChild(getView().findViewById(R.id.radio_group_was_angiography_performed));
 			mContainerView.addView(mHiddenGroupAngiographyPerformed, viewIndex + 1);
 			
+			// setup (2nd level) radio group that triggers layout display
+			mAngiographyWasPerformedRadioGroup = (RadioGroup)view.findViewById(R.id.radio_group_angiography_performed);
+			mAngiographyWasPerformedRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+				
+				public void onCheckedChanged(RadioGroup group, int checkedId) {
+					switch(checkedId) {
+					case R.id.radio_angiography_performed_1:
+						hidePerformedThisHospital0();
+						hidePerformedThisHospital1();
+						hidePerformedAnotherHospital0();
+						hidePerformedAnotherHospital1();
+						
+						showPerformedThisHospital0();
+						showPerformedThisHospital1();
+						break;
+					case R.id.radio_angiography_performed_2:
+						hidePerformedThisHospital0();
+						hidePerformedThisHospital1();
+						hidePerformedAnotherHospital0();
+						hidePerformedAnotherHospital1();
+						
+						showPerformedThisHospital0();
+						showPerformedThisHospital1();
+						break;
+					case R.id.radio_angiography_performed_3:
+						hidePerformedThisHospital0();
+						hidePerformedThisHospital1();
+						hidePerformedAnotherHospital0();
+						hidePerformedAnotherHospital1();
+						
+						showPerformedAnotherHospital0();
+						showPerformedAnotherHospital1();
+						break;
+					case R.id.radio_angiography_performed_4:
+						hidePerformedThisHospital0();
+						hidePerformedThisHospital1();
+						hidePerformedAnotherHospital0();
+						hidePerformedAnotherHospital1();
+						
+						showPerformedAnotherHospital0();
+						showPerformedAnotherHospital1();
+						break;
+					}
+				}
+
+			});
 		}
 
 		@Override
@@ -135,49 +164,53 @@ public class AngiographyFragment extends Fragment {
 
 		@Override
 		public void showPerformedThisHospital0() {
-			// TODO Auto-generated method stub
-			
+			// add the hidden view
+			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
+			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedThis0, viewIndex + 1);			
 		}
 
 		@Override
 		public void hidePerformedThisHospital0() {
-			// TODO Auto-generated method stub
+			mHiddenGroupAngiographyPerformed.removeView(mHiddenGroupAngiographyPerformedThis0);
 			
 		}
 
 		@Override
 		public void showPerformedThisHospital1() {
-			// TODO Auto-generated method stub
+			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.delay_to_performance_angiogram_spinner));
+			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedThis1, viewIndex + 1);	
 			
 		}
 
 		@Override
 		public void hidePerformedThisHospital1() {
-			// TODO Auto-generated method stub
+			mHiddenGroupAngiographyPerformed.removeView(mHiddenGroupAngiographyPerformedThis1);
 			
 		}
 
 		@Override
 		public void showPerformedAnotherHospital0() {
-			// TODO Auto-generated method stub
+			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.radio_group_angiography_performed));
+			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedAnother0, viewIndex + 1);
 			
 		}
 
 		@Override
 		public void hidePerformedAnotherHospital0() {
-			// TODO Auto-generated method stub
+			mHiddenGroupAngiographyPerformed.removeView(mHiddenGroupAngiographyPerformedAnother0);
 			
 		}
 
 		@Override
 		public void showPerformedAnotherHospital1() {
-			// TODO Auto-generated method stub
+			int viewIndex = mHiddenGroupAngiographyPerformed.indexOfChild(getView().findViewById(R.id.delay_to_performance_angiogram_spinner));
+			mHiddenGroupAngiographyPerformed.addView(mHiddenGroupAngiographyPerformedAnother1, viewIndex + 1);	
 			
 		}
 
 		@Override
 		public void hidePerformedAnotherHospital1() {
-			// TODO Auto-generated method stub
+			mHiddenGroupAngiographyPerformed.removeView(mHiddenGroupAngiographyPerformedAnother1);
 			
 		}
 	};
