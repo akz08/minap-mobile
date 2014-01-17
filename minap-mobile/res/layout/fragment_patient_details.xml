@@ -87,6 +87,7 @@
 	        android:id="@+id/date_of_birth_textspinner"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
+	        android:paddingLeft="8dp"
 	        style="@android:style/Widget.DeviceDefault.Light.Spinner"
 	        android:hint="@string/value_hint_date_of_birth"
 			/>
@@ -106,6 +107,7 @@
 		        android:id="@+id/admission_date_textspinner"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
 		        android:hint="@string/value_hint_admission_date"
 		        android:layout_weight="0.5"
 		        android:nextFocusDown="@+id/admission_time" 
@@ -115,6 +117,7 @@
 		        android:id="@+id/admission_time_textspinner"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
 		        android:hint="@string/value_hint_admission_time"
 		        android:layout_weight="0.5" 
 		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
