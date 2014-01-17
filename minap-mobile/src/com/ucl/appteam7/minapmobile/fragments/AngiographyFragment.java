@@ -10,6 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
@@ -20,10 +22,18 @@ public class AngiographyFragment extends Fragment {
 	
 	private static final String DIALOG_ABOUT = "about";
 	
+	private RadioGroup mAngiographyWasPerformedRadioGroup;
+	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
 	private ViewGroup mHiddenGroupAngiographyPerformed;
 	private ViewGroup mHiddenGroupAngiographyNotPerformed;
+	
+	private ViewGroup mHiddenGroupAngiographyPerformedThis0;
+	private ViewGroup mHiddenGroupAngiographyPerformedThis1;
+	
+	private ViewGroup mHiddenGroupAngiographyPerformedAnother0;
+	private ViewGroup mHiddenGroupAngiographyPerformedAnother1;
 	
 	private AngiographyView view;
 	
@@ -42,6 +52,31 @@ public class AngiographyFragment extends Fragment {
 		mContainerView = (ViewGroup) view.findViewById(R.id.container);
 		mHiddenGroupAngiographyPerformed = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed, mContainerView, false);
 		mHiddenGroupAngiographyNotPerformed = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_not_performed, mContainerView, false);
+		
+		mHiddenGroupAngiographyPerformedThis0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_0, mContainerView, false);
+		mHiddenGroupAngiographyPerformedThis1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_this_hospital_1, mContainerView, false);
+		
+		mHiddenGroupAngiographyPerformedAnother0 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_0, mContainerView, false);
+		mHiddenGroupAngiographyPerformedAnother1 = (ViewGroup) inflater.inflate(R.layout.hidden_group_angiography_performed_another_hospital_1, mContainerView, false);
+		
+		// setup (2nd level) radio group that triggers layout display
+		mAngiographyWasPerformedRadioGroup = (RadioGroup)view.findViewById(R.id.radio_group_was_angiography_performed);
+		mAngiographyWasPerformedRadioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				switch(checkedId) {
+				case R.id.radio_angiography_performed_1:
+					break;
+				case R.id.radio_angiography_performed_2:
+					break;
+				case R.id.radio_angiography_performed_3:
+					break;
+				case R.id.radio_angiography_performed_4:
+					break;
+				}
+			}
+
+		});
 		
 		// wiring up action bar icon for ancestral navigation
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -95,6 +130,54 @@ public class AngiographyFragment extends Fragment {
 		@Override
 		public void hideAngiographyPerformed() {
 			mContainerView.removeView(mHiddenGroupAngiographyPerformed);
+			
+		}
+
+		@Override
+		public void showPerformedThisHospital0() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void hidePerformedThisHospital0() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showPerformedThisHospital1() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void hidePerformedThisHospital1() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showPerformedAnotherHospital0() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void hidePerformedAnotherHospital0() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void showPerformedAnotherHospital1() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void hidePerformedAnotherHospital1() {
+			// TODO Auto-generated method stub
 			
 		}
 	};

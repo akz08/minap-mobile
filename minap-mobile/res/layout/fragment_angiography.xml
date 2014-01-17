@@ -46,7 +46,7 @@
            <TextView
 			    android:layout_width="0dip"
 			    android:layout_height="wrap_content"
-			    android:text="@string/value_label_angiography_performed"
+			    android:text="@string/value_label_was_angiography_performed"
 			    style="?android:listSeparatorTextViewStyle"
 			    android:layout_marginTop="16dp"
 			    android:layout_weight="1"
@@ -55,7 +55,7 @@
 		</LinearLayout>
 		
 		<RadioGroup
-		    android:id="@+id/radio_group_angiography_performed"
+		    android:id="@+id/radio_group_was_angiography_performed"
 		    android:layout_width="match_parent"
 		    android:layout_height="0dip"
 		    android:orientation="horizontal"
@@ -63,13 +63,13 @@
 			 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
 			 <!-- it's a bit of hack, and won't work if the layout inflated below isn't big enough -->
 		    <RadioButton
-		        android:id="@+id/radio_angiography_performed_yes"
+		        android:id="@+id/radio_was_angiography_performed_yes"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="@string/yes"
 			  	/>
 		    <RadioButton
-		        android:id="@+id/radio_angiography_performed_no"
+		        android:id="@+id/radio_was_angiography_performed_no"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:text="@string/no"

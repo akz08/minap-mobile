@@ -33,6 +33,7 @@
 	        android:id="@+id/date_first_intervention_surgery_locally_date_textspinner"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
+	        android:paddingLeft="8dp"
 	        android:hint="@string/value_hint_date"
 	        style="@android:style/Widget.DeviceDefault.Light.Spinner"
 			/>

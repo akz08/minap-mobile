@@ -44,6 +44,7 @@
 		        android:id="@+id/angio_datetime_time_textspinner"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
 		        android:hint="@string/value_hint_time"
 		        android:layout_weight="0.5" 
 		        style="@android:style/Widget.DeviceDefault.Light.Spinner"

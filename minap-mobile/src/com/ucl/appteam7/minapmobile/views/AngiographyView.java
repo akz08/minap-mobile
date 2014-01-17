@@ -29,6 +29,19 @@ public class AngiographyView extends ScrollView {
 		public void showAngiographyPerformed();
 		public void hideAngiographyPerformed();
 		
+		// methods for the nested layouts
+		public void showPerformedThisHospital0();
+		public void hidePerformedThisHospital0();
+		
+		public void showPerformedThisHospital1();
+		public void hidePerformedThisHospital1();
+		
+		public void showPerformedAnotherHospital0();
+		public void hidePerformedAnotherHospital0();
+		
+		public void showPerformedAnotherHospital1();
+		public void hidePerformedAnotherHospital1();
+		
 		// about dialogs
 		public void showAboutWarningAngiography();
 		
@@ -58,11 +71,11 @@ public class AngiographyView extends ScrollView {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				
 				switch(checkedId) {
-				case R.id.radio_angiography_performed_yes:
+				case R.id.radio_was_angiography_performed_yes:
 					viewListener.hideAngiographyNotPerformed();
 					viewListener.showAngiographyPerformed();
 					break;
-				case R.id.radio_angiography_performed_no:
+				case R.id.radio_was_angiography_performed_no:
 					viewListener.hideAngiographyPerformed();
 					viewListener.showAngiographyNotPerformed();
 					break;

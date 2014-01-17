@@ -5,7 +5,7 @@
     android:orientation="vertical" >
     
 		<RadioGroup
-		    android:id="@+id/radio_group_astemi_admission_yes"
+		    android:id="@+id/radio_group_angiography_performed"
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
 		    android:orientation="vertical"
@@ -68,6 +68,7 @@
 		        android:id="@+id/datetime_referral_investigation_intervention_date_textspinner"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
 		        android:hint="@string/value_hint_date"
 		        android:layout_weight="0.5"
 		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
@@ -76,6 +77,7 @@
 		        android:id="@+id/datetime_referral_investigation_intervention_time_textspinner"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
 		        android:hint="@string/value_hint_time"
 		        android:layout_weight="0.5" 
 		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
