@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.AngiographyActivity;
 import com.ucl.appteam7.minapmobile.activities.ExaminationsActivity;
@@ -21,6 +22,7 @@ import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.MedicalHistoryView;
 
 public class MedicalHistoryFragment extends Fragment {
+	private static final String CHECKPOINT_MEDICAL_HISTORY = "Medical History";
 	
 	// get the patient singleton
 	Patient patient = Patient.get();
@@ -50,6 +52,9 @@ public class MedicalHistoryFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+		
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_MEDICAL_HISTORY);
 	}
 	
 	@Override

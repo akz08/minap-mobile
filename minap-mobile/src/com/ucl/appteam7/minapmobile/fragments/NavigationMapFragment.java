@@ -1,5 +1,6 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 
 import android.content.res.Configuration;
@@ -12,11 +13,15 @@ import android.widget.Toast;
 
 
 public class NavigationMapFragment extends Fragment {
-	 
+	private static final String CHECKPOINT_NAVIGATION_MAP = "Navigation Map"; 
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+		
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_NAVIGATION_MAP);
 	}
 	
 	@Override

@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.InitialReperfusionActivity;
 import com.ucl.appteam7.minapmobile.activities.MedicalHistoryActivity;
@@ -21,6 +22,7 @@ import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.ExaminationsView;
 
 public class ExaminationsFragment extends Fragment {
+	private static final String CHECKPOINT_EXAMINATIONS = "Examinations";
 	
 	// get the patient singleton
 	Patient patient = Patient.get();
@@ -35,6 +37,9 @@ public class ExaminationsFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+		
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_EXAMINATIONS);
 	}
 	
 	@Override

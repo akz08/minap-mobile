@@ -14,11 +14,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.NavigationMapActivity;
 import com.ucl.appteam7.minapmobile.views.PatientDetailsView;
 
 public class PatientDetailsFragment extends Fragment {
+	private static final String CHECKPOINT_PATIENT_DETAILS = "Patient Details";
+	
 	public static final String EXTRA_FOCUS_HOSPITAL_NUMBER = "com.ucl.appteam7.minapmobile.EXTRA_FOCUS_HOSPITAL_NUMBER";
 
 	private static final String DIALOG_DATE = "date";
@@ -43,6 +46,8 @@ public class PatientDetailsFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);		
 		
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_PATIENT_DETAILS);
 	}
 	
 	@Override

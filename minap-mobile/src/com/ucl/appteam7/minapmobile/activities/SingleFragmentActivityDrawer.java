@@ -27,6 +27,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.fragments.LogOutDialogFragment;
 import com.ucl.appteam7.minapmobile.fragments.PatientDetailsFragment;
@@ -34,6 +35,7 @@ import com.ucl.appteam7.minapmobile.fragments.PatientDetailsFragment;
 
 
 public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
+	private static final String CHECKPOINT_DRAWER_EDIT_NUMBER = "Edit hospital number via drawer";
 	
 	public static final String TAG = "com.ucl.appteam7.minapmobile.activitydrawer";
 	protected abstract Fragment createFragment();
@@ -79,6 +81,9 @@ public abstract class SingleFragmentActivityDrawer extends FragmentActivity {
         mEditPatientButton.setOnClickListener(new View.OnClickListener() {
         	@Override
         	public void onClick(View view) {
+        		// TestFlight checkpoint
+        		TestFlight.passCheckpoint(CHECKPOINT_DRAWER_EDIT_NUMBER);
+        		
         		// open patient details with focus on hospital number field
         		Intent intent = new Intent(SingleFragmentActivityDrawer.this, PatientDetailsActivity.class);
         		intent.putExtra(PatientDetailsFragment.EXTRA_FOCUS_HOSPITAL_NUMBER, true);

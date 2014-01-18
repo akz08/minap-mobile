@@ -16,12 +16,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.DemographicsAndAdmissionActivity;
 import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.InitialDiagnosisView;
 
 public class InitialDiagnosisFragment extends Fragment {
+	private static final String CHECKPOINT_INITIAL_DIAGNOSIS = "Initial Diagnosis";
 	
 	// get the patient singleton
 	Patient patient = Patient.get();
@@ -52,6 +54,8 @@ public class InitialDiagnosisFragment extends Fragment {
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
 
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_INITIAL_DIAGNOSIS);
 	}
 	
 	@Override

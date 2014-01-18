@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.ExaminationsActivity;
 import com.ucl.appteam7.minapmobile.activities.PrehospitalEventsActivity;
@@ -22,6 +23,7 @@ import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.InitialReperfusionView;
 
 public class InitialReperfusionFragment extends Fragment {
+	private static final String CHECKPOINT_INITIAL_REPERFUSION = "Initial Reperfusion";
 	
 	// get the patient singleton
 	Patient patient = Patient.get();
@@ -55,6 +57,9 @@ public class InitialReperfusionFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setHasOptionsMenu(true);
+		
+		// TestFlight checkpoint
+		TestFlight.passCheckpoint(CHECKPOINT_INITIAL_REPERFUSION);
 	}
 	
 	@Override
