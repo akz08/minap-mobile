@@ -30,7 +30,8 @@ public class HiRisknSTEMI extends Value {
 				+ "hospital staff to be high risk or who potentially may benefit from early angiography/PCI should be "
 				+ "discussed with the local cardiologists and, where appropriate, with the regional cardiac centre.\n"
 				+ "A formal risk scoring assessment (e.g.: GRACE score) should still be undertaken as part of the assessment "
-				+ "on all patients admitted with UA/NSTEMI, in line with NICE guidance.");
+				+ "on all patients admitted with UA/NSTEMI, in line with NICE guidance.",
+				"High Risk Nstemi");
 	}
 	
 	public static boolean setHiRisknSTEMI(byte hiNSTEMI) {

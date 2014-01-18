@@ -11,7 +11,8 @@ import com.ucl.appteam7.minapmobile.model.Value;
 public class InterventionalCentreCode extends Value {
 	
 	public InterventionalCentreCode() {
-		super("4.20", "The identifier for the Interventional Centre.");
+		super("4.20", "The identifier for the Interventional Centre.",
+				"Interventional Centre");
 	
 	}
 	// Default value is user's own hospital

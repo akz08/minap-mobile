@@ -22,7 +22,8 @@ public class InitialDiagnosis extends Value {
 	public InitialDiagnosis() {
 		super("2.01", "This is a working diagnosis whose primary purpose is to identify those patients with a diagnosis of definite ST elevation MI. "
 				+ "This includes an initial diagnosis made by an ambulance paramedic crew, or other clinician in a position to provide definitive treatment. "
-				+ "Do not change Initial diagnosis on the basis of further ECGs or enzymes/markers. (See 2.03 ECG determining treatment).");
+				+ "Do not change Initial diagnosis on the basis of further ECGs or enzymes/markers. (See 2.03 ECG determining treatment).",
+				"Initial Diagnosis");
 	}
 	
 	public static boolean setInitialDiagnosis(byte iniDiagnosis) {

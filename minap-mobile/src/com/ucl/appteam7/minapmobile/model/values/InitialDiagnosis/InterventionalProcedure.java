@@ -23,7 +23,8 @@ public class InterventionalProcedure extends Value {
 	
 	public InterventionalProcedure() {
 		super("4.29", "For use by non-interventional hospitals when patients return after an intervention. "
-				+ "This field is not to be used for nSTEMI records as it refers to primary reperfusion.");
+				+ "This field is not to be used for nSTEMI records as it refers to primary reperfusion.",
+				"What Procedure Was Performed At The Interventional Hospital");
 	}
 	
 	public static boolean setInterventionalProcedure(byte interHosProcedure) {

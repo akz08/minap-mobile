@@ -21,7 +21,8 @@ public class ReferHospitalReturn extends Value {
 	static SimpleDateFormat sd = new SimpleDateFormat("dd/mm/yyyy"); // date formatter
 
 	public ReferHospitalReturn() {	
-		super("4.26", "For use when a patient is admitted to a DGH, transferred to an interventional centre and returns to the DGH.");
+		super("4.26", "For use when a patient is admitted to a DGH, transferred to an interventional centre and returns to the DGH.",
+				"Date Of Return To Referring Hospital");
 	}
 
 	public static boolean setRDate(Date bDate) throws ParseException {

@@ -14,7 +14,9 @@ public class AdmissionAfterNSTEMI extends Value {
 	private static boolean admissionAfterSTEMI = false;
 	
 	public AdmissionAfterNSTEMI() {
-		super("Null", "If set to true, show fields 4.29, 4.26 and Interventional Centre");
+		super("Null", "Use even if intended primary reperfusion treatment was not performed. "
+				+ "Not for use with non STE ACS.",
+				"Admission After Treatment Elsewhere");
 	}
 	
 	public static boolean setAdmissionAfterSTEMI(boolean admASTEMI) {
