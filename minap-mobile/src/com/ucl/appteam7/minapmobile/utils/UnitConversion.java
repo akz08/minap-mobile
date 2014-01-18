@@ -16,6 +16,7 @@ public class UnitConversion {
 	}
 	
 	public static int stonesAndPoundsToKg(int stones, int pounds) {
+		// TODO: add in conversion logic
 		return 0;
 	}
 	
@@ -28,6 +29,7 @@ public class UnitConversion {
 	}
 	
 	public static int feetAndInchesToCms(int feet, int inches) {
+		// TODO: add in conversion logic
 		return 0;
 	}
 }

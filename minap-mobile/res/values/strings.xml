@@ -855,7 +855,24 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
 	    <item>8. Not applicable</item>
 	    <item>9. Unknown</item>
 	</string-array>
-    
+	
+	<string name="value_label_bmi">BMI Calculator</string>
+	<string name="value_help_bmi_weight">Conversion: Enter stones and pounds, then press Convert to kgs"</string>
+	<string name="value_help_bmi_height">Conversion: Enter feet and inches, then press Convert to cms"</string>
+	
+	<string name="value_label_bmi_weight">Weight</string>
+	<string name="value_unit_stones">Stones</string>
+	<string name="value_unit_pounds">Pounds</string>
+	<string name="value_unit_kgs">kgs</string>
+	
+	<string name="value_label_bmi_height">Height</string>
+	<string name="value_unit_feet">Feet</string>
+	<string name="value_unit_inches">Inches</string>
+	<string name="value_unit_cms">cms</string>
+	
+	<string name="value_bmi_convert_kgs">Convert to kgs</string>
+	<string name="value_bmi_convert_cms">Convert to cms</string>
+	
     <!-- Medical History -->
     <string name="title_medical_history">Medical History</string>
     
