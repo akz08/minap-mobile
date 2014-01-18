@@ -5,7 +5,8 @@ import com.ucl.appteam7.minapmobile.model.Value;
 public class Height extends Value {
 	private static double height;
 	public Height() {	
-		super("2.29", "Height in cms to derive BMI.");
+		super("2.29", "Height in cms to derive BMI.",
+				"Height");
 	}
 		// check if valid entry
 	public static boolean setHeight (double h){

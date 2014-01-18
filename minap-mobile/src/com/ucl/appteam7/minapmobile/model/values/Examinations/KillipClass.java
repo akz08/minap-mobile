@@ -7,7 +7,8 @@ public class KillipClass extends Value {
 	private static String killipClassLongCode;
 	public KillipClass() {	
 		super("2.41", "A part of the GRACE score.  "
-				+ "The worst category developing during the admission should be used.");
+				+ "The worst category developing during the admission should be used.",
+				"Killip Class");
 	}
 	public static boolean setKillipClass(byte kClass) {
 		// check if valid entry

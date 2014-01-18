@@ -5,7 +5,8 @@ import com.ucl.appteam7.minapmobile.model.Value;
 public class Weight extends Value {
 	private static double weight;
 	public Weight() {	
-		super("2.30", "Weight in kgs to derive BMI.");
+		super("2.30", "Weight in kgs to derive BMI.",
+				"Weight");
 	}
 		// check if valid entry
 	public static boolean setWeight (double w){

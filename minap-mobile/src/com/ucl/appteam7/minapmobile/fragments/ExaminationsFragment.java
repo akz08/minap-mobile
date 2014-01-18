@@ -74,33 +74,30 @@ public class ExaminationsFragment extends Fragment {
 
 		@Override
 		public void showAboutSystolicBp() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.Systolic.getNotesTitle() + " " + patient.Systolic.getId(), patient.Systolic.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
 
 		@Override
 		public void showAboutHeartRateOnAdmission() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.HeartRate.getNotesTitle() + " " + patient.HeartRate.getId(), patient.HeartRate.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
 
 		@Override
 		public void showAboutKillipClass() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.Killip.getNotesTitle() + " " + patient.Killip.getId(), patient.Killip.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}

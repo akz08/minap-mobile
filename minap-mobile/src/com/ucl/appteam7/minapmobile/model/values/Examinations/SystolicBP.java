@@ -10,7 +10,8 @@ public class SystolicBP extends Value {
 		super("2.20", "The first systolic blood pressure recorded after admission to hospital. "
 				+ "The patient should be in a stable cardiac rhythm, ie sinus or chronic AF.  "
 				+ "Where the presenting rhythm is a treatable tachyarrhythmia, "
-				+ "the first stable SBP after treatment should be used.");
+				+ "the first stable SBP after treatment should be used.",
+				"Systolic BP");
 	}
 		// check if valid entry
 	public static boolean setSystolicBP (double sBP){//2.20, n3, systolic blood pressure
