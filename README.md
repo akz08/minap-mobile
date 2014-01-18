@@ -15,7 +15,7 @@ Contains a [MonkeyTalk][6] project to help test user interaction/flow throughout
 #### minap-mobile
 Contains the main Android project for MINAP. As agreed with the client, the app exists as a proof of concept of mobile data collection in the hospital. Server communication is simulated, but not implemented.
 
-### Collaborators
+### Contributors
 Code was created/maintained by:
 * [David Corrales][1]
 * [Amer Kamil Zainal][2]
