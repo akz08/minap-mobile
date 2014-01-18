@@ -20,9 +20,13 @@ import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.MedicalHistoryActivity;
+import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.AngiographyView;
 
 public class AngiographyFragment extends Fragment {
+	
+	// get the patient singleton
+	Patient patient = Patient.get();
 	
 	private static final String DIALOG_ABOUT = "about";
 	private static final String DIALOG_DATE = "date";

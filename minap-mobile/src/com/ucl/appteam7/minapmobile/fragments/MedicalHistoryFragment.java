@@ -17,9 +17,13 @@ import android.widget.Toast;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.AngiographyActivity;
 import com.ucl.appteam7.minapmobile.activities.ExaminationsActivity;
+import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.MedicalHistoryView;
 
 public class MedicalHistoryFragment extends Fragment {
+	
+	// get the patient singleton
+	Patient patient = Patient.get();
 	
 	private static final String DIALOG_ABOUT = "about";
 	
