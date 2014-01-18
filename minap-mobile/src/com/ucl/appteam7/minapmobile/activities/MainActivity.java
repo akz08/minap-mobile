@@ -193,12 +193,16 @@ public class MainActivity extends Activity {
 		if (!patient.NHSVerification.setVerification((byte)1))
 			Toast.makeText(this, "Invalid verification", Toast.LENGTH_LONG).show();
 		
+		// refer hospital
+		if (!patient.ReferralHospital.setReferralIdentifier("GGG"))
+			Toast.makeText(this, "Invalid referral hospital", Toast.LENGTH_LONG).show();
+		
 		db.open();
 		if (db.updateDemographics(patient.RecordNumber.getCaseNumber(), patient.Gender.getPatientGender(), 
 				patient.Ethnicity.getEthnicity(), patient.AdmissionMethod.getAdmissionMethod(), 
 				patient.AdmissionWard.getAdmissionWard(), patient.GPCode.getGPCode(), patient.PostCode.getPostcode(), 
 				patient.AdmitConsul.getAdmittingConsultant(), patient.AdminStatus.getAdminStatus(), patient.FirstECG.getFirstECG(), 
-				patient.NHSVerification.getVerification()))
+				patient.NHSVerification.getVerification(), patient.ReferralHospital.getReferralIdentifier()))
 			Toast.makeText(this, "Demographics Update successful", Toast.LENGTH_LONG).show();
 		else
 			Toast.makeText(this, "Demographics Update failed", Toast.LENGTH_LONG).show();
@@ -579,48 +583,49 @@ public class MainActivity extends Activity {
 							"\nConsultant: " + c.getString(19) +
 							"\nStatus: " + c.getString(20) +
 							"\nECG: " + c.getString(21) +
-							"\nVerification: " + c.getString(22), Toast.LENGTH_LONG).show();
+							"\nVerification: " + c.getString(22) +
+							"\nReferral Hospital: " + c.getString(23), Toast.LENGTH_LONG).show();
 		
-		Toast.makeText(this, "\nTreatment: " + c.getString(23) +
-							"\nReperfusion: " + c.getString(24) +
-							"\nECG Treatment: " + c.getString(25) +
-							"\nECG QRS: " + c.getString(26) +
-							"\nLocation: " + c.getString(27) +
-							"\nIntervention Code: " + c.getString(28) +
-							"\nInfarction: " + c.getString(29), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "\nTreatment: " + c.getString(24) +
+							"\nReperfusion: " + c.getString(25) +
+							"\nECG Treatment: " + c.getString(26) +
+							"\nECG QRS: " + c.getString(27) +
+							"\nLocation: " + c.getString(28) +
+							"\nIntervention Code: " + c.getString(29) +
+							"\nInfarction: " + c.getString(30), Toast.LENGTH_LONG).show();
 		
-		Toast.makeText(this, "\nAngiography: " + c.getString(30) +
-							"\nRefer Date: " + c.getString(31) +
-							"\nAngio Delay: " + c.getString(32) +
-							"\nAngio Date: " + c.getString(33) +
-							"\nAngio Code: " + c.getString(34) +
-							"\nAngio Intervention: " + c.getString(35) +
-							"\nCoronary: " + c.getString(36) +
-							"\nPatient Return: " + c.getString(37) +
-							"\nDaycase Transfer: " + c.getString(38) +
-							"\nRefer Return: " + c.getString(39), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "\nAngiography: " + c.getString(31) +
+							"\nRefer Date: " + c.getString(32) +
+							"\nAngio Delay: " + c.getString(33) +
+							"\nAngio Date: " + c.getString(34) +
+							"\nAngio Code: " + c.getString(35) +
+							"\nAngio Intervention: " + c.getString(36) +
+							"\nCoronary: " + c.getString(37) +
+							"\nPatient Return: " + c.getString(38) +
+							"\nDaycase Transfer: " + c.getString(39) +
+							"\nRefer Return: " + c.getString(40), Toast.LENGTH_LONG).show();
 		
-		Toast.makeText(this, "\nSystolic: " + c.getString(40) +
-							"\nHeart Rate: " + c.getString(41) +
-							"\nKillip: " + c.getString(42) +
-							"\nBMI: " + c.getString(43) +
-							"\nHeight: " + c.getString(44) +
-							"\nWeight: " + c.getString(45), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "\nSystolic: " + c.getString(41) +
+							"\nHeart Rate: " + c.getString(42) +
+							"\nKillip: " + c.getString(43) +
+							"\nBMI: " + c.getString(44) +
+							"\nHeight: " + c.getString(45) +
+							"\nWeight: " + c.getString(46), Toast.LENGTH_LONG).show();
 							
-		Toast.makeText(this, "\nPrev AMI: " + c.getString(46) +
-							"\nHypertension: " + c.getString(47) +
-							"\nCerebro: " + c.getString(48) +
-							"\nPrev PCI: " + c.getString(49) +
-							"\nSmoking: " + c.getString(50) +
-							"\nDiabetes: " + c.getString(51) +
-							"\nPrev Angina: " + c.getString(52) +
-							"\nHypercholesterol:" + c.getString(53) +
-							"\nAsthma: " + c.getString(54) +
-							"\nCABG: " + c.getString(55) +
-							"\nHeart Failure: " + c.getString(56) +
-							"\nVascular: " + c.getString(57) +
-							"\nRenal Failure: " + c.getString(58) +
-							"\nCHD: " + c.getString(59), Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "\nPrev AMI: " + c.getString(47) +
+							"\nHypertension: " + c.getString(48) +
+							"\nCerebro: " + c.getString(49) +
+							"\nPrev PCI: " + c.getString(50) +
+							"\nSmoking: " + c.getString(51) +
+							"\nDiabetes: " + c.getString(52) +
+							"\nPrev Angina: " + c.getString(53) +
+							"\nHypercholesterol:" + c.getString(54) +
+							"\nAsthma: " + c.getString(55) +
+							"\nCABG: " + c.getString(56) +
+							"\nHeart Failure: " + c.getString(57) +
+							"\nVascular: " + c.getString(58) +
+							"\nRenal Failure: " + c.getString(59) +
+							"\nCHD: " + c.getString(60), Toast.LENGTH_LONG).show();
 	}
 	
 	@Override

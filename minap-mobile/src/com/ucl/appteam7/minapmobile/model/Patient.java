@@ -66,6 +66,7 @@ public class Patient {
 	public AdminStatus AdminStatus = new AdminStatus();
 	public FirstECG FirstECG = new FirstECG();
 	public NHSVerification NHSVerification = new NHSVerification();
+	public ReferralHospital ReferralHospital = new ReferralHospital();
 	
 	// Initial Reperfusion
 	public InitialReperfusion InitialReperfusion = new InitialReperfusion();

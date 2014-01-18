@@ -49,8 +49,9 @@ public class DBAdapter {
 	public static final String ADMISSION_STATUS = "AdminStatus"; 				// (byte) Field 1.09
 	public static final String PLACE_FIRST_12_LEAD_ECG_PERFORMED = "FirstECG"; 	// (byte) : Field 2.22
 	public static final String NHS_VERIFICATION = "NHSVerif";					/** (string) no field number */	
+	public static final String REFERRAL_HOSPITAL = "RefHospital";				// (String) Field 4.21
 	public static final String [] ADMISSION = {PATIENT_GENDER, PATIENT_ETHNICITY, ADMISSION_METHOD, ADMISSION_WARD, GP_PCT_CODE,
-		PATIENT_POST_CODE, ADMITTING_CONSULTANT, ADMISSION_STATUS, PLACE_FIRST_12_LEAD_ECG_PERFORMED, NHS_VERIFICATION};
+		PATIENT_POST_CODE, ADMITTING_CONSULTANT, ADMISSION_STATUS, PLACE_FIRST_12_LEAD_ECG_PERFORMED, NHS_VERIFICATION, REFERRAL_HOSPITAL};
 	
 	// Page 3 - Initial Reperfusion - 7 fields
 	public static final String INITIAL_REPERFUSION_TREATMENT = "InitialReperfusionTreat"; 	// (byte) field 3.39
@@ -149,6 +150,7 @@ public class DBAdapter {
 			ADMISSION_STATUS + 						" TEXT, " + 								// 1.09
 			PLACE_FIRST_12_LEAD_ECG_PERFORMED + 	" TEXT, " + 								// 2.22
 			NHS_VERIFICATION + 						" TEXT, " +									/** (string) no field number */	
+			REFERRAL_HOSPITAL + 					" TEXT, " + 								// 4.21
 
 			INITIAL_REPERFUSION_TREATMENT + 		" TEXT, " +								 	// 3.39 - START INITIAL REPERFUSION PAGE
 			REPERFUSION_NOT_GIVEN + 				" TEXT, " + 								// 3.08
@@ -300,7 +302,7 @@ public class DBAdapter {
 	}
 		
 	// Update Demographics and Admission by id returns boolean flag - MUST BE CALLED TO POPULATE PAGE
-	public boolean updateDemographics(String id, String gender, String ethnicity, String method, String ward, String gpcode, String post, String consultant, String status, String ecg, String verif) {
+	public boolean updateDemographics(String id, String gender, String ethnicity, String method, String ward, String gpcode, String post, String consultant, String status, String ecg, String verif, String refer) {
 		ContentValues updateDemographics = new ContentValues();
 		updateDemographics.put(PATIENT_GENDER, gender);
 		updateDemographics.put(PATIENT_ETHNICITY, ethnicity);
@@ -312,6 +314,7 @@ public class DBAdapter {
 		updateDemographics.put(ADMISSION_STATUS, status);
 		updateDemographics.put(PLACE_FIRST_12_LEAD_ECG_PERFORMED, ecg);
 		updateDemographics.put(NHS_VERIFICATION, verif);
+		updateDemographics.put(REFERRAL_HOSPITAL, refer);
 		return db.update(TABLE_NAME, updateDemographics, RECORD_NO + "= '" + id + "'", null) > 0;
 	}
 		
