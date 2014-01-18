@@ -531,49 +531,49 @@ public class Patient {
 	
 	
 //==================================================================	
-	
-	/**
-	 * Model all range check fields after setSerumCholesterol method. Validation is done.	
-	 * @param cholesterol
-	 */
-	public static void setSerumCholesterol(double cholesterol) {
-		//check type first 
-		// use Double.valueOf(var) instanceof Double on validation
-//		String targetType = "Double", varType;
-		String targetType = "double";
-		double value1 = cholesterol;
-		if (Validation.typeCheck(String varType, String targetType)) {
-			if(Validation.rangeCheck(MIN_CHOLES, MAX_CHOLES, cholesterol));	
-				serumCholesterol = cholesterol;
-				// then set some boolean to true preparing for submission.
-				String serumCholesterolDone = "yes";
-		}
-		
-	}
-	
-	//Sample getters
-	
-	public static String getSurname() {
-		//getting surname
-		return surname;
-	}
-	
-	public static double getSerumCholesterol(){
-		//getting SerumCholesterol
-		return serumCholesterol;
-	}
-	
-	public static Date getDOB(){
-		//getting DOB
-		return dob;
-	}
-	
-	// calculated methods
-	public static void calcBMI() {
-		// assume calculators are valid
-		// once last calculator is entered, bmiScore should be pushed to appropriate field
-		// if (calculators are filled or not empty		
-		//bmiScore = height(cm) / weight(kg); // <- temporary placeholder calculation
-		// set bmi field to bmiScore
-	}
+//	
+//	/**
+//	 * Model all range check fields after setSerumCholesterol method. Validation is done.	
+//	 * @param cholesterol
+//	 */
+//	public static void setSerumCholesterol(double cholesterol) {
+//		//check type first 
+//		// use Double.valueOf(var) instanceof Double on validation
+////		String targetType = "Double", varType;
+//		String targetType = "double";
+//		double value1 = cholesterol;
+//		if (Validation.typeCheck(String varType, String targetType)) {
+//			if(Validation.rangeCheck(MIN_CHOLES, MAX_CHOLES, cholesterol));	
+//				serumCholesterol = cholesterol;
+//				// then set some boolean to true preparing for submission.
+//				String serumCholesterolDone = "yes";
+//		}
+//		
+//	}
+//	
+//	//Sample getters
+//	
+//	public static String getSurname() {
+//		//getting surname
+//		return surname;
+//	}
+//	
+//	public static double getSerumCholesterol(){
+//		//getting SerumCholesterol
+//		return serumCholesterol;
+//	}
+//	
+//	public static Date getDOB(){
+//		//getting DOB
+//		return dob;
+//	}
+//	
+//	// calculated methods
+//	public static void calcBMI() {
+//		// assume calculators are valid
+//		// once last calculator is entered, bmiScore should be pushed to appropriate field
+//		// if (calculators are filled or not empty		
+//		//bmiScore = height(cm) / weight(kg); // <- temporary placeholder calculation
+//		// set bmi field to bmiScore
+//	}
 }
