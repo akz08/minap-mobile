@@ -7,7 +7,8 @@ public class CoronaryAngiography extends Value {
 	private static String coronaryAngiographyLongCode;
 	public CoronaryAngiography() {	
 		super("4.13", "Coronary angiography performed or arranged, "
-				+ "but not as part of the initial reperfusion strategy.");
+				+ "but not as part of the initial reperfusion strategy.",
+				"Coronary Angiography");
 	}
 	public static boolean setCoronaryAngiography(byte cAngiography) {
 		// check if valid entry

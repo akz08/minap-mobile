@@ -7,7 +7,8 @@ public class AngioDelay extends Value {
 	private static String angioDelayLongCode;
 	public AngioDelay() {	
 		super("4.30", "This field serves to determine reasons behind delays in patients being referred for or having an angiogram following an admission with nSTEMI. "
-				+ "The NICE guideline suggest a maximum acceptable delay to angiogram mximum of 96 hours from admission. ");
+				+ "The NICE guideline suggest a maximum acceptable delay to angiogram mximum of 96 hours from admission. ",
+				"Delay To Performance Of Angiogram");
 	}
 	public static boolean setAngioDelay(byte aDelay) {
 		// check if valid entry

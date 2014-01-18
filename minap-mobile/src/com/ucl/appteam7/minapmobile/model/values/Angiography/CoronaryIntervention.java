@@ -7,7 +7,8 @@ public class CoronaryIntervention extends Value {
 	private static String coronaryInterventionLongCode;
 	public CoronaryIntervention() {	
 		super("4.14", "Coronary intervention during this episode performed either in your hospital or by referral to another hospital. "
-				+ "Do not use for primary PCI or rescue which are covered by 3.39 and 3.40.");
+				+ "Do not use for primary PCI or rescue which are covered by 3.39 and 3.40.",
+				"Coronary Intervention");
 	}
 	public static boolean setCoronaryIntervention(byte cIntervention) {
 		// check if valid entry

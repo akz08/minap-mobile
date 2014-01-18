@@ -22,7 +22,8 @@ public class LocalInterventionDate extends Value {
 
 	public LocalInterventionDate() {	
 		super("4.19", "Local intervention date"
-				+ "Data value must fall between 1st Jan 2000 and today's date.");
+				+ "Data value must fall between 1st Jan 2000 and today's date.",
+				"Date Of First Intervention Or Surgery Performed Locally");
 	}
 	
 	public static boolean setInterventionDate(Date iDate) throws ParseException {

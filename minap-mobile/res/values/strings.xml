@@ -980,6 +980,8 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     <string name="title_angiography">Angiography</string>
 
     <string name="title_warning_angiography">Do not use this page for details of Primary PCI</string>
+    <string name="title_warning_about_title">Additional Advice</string>
+    <string name="title_warning_about_contents">This page should not be used for primary PCI, but should be used for additional reperfusion procedures after STEMI - such as rescue or urgent angiography/intervention. It should also be used for angio/intervention following nonSTE MI.</string>
     
     <string name="value_label_was_angiography_performed">Was angiography performed during this Admission?</string>
     

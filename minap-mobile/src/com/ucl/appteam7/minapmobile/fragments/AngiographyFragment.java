@@ -49,6 +49,7 @@ public class AngiographyFragment extends Fragment {
 	private ImageButton mAboutAngioDateTimeButton;
 	private ImageButton mAboutInterventionalCentreButton;
 	private ImageButton mAboutDateFirstInterventionButton;
+	private ImageButton mAboutCoronaryInterventionButton;
 	
 	// ViewGroups to handle hidden fields
 	private ViewGroup mContainerView;
@@ -105,11 +106,10 @@ public class AngiographyFragment extends Fragment {
 
 		@Override
 		public void showAboutWarningAngiography() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(getString(R.string.title_warning_about_title), getString(R.string.title_warning_about_contents));
 			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
@@ -309,13 +309,22 @@ public class AngiographyFragment extends Fragment {
 			coronaryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			mCoronaryInterventionSpinner.setAdapter(coronaryAdapter);
 			
-			// wire up 'about' button for date of first intervention/surgery
+			// wire up 'about' buttons
 			mAboutDateFirstInterventionButton = (ImageButton) view.findViewById(R.id.about_date_first_intervention_surgery_locally);
 			mAboutDateFirstInterventionButton.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					viewListener.showAboutDateFirstIntervention();
+				}
+			});
+			
+			mAboutCoronaryInterventionButton = (ImageButton) view.findViewById(R.id.about_coronary_intervention);
+			mAboutCoronaryInterventionButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutCoronaryIntervention();
 				}
 			});
 			
@@ -365,6 +374,16 @@ public class AngiographyFragment extends Fragment {
 			ArrayAdapter<CharSequence> coronaryAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.coronary_intervention_array, R.layout.multiline_spinner_item);
 			coronaryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			mCoronaryInterventionSpinner.setAdapter(coronaryAdapter);
+			
+			// wire up about button
+			mAboutCoronaryInterventionButton = (ImageButton) view.findViewById(R.id.about_coronary_intervention);
+			mAboutCoronaryInterventionButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					viewListener.showAboutCoronaryIntervention();
+				}
+			});
 		}
 
 		@Override
@@ -375,51 +394,46 @@ public class AngiographyFragment extends Fragment {
 
 		@Override
 		public void showAboutAngioDateTime() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.AngioDate.getNotesTitle() + " " + patient.AngioDate.getId(), patient.AngioDate.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
 		@Override
 		public void showAboutInterventionalCentre() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.AngioCentreCode.getNotesTitle() + " " + patient.AngioCentreCode.getId(), patient.AngioCentreCode.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
 		@Override
 		public void showAboutDateTimeReferral() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ReferralDate.getNotesTitle() + " " + patient.ReferralDate.getId(), patient.ReferralDate.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
 		@Override
 		public void showAboutDelayToAngiogram() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.AngioDelay.getNotesTitle() + " " + patient.AngioDelay.getId(), patient.AngioDelay.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
 		@Override
 		public void showAboutDateFirstIntervention() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.InterventionDate.getNotesTitle() + " " + patient.InterventionDate.getId(), patient.InterventionDate.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
@@ -470,6 +484,26 @@ public class AngiographyFragment extends Fragment {
 			DatePickerFragment dialog = DatePickerFragment
 					.newInstance(getString(R.string.value_date_picker_title_first_intervention_surgery_locally));
 			dialog.show(fm, DIALOG_DATE);
+			
+		}
+
+		@Override
+		public void showAboutCoronaryIntervention() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance(patient.CoronaryIntervention.getNotesTitle() + " " + patient.CoronaryIntervention.getId(), patient.CoronaryIntervention.getNotes());
+			dialog.show(fm, DIALOG_ABOUT);	
+			
+		}
+
+		@Override
+		public void showAboutAngiography() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance(patient.CoronaryAngiography.getNotesTitle() + " " + patient.CoronaryAngiography.getId(), patient.CoronaryAngiography.getNotes());
+			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
 	};

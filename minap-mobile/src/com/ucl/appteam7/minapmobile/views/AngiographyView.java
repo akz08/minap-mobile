@@ -16,6 +16,7 @@ public class AngiographyView extends ScrollView {
 	private RadioGroup mAngiographyPerformedRadioGroup;
 	
 	private ImageButton mAboutWarningAngiographyButton;
+	private ImageButton mAboutAngiographyButton;
 	
 	private Button mPreviousPage;
 	
@@ -51,12 +52,14 @@ public class AngiographyView extends ScrollView {
 		
 		// about dialogs
 		public void showAboutWarningAngiography();
+		public void showAboutAngiography();
 		
 		public void showAboutAngioDateTime();
 		public void showAboutInterventionalCentre();
 		public void showAboutDateTimeReferral();
 		public void showAboutDelayToAngiogram();
 		public void showAboutDateFirstIntervention();
+		public void showAboutCoronaryIntervention();
 		
 		// navigation buttons
 		public void previousPage();
@@ -97,13 +100,23 @@ public class AngiographyView extends ScrollView {
 			}
 		});
 		
-		// wire up visible 'about' information button
+		// wire up visible 'about' information buttons
 		mAboutWarningAngiographyButton = (ImageButton)findViewById(R.id.about_warning_angiography);
 		mAboutWarningAngiographyButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				viewListener.showAboutWarningAngiography();
+				
+			}
+		});
+		
+		mAboutAngiographyButton = (ImageButton)findViewById(R.id.about_angiography);
+		mAboutAngiographyButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutAngiography();
 				
 			}
 		});

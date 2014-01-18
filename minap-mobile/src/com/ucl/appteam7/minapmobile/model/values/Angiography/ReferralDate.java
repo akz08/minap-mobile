@@ -26,7 +26,8 @@ public class ReferralDate extends Value {
 
 	public ReferralDate() {	
 		super("4.15", "Date/time of referral for investigation/intervention."
-				+ "Data value must fall between 1st Jan 2000 and today's date.");
+				+ "Data value must fall between 1st Jan 2000 and today's date.",
+				"Date Of Referral For Investigation/Intervention");
 	}
 
 	public static boolean setDateTime() {
