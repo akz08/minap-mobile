@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+  
+		<RadioGroup
+		    android:id="@+id/radio_group_astemi_admission_no"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dip"
+		    android:orientation="vertical"
+		    android:layout_marginTop="8dp"
+		    android:layout_weight="1.0">
+			 <!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
+			 <!-- it's a bit of hack, and won't work if the layout inflated below isn't big enough -->
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_5"
+			  	/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_6"
+				/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_7"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_7"
+				/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_8"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_8"
+				/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_9"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_9"
+				/>
+		</RadioGroup>
+
+</LinearLayout>

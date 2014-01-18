@@ -1,4 +1,6 @@
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.activities;
+
+import com.ucl.appteam7.minapmobile.R;
 
 import android.os.Bundle;
 import android.app.Activity;

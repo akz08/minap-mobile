@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ucl.appteam7.minapmobile.views.MedicalHistoryView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+ 	<LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+    	android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true" >
+        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="2dp">
+         	<!-- add in a margin to give space for the about button -->
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_previous_ami"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_previous_ami"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+		<Spinner 
+	        android:id="@+id/previous_ami_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />       
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_hypertension"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_hypertension"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/hypertension_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_cerebrovascular_disease"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_cerebrovascular_disease"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/cerebrovascular_disease_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_previous_pci"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_previous_pci"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/previous_pci_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_smoking_status"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_smoking_status"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/smoking_status_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_diabetes"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_diabetes"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/diabetes_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_previous_angina"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_previous_angina"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/previous_angina_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_hypercholesterolaemia"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_hypercholesterolaemia"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/hypercholesterolaemia_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />    
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_asthma_copd"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_asthma_copd"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/asthma_copd_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_previous_cabg"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_previous_cabg"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/previous_cabg_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_heart_failure"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_heart_failure"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/heart_failure_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+	        
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_peripheral_vascular_disease"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_peripheral_vascular_disease"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/peripheral_vascular_disease_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_chronic_renal_failure"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_chronic_renal_failure"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/chronic_renal_failure_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_family_history_of_chd"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_family_history_of_chd"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/family_history_of_chd_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        />   
+		
+        <!-- page navigation buttons -->
+        <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_vertical">	
+		    <Button
+	         android:id="@+id/previous_page_button"
+	         android:text="@string/previous_page"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:drawableLeft="@drawable/ic_action_previous_item"
+	         />
+			<Button
+	         android:id="@+id/next_page_button"
+	         android:text="@string/next_page"
+	         android:layout_width="0dip"
+	         android:layout_weight="1.0"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:drawableRight="@drawable/ic_action_next_item"
+	         />
+		</LinearLayout>
+    </LinearLayout>
+    
+
+</com.ucl.appteam7.minapmobile.views.MedicalHistoryView>

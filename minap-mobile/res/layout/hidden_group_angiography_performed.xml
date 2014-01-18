@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true" >
+    
+		<RadioGroup
+		    android:id="@+id/radio_group_angiography_performed"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_marginTop="8dp">
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_1"
+			  	/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_2"
+				/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_3"
+				/>
+		    <RadioButton
+		        android:id="@+id/radio_angiography_performed_4"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_radio_angiography_performed_4"
+				/>
+		</RadioGroup>
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_datetime_referral_investigation_intervention"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_datetime_referral_investigation_intervention"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:id="@+id/datetime_referral_investigation_intervention_date_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
+		        android:hint="@string/value_hint_date"
+		        android:layout_weight="0.5"
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+		    <TextView 
+		        android:id="@+id/datetime_referral_investigation_intervention_time_textspinner"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="8dp"
+		        android:hint="@string/value_hint_time"
+		        android:layout_weight="0.5" 
+		        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+				/>
+	    </LinearLayout>
+	    
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_delay_to_performance_angiogram"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_delay_to_performance_angiogram"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+		
+		<Spinner 
+	        android:id="@+id/delay_to_performance_angiogram_spinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1.0"
+	        />    
+		<!-- the weight 1.0 is to ensure the buttons are at the bottom of the screen -->
+
+</LinearLayout>
