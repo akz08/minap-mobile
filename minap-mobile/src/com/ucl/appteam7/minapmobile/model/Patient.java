@@ -4,7 +4,7 @@
  * @author david
  */
 
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.model;
 
 import com.ucl.appteam7.minapmobile.model.values.PatientInfo.*;
 import com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*;

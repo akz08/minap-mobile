@@ -1,6 +1,6 @@
 package com.ucl.appteam7.minapmobile.model.values.InitialReperfusion;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class ReperfusionNotGiven extends Value {
 	private static byte reperfusionNotGiven;

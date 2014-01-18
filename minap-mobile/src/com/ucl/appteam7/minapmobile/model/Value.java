@@ -1,4 +1,4 @@
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.model;
 //All values extents this, every page will check these methods. 
 public class Value {
 	public Value (String id, String notes) {

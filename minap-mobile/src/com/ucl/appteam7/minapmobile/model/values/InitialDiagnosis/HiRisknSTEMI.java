@@ -11,7 +11,7 @@
 
 package com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class HiRisknSTEMI extends Value {
 

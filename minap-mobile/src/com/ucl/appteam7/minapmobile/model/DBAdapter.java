@@ -2,7 +2,7 @@
  * DBAdapter class will handle all SQL related reading, writing and updating
  * @author david
  */
-package com.ucl.appteam7.minapmobile;
+package com.ucl.appteam7.minapmobile.model;
 
 import java.util.Collections;
 import java.util.Date;

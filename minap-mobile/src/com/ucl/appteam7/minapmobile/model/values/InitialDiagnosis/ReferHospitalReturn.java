@@ -8,7 +8,8 @@
 	
 package com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

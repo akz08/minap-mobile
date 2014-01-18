@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.ucl.appteam7.minapmobile.DBAdapter;
-import com.ucl.appteam7.minapmobile.Patient;
 import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.model.DBAdapter;
+import com.ucl.appteam7.minapmobile.model.Patient;
 
 public class MainActivity extends Activity {
 

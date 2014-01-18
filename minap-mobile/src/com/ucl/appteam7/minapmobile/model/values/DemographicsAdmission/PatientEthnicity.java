@@ -14,7 +14,7 @@
 
 package com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class PatientEthnicity extends Value {
 
