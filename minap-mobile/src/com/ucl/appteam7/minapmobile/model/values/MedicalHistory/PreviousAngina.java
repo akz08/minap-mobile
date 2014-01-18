@@ -6,7 +6,8 @@ public class PreviousAngina extends Value {
 	private static byte previousAngina;
 	private static String previousAnginaLongCode;
 	public PreviousAngina() {	
-		super("2.05", "Identifies if and when aspirin or other antiplatelet drug was first given to patient.");
+		super("2.06", "Identifies if and when aspirin or other antiplatelet drug was first given to patient.",
+				"Previous Angina");
 	}
 	public static boolean setPreviousAngina(byte pAngina) {
 		// check if valid entry

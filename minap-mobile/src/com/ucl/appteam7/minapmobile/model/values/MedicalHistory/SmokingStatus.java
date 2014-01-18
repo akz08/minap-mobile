@@ -6,7 +6,8 @@ public class SmokingStatus extends Value {
 	private static byte smokingStatus;
 	private static String smokingStatusLongCode;
 	public SmokingStatus() {	
-		super("2.16", " ");
+		super("2.16", " ",
+				"Smoking Status");
 	}
 	public static boolean setSmokingStatus(byte sStatus) {
 		// check if valid entry

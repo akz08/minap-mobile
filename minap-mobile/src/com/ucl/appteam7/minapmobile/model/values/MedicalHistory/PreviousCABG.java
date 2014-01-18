@@ -6,7 +6,8 @@ public class PreviousCABG extends Value {
 	private static byte previousCABG;
 	private static String previousCABGLongCode;
 	public PreviousCABG() {	
-		super("2.19", "Coronary artery bypass grafting at any time prior to this admission.");
+		super("2.19", "Coronary artery bypass grafting at any time prior to this admission.",
+				"Previous CABG");
 	}
 	public static boolean setPreviousCABG(byte pCABG) {
 		// check if valid entry

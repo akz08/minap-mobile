@@ -6,7 +6,8 @@ public class PreviousPCI extends Value {
 	private static byte previousPCI;
 	private static String previousPCILongCode;
 	public PreviousPCI() {	
-		super("2.18", "A percutaneous coronary intervention at any time prior to this admission.");
+		super("2.18", "A percutaneous coronary intervention at any time prior to this admission.",
+				"Previous PCI");
 	}
 	public static boolean setPreviousPCI(byte pPCI) {
 		// check if valid entry
