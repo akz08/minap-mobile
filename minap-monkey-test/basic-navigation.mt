@@ -1,19 +1,20 @@
-Button "Log in" tap
-Scroller * swipe up
-Button Confirm tap
-Table left_drawer select "Initial Diagnosis"
-Button Next tap
-Scroller * swipe up
-Button Next tap
-Scroller * swipe right
-Button Next tap
-Button Next tap
-Button Next tap
-Scroller * swipe up
-Button Next tap
-View "Navigate up" tap
-Label "Save all" tap
-Menu * select "Save all"
-Device * menu
-Menu * select "Log out"
-Button OK tap
+Button "Log in" tap %thinktime=2000
+Button Confirm tap %thinktime=2000
+Table left_drawer select "Initial Diagnosis" %thinktime=2000
+Button Next tap %thinktime=2000
+Button Next tap %thinktime=2000
+Button Next tap %thinktime=2000
+Button Next tap %thinktime=2000
+Button Next tap %thinktime=2000
+Button Next tap %thinktime=2000
+Button Back tap %thinktime=2000
+Button Back tap %thinktime=2000
+Button Back tap %thinktime=2000
+Button Back tap %thinktime=2000
+Button Back tap %thinktime=2000
+Button Back tap %thinktime=2000
+View "Navigate up" tap %thinktime=2000
+Label "Save all" tap %thinktime=2000
+Device * menu %thinktime=2000
+Menu * select "Log out" %thinktime=2000
+Button OK tap %thinktime=2000
