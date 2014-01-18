@@ -1,16 +1,14 @@
 package com.ucl.appteam7.minapmobile.activities;
 
-import com.ucl.appteam7.minapmobile.R;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.database.Cursor;
+import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Toast;
-import android.database.Cursor;
+
+import com.ucl.appteam7.minapmobile.DBAdapter;
+import com.ucl.appteam7.minapmobile.Patient;
+import com.ucl.appteam7.minapmobile.R;
 
 public class MainActivity extends Activity {
 

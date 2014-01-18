@@ -36,40 +36,40 @@ public class Patient {
 	// Declare all fields to patient
 	
 	// Patient Info
-	HospitalIdentifier HospitalIdentifier = new HospitalIdentifier();
-	PatientCaseRecordNumber RecordNumber = new PatientCaseRecordNumber();
-	NHSNumber NHSNumber = new NHSNumber();
-	PatientSurname Surname = new PatientSurname();
-	PatientForename Forename = new PatientForename();
-	DOB DOB = new DOB();
-	AdmissionDate AdmissionDate = new AdmissionDate();
+	public HospitalIdentifier HospitalIdentifier = new HospitalIdentifier();
+	public PatientCaseRecordNumber RecordNumber = new PatientCaseRecordNumber();
+	public NHSNumber NHSNumber = new NHSNumber();
+	public PatientSurname Surname = new PatientSurname();
+	public PatientForename Forename = new PatientForename();
+	public DOB DOB = new DOB();
+	public AdmissionDate AdmissionDate = new AdmissionDate();
 	
 	// Initial Diagnosis
-	InitialDiagnosis InitialDiagnosis = new InitialDiagnosis();
-	AdmissionAfterNSTEMI AdmissionAfterNSTEMI = new AdmissionAfterNSTEMI();
-	HiRisknSTEMI HighRisknSTEMI = new HiRisknSTEMI();
-	InterventionalProcedure InterventionalProcedure = new InterventionalProcedure();
-	ReferHospitalReturn ReferHospitalReturn = new ReferHospitalReturn();
-	InterventionalCentreCode InterventionalCentreCode = new InterventionalCentreCode(); // used on Initial Diagnosis, Initial Reperfusion and Angiography
+	public InitialDiagnosis InitialDiagnosis = new InitialDiagnosis();
+	public AdmissionAfterNSTEMI AdmissionAfterNSTEMI = new AdmissionAfterNSTEMI();
+	public HiRisknSTEMI HighRisknSTEMI = new HiRisknSTEMI();
+	public InterventionalProcedure InterventionalProcedure = new InterventionalProcedure();
+	public ReferHospitalReturn ReferHospitalReturn = new ReferHospitalReturn();
+	public InterventionalCentreCode InterventionalCentreCode = new InterventionalCentreCode(); // used on Initial Diagnosis, Initial Reperfusion and Angiography
 	
 	// Demographics and Admission
-	Gender Gender = new Gender();
-	PatientEthnicity Ethnicity = new PatientEthnicity();
-	AdmissionMethod AdmissionMethod = new AdmissionMethod();
-	AdmissionWard AdmissionWard = new AdmissionWard();
-	GPCode GPCode = new GPCode();
-	PatientPostcode PostCode = new PatientPostcode();
-	AdmittingConsultant AdmitConsul = new AdmittingConsultant();
-	AdminStatus AdminStatus = new AdminStatus();
-	FirstECG FirstECG = new FirstECG();
-	NHSVerification NHSVerification = new NHSVerification();
+	public Gender Gender = new Gender();
+	public PatientEthnicity Ethnicity = new PatientEthnicity();
+	public AdmissionMethod AdmissionMethod = new AdmissionMethod();
+	public AdmissionWard AdmissionWard = new AdmissionWard();
+	public GPCode GPCode = new GPCode();
+	public PatientPostcode PostCode = new PatientPostcode();
+	public AdmittingConsultant AdmitConsul = new AdmittingConsultant();
+	public AdminStatus AdminStatus = new AdminStatus();
+	public FirstECG FirstECG = new FirstECG();
+	public NHSVerification NHSVerification = new NHSVerification();
 	
 	// Initial Reperfusion
-	InitialReperfusion InitialReperfusion = new InitialReperfusion();
-	ReperfusionNotGiven ReperfusionNotGiven = new ReperfusionNotGiven();
-	EcgDetermineTreatment ECGTreatment = new EcgDetermineTreatment();
-	EcgQRSComplex ECG_QRSComplex = new EcgQRSComplex();
-	LocationAtSTEMI LocationSTEMI = new LocationAtSTEMI();
-	InterventionalCentreCode ReperfusionCentreCode = new InterventionalCentreCode();
-	InfarctionSite InfarctionSite = new InfarctionSite();
+	public InitialReperfusion InitialReperfusion = new InitialReperfusion();
+	public ReperfusionNotGiven ReperfusionNotGiven = new ReperfusionNotGiven();
+	public EcgDetermineTreatment ECGTreatment = new EcgDetermineTreatment();
+	public EcgQRSComplex ECG_QRSComplex = new EcgQRSComplex();
+	public LocationAtSTEMI LocationSTEMI = new LocationAtSTEMI();
+	public InterventionalCentreCode ReperfusionCentreCode = new InterventionalCentreCode();
+	public InfarctionSite InfarctionSite = new InfarctionSite();
 }
