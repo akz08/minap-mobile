@@ -106,7 +106,7 @@ public class Patient {
 	public Diabetes Diabetes = new Diabetes();
 	public PreviousAngina PreviousAngina = new PreviousAngina();
 	public Hypercholesterolaemia HyperCholesterol = new Hypercholesterolaemia();
-	public AsthmaOrCOPD AshtmaCOPD = new AsthmaOrCOPD();
+	public AsthmaOrCOPD AsthmaCOPD = new AsthmaOrCOPD();
 	public PreviousCABG PreviousCABG = new PreviousCABG();
 	public HeartFailure HeartFailure = new HeartFailure();
 	public PeripheralVascularDisease PeripheralVascular = new PeripheralVascularDisease();

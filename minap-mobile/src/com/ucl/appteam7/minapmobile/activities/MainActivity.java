@@ -430,7 +430,7 @@ public class MainActivity extends Activity {
 			Toast.makeText(this, "invalid choles", Toast.LENGTH_LONG).show();
 
 		// asthma
-		if (!patient.AshtmaCOPD.setAsthmaCOPD((byte)1))
+		if (!patient.AsthmaCOPD.setAsthmaCOPD((byte)1))
 			Toast.makeText(this, "invalid asthma", Toast.LENGTH_LONG).show();
 		
 		// cabg
@@ -499,7 +499,7 @@ public class MainActivity extends Activity {
 			Toast.makeText(this, "invalid hypercholesterol", Toast.LENGTH_LONG).show();
 		
 		// asthma copd
-		if (!patient.AshtmaCOPD.setAsthmaCOPD((byte)1))
+		if (!patient.AsthmaCOPD.setAsthmaCOPD((byte)1))
 			Toast.makeText(this, "invalid asthma", Toast.LENGTH_LONG).show();
 		
 		// previous cabg
@@ -526,7 +526,7 @@ public class MainActivity extends Activity {
 		if (db.updateMedicalHistory(patient.RecordNumber.getCaseNumber(), patient.PreviousAMI.getPreviousAMI(), 
 				patient.Hypertension.getHyperTension(), patient.Cerebrovascular.getCerebrovascular(), 
 				patient.PreviousPCI.getPreviousPCI(), patient.Smoking.getSmokingStatus(), patient.Diabetes.getDiabetes(), 
-				patient.PreviousAngina.getPreviousAngina(), patient.HyperCholesterol.getHyperCholesterol(), patient.AshtmaCOPD.getAsthmaCOPD(), 
+				patient.PreviousAngina.getPreviousAngina(), patient.HyperCholesterol.getHyperCholesterol(), patient.AsthmaCOPD.getAsthmaCOPD(), 
 				patient.PreviousCABG.getPreviousCABG(), patient.HeartFailure.getHeartFailure(), patient.PeripheralVascular.getPeripheralVascularDisease(), 
 				patient.RenalFailure.getRenalFailure(), patient.FamilyCHD.getFamilyCHD()))
 			Toast.makeText(this, "Medical History Update Successful", Toast.LENGTH_LONG).show();
