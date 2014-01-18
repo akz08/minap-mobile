@@ -18,9 +18,13 @@ import android.widget.Toast;
 
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.activities.DemographicsAndAdmissionActivity;
+import com.ucl.appteam7.minapmobile.model.Patient;
 import com.ucl.appteam7.minapmobile.views.InitialDiagnosisView;
 
 public class InitialDiagnosisFragment extends Fragment {
+	
+	// get the patient singleton
+	Patient patient = Patient.get();
 	
 	private static final String DIALOG_ABOUT = "about";
 	private static final String DIALOG_DATE = "date";
@@ -166,7 +170,7 @@ public class InitialDiagnosisFragment extends Fragment {
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.InitialDiagnosis.getNotesTitle() + " " + patient.InitialDiagnosis.getId(), patient.InitialDiagnosis.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);
 			
 		}
