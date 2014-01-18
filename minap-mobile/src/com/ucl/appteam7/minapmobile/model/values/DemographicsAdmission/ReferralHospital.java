@@ -11,7 +11,8 @@ import com.ucl.appteam7.minapmobile.model.Value;
 public class ReferralHospital extends Value {
 	
 	public ReferralHospital() {
-		super("4.21", "Code of hospital from which patient was referred for any investigation or intervention.");
+		super("4.21", "Code of hospital from which patient was referred for any investigation or intervention.",
+				"Referral Hospital");
 	
 	}
 	// Default value is user's own hospital

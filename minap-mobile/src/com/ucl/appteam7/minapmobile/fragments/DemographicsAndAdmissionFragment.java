@@ -205,11 +205,10 @@ public class DemographicsAndAdmissionFragment extends Fragment {
 
 		@Override
 		public void showAboutReferralHospital() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ReferralHospital.getNotesTitle() + " " + patient.ReferralHospital.getId(), patient.ReferralHospital.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
