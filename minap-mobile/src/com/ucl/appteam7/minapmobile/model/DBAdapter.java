@@ -1,5 +1,4 @@
-/**
- * DBAdapter class will handle all SQL related reading, writing and updating
+/** DBAdapter class will handle all SQL related reading, writing and updating
  * @author david
  */
 package com.ucl.appteam7.minapmobile.model;
@@ -85,8 +84,7 @@ public class DBAdapter {
 	public static final String BMI = "BMI";							// (double) No field number
 	public static final String HEIGHT = "Height";					// (short) Field 2.29
 	public static final String WEIGHT = "Weight"; 					// (short) Field 2.30
-	public static final String GRACE_SCORE = "GraceScore";			/** Missing algorithm */
-	public static final String [] EXAMINATIONS = {SYSTOLIC, HEART_RATE, KILLIP_CLASS, BMI, HEIGHT, WEIGHT, GRACE_SCORE};
+	public static final String [] EXAMINATIONS = {SYSTOLIC, HEART_RATE, KILLIP_CLASS, BMI, HEIGHT, WEIGHT};
 	
 	// Page 6 - Medical History - 14 fields
 	public static final String PREVIOUS_AMI = "PrevAMI";				// (byte) Field 2.05
@@ -122,17 +120,17 @@ public class DBAdapter {
 	public static final String TAG = "DBAdapter";
 	private static final String DATABASE_NAME = "minap";
 	private static final String TABLE_NAME = "patient";
-	private static final int DATABASE_VERSION = 10; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
+	private static final int DATABASE_VERSION = 11; // MUST BE INCREASED IF THERE'S A CHANGE IN DATABASE_CREATE SQL STATEMENT
 	
 	// Database creation SQL Statement
 	private static final String DATABASE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" +
 			RECORD_NO + 							" TEXT PRIMARY KEY, " + 	// 1.02 - START PATIENT INFO PAGE
-			PATIENT_FORENAME + 						" TEXT NOT NULL, " + 						// 1.05
-			PATIENT_SURNAME + 						" TEXT NOT NULL, " + 						// 1.04
-			PATIENT_DOB + 							" TEXT NOT NULL, " +						// 1.06
-			NHS_NUMBER + 							" TEXT NOT NULL, " +		 				// 1.03
+			PATIENT_FORENAME + 						" TEXT, " + 								// 1.05
+			PATIENT_SURNAME + 						" TEXT, " + 								// 1.04
+			PATIENT_DOB + 							" TEXT, " +									// 1.06
+			NHS_NUMBER + 							" TEXT, " +		 							// 1.03
 			HOSPITAL_IDENTIFIER + 					" TEXT NOT NULL, " +						// 1.01
-			ADMISSION_DATE  + 						" TEXT NOT NULL, " +						/** NO FIELD NUMBER */
+			ADMISSION_DATE  + 						" TEXT NOT NULL, " +						// 3.06
 			
 			INITIAL_DIAGNOSIS + 					" TEXT, " + 								// 2.01 - START INITIAL DIAGNOSIS PAGE
 			ADMISSION_AFTER_NSTEMI + 				" TEXT, " + 								// No field number
@@ -177,7 +175,6 @@ public class DBAdapter {
 			BMI + 									" TEXT, " +									// No field number
 			HEIGHT + 								" TEXT, " +									// 2.29
 			WEIGHT + 								" TEXT, " + 								// 2.30
-			GRACE_SCORE + 							" TEXT, " +									/** Missing algorithm */
 			
 			PREVIOUS_AMI + 							" TEXT, " +									// (byte) Field 2.05
 			HYPERTENSION + 							" TEXT, " +									// (byte) Field 2.07
@@ -375,7 +372,7 @@ public class DBAdapter {
 	}
 	
 	// Update Examinations by id returns boolean flag - MUST BE CALLED TO POPULATE PAGE
-	public boolean updateExaminations(String id, String systolic, String heart, String killip, String bmi, String height, String weight, String grace) {
+	public boolean updateExaminations(String id, String systolic, String heart, String killip, String bmi, String height, String weight) {
 		ContentValues updateAngiography = new ContentValues();
 		updateAngiography.put(SYSTOLIC, systolic);
 		updateAngiography.put(HEART_RATE, heart);
@@ -383,7 +380,6 @@ public class DBAdapter {
 		updateAngiography.put(BMI, bmi);
 		updateAngiography.put(HEIGHT, height);
 		updateAngiography.put(WEIGHT, weight);
-		updateAngiography.put(GRACE_SCORE, grace);
 		return db.update(TABLE_NAME, updateAngiography, RECORD_NO + "= '" + id + "'", null) > 0;
 	}
 

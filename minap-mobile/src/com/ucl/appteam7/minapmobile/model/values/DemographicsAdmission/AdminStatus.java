@@ -22,7 +22,7 @@ public class AdminStatus extends Value {
 		super("1.09", " ");
 	}
 	
-	public static void setAdminStatus(byte admStatus) {
+	public static boolean setAdminStatus(byte admStatus) {
 		// check if valid entry
 		if (admStatus == 1 || admStatus == 2 || admStatus == 3 || admStatus == 9) {
 			adminStatus = admStatus;
@@ -32,10 +32,10 @@ public class AdminStatus extends Value {
 			case 3 : statusLongCode = "Amenity"; break;
 			case 9 : statusLongCode = "Unknown"; break;
 			}
+			return true;
 		}
 		else
-			System.err.println("Invalid Entry");
-		// set additional fields to visible here
+			return false;
 	}
 	
 	public static String getAdminStatus() {
