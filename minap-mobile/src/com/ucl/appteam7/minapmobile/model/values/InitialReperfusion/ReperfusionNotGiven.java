@@ -7,7 +7,8 @@ public class ReperfusionNotGiven extends Value {
 	private static String rNotGivenLongCode;
 	public ReperfusionNotGiven() {	
 		super("3.08", "Reperfusion treatment refers to primary PCI and thrombolytic treatment and applies only to patients with ST elevation infarction. "
-				+ "Where there is more than one contraindication to treatment you can only enter one option, with 'Too late' having priority over all the others. ");
+				+ "Where there is more than one contraindication to treatment you can only enter one option, with 'Too late' having priority over all the others. ",
+				"Reason Reperfusion Treatment Not Given");
 	}
 	public static boolean setReperfusionNotGiven(byte rNotGiven) {
 		// check if valid entry

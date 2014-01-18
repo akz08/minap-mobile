@@ -8,7 +8,8 @@ public class LocationAtSTEMI extends Value {
 	public LocationAtSTEMI() {	
 		super("2.40", "The purpose of this field is to permit identification of STE MI not originating in the community, "
 				+ "in order that such patients can be excluded, where appropriate, "
-				+ "from call to needle and call to balloon analyses.");
+				+ "from call to needle and call to balloon analyses.",
+				"Patient Location At Time of STEMI Onset");
 	}
 	public static boolean setSTEMILocation(byte lAtSTEMI) {
 		// check if valid entry

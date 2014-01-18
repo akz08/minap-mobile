@@ -1,18 +1,21 @@
 package com.ucl.appteam7.minapmobile.views;
 
-import com.ucl.appteam7.minapmobile.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.ScrollView;
+
+import com.ucl.appteam7.minapmobile.R;
 
 public class InitialReperfusionView extends ScrollView {
 	
 	private RadioGroup mInitialReperfusionTreatmentRadioGroup;
+	
+	private ImageButton mAboutInitialReperfusionButton;
 	
 	private Button mPreviousPage;
 	private Button mNextPage;
@@ -31,6 +34,7 @@ public class InitialReperfusionView extends ScrollView {
 		public void hideSiteOfInfarction();
 		
 		// about dialogs
+		public void showAboutInitialReperfusion();
 		public void showAboutReasonTreatmentNotGiven();
 		public void showAboutInterventionalCentre();
 		public void showAboutEcgDeterminingTreatment();
@@ -128,6 +132,16 @@ public class InitialReperfusionView extends ScrollView {
 			}
 		});
 		
+		// wire up 'about' button
+		mAboutInitialReperfusionButton = (ImageButton)findViewById(R.id.about_initial_reperfusion);
+		mAboutInitialReperfusionButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutInitialReperfusion();
+				
+			}
+		});
 		
 		// wire up page navigation buttons
 		mPreviousPage = (Button)findViewById(R.id.previous_page_button);

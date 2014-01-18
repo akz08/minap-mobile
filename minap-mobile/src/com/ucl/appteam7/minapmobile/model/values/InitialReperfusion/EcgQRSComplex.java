@@ -6,7 +6,8 @@ public class EcgQRSComplex extends Value {
 	private static byte ecgQRSComplex;
 	private static String ecgQRSComplexLongCode;
 	public EcgQRSComplex() {	
-		super("2.37", "Must be stable feature on ECGs during admission. NICE MI secondary prevention audit criteria.");
+		super("2.37", "Must be stable feature on ECGs during admission. NICE MI secondary prevention audit criteria.",
+				"ECG QRS Complex Duration");
 	}
 	public static boolean setECGQRSComplex(byte eQRSComplex) {
 		// check if valid entry

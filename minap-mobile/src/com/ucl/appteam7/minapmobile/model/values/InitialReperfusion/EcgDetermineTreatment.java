@@ -9,7 +9,8 @@ public class EcgDetermineTreatment extends Value {
 		super("2.03", "The ECG appearances upon which a decision to offer reperfusion treatment including primary PCI, was based. "
 				+ "This can include any 12 lead ECG performed in the pre-hospital setting. "
 				+ "If ST elevation consistent with infarction is recorded on any ECG during the admission, regardless of treatment, "
-				+ "the discharge diagnosis should be Myocardial infarction (ST elevation).");
+				+ "the discharge diagnosis should be Myocardial infarction (ST elevation).",
+				"ECG Determining Treatment");
 	}
 	public static boolean setECGTreatment(byte eDetermineTreatment) {
 		// check if valid entry

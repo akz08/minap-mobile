@@ -27,7 +27,15 @@
 			    style="?android:listSeparatorTextViewStyle"
 			    android:layout_weight="1"
 		    	/>
- 
+ 		 <ImageButton
+               android:id="@+id/about_initial_reperfusion"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
 	  </LinearLayout>
             
 	        <RadioGroup

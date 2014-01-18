@@ -6,7 +6,8 @@ public class InitialReperfusion extends Value {
 	private static byte initialReperfusion;
 	private static String initialReperfusionLongCode;
 	public InitialReperfusion() {	
-		super("3.39", "This refers to treatment given in your hospital.");
+		super("3.39", "This refers to treatment given in your hospital.",
+				"Initial Reperfusion");
 	}
 	public static boolean setInitialReperfusion(byte iReperfusion) {
 		// check if valid entry

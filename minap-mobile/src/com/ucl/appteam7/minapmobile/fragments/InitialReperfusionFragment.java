@@ -240,67 +240,71 @@ public class InitialReperfusionFragment extends Fragment {
 
 		@Override
 		public void showAboutReasonTreatmentNotGiven() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ReperfusionNotGiven.getNotesTitle() + " " + patient.ReperfusionNotGiven.getId(), patient.ReperfusionNotGiven.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutInterventionalCentre() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ReperfusionCentreCode.getNotesTitle() + " " + patient.ReperfusionCentreCode.getId(), patient.ReperfusionCentreCode.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutEcgDeterminingTreatment() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ECGTreatment.getNotesTitle() + " " + patient.ECGTreatment.getId(), patient.ECGTreatment.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutPatientLocation() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.LocationSTEMI.getNotesTitle() + " " + patient.LocationSTEMI.getId(), patient.LocationSTEMI.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutEcgQrsDuration() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ECG_QRSComplex.getNotesTitle() + " " + patient.ECG_QRSComplex.getId(), patient.ECG_QRSComplex.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 			
 		}
 
 		@Override
 		public void showAboutSiteOfInfarction() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.InfarctionSite.getNotesTitle() + " " + patient.InfarctionSite.getId(), patient.InfarctionSite.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
+			
+		}
+
+		@Override
+		public void showAboutInitialReperfusion() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance(patient.InitialReperfusion.getNotesTitle() + " " + patient.InitialReperfusion.getId(), patient.InitialReperfusion.getNotes());
+			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
 	};

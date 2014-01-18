@@ -6,7 +6,8 @@ public class InfarctionSite extends Value {
 	private static byte infarctionSite;
 	private static String infarctionSiteLongCode;
 	public InfarctionSite() {	
-		super("2.36", "Enter the area having the most extensive ST segment changes. ");
+		super("2.36", "Enter the area having the most extensive ST segment changes. ",
+				"Site Of Infarction");
 	}
 	public static boolean setInfarctionSite(byte iSite) {
 		// check if valid entry
