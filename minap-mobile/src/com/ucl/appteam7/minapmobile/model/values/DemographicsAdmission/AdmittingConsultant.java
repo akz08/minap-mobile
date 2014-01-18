@@ -20,7 +20,8 @@ public class AdmittingConsultant extends Value {
 	
 	public AdmittingConsultant() {
 		super("2.22", "The clinician having primary care of the patient immediately (first 24 hours) "
-				+ "after admission to hospital (not the A&E consultant).");
+				+ "after admission to hospital (not the A&E consultant).",
+				"Admitting Consultant");
 	}
 	
 	public static boolean setAdmittingConsultant(byte admConsul) {

@@ -14,7 +14,8 @@ public class GPCode extends Value{
 	private static String gpCode; // field 1.11
 	public static final short VAL_LENGTH = 6; // maximum length for gpCode
 	public GPCode() {	
-		super("1.11", "The national code for the practice of the patient's registered GP or PCT.");
+		super("1.11", "The national code for the practice of the patient's registered GP or PCT.",
+				"GP Practice Code/PCT Code");
 	}
 	
 	public static boolean setGPCode(String pctCode) {

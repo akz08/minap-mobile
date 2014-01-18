@@ -18,7 +18,8 @@ public class FirstECG extends Value {
 	private static String ecgLongCode; // to set field's long code value
 	
 	public FirstECG() {
-		super("2.23", "This refers to the 1st ECG recorded, not necessarily the diagnostic ECG.");
+		super("2.23", "This refers to the 1st ECG recorded, not necessarily the diagnostic ECG.",
+				"Place First 12 Lead ECG Performed");
 	}
 	
 	public static boolean setFirstECG(byte fECG) {

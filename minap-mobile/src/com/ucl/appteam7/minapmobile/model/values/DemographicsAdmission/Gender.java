@@ -19,7 +19,9 @@ public class Gender extends Value {
 	private static String genderLongCode; // to set field's long code value
 	
 	public Gender() {
-		super("1.07", " ");
+		super("1.07", "Note the '9. Not specified' option is to be used where patient sex is indeterminate (e.g. in neonates) and the "
+				+"'0. Not known' option where patient's gender is unknown (i.e. you have not met the patient).",
+				"Gender");
 	}
 	
 	public static boolean setPatientGender(byte gen) {

@@ -24,7 +24,8 @@ public class AdmissionMethod extends Value {
 	private static String admissionLongCode; // to set field's long code value
 	
 	public AdmissionMethod() {
-		super("2.39", " ");
+		super("2.39", " ",
+				"Admission Method");
 	}
 	
 	public static boolean setAdmissionMethod(byte admMethod) {

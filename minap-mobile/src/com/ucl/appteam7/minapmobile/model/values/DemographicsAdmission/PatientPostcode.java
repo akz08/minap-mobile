@@ -15,7 +15,8 @@ public class PatientPostcode extends Value{
 	public static final short VAL_LENGTH = 8; // maximum length for pCode
 	public PatientPostcode() {	
 		super("1.10", "The postcode of the address nominated by the patient "
-				+ "as their main permanent residence. Use pseudo postcodes for visitors.");
+				+ "as their main permanent residence. Use pseudo postcodes for visitors."
+				, "Full Postcode");
 	}
 	
 	public static boolean setPostcode(String pCode) {

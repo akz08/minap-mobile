@@ -19,7 +19,8 @@ public class AdminStatus extends Value {
 	private static String statusLongCode = "NHS"; // to set field's long code value
 	
 	public AdminStatus() {
-		super("1.09", " ");
+		super("1.09", " ",
+				"Patient Admin Status");
 	}
 	
 	public static boolean setAdminStatus(byte admStatus) {

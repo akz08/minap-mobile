@@ -22,7 +22,8 @@ public class PatientEthnicity extends Value {
 	private static String ethnicLongCode; // to set field's long code value
 	
 	public PatientEthnicity() {
-		super("1.13", "The patient's ethnic group as perceived by the patient.");
+		super("1.13", "The patient's ethnic group as perceived by the patient.",
+				"Patient Ethnicity");
 	}
 	
 	public static boolean setEthnicity(byte ethnic) {

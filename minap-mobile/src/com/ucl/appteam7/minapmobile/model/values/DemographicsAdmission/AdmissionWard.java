@@ -27,7 +27,8 @@ public class AdmissionWard extends Value {
 		super("3.17", "The purpose of this question is to determine where immediate care took place. "
 				+ "Refers to the unit to which the patient is admitted either from A&E or directly by"
 				+ " ambulance service and where patient will spend majority of first 24 hours in hospital. "
-				+ "If patient admitted direct to cath lab, enter facility to which patient admitted on leaving lab.");
+				+ "If patient admitted direct to cath lab, enter facility to which patient admitted on leaving lab."
+				, "Admission Ward");
 	}
 	
 	public static boolean setAdmissionWard(byte admWard) {
