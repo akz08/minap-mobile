@@ -6,7 +6,8 @@ public class Diabetes extends Value {
 	private static byte diabetes;
 	private static String diabetesLongCode;
 	public Diabetes() {	
-		super("2.17", " ");
+		super("2.17", " ",
+				"Diabetes");
 	}
 	public static boolean setDiabetes(byte diabete) {
 		// check if valid entry

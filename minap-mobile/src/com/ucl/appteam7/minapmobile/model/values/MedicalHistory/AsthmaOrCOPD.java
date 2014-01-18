@@ -6,7 +6,8 @@ public class AsthmaOrCOPD extends Value {
 	private static byte asthmaCOPD;
 	private static String asthmaCOPDLongCode;
 	public AsthmaOrCOPD() {	
-		super("2.11", "Any form of obstructive airways disease.");
+		super("2.11", "Any form of obstructive airways disease.",
+				"Asthma Or COPD");
 	}
 	public static boolean setAsthmaCOPD(byte aCOPD) {
 		// check if valid entry

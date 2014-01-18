@@ -6,7 +6,8 @@ public class FamilyCHD extends Value {
 	private static byte familyCHD;
 	private static String familyCHDLongCode;
 	public FamilyCHD() {	
-		super("2.32", "Identifies a family history of premature CHD by diagnosis, (males before 55, females before 65).");
+		super("2.32", "Identifies a family history of premature CHD by diagnosis, (males before 55, females before 65).",
+				"Family History of CHD");
 	}
 	public static boolean setFamilyCHD(byte fCHD) {
 		// check if valid entry

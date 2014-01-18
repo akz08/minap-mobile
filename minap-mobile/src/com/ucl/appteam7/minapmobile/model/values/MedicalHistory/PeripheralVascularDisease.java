@@ -7,7 +7,8 @@ public class PeripheralVascularDisease extends Value{
 	private static String peripheralVascularDiseaseLongCode;
 	
 	public PeripheralVascularDisease() {	
-		super("2.09", "The presence of peripheral vascular disease, either presently symptomatic or previously treated by intervention or surgery. Include known renovascular disease and aortic aneurysm.");
+		super("2.09", "The presence of peripheral vascular disease, either presently symptomatic or previously treated by intervention or surgery. Include known renovascular disease and aortic aneurysm.",
+				"Peripheral Vascular Disease");
 	}
 	
 	public static boolean setPeripheralVascularDisease (byte pVascularDisease){//2.09, options, Peripheral vascular disease		

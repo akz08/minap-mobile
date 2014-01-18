@@ -6,7 +6,8 @@ public class ChronicRenalFailure extends Value {
 	private static byte chronicRenalFailure;
 	private static String chronicRenalFailureLongCode;
 	public ChronicRenalFailure() {	
-		super("2.12", "Any form of obstructive airways disease.");
+		super("2.12", "Any form of obstructive airways disease.",
+				"Chronic Renal Failure");
 	}
 	public static boolean setRenalFailure(byte cRenalFailure) {
 		// check if valid entry

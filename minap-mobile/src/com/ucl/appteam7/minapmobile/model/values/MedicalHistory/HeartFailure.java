@@ -6,7 +6,8 @@ public class HeartFailure extends Value {
 	private static byte heartFailure;
 	private static String heartFailureLongCode;
 	public HeartFailure() {	
-		super("2.13", "A previously validated diagnosis of heart failure on any therapeutic regime.");
+		super("2.13", "A previously validated diagnosis of heart failure on any therapeutic regime.",
+				"Heart Failure");
 	}
 	public static boolean setHeartFailure(byte hFailure) {
 		// check if valid entry

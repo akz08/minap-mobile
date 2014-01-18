@@ -7,7 +7,8 @@ public class Hypercholesterolaemia extends Value{
 	private static String hyperCholesterolaemiaLongCode;
 	
 	public Hypercholesterolaemia() {	
-		super("2.08", "Elevation of serum cholesterol requiring dietary or drug treatment. Use field 2.15 (Serum cholesterol) for present value of cholesterol.");
+		super("2.08", "Elevation of serum cholesterol requiring dietary or drug treatment. Use field 2.15 (Serum cholesterol) for present value of cholesterol.",
+				"Hypercholesterolaemia");
 	}
 	
 	public static boolean setHyperCholesterol(byte hCholesterolaemia) {

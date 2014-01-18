@@ -6,7 +6,8 @@ public class CerebrovascularDisease extends Value{
 	private static byte cerebrovascularDisease;
 	private static String cerebrovascularDiseaseLongCode;
 	public CerebrovascularDisease() {	
-		super("2.10", "A history of cerebrovascular ischaemia. To include transient cerebral ischaemic episodes as well as events with deficit lasting >24 hours.");
+		super("2.10", "A history of cerebrovascular ischaemia. To include transient cerebral ischaemic episodes as well as events with deficit lasting >24 hours.",
+				"Cerebrovascular Disease");
 	}
 	public static boolean setCerebrovascular(byte cDisease) {
 		// check if valid entry

@@ -7,7 +7,8 @@ public class Hypertension extends Value{
 	private static String hyperTensionLongCode;
 	
 	public Hypertension() {	
-		super("2.07", "A patient already receiving treatment (drug, dietary or lifestyle) for hypertension or with recorded  BP > 140/90 on at least two occasions prior to admission.");
+		super("2.07", "A patient already receiving treatment (drug, dietary or lifestyle) for hypertension or with recorded  BP > 140/90 on at least two occasions prior to admission.",
+				"Treated Hypertension");
 	}
 	
 	public static boolean setHyperTension(byte hTension) {

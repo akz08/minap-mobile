@@ -6,7 +6,8 @@ public class PreviousAMI extends Value {
 	private static byte previousAMI;
 	private static String previousAMILongCode;
 	public PreviousAMI() {	
-		super("2.05", "Symptoms due to cardiac ischaemia developing or already in existence at least two weeks prior to admission, and continuing up to admission.");
+		super("2.05", "Symptoms due to cardiac ischaemia developing or already in existence at least two weeks prior to admission, and continuing up to admission.",
+				"Previous AMI");
 	}
 	public static boolean setPreviousAMI(byte pAMI) {
 		// check if valid entry
