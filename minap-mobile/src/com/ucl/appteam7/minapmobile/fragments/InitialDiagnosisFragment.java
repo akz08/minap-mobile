@@ -166,7 +166,6 @@ public class InitialDiagnosisFragment extends Fragment {
 
 		@Override
 		public void showAboutWorkingDiagnosis() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
@@ -177,52 +176,47 @@ public class InitialDiagnosisFragment extends Fragment {
 
 		@Override
 		public void showAboutAstemiAdmission() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.AdmissionAfterNSTEMI.getNotesTitle(), patient.AdmissionAfterNSTEMI.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);
 			
 		}
 
 		@Override
 		public void showAboutHighRiskNstemi() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.HighRisknSTEMI.getNotesTitle() + " " + patient.HighRisknSTEMI.getId(), patient.HighRisknSTEMI.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);			
 		}
 
 		@Override
 		public void showAboutProcedureAtInterventionalHospital() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.InterventionalProcedure.getNotesTitle() + " " + patient.InterventionalProcedure.getId(), patient.InterventionalProcedure.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
 		@Override
 		public void showAboutInterventionalCentre() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.InterventionalCentreCode.getNotesTitle() + " " + patient.InterventionalCentreCode.getId(), patient.InterventionalCentreCode.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 		
 		@Override
 		public void showAboutDateOfReturn() {
-			// TODO: Replace title and content with calls to the model
 			FragmentManager fm = getActivity()
 					.getSupportFragmentManager();
 			AboutDialogFragment dialog = AboutDialogFragment
-					.newInstance("Dummy Title", "dummy content");
+					.newInstance(patient.ReferHospitalReturn.getNotesTitle() + " " + patient.ReferHospitalReturn.getId(), patient.ReferHospitalReturn.getNotes());
 			dialog.show(fm, DIALOG_ABOUT);				
 		}
 
