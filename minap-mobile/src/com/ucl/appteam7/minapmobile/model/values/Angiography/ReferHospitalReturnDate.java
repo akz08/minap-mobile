@@ -11,7 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class ReferHospitalReturnDate extends Value {
 

@@ -1,6 +1,6 @@
 package com.ucl.appteam7.minapmobile.model.values.MedicalHistory;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class PeripheralVascularDisease extends Value{
 	private static byte peripheralVascularDisease;

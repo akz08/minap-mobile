@@ -7,7 +7,7 @@
 	
 package com.ucl.appteam7.minapmobile.model.values.Angiography;
 
-import com.ucl.appteam7.minapmobile.Value;
+import com.ucl.appteam7.minapmobile.model.Value;
 
 public class ReturnExpected extends Value {
 	
