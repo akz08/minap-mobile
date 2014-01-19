@@ -4,11 +4,40 @@ package com.ucl.appteam7.minapmobile.views;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.Shader;
 import android.widget.ImageView;
 
 public class NavigationMapView extends ImageView {
 	
+	private static final int X_OFFSET = -30; // offset from width/2
+	
+	// using American spelling for consistency
+	private String bgColor = new String("#ffffff");
+	private String lineColor = new String("#999999");
+	private String textColor = new String("#666666");
+	private String boxLightColor = new String("#e5e5e5");
+	private String boxDarkColor = new String("#b9b9b9");
+
+	private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG); 
+	
+	private int width, halfWidth;
+	private int height;
+	private int padding, extraPadding; // extraPadding used for bottom-most items
+	private int radius;
+	private int lineWidth;
+	private int textSize;
+	private int yTextOffset;
+	
+    private Rect rectInitialDiagnosis = new Rect();
+    private Rect rectDemographics = new Rect();
+    private Rect rectPrehospital = new Rect();
+    private Rect rectReperfusion = new Rect();
+    private Rect rectAngiography  = new Rect();
+    private Rect rectExaminations = new Rect();
+    private Rect rectMedicalHistory = new Rect();
 	
 	public NavigationMapView(Context context) {
 		super(context);
@@ -19,53 +48,23 @@ public class NavigationMapView extends ImageView {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 	
-		// all dimensions are relative to the parent dimensions to scale when zoomed
+/*
+ * COORDINATE CALCULATIONS
+ */
 		
-        int width = getWidth();
-        int height = getHeight();
-        int padding = height/70;
-        int radius;
+		// all dimensions are relative to the parent dimensions to scale when zoomed
+        width = getWidth();
+        halfWidth = width/2 + X_OFFSET;
+        height = getHeight();
+        padding = height/70;
+        extraPadding = 20;
         radius = height/8 - padding;
-        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.WHITE);
-        canvas.drawPaint(paint);
-        // Use Color.parseColor to define HTML colors
-        paint.setColor(Color.parseColor("#e5e5e5"));
-        
-        
-        
-        
-        int lineWidth = height/140;
-        
-        
-        Paint myPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        myPaint.setStyle(Paint.Style.STROKE); 
-        myPaint.setStrokeWidth(lineWidth);
-        myPaint.setColor(Color.parseColor("#999999"));   // grey
-        
-        myPaint.setTextAlign(Paint.Align.CENTER); // set text to align to centre to make calculation easier
-        
-        
-//        // calculate 2 (horizontal) level origins to draw items from (assuming items take in a centre point as the origin)
-//        int[] x3LevelArray = new int[3];
-//        for (int i = 0; i < 3; i++) {
-//        	x3LevelArray[i] = i * (width / 3) + radius + padding;
-//        }
-        
-        // this array gives 2 spaces evenly distributed based on the screen width
-//        int[] x2LevelArray = new int[2];
-//        int extraPadding = 20;
-//        x2LevelArray[0] = width/2 - (radius + (width/4 - radius)) ;
-//        x2LevelArray[1] = width/2 + (radius + (width/4 - radius));
-        
-        int halfWidth = width/2;
-        // introduce an x-offset
-        halfWidth -= 30;
+        textSize = height/33;
+        lineWidth = height/140;
         
         //this array uses a fixed distance from the horizontal centre (used for the bottom-most items)
         int[] x2LevelArray = new int[2];
-        int extraPadding = 20;
+        
         x2LevelArray[0] = halfWidth - (radius + (padding + extraPadding)) ;
         x2LevelArray[1] = halfWidth + (radius + (padding + extraPadding));
         
@@ -77,44 +76,110 @@ public class NavigationMapView extends ImageView {
         for (int i = 0; i < 4; i++) {
         	y4LevelArray[i] =  i * (height / 4) + radius + padding;
         }
+
+/*
+ * FILL BACKGROUND
+ */
+        
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.parseColor(bgColor));
+        canvas.drawPaint(paint);
+        
+/*
+ * DRAW CONNECTOR LINES
+ */
+        
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(lineWidth);
+        paint.setColor(Color.parseColor(lineColor));
         
         // draw connector lines (vertical) top -> down
-        canvas.drawLine(halfWidth, y4LevelArray[0], halfWidth, y4LevelArray[1], myPaint);
-        canvas.drawLine(halfWidth, y4LevelArray[1], halfWidth, y4LevelArray[2], myPaint);
+        canvas.drawLine(halfWidth, y4LevelArray[0], halfWidth, y4LevelArray[1], paint);
+        canvas.drawLine(halfWidth, y4LevelArray[1], halfWidth, y4LevelArray[2], paint);
         
-        canvas.drawLine(halfWidth, y4LevelArray[2], halfWidth, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, myPaint);
-        canvas.drawLine(x2LevelArray[0], y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[0], y4LevelArray[3], myPaint);
-        canvas.drawLine(x2LevelArray[1], y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[1], y4LevelArray[3], myPaint);
+        canvas.drawLine(halfWidth, y4LevelArray[2], halfWidth, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, paint);
+        canvas.drawLine(x2LevelArray[0], y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[0], y4LevelArray[3], paint);
+        canvas.drawLine(x2LevelArray[1], y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[1], y4LevelArray[3], paint);
         
         // draw connector lines (horizontal) top -> down
-        canvas.drawLine(halfWidth, y4LevelArray[1], xRightItem, y4LevelArray[1], myPaint);
-        canvas.drawLine(halfWidth, y4LevelArray[2], xRightItem, y4LevelArray[2], myPaint);
-        canvas.drawLine(x2LevelArray[0] - lineWidth/2, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[1] + lineWidth/2, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, myPaint);
+        canvas.drawLine(halfWidth, y4LevelArray[1], xRightItem, y4LevelArray[1], paint);
+        canvas.drawLine(halfWidth, y4LevelArray[2], xRightItem, y4LevelArray[2], paint);
+        canvas.drawLine(x2LevelArray[0] - lineWidth/2, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, x2LevelArray[1] + lineWidth/2, y4LevelArray[3] + (y4LevelArray[2] - y4LevelArray[3])/2, paint);
         
-        // draw item boxes/circles
-        canvas.drawCircle(halfWidth, y4LevelArray[0], radius, paint);
+/*
+ * DRAW VALUE ITEMS
+ */
+        paint.setStyle(Paint.Style.FILL);
+//        paint.setColor(Color.parseColor(boxColor));
+        paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
         
-        canvas.drawCircle(halfWidth, y4LevelArray[1], radius, paint);
-        canvas.drawCircle(xRightItem, y4LevelArray[1], radius, paint);
+        // draw item circles
+//        canvas.drawCircle(halfWidth, y4LevelArray[0], radius, paint);
+//        
+//        canvas.drawCircle(halfWidth, y4LevelArray[1], radius, paint);
+//        canvas.drawCircle(xRightItem, y4LevelArray[1], radius, paint);
+//        
+//        canvas.drawCircle(halfWidth, y4LevelArray[2], radius, paint);
+//        canvas.drawCircle(xRightItem, y4LevelArray[2], radius, paint);
+//        
+//        canvas.drawCircle(x2LevelArray[0], y4LevelArray[3], radius, paint);
+//        canvas.drawCircle(x2LevelArray[1], y4LevelArray[3], radius, paint);
         
-        canvas.drawCircle(halfWidth, y4LevelArray[2], radius, paint);
-        canvas.drawCircle(xRightItem, y4LevelArray[2], radius, paint);
+        // set the rects for item boxes (left, top, right, bottom)
+        rectInitialDiagnosis.set(halfWidth - radius, y4LevelArray[0] - radius, halfWidth + radius,  y4LevelArray[0] + radius);
         
-        canvas.drawCircle(x2LevelArray[0], y4LevelArray[3], radius, paint);
-        canvas.drawCircle(x2LevelArray[1], y4LevelArray[3], radius, paint);
+        rectDemographics.set(halfWidth - radius, y4LevelArray[1] - radius, halfWidth + radius,  y4LevelArray[1] + radius);
+        rectPrehospital.set(xRightItem - radius, y4LevelArray[1] - radius, xRightItem + radius,  y4LevelArray[1] + radius);
         
-        // define the rects for item boxes
+        rectReperfusion.set(halfWidth - radius, y4LevelArray[2] - radius, halfWidth + radius,  y4LevelArray[2] + radius);
+        rectAngiography.set(xRightItem - radius, y4LevelArray[2] - radius, xRightItem + radius,  y4LevelArray[2] + radius);
         
+        rectExaminations.set(x2LevelArray[0] - radius, y4LevelArray[3] - radius, x2LevelArray[0] + radius, y4LevelArray[3] + radius);
+        rectMedicalHistory.set(x2LevelArray[1] - radius, y4LevelArray[3] - radius, x2LevelArray[1] + radius, y4LevelArray[3] + radius);
+        
+        // draw the item boxes
+        canvas.drawRect(rectInitialDiagnosis, paint);
+        
+        canvas.drawRect(rectDemographics, paint);
+        canvas.drawRect(rectPrehospital, paint);
+        
+        canvas.drawRect(rectReperfusion, paint);
+        canvas.drawRect(rectAngiography, paint);
+        
+        canvas.drawRect(rectExaminations, paint);
+        canvas.drawRect(rectMedicalHistory, paint);
+        
+        // reset shader
+        paint.setShader(null);
+/*
+ * DRAW VALUE TEXT
+ */
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.parseColor(textColor));
+        paint.setTextSize(textSize); 
+        paint.setTextAlign(Paint.Align.CENTER); // set text to align to centre to make calculation easier
+         
+        yTextOffset = - textSize/3;
         // draw text
-        myPaint.setStrokeWidth(lineWidth/7);
-        myPaint.setTextSize(height/30); 
-        canvas.drawText("Some", halfWidth, y4LevelArray[0], myPaint); 
-        canvas.drawText("Text", halfWidth, y4LevelArray[0] + height/30, myPaint); 
-        
-//        canvas.drawCircle(width / 2, 2* (height / 4 - padding), radius, paint);
-//        canvas.drawCircle(width / 2, 3* (height / 4 - padding), radius, paint);
-//        canvas.drawCircle(width / 2, 4 *(height / 4 - padding), radius, paint);
+        canvas.drawText("Initial", halfWidth, y4LevelArray[0] + yTextOffset, paint); 
+        canvas.drawText("Diagnosis", halfWidth, y4LevelArray[0] + textSize + yTextOffset, paint); 
 
+        canvas.drawText("Demographics", halfWidth, y4LevelArray[1] - textSize + textSize/4, paint); 
+        canvas.drawText("and", halfWidth, y4LevelArray[1] + textSize/4, paint); 
+        canvas.drawText("Admission", halfWidth, y4LevelArray[1] + textSize + textSize/4, paint); 
+        
+        canvas.drawText("Prehospital", xRightItem, y4LevelArray[1] + yTextOffset, paint); 
+        canvas.drawText("Events", xRightItem, y4LevelArray[1] + textSize + yTextOffset, paint); 
+        
+        canvas.drawText("Initial", halfWidth, y4LevelArray[2] + yTextOffset, paint); 
+        canvas.drawText("Reperfusion", halfWidth, y4LevelArray[2] + textSize + yTextOffset, paint); 
+        
+        canvas.drawText("Angiography", xRightItem, y4LevelArray[2] + yTextOffset + textSize/2, paint); 
+        
+        canvas.drawText("Examinations", x2LevelArray[0], y4LevelArray[3] + yTextOffset + textSize/2, paint); 
+        
+        canvas.drawText("Medical", x2LevelArray[1], y4LevelArray[3] + yTextOffset, paint); 
+        canvas.drawText("History", x2LevelArray[1], y4LevelArray[3] + textSize + yTextOffset, paint); 
   
 	}
 
