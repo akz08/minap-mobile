@@ -6,8 +6,6 @@
  */
 package com.ucl.appteam7.minapmobile.model.values.PatientInfo;
 
-import java.util.Scanner;
-
 import com.ucl.appteam7.minapmobile.model.Value;
 
 public class NHSNumber extends Value{
