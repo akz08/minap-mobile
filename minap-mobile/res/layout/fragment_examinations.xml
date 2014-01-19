@@ -132,7 +132,247 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        />    
+	        
+         <TextView
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/value_label_bmi"
+		    style="?android:listSeparatorTextViewStyle"
+		    android:layout_marginTop="16dp"
+		   	/>
+		
+<!-- Weight -->
+         
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_bmi_weight"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:textStyle="normal"
+			    android:layout_marginTop="8dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_weight"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+         
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <EditText 
+		        android:id="@+id/bmi_kg_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_kgs"
+				/>
+	    </LinearLayout>
+        
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textStyle="italic"
+		    android:text="@string/value_help_bmi_weight"
+		    />
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <EditText 
+		        android:id="@+id/bmi_stones_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_stones"
+				/>
+		    <EditText 
+		        android:id="@+id/bmi_pounds_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_pounds"
+				/>
+	    </LinearLayout>
 	    
+		    <Button
+	         android:id="@+id/convert_weight_button"
+	         android:text="@string/value_bmi_convert_kgs"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         />
+	    
+<!-- Height -->
+		
+        <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+          
+          <TextView
+			    android:layout_width="0dip"
+			    android:layout_height="wrap_content"
+			    android:text="@string/value_label_bmi_height"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:textStyle="normal"
+			    android:layout_marginTop="16dp"
+			    android:layout_weight="1"
+		    	/>
+		 <ImageButton
+               android:id="@+id/about_height"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="@string/button_about_value"
+               android:src="@drawable/ic_action_about" 
+               android:background="@drawable/button_about_value"
+               android:layout_gravity="bottom"
+	           android:layout_marginBottom="1dp"/>
+		</LinearLayout>
+         
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <EditText 
+		        android:id="@+id/bmi_cms_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_cms"
+				/>
+	    </LinearLayout>
+        
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textStyle="italic"
+		    android:text="@string/value_help_bmi_height"
+		    />
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <EditText 
+		        android:id="@+id/bmi_feet_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_feet"
+				/>
+		    <EditText 
+		        android:id="@+id/bmi_inches_edit_text"
+		        android:inputType="number"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:maxLength="10"
+		        android:imeOptions="flagNoExtractUi"
+		        android:layout_weight="1"
+				/>
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/value_unit_inches"
+				/>
+	    </LinearLayout>
+	    
+		    <Button
+	         android:id="@+id/convert_height_button"
+	         android:text="@string/value_bmi_convert_cms"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         />
+	    
+<!-- Calculated BMI -->
+          <TextView
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Calculate BMI"
+			    style="?android:listSeparatorTextViewStyle"
+			    android:textStyle="normal"
+			    android:layout_marginTop="16dp"
+		    	/>
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textStyle="bold"
+		        android:text="BMI: "
+				/>
+		    <EditText 
+		        android:id="@+id/bmi_edit_text"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+				android:enabled="false"
+		        android:layout_weight="1"
+				/>
+
+	    </LinearLayout>
+		  <Button
+	         android:id="@+id/calculate_bmi_button"
+	         android:text="Calculate BMI"
+	         android:layout_width="match_parent"
+	         android:layout_height="0dip"
+	         android:layout_marginTop="8dp"
+	         android:layout_marginBottom="8dp"
+	         android:layout_weight="1.0"
+	         />
+		    
         <!-- page navigation buttons -->
         <LinearLayout
 		    android:layout_width="match_parent"

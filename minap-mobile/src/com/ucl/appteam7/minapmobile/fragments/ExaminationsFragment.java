@@ -106,6 +106,26 @@ public class ExaminationsFragment extends Fragment {
 			dialog.show(fm, DIALOG_ABOUT);	
 			
 		}
+
+		@Override
+		public void showAboutWeight() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance(patient.Weight.getNotesTitle() + " " + patient.Weight.getId(), patient.Weight.getNotes());
+			dialog.show(fm, DIALOG_ABOUT);	
+			
+		}
+
+		@Override
+		public void showAboutHeight() {
+			FragmentManager fm = getActivity()
+					.getSupportFragmentManager();
+			AboutDialogFragment dialog = AboutDialogFragment
+					.newInstance(patient.Height.getNotesTitle() + " " + patient.Height.getId(), patient.Height.getNotes());
+			dialog.show(fm, DIALOG_ABOUT);	
+			
+		}
 	};
 	
 	// inflate save button in action menu

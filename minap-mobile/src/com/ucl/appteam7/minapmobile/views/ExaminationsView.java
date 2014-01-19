@@ -14,6 +14,8 @@ public class ExaminationsView extends ScrollView {
 	private ImageButton mAboutSystolicBpButton;
 	private ImageButton mAboutHeartRateOnAdmissionButton;
 	private ImageButton mAboutKillipClassButton;
+	private ImageButton mAboutWeightButton;
+	private ImageButton mAboutHeightButton;
 	
 	private Button mPreviousPage;
 	private Button mNextPage;
@@ -25,6 +27,8 @@ public class ExaminationsView extends ScrollView {
 		public void showAboutSystolicBp();
 		public void showAboutHeartRateOnAdmission();
 		public void showAboutKillipClass();
+		public void showAboutWeight();
+		public void showAboutHeight();
 		
 		// navigation buttons
 		public void previousPage();
@@ -73,6 +77,26 @@ public class ExaminationsView extends ScrollView {
 			@Override
 			public void onClick(View v) {
 				viewListener.showAboutKillipClass();
+				
+			}
+		});
+		
+		mAboutWeightButton = (ImageButton)findViewById(R.id.about_weight);
+		mAboutWeightButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutWeight();
+				
+			}
+		});
+		
+		mAboutHeightButton = (ImageButton)findViewById(R.id.about_height);
+		mAboutHeightButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				viewListener.showAboutHeight();
 				
 			}
 		});

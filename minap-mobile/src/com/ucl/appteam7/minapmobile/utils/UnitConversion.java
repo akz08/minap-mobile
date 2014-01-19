@@ -16,7 +16,8 @@ public class UnitConversion {
 	}
 	
 	public static int stonesAndPoundsToKg(int stones, int pounds) {
-		return 0;
+		double kgs = (double)stones * 6.35029 + (double)pounds * 0.453592;
+		return (int)kgs;
 	}
 	
 	public static int feetToCms(int feet) {
@@ -28,6 +29,7 @@ public class UnitConversion {
 	}
 	
 	public static int feetAndInchesToCms(int feet, int inches) {
-		return 0;
+		double cms = (double)feet * 30.48 + (double)inches * 2.54;
+		return (int)cms;
 	}
 }
