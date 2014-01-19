@@ -3,17 +3,22 @@ package com.ucl.appteam7.minapmobile.fragments;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
 import com.ucl.appteam7.minapmobile.views.NavigationMapView;
+import com.ucl.appteam7.minapmobile.views.PanAndZoomListener;
+import com.ucl.appteam7.minapmobile.views.PanAndZoomListener.Anchor;
 
 
 public class NavigationMapFragment extends Fragment {
@@ -30,8 +35,20 @@ public class NavigationMapFragment extends Fragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+		FrameLayout view = new FrameLayout(getActivity());
+
+		FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.TOP | Gravity.LEFT);
 		
-		return new NavigationMapView(getActivity());
+		
+		ImageView mapView = new NavigationMapView(getActivity());
+//		ImageView mapView = new ImageView(getActivity());
+//		mapView.setImageResource(R.drawable.sunflower);
+		mapView.setAdjustViewBounds(true);
+		mapView.setScaleType(ImageView.ScaleType.FIT_XY);
+		view.addView(mapView, fp);
+		view.setOnTouchListener(new PanAndZoomListener(view, mapView, Anchor.TOPLEFT));
+
+		return view;
 	}
 	
 	@Override
