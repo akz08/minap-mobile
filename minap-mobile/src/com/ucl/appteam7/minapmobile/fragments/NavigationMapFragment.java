@@ -1,15 +1,19 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
-import com.testflightapp.lib.TestFlight;
-import com.ucl.appteam7.minapmobile.R;
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.testflightapp.lib.TestFlight;
+import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.views.NavigationMapView;
 
 
 public class NavigationMapFragment extends Fragment {
@@ -22,6 +26,12 @@ public class NavigationMapFragment extends Fragment {
 		
 		// TestFlight checkpoint
 		TestFlight.passCheckpoint(CHECKPOINT_NAVIGATION_MAP);
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+		
+		return new NavigationMapView(getActivity());
 	}
 	
 	@Override
