@@ -23,7 +23,7 @@ public class NavigationMapView extends ImageView {
 		
         int width = getWidth();
         int height = getHeight();
-        int padding = height/60;
+        int padding = height/40;
         int radius;
         radius = height/8 - padding;
         Paint paint = new Paint();
@@ -41,8 +41,8 @@ public class NavigationMapView extends ImageView {
         
         int[] x2LevelArray = new int[2];
         int extraPadding = 20;
-        x2LevelArray[0] = width/2 - (radius + padding + extraPadding) ;
-        x2LevelArray[1] = width/2 + (radius + padding + extraPadding);
+        x2LevelArray[0] = width/2 - (radius + (width/4 - radius)) ;
+        x2LevelArray[1] = width/2 + (radius + (width/4 - radius));
         
         // calculate 4 (vertical) level origins to draw items from (assuming items take in a centre point as the origin)
         int[] y4LevelArray = new int[4];
