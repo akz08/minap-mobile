@@ -8,9 +8,12 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Shader;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 
 public class NavigationMapView extends ImageView {
+
 	
 	private static final int X_OFFSET = -30; // offset from width/2
 	
@@ -18,8 +21,8 @@ public class NavigationMapView extends ImageView {
 	private String bgColor = new String("#ffffff");
 	private String lineColor = new String("#999999");
 	private String textColor = new String("#666666");
-	private String boxLightColor = new String("#e5e5e5");
-	private String boxDarkColor = new String("#b9b9b9");
+	private String boxLightColor = new String("#eaeaea");
+	private String boxDarkColor = new String("#c1c1c1");
 
 	private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG); 
 	
@@ -39,6 +42,7 @@ public class NavigationMapView extends ImageView {
     private Rect rectExaminations = new Rect();
     private Rect rectMedicalHistory = new Rect();
 	
+    
 	public NavigationMapView(Context context) {
 		super(context);
 
@@ -111,7 +115,7 @@ public class NavigationMapView extends ImageView {
  */
         paint.setStyle(Paint.Style.FILL);
 //        paint.setColor(Color.parseColor(boxColor));
-        paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
         
         // draw item circles
 //        canvas.drawCircle(halfWidth, y4LevelArray[0], radius, paint);
@@ -183,4 +187,23 @@ public class NavigationMapView extends ImageView {
   
 	}
 
+//	@Override 
+//	public boolean onTouchEvent(MotionEvent event) {
+//		float x = event.getX();
+//		float y = event.getY();
+//		
+//		switch (event.getAction()) {
+//		case MotionEvent.ACTION_DOWN:
+//			Log.d("touch", "one finger down");
+//			break;
+//		case MotionEvent.ACTION_POINTER_UP:
+//			if (event.getPointerCount() == 1) {
+//				Log.d("touch", "one finger up");
+//			}
+//			break;
+//		}
+//		
+//		return true;
+//	}
+	
 }
