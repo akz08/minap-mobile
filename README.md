@@ -13,7 +13,9 @@ Contains a Java project from the initial prototype stage. The project is non-fun
 Contains a [MonkeyTalk][6] project to help test user interaction/flow throughout the app. 
 
 #### minap-mobile
-Contains the main Android project for MINAP. As agreed with the client, the app exists as a proof of concept of mobile data collection in the hospital. Server communication is simulated, but not implemented.
+Contains the main Android project for MINAP. As agreed with the client, the app exists as a proof of concept of mobile data collection in the hospital. Server communication is simulated, but not implemented. 
+
+NOTE: To allow the use of MonkeyTalk, the project was converted to AspectJ. [AspectJ Development Tools][7] need to be installed in Eclipse for the project to compile.
 
 ### Contributors
 Code was created/maintained by:
@@ -27,3 +29,4 @@ Code was created/maintained by:
 [3]: https://github.com/Noodle-Soup "Ke's GitHub"
 [5]: http://akz08.github.io/minap-mobile/ "App Team 7 Blog"
 [6]: https://www.cloudmonkeymobile.com/monkeytalk "MonkeyTalk"
+[7]: http://www.eclipse.org/ajdt/ "AJDT"
