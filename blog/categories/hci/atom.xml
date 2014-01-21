@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCI | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/hci/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-03T16:26:36+00:00</updated>
+  <updated>2014-01-21T02:20:01+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[David's Heuristic Evaluation]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2014/01/21/davids-heuristic-evaluation/"/>
+    <updated>2014-01-21T02:17:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2014/01/21/davids-heuristic-evaluation</id>
+    <content type="html"><![CDATA[<p>Throughout this project, I&rsquo;ve been mostly involved with the back-end logic and design, and though my &ldquo;share&rdquo; has its importance, in the end it is the user interface that will be presented to our end users. Having said that, using the mobile application was, for this particular user, a painless experience.</p>
+
+<p>There is familiarity in the way the application is presented. As of this writing, our application is not complete; yet I can&rsquo;t help but make parallels between the existing web application and our solution. The way input is asked from the user is identical on both applications: radio buttons, drop-down lists, text / date fields are all included, work and (for the most part, given the reduced working space) are presented in the same order. Functionally, our solution works as the web application does. A record needs only four fields be filled in order to be saved, but provides enough fields to complete six full information pages.</p>
+
+<p>The overall design of our solution is, for lack of a better term, aesthetically sound. There are no elements that go unused or misused, everything on the screen is there for a clear reason. Furthermore, the design is clean. Colours are used sparingly, but contrast well when needed (especially on radio button selection).</p>
+
+<p>Navigation has remained faithful to the web application as well. Next and Back buttons work on our app as they do online, keeping a linear approach. Yet the addition of a drawer navigation object will allow for faster navigation and data input for those users that may be more experienced than most. Slight reminders or visual cues, the clearest one being having to scroll down to the end of the page in order to continue, make for a more user friendly experience.</p>
+
+<p>As a final note, it should be pointed out that this application is meant for medical professionals. As such, terminology is not suited for all users. Tooltips also will only help those that are familiar with MINAP and their web application.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Playing With Paper]]></title>
@@ -113,15 +130,6 @@
 
 <p>One other interesting feature is how the app deals with multiple logins. It is common practice on Reddit for users to manage multiple accounts for their different online personas. Reddit Sync prominently displays your currently logged in username at the top of the navigation drawer, with a &lsquo;spinner&rsquo; &ndash; an Android signifier indicating the ability to choose between several options. Touching this spinner allows the user to switch between accounts on the fly. Such an interface could be useful in the near future to allow MINAP users to switch between accounts registered to different hospitals under their name.
 <img src="/images/sync-spinner.png" title="Reddit Sync user spinner" ></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Looking Deeper]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper/"/>
-    <updated>2013-12-16T14:01:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper</id>
-    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post looking into information organisation and design conventions used in current web app.</em></p>
 ]]></content>
   </entry>
   
