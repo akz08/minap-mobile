@@ -642,8 +642,312 @@ The team typically meets every workday to complete work together. Some team memb
 \begin{center}
 	\begin{tabular}{| p{13cm} | p{5cm} |}
 	\hline
-	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
-	\textasciitilde
+	\textbf{FamilyCHD} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{familyCHD} : Byte & Holds the short code for patient's family CHD status \\ \hline
+	- \underline{familyCHDLongCode} : String & Holds the long code associated with familyCHD \\ \hline \hline
+	+ $<<$constructor$>>$ FamilyCHD() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setFamilyCHD}(hFailure : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getFamilyCHD}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with familyCHD variable \\ \hline
+	
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{FirstECG} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{firstECG} : Byte & Holds the short code for patient's first ECG instance  \\ \hline
+	- \underline{ecgLongCode} : String & Holds the long code associated with firstECG  \\ \hline \hline
+	+ $<<$constructor$>>$ FirstECG() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setFirstECG}(fECG : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getFirstECG}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with firstECG variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Gender} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{patientGender} : Byte & Holds the short code for patient's gender \\ \hline
+	- \underline{genderLongCode} : String & Holds the long code associated with patientGender \\ \hline \hline
+	+ $<<$constructor$>>$ Gender() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setPatientGender}(gen : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getPatientGender}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with patientGender variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{GPCode} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{gpCode} : String & Holds the patient's GP code \\ \hline
+	+ \underline{$VAL\_LENGTH$} : Short = 6 & Holds the maximum length for gpCode \\ \hline \hline
+	+ $<<$constructor$>>$ GPCode() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setGPCode}(pctCode : String) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getGPCode}() : String & Returns gpCode \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{HeartFailure} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{heartFailure} : Byte & Holds the short code for patient's heart failure status \\ \hline
+	- \underline{heartFailureLongCode} : String & Holds the long code associated with heartFailure \\ \hline \hline
+	+ $<<$constructor$>>$ HeartFailure() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setHeartFailure}(hFailure : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getHeartFailure}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with heartFailure variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{HeartRate} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Examinations & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{heartRate} : Double & Holds the patient's heart rate \\ \hline \hline
+	+ $<<$constructor$>>$ HeartRate() & Set the appropriate superclass values \\ \hline
+	+ \underline{setHeartRate}(hRate : Double) : Boolean & Returns true if parameter passes validation \\ \hline
+	+ \underline{getHeartRate}() : String & Returns heartRate \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Height} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Examinations & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{height} : Double & Holds the patient's height \\ \hline \hline
+	+ $<<$constructor$>>$ Height() & Set the appropriate superclass values \\ \hline
+	+ \underline{setHeight}(h : Double) : Boolean & Returns true if parameter passes validation \\ \hline
+	+ \underline{getHeight}() : String & Returns height \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{HiRisknSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{hiRisknSTEMI} : Byte & Holds the short code choice for High Risk nSTEMI \\ \hline
+	- \underline{nSTEMILongCode} : String & Holds the long code associated with hiRisknSTEMI \\ \hline \hline
+	+ $<<$constructor$>>$ HiRisknSTEMI() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setHiRisknSTEMI}(hiNSTEMI : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getHiRisknSTEMI}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{HospitalIdentifier} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.PatientInfo & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{hospitalID} : String & Holds a three letter string for hospitalID \\ \hline
+	+ \underline{$VAL\_LENGTH$} : Short = 3 & Holds the valid length for hospitalID \\ \hline \hline
+	+ $<<$constructor$>>$ HospitalIdentifier() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setHospitalIdentifier}(hospId : String) : Boolean & Checks the paramenter against validation rules, returns true if passed \\ \hline
+	+ \underline{getHospitalIdentifier}() : String & Returns hospitalID \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Hypercholesterolaemia} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline
+	- \underline{hyperCholesterolaemia} : Byte & Holds the short code for patient's hypercholesterolaemia status \\ \hline
+	- \underline{hyperCholesterolaemiaLongCode} : String & Holds the long code associated with hyperCholesterolaemia \\ \hline \hline
+	+ $<<$constructor$>>$ Hypercholesterolaemia() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setHypercholesterol}(hCholesterolaemia : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getHypercholesterol}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with hyperCholesterolaemia variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Hypertension} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{hyperTension} : Byte & Holds the short code for patient's hypertension status \\ \hline
+	- \underline{hyperTensionLongCode} : String & Holds the long code associated with hyperTension \\ \hline \hline
+	+ $<<$constructor$>>$ Hypertension() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setHypertension}(hTension : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getHypertension}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with hyperTension variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{InitialDiagnosis} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{initialDiagnosis} : Byte & Holds the short code choice for Initial Diagnosis \\ \hline
+	- \underline{diagnosisLongCode} : String & Holds the long code associated with initialDiagnosis \\ \hline \hline
+	+ $<<$constructor$>>$ InitialDiagnosis() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setInitialDiagnosis}(iniDiagnosis : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getInitialDiagnosis}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getInitialLongCode}() : String & Returns diagnosisLongCode \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{InitialReperfusion} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialReperfusion & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{initialReperfusion} : Byte & Holds the short code for patient's initial reperfusion \\ \hline
+	- \underline{initialReperfusionLongCode} : String & Holds the long code associated with initialReperfusion \\ \hline \hline
+	+ $<<$constructor$>>$ InitialReperfusion() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setInitialReperfusion}(iReperfusion : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getInitialReperfusion}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with initialReperfusion variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{InfarctionSite} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialReperfusion & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{infarctionSite} : Byte & Holds the short code for patient's infarction site \\ \hline
+	- \underline{infarctionSiteLongCode} : String & Holds the long code associated with infarctionSite \\ \hline \hline
+	+ $<<$constructor$>>$ InfarctionSite() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setInfarctionSite}(iSite : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getInfarctionSite}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with infarctionSite variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{InterventionalCentreCode} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{interventionalID} : String & Holds the patient's Interventional Centre Code \\ \hline
+	+ \underline{$VAL\_LENGTH$} : Short = 3 & Holds the maximum length for interventionalID \\ \hline \hline
+	+ $<<$constructor$>>$ InterventionalCentreCode() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setInterventionalCentre}(iCode : String) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getInterventionalCentre}() : String & Returns interventionalID \\ \hline \hline
+	Note: This class is used three times within the Patient singleton & \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{InterventionalProcedure} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{interventionalProcedure} : Byte & Holds the short code for Interventional Procedure \\ \hline
+	- \underline{procedureLongCode} : String & Holds the long code associated with interventionalProcedure \\ \hline
+	+ $<<$constructor$>>$ InterventionalProcedure() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setInterventionalProcedure}(interHosProcedure : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	 + \underline{getInterventionalProcedure}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{KillipClass} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Examinations & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{killipClass} : Byte & Holds the short code for patient's coronary angiography \\ \hline
+	- \underline{killipClassLongCode} : String & Holds the long code associated with killipClass \\ \hline \hline
+	+ $<<$constructor$>>$ KillipClass() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setKillipClass}(kClass : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getKillipClass}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with killipClass variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{LocationAtSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialReperfusion & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline
+	- \underline{locationAtSTEMI} : Byte & Holds the short code for patient's location at STEMI \\ \hline
+	- \underline{locationAtSTEMILongCode} : String & Holds the long code associated with locationAtSTEMI \\ \hline \hline
+	+ $<<$constructor$>>$ LocationAtSTEMI() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setSTEMILocation}(lAtSTEMI : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getSTEMILocation}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with locationAtSTEMI variable \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{LocalInterventionDate} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Angiography & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline
+	$<<$import$>>$ java.text.ParseException & \\ \hline
+	$<<$import$>>$ java.text.SimpleDateFormat & \\ \hline
+	$<<$import$>>$ java.util.Date & \\ \hline \hline
+	\underline{sd} : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy") & Holds the String format desired for interventionDate \\ \hline
+	- \underline{interventionDate} : String & Holds the patient's local intervention date \\ \hline
+	- \underline{$DATE\_FORMAT$} : String = "01/01/2000" & Lower bound for date range check \\ \hline
+	- \underline{now} : String = sd.format(new Date()) & Holds current Date as a String, used for range check \\ \hline \hline
+	+ $<<$constructor$>>$ LocalInterventionDate() & Set the appropriate superclass values \\ \hline
+	+ \underline{setInterventionDate}(iDate: Date) : Boolean & Returns true if parameter passes validation \\ \hline
+	+ \underline{getInterventionDate}() : String & Returns interventionDate variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{NHSNumber} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.PatientInfo & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{nhsNumber} : String & Holds the patient's NHS number \\ \hline
+	+ \underline{$VAL\_LENGTH$} : Short = 10 & Holds the maximum length for nhsNumber \\ \hline \hline
+	+ $<<$constructor$>>$ NHSNumber() & Sets the appropriate superclass values \\ \hline
+	+ $<<$setNHSNum$>>$(nhsNum : String) : Boolean & Checks the parameter against validation rules, returns true if passed \\ \hline
+	+ $<<$getNHSNum$>>$() : String & Returns nhsNumber \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{NHSVerification} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission & \\ \hline
+	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
+	- \underline{verification} : Byte & Holds the short code for patient's NHS verification \\ \hline
+	- \underline{verificationLongCode} : String & Holds the long code associated with verification \\ \hline \hline
+	+ $<<$constructor$>>$ NHSVerification() & Sets the appropriate superclass values \\ \hline
+	+ \underline{setVerification}(verif : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
+	+ \underline{getVerification}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
+	+ \underline{getLongCode}() : String & Returns the long code associated with verification variable \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -671,6 +975,13 @@ The team typically meets every workday to complete work together. Some team memb
 	\end{tabular}
 \end{center}
 
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde
+	\end{tabular}
+\end{center}
 \restoregeometry
 
 \newpage
