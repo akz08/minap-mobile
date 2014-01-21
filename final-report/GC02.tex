@@ -297,8 +297,8 @@ The team typically meets every workday to complete work together. Some team memb
 	+ \underline{setangioralDate}(rDate : Date) : Boolean & Returns true if Date parameter passes validation \\ \hline
 	+ \underline{setangioralTime}(rTime : Date) : Boolean & Returns true if Time parameter passes validation \\ \hline
 	+ \underline{getDateTime}() : String & Returns angioDateTime variable \\ \hline
-	+ \underline{getAngioDate}() : String & Returns angioDate variable \\ \hline
-	+ \underline{getAngioTime}() : String & Returns angioTime variable \\ \hline
+	+ \underline{getAngioDate}() : String & Returns angioDate variable \\&\\ \hline
+	+ \underline{getAngioTime}() : String & Returns angioTime variable \\ &\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -597,13 +597,13 @@ The team typically meets every workday to complete work together. Some team memb
 	$<<$import$>>$ java.text.ParseException & \\ \hline
 	$<<$import$>>$ java.text.SimpleDateFormat & \\ \hline
 	$<<$import$>>$ java.util.Date & \\ \hline \hline
-	sd : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy") & Holds the String format desired for dob \\ \hline
+	\underline{sd} : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy") & Holds the String format desired for dob \\ \hline
 	- \underline{dob} : String & Holds the patient's date of birth \\ \hline
 	- \underline{$DATE\_FORMAT$} : String = "01/01/1900" & Lower bound for date range check \\ \hline
 	- \underline{twentyYrsAgo} : String = "01/01/1994" & Upper bound for date range check \\ \hline \hline
 	+ $<<$constructor$>>$ DOB() & Set the appropriate superclass values \\ \hline
 	+ \underline{setDOB}(bDate : Date) : Boolean & Checks the passed Date against validation rules, returns true if passed \\ \hline
-	+ \underline{getDOB}() : String & Returns dob variable \\ \hline
+	+ \underline{getDOB}() : String & Returns dob variable \\&\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -691,11 +691,11 @@ The team typically meets every workday to complete work together. Some team memb
 	\textbf{GPCode} & \textbf{$<<$extends Value$>>$} \\ \hline
 	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission & \\ \hline
 	$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value & \\ \hline \hline
-	- \underline{gpCode} : String & Holds the patient's GP code \\ \hline
+	- \underline{gpCode} : String & Holds the patient's GP code \\&\\ \hline
 	+ \underline{$VAL\_LENGTH$} : Short = 6 & Holds the maximum length for gpCode \\ \hline \hline
 	+ $<<$constructor$>>$ GPCode() & Sets the appropriate superclass values \\ \hline
 	+ \underline{setGPCode}(pctCode : String) : Boolean & Returns true if parameter passes validation rules \\ \hline
-	+ \underline{getGPCode}() : String & Returns gpCode \\ \hline
+	+ \underline{getGPCode}() : String & Returns gpCode \\&\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -723,7 +723,7 @@ The team typically meets every workday to complete work together. Some team memb
 	- \underline{heartRate} : Double & Holds the patient's heart rate \\ \hline \hline
 	+ $<<$constructor$>>$ HeartRate() & Set the appropriate superclass values \\ \hline
 	+ \underline{setHeartRate}(hRate : Double) : Boolean & Returns true if parameter passes validation \\ \hline
-	+ \underline{getHeartRate}() : String & Returns heartRate \\ \hline
+	+ \underline{getHeartRate}() : String & Returns heartRate \\&\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -736,7 +736,7 @@ The team typically meets every workday to complete work together. Some team memb
 	- \underline{height} : Double & Holds the patient's height \\ \hline \hline
 	+ $<<$constructor$>>$ Height() & Set the appropriate superclass values \\ \hline
 	+ \underline{setHeight}(h : Double) : Boolean & Returns true if parameter passes validation \\ \hline
-	+ \underline{getHeight}() : String & Returns height \\ \hline
+	+ \underline{getHeight}() : String & Returns height \\&\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -764,7 +764,7 @@ The team typically meets every workday to complete work together. Some team memb
 	+ \underline{$VAL\_LENGTH$} : Short = 3 & Holds the valid length for hospitalID \\ \hline \hline
 	+ $<<$constructor$>>$ HospitalIdentifier() & Sets the appropriate superclass values \\ \hline
 	+ \underline{setHospitalIdentifier}(hospId : String) : Boolean & Checks the paramenter against validation rules, returns true if passed \\ \hline
-	+ \underline{getHospitalIdentifier}() : String & Returns hospitalID \\ \hline
+	+ \underline{getHospitalIdentifier}() : String & Returns hospitalID \\  & \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -809,7 +809,7 @@ The team typically meets every workday to complete work together. Some team memb
 	+ $<<$constructor$>>$ InitialDiagnosis() & Sets the appropriate superclass values \\ \hline
 	+ \underline{setInitialDiagnosis}(iniDiagnosis : Byte) : Boolean & Returns true if parameter passes validation rules \\ \hline
 	+ \underline{getInitialDiagnosis}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
-	+ \underline{getInitialLongCode}() : String & Returns diagnosisLongCode \\ \hline
+	+ \underline{getInitialLongCode}() : String & Returns diagnosisLongCode \\&\\ \hline
 	\end{tabular}
 \end{center}
 
@@ -853,8 +853,8 @@ The team typically meets every workday to complete work together. Some team memb
 	+ \underline{$VAL\_LENGTH$} : Short = 3 & Holds the maximum length for interventionalID \\ \hline \hline
 	+ $<<$constructor$>>$ InterventionalCentreCode() & Sets the appropriate superclass values \\ \hline
 	+ \underline{setInterventionalCentre}(iCode : String) : Boolean & Returns true if parameter passes validation rules \\ \hline
-	+ \underline{getInterventionalCentre}() : String & Returns interventionalID \\ \hline \hline
-	Note: This class is used three times within the Patient singleton & \\ \hline
+	+ \underline{getInterventionalCentre}() : String & Returns interventionalID \\&\\ \hline \hline
+	Note: This class is used three times within the Patient singleton &\\ & \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -954,34 +954,429 @@ The team typically meets every workday to complete work together. Some team memb
 \begin{center}
 	\begin{tabular}{| p{13cm} | p{5cm} |}
 	\hline
-	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
-	\textasciitilde
+	\textbf{Patient} & \textbf{$<<$singleton$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model	 & \\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.PatientInfo.*	 &\\ \hline
+$<<$import$>>$ &\\  com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis.*	&\\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission.*	&\\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.InitialReperfusion.*	&\\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.Angiography.*	&\\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.Examinations.*	&\\ \hline
+$<<$import$>>$ &\\ com.ucl.appteam7.minapmobile.model.values.MedicalHistory.* &\\ \hline \hline
+
+- \underline{instance} : Patient	 & Controls the singleton behavior of this class\\ \hline
++ HospitalIdentifier : HospitalIdentifier	& Declares a HospitalIdentifier object to the singleton\\ \hline
++ RecordNumber : PatientCaseRecordNumber	& Declares a PatientCaseRecordNumber object to the singleton\\ \hline
++ NHSNumber : NHSNumber & Declares a NHSNumber object to the singleton\\ \hline
++ Surname : PatientSurname & Declares a PatientSurname object to the singleton\\ \hline
++ Forename : PatientForename	& Declares a PatientForename object to the singleton\\ \hline
++ DOB : DOB	 & Declares a DOB object to the singleton\\ \hline
++ AdmissionDate : AdmissionDate & 	Declares a AdmissionDate object to the singleton\\ \hline
++ InitialDiagnosis : InitialDiagnosis	 & Declares a InitialDiagnosis object to the singleton\\ \hline
++ AdmissionAfterNSTEMI : AdmissionAfterNSTEMI	 & Declares a AdmissionAfterNSTEMI object to the singleton\\ \hline
++ HighRisknSTEMI : HiRisknSTEMI	 & Declares a HiRisknSTEMI object to the singleton\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
++ InterventionalProcedure : InterventionalProcedure	 & Declares a InterventionalProcedure object to the singleton\\ \hline
++ ReferHospitalReturn : ReferHospitalReturn & 	Declares a ReferHospitalReturn object to the singleton\\ \hline
++ InterventionalCentreCode : InterventionalCentreCode & 	Declares a InterventionalCentreCode object to the singleton\\ \hline
++ Gender : Gender & 	Declares a Gender object to the singleton\\ \hline
++ Ethnicity : PatientEthnicity & 	Declares a PatientEthnicity object to the singleton\\ \hline
++ AdmissionMethod : AdmissionMethod & 	Declares a AdmissionMethod object to the singleton\\ \hline
++ AdmissionWard : AdmissionWard & 	Declares a AdmissionWard object to the singleton\\ \hline
++ GPCode : GPCode	 & Declares a GPCode object to the singleton\\ \hline
++ PostCode : PatientPostcode & 	Declares a PatientPostcode object to the singleton\\ \hline
++ AdmitConsul : AdmittingConsultant	 & Declares a AdmittingConsultant object to the singleton\\ \hline
++ AdminStatus : AdminStatus	 & Declares a AdminStatus object to the singleton\\ \hline
++ FirstECG : FirstECG	 & Declares a FirstECG object to the singleton\\ \hline
++ NHSVerification : NHSVerification	 & Declares a NHSVerification object to the singleton\\ \hline
++ ReferralHospital : ReferralHospital	 & Declares a ReferralHospital object to the singleton\\ \hline
++ InitialReperfusion : InitialReperfusion	 & Declares a InitialReperfusion object to the singleton\\ \hline
++ ReperfusionNotGiven : ReperfusionNotGiven	 & Declares a ReperfusionNotGiven object to the singleton\\ \hline
++ ECGTreatment : EcgDetermineTreatment	 & Declares a EcgDetermineTreatment object to the singleton\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
++ $ECG\_QRSComplex$ : EcgQRSComplex & 	Declares a EcgQRSComplex object to the singleton\\ \hline
++ LocationSTEMI : LocationAtSTEMI	 & Declares a LocationAtSTEMI object to the singleton\\ \hline
++ ReperfusionCentreCode : InterventionalCentreCode	 & Declares a second InterventionalCentreCode object to the singleton\\ \hline
++ InfarctionSite : InfarctionSite	 & Declares a InfarctionSite object to the singleton\\ \hline
++ CoronaryAngiography : CoronaryAngiography	 & Declares a CoronaryAngiography object to the singleton\\ \hline
++ ReferralDate : ReferralDate	 & Declares a ReferralDate object to the singleton\\ \hline
++ AngioDelay : AngioDelay & 	Declares a AngioDelay object to the singleton\\ \hline
++ AngioDate : AngioDate & 	Declares a AngioDate object to the singleton\\ \hline
++ AngioCentreCode : InterventionalCentreCode	 & Declares a third InterventionalCentreCode object to the singleton\\ \hline
++ InterventionDate : LocalInterventionDate	 & Declares a LocalInterventionDate object to the singleton\\ \hline
++ CoronaryIntervention : CoronaryIntervention	 & Declares a CoronaryIntervention object to the singleton\\ \hline
++ ReturnExpected : ReturnExpected	 & Declares a ReturnExpected object to the singleton\\ \hline
++ DaycaseTransfer : DaycaseTransferDate	 & Declares a DaycaseTransferDate object to the singleton\\ \hline
++ ReferReturnDate : ReferHospitalReturnDate & 	Declares a ReferHospitalReturnDate object to the singleton\\ \hline
++ Systolic : SystolicBP	 & Declares a SystolicBP object to the singleton\\ \hline
++ HeartRate : HeartRate	 & Declares a HeartRate object to the singleton\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
++ Killip : KillipClass & 	Declares a KillipClass object to the singleton\\ \hline
++ Height : Height	 & Declares a Height object to the singleton\\ \hline
++ Weight : Weight & 	Declares a Weight object to the singleton\\ \hline
++ BMI : BMI	 & Declares a BMI object to the singleton\\ \hline
++ PreviousAMI : PreviousAMI	 & Declares a PreviousAMI object to the singleton\\ \hline
++ Hypertension : Hypertension	 & Declares a Hypertension object to the singleton\\ \hline
++ Cerebrovascular : CerebrovascularDisease	 & Declares a CerebrovascularDisease object to the singleton\\ \hline
++ PreviousPCI : PreviousPCI	 & Declares a PreviousPCI object to the singleton\\ \hline
++ Smoking : SmokingStatus	 & Declares a SmokingStatus object to the singleton\\ \hline
++ Diabetes : Diabetes & 	Declares a Diabetes object to the singleton\\ \hline
++ PreviousAngina : PreviousAngina	 & Declares a PreviousAngina object to the singleton\\ \hline
++ HyperCholesterol : Hypercholesterolaemia	 & Declares a Hypercholesterolaemia object to the singleton\\ \hline
++ AsthmaCOPD : AsthmaOrCOPD	 & Declares a AsthmaOrCOPD object to the singleton\\ \hline
++ PreviousCABG : PreviousCABG	 & Declares a PreviousCABG object to the singleton\\ \hline
++ HeartFailure : HeartFailure & 	Declares a HeartFailure object to the singleton\\ \hline
++ PeripheralVascular : PeripheralVascularDisease	 & Declares a PreipheralVascularDisease object to the singleton\\ \hline
++ RenalFailure : ChronicRenalFailure	 & Declares a ChronicRenalFailure object to the singleton\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
++ FamilyCHD : FamilyCHD	 & Declares a FamilyCHD object to the singleton\\ \hline \hline
++ \underline{get}() : Patient	 & Returns the instance variable, or creates one if it does not exist\\ \hline
+- $<<$constructor$>>$ Patient()	 & Private constructor, restricts creation of Patient objects to this class only\\ \hline
+\# $<<$override$>>$ clone() : Object & 	Forbids a clone() method call. Completes the singleton declaration\\ \hline
 	\end{tabular}
 \end{center}
 
 \begin{center}
 	\begin{tabular}{| p{13cm} | p{5cm} |}
 	\hline
-	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
-	\textasciitilde
+	\textbf{PatientCaseRecordNumber} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.PatientInfo	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	& \\ \hline \hline
+- \underline{caseNumber} : String	 & Hold the patient's Case Number\\ \hline
+- \underline{oldCase} : String = caseNumber & 	Holds a copy of a patient's previous record number, used when updating Database\\ \hline
+- \underline{$VAL\_LENGTH$} : Short = 10	 & Holds the maximum length for caseNumber\\ \hline \hline
++ $<<$constructor$>>$ PatientCaseRecordNumber()	 & Sets the appropriate superclass values\\ \hline
++ $<<$setCaseNumber$>>$(cNumber : String) : Boolean	 & Returns true if parameter passes validation rules\\ \hline
++ $<<$getCaseNumber$>>$()	 & Returns caseNumber\\ \hline
++ $<<$getOldCase$>>$() & 	Returns oldCase\\ \hline
 	\end{tabular}
 \end{center}
 
 \begin{center}
 	\begin{tabular}{| p{13cm} | p{5cm} |}
 	\hline
-	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
-	\textasciitilde
+	\textbf{PatientEthnicity} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission	& \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	& \\ \hline \hline
+- \underline{ethnicity} : Byte	& Holds the short code for patient's Ethnicity \\ \hline
+- \underline{ethnicLongCode} : String	 & Holds the long code associated with ethnicity \\ \hline \hline
++ $<<$constructor$>>$ PatientEthnicity()	& Sets the appropriate superclass values \\ \hline
++ \underline{setEthnicity}(ethnic : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getEthnicity}() : String & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	& Returns the long code associated with ethnicity variable \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PatientForename} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.PatientInfo	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	& \\ \hline \hline
+- \underline{forename} : String		& Holds the patient's forename \\ \hline
++ \underline{$VAL\_LENGTH$} : Short = 35		& Holds the maximum length for forename \\ \hline \hline
++ $<<$constructor$>>$ PatientForename()		& Sets the appropriate superclass values \\ \hline
++ \underline{setForename}(fName : String) : Boolean	& 	Returns true if parameter passes validation rules \\ \hline
++ \underline{getForename}() : String	& 	Returns forename variable \\& \\ \hline
 	\end{tabular}
 \end{center}
 
 \begin{center}
 	\begin{tabular}{| p{13cm} | p{5cm} |}
 	\hline
-	\textbf{AdmissionAfterNSTEMI} & \textbf{$<<$extends Value$>>$} \\ \hline
-	\textasciitilde
+	\textbf{PatientPostcode} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	& \\ \hline \hline
+- \underline{postCode} : String	 & Holds the patient's Postcode \\ \hline
++ \underline{$VAL\_LENGTH$} : Short = 8	 & Holds the maximum length for postCode \\ \hline \hline
++ $<<$constructor$>>$ PatientPostcode()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setPostcode}(rId : String) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getPostcode}() : String	 & Returns postCode \\&\\ \hline
 	\end{tabular}
 \end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PatientSurname} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.PatientInfo &	\\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value &	\\ \hline \hline
+- \underline{surname} : String	 & Holds the patient's surname \\&\\ \hline
++ \underline{$VAL\_LENGTH$} : Short = 35	 & Holds the maximum length for surname \\ \hline \hline
++ $<<$constructor$>>$ PatientSurname()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setSurname}(sName : String) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getSurname}() : String	 & Returns surname variable \\ & \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PeripheralVascularDisease} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 & \\ \hline \hline
+- \underline{peripheralVascularDisease} : Byte	 & Holds the short code for patient's peripheral vascular disease \\ \hline
+- \underline{peripheralVascularDiseaseLongCode} : String	 & Holds the long code associated with peripheralVascularDisease \\ \hline \hline
++ $<<$constructor$>>$ PeripheralVascularDisease() & 	Sets the appropriate superclass values \\ \hline
++ \underline{setPeripheralVascularDisease}(pVascularDisease : Byte) : Boolean	 & Returns true if parameter passes  validation rules \\ \hline
++ \underline{getPeripheralVascularDisease}() : String	 & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	 & Returns the long code associated with peripheralVascularDisease variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PreviousAMI} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	& \\ \hline \hline
+- \underline{previousAMI} : Byte	 & Holds the short code for patient's previous AMI status \\ \hline
+- \underline{previousAMILongCode} : String	 & Holds the long code associated with previousAMI \\ \hline \hline
++ $<<$constructor$>>$ PreviousAMI()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setPreviousAMI}(pAMI : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getPreviousAMI}() : String	 & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	 & Returns the long code associated with previousAMI variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PreviousAngina} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	 & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 & \\ \hline \hline
+- \underline{previousAngina} : Byte	 & Holds the short code for patient's previous angina status \\ \hline
+- \underline{previousAnginaLongCode} : String	 & Holds the long code associated with previousAngina \\ \hline \hline
++ $<<$constructor$>>$ PreviousAngina()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setPreviousAngina}(pAngina : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getPreviousAngina}() : String	 & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	 & Returns the long code associated with previousAngina variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PreviousCABG} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	  & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	  & \\ \hline \hline
+- \underline{previousCABG} : Byte	 & Holds the short code for patient's previous CABG status \\ \hline
+- \underline{previousCABGLongCode} : String	 & Holds the long code associated with previousCABG \\ \hline \hline
++ $<<$constructor$>>$ PreviousCABG() & 	Sets the appropriate superclass values \\ \hline
++ \underline{setPreviousCABG}(pCABG : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getPreviousCABG}() : String	 & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	 & Returns the long code associated with previousCABG variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{PreviousPCI} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline \hline
+- \underline{previousPCI} : Byte	 & Holds the short code for patient's previous PCI status \\ \hline
+- \underline{previousPCILongCode} : String & 	Holds the long code associated with previousPCI \\ \hline \hline
++ $<<$constructor$>>$ PreviousPCI()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setPreviousPCI}(pPCI : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getPreviousPCI}() : String & 	Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String & 	Returns the long code associated with previousPCI variable \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReferHospitalReturn} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialDiagnosis	  & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline
+$<<$import$>>$ java.text.ParseException	 &  \\ \hline
+$<<$import$>>$ java.text.SimpleDateFormat	 &  \\ \hline
+$<<$import$>>$ java.util.Date	 &  \\ \hline \hline
+- \underline{rDate} : String	 & Holds the Date for return from Referring Hospital \\ \hline
+- \underline{now} : Date = new Date()	 & Holds the current date used for validation \\ \hline
+\underline{sd} SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy")	 & Holds the string format desired for rDate \\ \hline \hline
++ $<<$constructor$>>$ ReferHospitalReturn()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setRDate}(bDate : Date) : Boolean	 & Returns true if paramenter passes validation rules \\ \hline
++ \underline{getRDate}() : String	 & Returns rDate \\& \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReferHospitalReturnDate} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Angiography	  & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline
+$<<$import$>>$ java.text.ParseException	 &  \\ \hline
+$<<$import$>>$ java.text.SimpleDateFormat	  & \\ \hline
+$<<$import$>>$ java.util.Date	 &  \\ \hline \hline
+\underline{sd} : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy")	 & Holds the String format desired for returnDate \\ \hline
+- \underline{returnDate} : String	 & Holds the patient's date of return to referral hospital \\ \hline
+- \underline{$DATE\_FORMAT$} : String = "01/01/2000"	 & Lower bound for date range check \\ \hline
+- \underline{now} : String = sd.format(new Date())	 & Holds current Date as a String, used for range check \\ \hline \hline
++ $<<$constructor$>>$ ReferHospitalReturnDate()	 & Set the appropriate superclass values \\ \hline
++ \underline{setReturnDate}(rhrDate: Date) : Boolean	 & Returns true if parameter passes validation \\ \hline
++ \underline{getReturnDate}() : String	 & Returns returnDate variable \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReferralDate} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Angiography	  & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline
+$<<$import$>>$ java.text.ParseException	  & \\ \hline
+$<<$import$>>$ java.text.SimpleDateFormat & 	 \\ \hline
+$<<$import$>>$ java.util.Date	  & \\ \hline \hline
+\underline{sd} : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy")	 & Holds the String format desired for referDate \\ \hline
+\underline{st} : SimpleDateFormat = new SimpleDateFormat("HH:mm") & 	Holds the String format desired for referTime \\ \hline
+\underline{sdt} : SimpleDateFormat = new SimpleDateFormat("dd/mm/yyyy HH:mm")	 & Holds the String format desired for referDateTime \\ \hline
+- \underline{referDate} : String & 	Holds the patient's referral date \\ \hline
+- \underline{$DATE\_FORMAT$} : String = "01/01/2000"	 & Lower bound for date range check \\ \hline
+- \underline{now} : Date = new Date()	 & Holds current Date, used for range check \\ \hline \hline
++ $<<$constructor$>>$ ReferralDate()	 & Set the appropriate superclass values \\ \hline
++ \underline{setDateTime}() : Boolean	 & Returns true if both dates passed validation \\ \hline
++ \underline{setReferralDate}(rDate : Date) : Boolean	 & Returns true if Date parameter passes validation \\ \hline
++ \underline{setReferralTime}(rTime : Date) : Boolean	 & Returns true if Time parameter passes validation \\ \hline
++ \underline{getDateTime}() : String	 & Returns referDateTime variable \\ \hline
++ \underline{getReferralDate}() : String	 & Returns referDate variable \\&\\ \hline
++ \underline{getReferralTime}() : String	 & Returns referTime variable \\&\\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReferralHospital} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.DemographicsAdmission	  & \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	  & \\ \hline \hline
+- \underline{referralId} : String	 & Holds the patient's ReferralHospital \\ \hline
++ \underline{$VAL\_LENGTH$} : Short = 3	 & Holds the maximum length for referralId \\ \hline \hline
++ $<<$constructor$>>$ ReferralHospital()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setReferralIdentifier}(rId : String) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getReferralIdentifier}() : String	 & Returns referralID \\&\\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReperfusionNotGiven} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.InitialReperfusion	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline \hline
+- \underline{reperfusionNotGiven} : Byte	 & Holds the short code for reason reperfusion was not given \\ \hline
+- \underline{rNotGivenLongCode} : String	 & Holds the long code associated with reperfusionNotGiven \\ \hline \hline
++ $<<$constructor$>>$ ReperfusionNotGiven()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setReperfusionNotGiven}(rNotGiven : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getReperfusionNotGiven}() : String & 	Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String & 	Returns the long code associated with ReperfusionNotGiven variable \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{ReturnExpected} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Angiography	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	  & \\ \hline \hline
+- \underline{returnExpected} : Boolean = false	 & Holds a boolean value, reveals items on UI \\ \hline \hline
++ $<<$constructor$>>$ ReturnExpected() & 	Sets the appropriate superclass values \\ \hline
++ \underline{setReturnExpected}(admASTEMI : Boolean) : Boolean	 & Sets, then returns returnExpected \\ \hline
++ \underline{getReturnExpected}() : String & 	Returns a String value of returnExpected \\ \hline
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{SmokingStatus} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.MedicalHistory	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	  & \\ \hline \hline
+- \underline{smokingStatus} : Byte	 & Holds the short code for patient's smoking status \\ \hline
+- \underline{smokingStatusLongCode} : String	 & Holds the long code associated with smokingStatus \\ \hline \hline
++ $<<$constructor$>>$ SmokingStatus()	 & Sets the appropriate superclass values \\ \hline
++ \underline{setSmokingStatus}(sStatus : Byte) : Boolean	 & Returns true if parameter passes validation rules \\ \hline
++ \underline{getSmokingStatus}() : String	 & Returns the selected short code and corresponding long code as a String \\ \hline
++ \underline{getLongCode}() : String	 & Returns the long code associated with smokingStatus variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{SystolicBP} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Examinations	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	 &  \\ \hline \hline
+- \underline{systolicBP} : Double	 & Holds the patient's systolic blood pressure \\ \hline \hline
++ $<<$constructor$>>$ SystolicBP()	 & Set the appropriate superclass values \\ \hline
++ \underline{setSystolicBP}(sBP : Double) : Boolean	 & Returns true if parameter passes validation \\ \hline
++ \underline{getSystolicBP}() : String	 & Returns systolicBP \\&\\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Value} & \textbf{$<<$superclass$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model	  & \\ \hline \hline
+- id : String	 & Will contain the dataset field value for each field class \\ \hline
+- notes : String	 & Will contain the field description for each class \\ \hline
+- notesTitle : String	 & Will hold the title for tooltips used in the UI \\ \hline
+- isValid : Boolean	 & To be used in future networking endeavors \\ \hline
+- isComplete : Boolean	 & To be used in future networking endeavors \\ \hline \hline
++ $<<$constructor$>>$ Value (id : String, notes : String)	 & Called and populated from field class declarations \\ \hline
++ $<<$constructor$>>$ Value (id : String, notes : String, notesTitle : String)	 & Called and populated from field class declarations \\ \hline
++ isValidated() : Boolean	 & Getter method for isValid variable \\ \hline
++ isCompleted() : Boolean	 & Getter method for isComplete variable \\ \hline
++ getId() : String	 & Getter method for id variable \\ \hline
++ getNotes() : String	 & Getter method for notes variable \\ \hline
++ getNotesTitle() : String	 & Getter method for notesTitle variable \\ \hline
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	\begin{tabular}{| p{13cm} | p{5cm} |}
+	\hline
+	\textbf{Weight} & \textbf{$<<$extends Value$>>$} \\ \hline
+	\textasciitilde com.ucl.appteam7.minapmobile.model.values.Examinations	 &  \\ \hline
+$<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	&  \\ \hline \hline
+- \underline{weight} : Double & 	Holds the patient's weight \\ &\\ \hline \hline
++ $<<$constructor$>>$ Weight()	 & Set the appropriate superclass values \\ \hline
++ \underline{setWeight}(w : Double) : Boolean	 & Returns true if parameter passes validation \\ \hline
++ \underline{getWeight}() : String & 	Returns weight \\&\\ \hline
+	\end{tabular}
+\end{center}
+
 \restoregeometry
 
 \newpage
