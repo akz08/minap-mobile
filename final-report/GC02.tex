@@ -5,6 +5,8 @@
 \usepackage{pgfgantt}
 \usepackage{lscape}
 \usepackage{verbatim}
+\usepackage{cleveref}
+
 \usepackage[a4paper]{geometry}
 
 \begin{document}
@@ -104,29 +106,39 @@ The Patient class would, in essence, capture the entirety of the dataset for thi
 
 \subsubsection{Designing and implementing field classes and the Value superclass}
 As previously mentioned, all fields must pass at least one validation rule before entering long term storage, either to the local database or MINAP's server. Although some fields shared similar validation rules, such as date fields needing a certain display format, the usage of a super class was minimized due to the volatility of the dataset itself. Due to this, our superclass, Value, only encapsulates variables that the team decided may not change as frequently as others; namely the field number within the dataset and the description of said field. These two values are used as tooltips on both the existing web application as well as our GUI. All field classes have been designed to be independent of each other.
-\\ \\
+
 Each class contains its own data validation rules. The MINAP dataset and sanity checks files provided by the client proved essential in deciding what data types to use for each field. Length check validations were handled by declaring a private short variable that would hold said length value. Date and time check validations were slightly trickier as they required the use of Date methods as well as importing the SimpleDateFormat library to better implement comparisons. Alphanumeric checks would need to be compared against regular expressions.
-\\ \\
+
 The getter methods would take an appropriate typed value as a parameter and return boolean true if said parameter passed the field's validation rules. An if statement was the most appropriate structure to check a parameter's value. Strings would need to clear regular expressions; Dates, Integers and Doubles have ranges they must fall within; to capture the drop down list or radio button behavior seen in the web application, classes with switch statements were implemented that both checked the selection for validity and set the fields "Long Code" variable to the appropriate value.
-\\ \\
+
 Setter methods, for reasons that will become clearer in the next session, would return the data necessary as a String in the needed display format.
 
 \subsubsection{Designing and implementing the DB}
 The SQLite database used in this project uses no third party libraries. It was clear that the less dependencies present in our code, the easier it may be to fully implement the dataset and network capabilities further down the road. As this approach was chosen, the implementation of the database was more time consuming than expected. The final result, however, was well worth it.
-\\  \\
+
 The database itself consists of only one table, one record long. The DBAdapter class starts by declaring the field names to be used, each logical "page" declaration finished by declaring an array of strings that can hold all column names to a particular page. The concatenateArrays method can then declare a larger array that will hold all columns that were previously declared, this method can and indeed is, then be used when a SELECT * statement needs to be used on the database. The database is then created by assigning it a name and a tag that will be used when updating the schema. After assigning the table a name, a String is declared that holds the SQL statement to create the database.
-\\ \\
+
 All of the database logic is held from the declaration of the DatabaseHelper class down. Methods to open and close the database are followed by methods that insert information to a set page, updating information in said pages. Special attention must be given to the insertPatient method as it represents the Patient Info page on the UI and is the only way to actually insert one more record onto the database. The DBAdapter class ends with the implementation of a method that will, due to the restriction of one record per session, destroy all data; and a method that will select all data from the record.
-\\ \\
+
 The columns on our patient table have all been set to be Text. This decision facilitates writing from the field classes getter methods without having to worry about server format compatibility. This decision, as well as the decision to only hold one record, can be easily expanded and corrected if necessary.
+
+\newpage
+\section{Testing \& Analytics}
 
 \newpage
 \section{Application Limitations}
 While this application does fulfil our client's requests, it is far from a finished product that could be implemented in the workplace. In order to provide a complete solution, our application would need to implement all missing fields from the dataset. These fields would then need to be reflected on the UI. However, the most obvious limitation of our solution is, without a doubt, the lack of network connectivity.
-\\ \\
+
 Our main priority during the second half of this project was to produce something tangible. To have something that our client could hold in her hands and, not to put it lightly, play with. To that end, and with her consent, networking research was put on the back burner in favour of delivering a functioning application.
-\\ \\
-Still the need for a further study onto the networking technologies used at MINAP was necessary. If not for our project, for future hands to grapple with.
+
+Still, the need for a further study onto the networking technologies used at MINAP was necessary. If not for our project, for future hands to grapple with.
+
+\newpage
+\section{Client Feedback}
+
+\newpage
+\section{User Feedback} 
+
 \newpage
 \section{Future Plans}
 \subsection{Use of XML/Portable Data Files}
@@ -176,30 +188,55 @@ The application rules are currently defined by a series of data fields stored ac
 \newpage
 \section{Teamwork}
 \subsection{Team Roles}
-Team roles were assigned based on the recommended list provided in the GC01 document requirements.
-\begin{center}
-    \begin{tabular}{ | l | l | p{5.4cm} |}
+Team roles were initially assigned based on the recommended list provided in the GC01 document requirements. These team roles were useful as a set of guidelines leading up to the first project milestone, but we quickly found that the assignment of multiple formal roles to team members was unrealistic for such a fast-paced project with team members at various skill levels. This meant that roles previously assigned to team members were not always reflective of their current work package, as the rest of the team pitched in to complete critical unfinished packages. As such, only the roles which the team member was most active in are tabulated below:
+\\ \\
+\begin{table}[h]
+\centering
+    \begin{tabular}{ | p{5cm} | p{5.4cm} |}
     \hline
-    Name & Primary Role & Secondary Role \\ \hline
-    Marco \textbf{David} Corrales & Secondary Team Lead & Primary Developer \\&& Background Researcher \\&& UI Designer \\ \hline
-     Amer \textbf{Kamil} Zainal & Primary Team Lead & Technology Researcher \\&& Software Tester \\&& Systems Designer \& Analyst \\&& Documentation Lead \\ \hline
-     \textbf{Ke} Wei & Client Main Contact & Secondary Developer \\&& Data Designer \\&& Device \& Deployment Tester \\ \hline
+    Name & Active Roles \\ \hline
+    Marco \textbf{David} Corrales \newline (Secondary Team Lead) & Secondary Developer \newline Data/Database Designer \newline \\ \hline
+     Amer \textbf{Kamil} Zainal \newline (Primary Team Lead)  & Primary Developer \newline Systems Designer \& Analyst \newline Documentation Lead \newline \\ \hline
+     \textbf{Ke} Wei & Networking Researcher \newline \\ \hline
     \end{tabular}
-\end{center}
+    \caption{Team Member Active Roles}
+    \end{table}
 
+\newpage
 \subsection{Teamwork Commentary}
 \subsubsection{Team Workflow}
-\href{https://trello.com}{Trello}\footnote{Information disclosed on Trello are private to the team} has been used extensively by the team for information organisation. Agendas for the next meeting are decided at the end of each meeting, with unfinished items of the day deferred; ensuring that each agenda is a summary of what was achieved at each meeting. To supplement this, any details (e.g. comments, photos, resources) related to the meeting are included in a separate section with a corresponding date. 
+\paragraph{Trello} ~\\
+\href{https://trello.com}{Trello}\footnote{Information disclosed on Trello are private to the team} has been used extensively by the team for information organisation. Agendas for the next meeting are typically decided at the end of each meeting, with unfinished items of the day deferred; ensuring that each agenda is a summary of what was achieved at each meeting. To supplement this, any details (e.g. comments, photos, resources) related to the meeting are included in a separate section with a corresponding date. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.35]{img/trello.png}
+\caption{Snapshot of a board in the team's Trello}
+\end{figure}
+\\
+\newpage
+\paragraph{GitHub} ~\\
+To further consolidate our memory of team progress, David updated a \href{http://akz08.github.io/minap-mobile/}{blog} \\(http://akz08.github.io/minap-mobile/) on \href{http://pages.github.com/}{GitHub Pages} using \href{http://octopress.org/}{Octopress}, summarising our meeting outcomes up to our first academic milestone. Due to the public nature of blogs, we initially ensured to omit any client identifying information to avoid any potential privacy problems, however we later decided that this was unnecessarily restrictive. This openness of communication was also necessary for us to write about our design process for the HCI requirement of our blog. All of the blog posts created are tagged with the author's name for attribution.
 
-To further consolidate our memory of team progress, our primary developer has been updating a \href{http://akz08.github.io/minap-mobile/}{blog} (http://akz08.github.io/minap-mobile/) summarising our meeting outcomes. Due to the public nature of blogs, we have ensured to omit any client identifying information to avoid any potential privacy problems. The blog should however be understandable upon reading the entirety of this report.
+For source code collaboration, we used a private \href{https://github.com}{GitHub} repository which was worked on by all members of the team. GitHub's repository wiki functionality was used for collaboration of more long-form documentation (e.g. writing this report) and structured ordering of resources. Due to the varying experience levels with git, the team mostly made use of simple git branches for each person. A full copy of the git repository is included in the project source code submission for closer inspection, contributing to the large file size. 
 
-For code sharing, we currently use a private \href{https://github.com}{GitHub} repository which is worked on by all members of the team. GitHub's repository wiki functionality is used for collaboration of more long-form documentation (e.g. writing this report) and structured ordering of resources.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{img/github.png}
+\caption{Snapshot of the team's GitHub repository page}
+\end{figure}
+\paragraph{Flowdock} ~\\
+For a unified cross-platform communication service, and to avoid having to check both Trello and GitHub frequently, we also used \href{https://www.flowdock.com/}{FlowDock} extensively to easily track changes and keep each other updated. The service also allowed team members to control the level of notifications, to avoid a constant barrage of information (as well as work-life separation).
 
-To avoid having to check both services frequently, we also use \href{https://www.flowdock.com/}{FlowDock} to easily track changes on both GitHub and Trello.
+The service proved to be especially useful in tracking the progress of work packages, allowing other members to intervene if the pace of work was noticeably slower than expected. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{img/flowdock.png}
+\caption{Snapshot of the team's Flowdock activity}
+\end{figure}
 \subsubsection{Task Assignment}
-Team members typically select the work packages outlined at the end of each meeting, but assignment of tasks tend to gravitate towards the team roles previously tabulated. 
+Team members typically were assigned work packages by the team leader, based on their current capabilities. These tended to be general work outlines, and were negotiable in their scope. The decisions on work packages at any given time were strongly influenced by ongoing technology research, the current state of the overall system, and client feedback.
 \subsubsection{Meetings}
-The team typically meets every workday to complete work together. Some team members pick up work to be done on their own time to help meeting productivity.
+The team typically met every workday to complete work together up to the first academic milestone. Most meetings since then have been conducted informally online using Flowdock, with occasional in-person catch-up meetings. This structure was more suited to the team once working on the final product, as work by each member was mostly independent of each other. Snapshots of early team meetings can be found in ~\cref{sec:internal_meetings}. 
 
 \newpage
 \appendix
@@ -1575,5 +1612,5 @@ It was decided through client feedback that the survey flow logic could be repla
 
 \newpage
 \section{Internal Meetings and Documentation}
-
+\label{sec:internal_meetings}
 \end{document}
