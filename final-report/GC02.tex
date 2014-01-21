@@ -94,11 +94,43 @@ After taking these comments on board, we have more formally modelled the user's 
 
 \newpage
 \section{Software Design}
-\subsection{Class Diagrams}
-\subsection{Data Dictionary}
+\subsection{Systems Design}
+\subsection{Designing for Android}
+\subsection{Data Model \& Validation}
+In order to capture the functional requirements previously explained, three major steps were to be completed for the inner workings of the mobile application.
 
+\subsubsection{Designing the patient singleton}
+The Patient class would, in essence, capture the entirety of the dataset for this project. For security reasons, the team agreed with the client (5/12/13 Meeting) that the application should not hold more than one record per session. As such, the patient class was deemed fit to be designed as a Singleton. A call to a Patient object will return either an existent instance of the class or create one if such instance does not exist. Furthermore, the clone method of the Patient class has been overridden to throw a CloneNotSupported exception in order prevent stray clones from being created. All fields from the dataset are then declared as part of the patient class.
 
+\subsubsection{Designing and implementing field classes and the Value superclass}
+As previously mentioned, all fields must pass at least one validation rule before entering long term storage, either to the local database or MINAP's server. Although some fields shared similar validation rules, such as date fields needing a certain display format, the usage of a super class was minimized due to the volatility of the dataset itself. Due to this, our superclass, Value, only encapsulates variables that the team decided may not change as frequently as others; namely the field number within the dataset and the description of said field. These two values are used as tooltips on both the existing web application as well as our GUI. All field classes have been designed to be independent of each other.
+\\ \\
+Each class contains its own data validation rules. The MINAP dataset and sanity checks files provided by the client proved essential in deciding what data types to use for each field. Length check validations were handled by declaring a private short variable that would hold said length value. Date and time check validations were slightly trickier as they required the use of Date methods as well as importing the SimpleDateFormat library to better implement comparisons. Alphanumeric checks would need to be compared against regular expressions.
+\\ \\
+The getter methods would take an appropriate typed value as a parameter and return boolean true if said parameter passed the field's validation rules. An if statement was the most appropriate structure to check a parameter's value. Strings would need to clear regular expressions; Dates, Integers and Doubles have ranges they must fall within; to capture the drop down list or radio button behavior seen in the web application, classes with switch statements were implemented that both checked the selection for validity and set the fields "Long Code" variable to the appropriate value.
+\\ \\
+Setter methods, for reasons that will become clearer in the next session, would return the data necessary as a String in the needed display format.
 
+\subsubsection{Designing and implementing the DB}
+The SQLite database used in this project uses no third party libraries. It was clear that the less dependencies present in our code, the easier it may be to fully implement the dataset and network capabilities further down the road. As this approach was chosen, the implementation of the database was more time consuming than expected. The final result, however, was well worth it.
+\\  \\
+The database itself consists of only one table, one record long. The DBAdapter class starts by declaring the field names to be used, each logical "page" declaration finished by declaring an array of strings that can hold all column names to a particular page. The concatenateArrays method can then declare a larger array that will hold all columns that were previously declared, this method can and indeed is, then be used when a SELECT * statement needs to be used on the database. The database is then created by assigning it a name and a tag that will be used when updating the schema. After assigning the table a name, a String is declared that holds the SQL statement to create the database.
+\\ \\
+All of the database logic is held from the declaration of the DatabaseHelper class down. Methods to open and close the database are followed by methods that insert information to a set page, updating information in said pages. Special attention must be given to the insertPatient method as it represents the Patient Info page on the UI and is the only way to actually insert one more record onto the database. The DBAdapter class ends with the implementation of a method that will, due to the restriction of one record per session, destroy all data; and a method that will select all data from the record.
+\\ \\
+The columns on our patient table have all been set to be Text. This decision facilitates writing from the field classes getter methods without having to worry about server format compatibility. This decision, as well as the decision to only hold one record, can be easily expanded and corrected if necessary.
+
+\newpage
+\section{Application Limitations}
+While this application does fulfil our client's requests, it is far from a finished product that could be implemented in the workplace. In order to provide a complete solution, our application would need to implement all missing fields from the dataset. These fields would then need to be reflected on the UI. However, the most obvious limitation of our solution is, without a doubt, the lack of network connectivity.
+\\ \\
+Our main priority during the second half of this project was to produce something tangible. To have something that our client could hold in her hands and, not to put it lightly, play with. To that end, and with her consent, networking research was put on the back burner in favour of delivering a functioning application.
+\\ \\
+Still the need for a further study onto the networking technologies used at MINAP was necessary. If not for our project, for future hands to grapple with.
+\newpage
+\section{Future Plans}
+\subsection{Use of XML/Portable Data Files}
+The application rules are currently defined by a series of data fields stored across two excel spreadsheets. From what we understand (20/11/13 Meeting), these rules are implemented in client-side Javascript for the current web app. Ideally, these rules would need to be stored in a standard machine-readable format which can be easily translated to validation code in any programming language.
 
 \newpage
 \section{Project Management}
