@@ -1,6 +1,8 @@
 /** Field 3.06 - Admission Date
  * Takes in a Date object that represents this patient's date of admission
  * aDate must be before or on the current date. Date format must be dd/mm/yyyy
+ * 
+ * Cannot be empty. Must be checked when exiting the field
  * @param bDate
  * @author david
  */

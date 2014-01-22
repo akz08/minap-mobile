@@ -1,3 +1,6 @@
+/**
+ * Must be checked when changed as part of sanity checks
+ */
 package com.ucl.appteam7.minapmobile.model.values.Examinations;
 
 import com.ucl.appteam7.minapmobile.model.Value;
@@ -10,7 +13,7 @@ public class Weight extends Value {
 	}
 		// check if valid entry
 	public static boolean setWeight (double w){
-		if (0.00<=w && w<=999.99){
+		if (30.00<=w && w<=180.00){
 			weight = w;
 			return true;
 		}

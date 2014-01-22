@@ -1,6 +1,8 @@
  /** Field 4.15 - Local Intervention Date
  * Takes in a Date object that represents this patient's date of local intervention
  * rDate must be a valid date displayed in dd/mm/yyyy format.
+ * This field empties Field 4.18 Angio Date/Time when changed.
+ * If invalid, this field is blank.
  * @param iDate
  * @author david
  */

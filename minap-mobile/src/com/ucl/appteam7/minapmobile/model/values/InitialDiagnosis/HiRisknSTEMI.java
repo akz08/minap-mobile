@@ -5,6 +5,7 @@
  * 0 - No
  * 1 - Yes
  * 9 - Unknown. 
+ * This field has no sanity checks associated with it
  * @param hiNSTEMI
  * @author david
  */

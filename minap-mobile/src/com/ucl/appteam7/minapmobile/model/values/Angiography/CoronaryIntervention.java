@@ -1,10 +1,12 @@
+/* This field is not checked as a part of sanity checks */
+
 package com.ucl.appteam7.minapmobile.model.values.Angiography;
 
 import com.ucl.appteam7.minapmobile.model.Value;
 
 public class CoronaryIntervention extends Value {
-	private static byte coronaryIntervention;
-	private static String coronaryInterventionLongCode;
+	private static byte coronaryIntervention = 8;
+	private static String coronaryInterventionLongCode = "Not performed or arranged";
 	public CoronaryIntervention() {	
 		super("4.14", "Coronary intervention during this episode performed either in your hospital or by referral to another hospital. "
 				+ "Do not use for primary PCI or rescue which are covered by 3.39 and 3.40.",

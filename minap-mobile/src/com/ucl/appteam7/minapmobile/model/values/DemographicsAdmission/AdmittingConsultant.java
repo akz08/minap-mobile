@@ -5,6 +5,7 @@
  * 1 - Other General Physician
  * 9 - Other
  * 99 - Unknown
+ * This field is not checked as part of sanity checks
  * @param admConsul
  * @author david
  */

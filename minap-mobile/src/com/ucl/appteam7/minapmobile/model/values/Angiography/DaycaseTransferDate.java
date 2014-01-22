@@ -1,6 +1,7 @@
 /** Field 4.17 - Daycase Transfer
  * Takes in a Date object that represents this patient's date of daycase transfer
  * rDate must be a valid date displayed in dd/mm/yyyy format.
+ * This field is checked when changed.
  * @param dDate
  * @author david
  */

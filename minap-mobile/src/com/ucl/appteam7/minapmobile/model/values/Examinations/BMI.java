@@ -1,5 +1,5 @@
 /** No field number - BMI
- * 
+ * Must be checked (recalculated) when either Height (2.29) or Weight (2.30) are changed 
  * @param height, weight - must come from respective java classes
  * @author david
  */

@@ -8,6 +8,7 @@
  * 5 - Repatriation after coronary intervention
  * 6 - Other
  * 9 - Unknown
+ * If admissionMethod != 4, Referral Hospital (4.21) must be blank. Checked when exiting field.
  * @param admMethod
  * @author david
  */

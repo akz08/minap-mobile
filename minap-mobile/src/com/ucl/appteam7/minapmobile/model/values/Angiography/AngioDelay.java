@@ -1,3 +1,6 @@
+/**
+ * This field is not a part of sanity checks
+ */
 package com.ucl.appteam7.minapmobile.model.values.Angiography;
 
 import com.ucl.appteam7.minapmobile.model.Value;

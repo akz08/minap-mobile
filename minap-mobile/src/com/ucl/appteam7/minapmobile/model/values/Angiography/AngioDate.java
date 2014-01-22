@@ -1,6 +1,7 @@
  /** Field 4.18 - Angiography Date
  * Takes in a Date object that represents this patient's angiography date
  * rDate must be a valid date displayed in dd/mm/yyyy format.
+ * This field is checked when focus is lost. Defaults to blank if invalid
  * @param aDate
  * @author david
  */

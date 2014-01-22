@@ -1,3 +1,7 @@
+/**
+ * If Initial Reperfusion (3.39) = 1, 2 or 3, ECG Determine Treatment cannot be 0, 1 or 2
+ * Must be checked when exiting field
+ */
 package com.ucl.appteam7.minapmobile.model.values.InitialReperfusion;
 
 import com.ucl.appteam7.minapmobile.model.Value;

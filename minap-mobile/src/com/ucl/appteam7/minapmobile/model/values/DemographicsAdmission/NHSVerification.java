@@ -9,6 +9,7 @@
  * 6 - Trace in progress
  * 7 - Number not present and trace not required
  * 8 - Trace postponed (baby under six weeks old)
+ * This field is not checked as part of sanity checks
  * @param verif
  * @author david
  */

@@ -5,6 +5,7 @@
  * 2 - Private
  * 3 - Amenity
  * 9 - Unknown
+ * This field has no sanity checks associated with it, save for the default value
  * @param admStatus
  * @author david
  */

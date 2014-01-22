@@ -1,6 +1,8 @@
- /** Field 4.26 - Angiography Date
+ /** Field 4.26 - Referring Hospital Return Date
  * Takes in a Date object that represents this patient's angiography date
  * rDate must be a valid date displayed in dd/mm/yyyy format.
+ * This field is checked whenever it is changed.
+ * If invalid, it should be emptied.
  * @param rhrDate
  * @author david
  */

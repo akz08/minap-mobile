@@ -1,3 +1,6 @@
+/**
+ * Must be checked when changed as part of sanity checks
+ */
 package com.ucl.appteam7.minapmobile.model.values.Examinations;
 
 import com.ucl.appteam7.minapmobile.model.Value;
@@ -10,7 +13,7 @@ public class Height extends Value {
 	}
 		// check if valid entry
 	public static boolean setHeight (double h){
-		if (0.00<=h && h<=999.99){
+		if (140.00<=h && h<=220.00){
 			height = h;
 			return true;
 		}

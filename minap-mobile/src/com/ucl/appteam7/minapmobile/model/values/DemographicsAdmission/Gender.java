@@ -5,6 +5,7 @@
  * 1 - Male
  * 2 - Female
  * 9 - Not Specified
+ * This field is not checked as part of sanity checks
  * @param gen
  * @author david  
  */

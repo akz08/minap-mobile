@@ -1,6 +1,7 @@
 /** Field 1.10 - Patient post code
  * Takes in an alphanumeric string that represents a patient's post code.
  * pCode must be 8 characters long. This field is encrypted.
+ * Checked when exiting field as part of sanity checks. Must be either fixed or left blank.
  * @param pCode
  * @author david
  */

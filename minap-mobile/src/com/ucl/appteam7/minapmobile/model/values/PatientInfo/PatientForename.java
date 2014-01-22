@@ -1,6 +1,9 @@
 /** Field 1.05 - Patient forename
  * Takes in an alphanumeric string that represents a patient's forename(s).
  * fName must be no more than 35 characters long. This field is encrypted
+ * 
+ * This field has no sanity checks associated with it
+ * It must be checked when exiting the field
  * @param fName
  * @author david
  */

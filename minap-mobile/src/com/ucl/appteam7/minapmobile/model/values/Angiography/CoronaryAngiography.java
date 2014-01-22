@@ -1,3 +1,8 @@
+/**
+ * if coronaryAngiography = 1 or 2:  
+ * show angio date/time (4.18), show date first intervention (4.19), show interventional centre (4.20) , show coronary intervention (4.14), 
+ * hide transfer date (4.17), hide return date (4.26)
+ */
 package com.ucl.appteam7.minapmobile.model.values.Angiography;
 
 import com.ucl.appteam7.minapmobile.model.Value;

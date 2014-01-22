@@ -1,6 +1,9 @@
 /** Field 1.03 - NHS Number
  * Takes in a numeric string that represents a patient's NHS Number.
  * nhsNum must be 10 digits long. This field is encrypted
+ * 
+ * This field has no sanity checks associated with it.
+ * It must be checked when saving the page
  * @param sName
  * @author david
  */

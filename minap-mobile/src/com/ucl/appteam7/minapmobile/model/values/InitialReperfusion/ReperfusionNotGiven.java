@@ -1,3 +1,7 @@
+/**
+ * If Initial Diagnosis (2.01) = 1 and Initial Reperfusion = 0, Default value = 1
+ * Must be checked when exiting field
+ */
 package com.ucl.appteam7.minapmobile.model.values.InitialReperfusion;
 
 import com.ucl.appteam7.minapmobile.model.Value;

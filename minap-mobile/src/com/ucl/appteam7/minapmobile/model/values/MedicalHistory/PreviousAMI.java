@@ -1,3 +1,12 @@
+/**
+ * If Previous PCI (2.18) = 1 and Previous Angina (2.06) = 0 and Previous AMI = 0, throw warning.
+ * You have said the patient has no history of coronary disease but had a previous intervention - please check these values.
+ *   
+ * If Previous CABG (2.19) = 1 and Previous Angina = 0 (2.06) and Previous AMI = 0, throw warning.
+ * You have said the patient has no history of coronary disease but had a previous CABG - please check these values.
+ * Must be checked when exiting field
+ */
+
 package com.ucl.appteam7.minapmobile.model.values.MedicalHistory;
 
 import com.ucl.appteam7.minapmobile.model.Value;

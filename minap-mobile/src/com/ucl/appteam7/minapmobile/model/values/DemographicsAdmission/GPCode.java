@@ -1,6 +1,7 @@
 /** Field 1.11 - GP / PCT Code
  * Takes a String that represents the patient's GP/PCT's code.
  * gpctCode must be 6 characters long. This field is encrypted.
+ * Checked when focus is lost as part of sanity checks
  * @param gpctCode 
  * @author david
  */

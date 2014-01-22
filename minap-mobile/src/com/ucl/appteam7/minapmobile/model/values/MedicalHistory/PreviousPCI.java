@@ -1,3 +1,9 @@
+/**
+ * If Previous PCI = 1 and Previous Angina = 0 and Previous AMI = 0, throw warning.
+ * You have said the patient has no history of coronary disease but had a previous intervention - please check these values.
+ * Must be checked when exiting field.
+ */
+
 package com.ucl.appteam7.minapmobile.model.values.MedicalHistory;
 
 import com.ucl.appteam7.minapmobile.model.Value;

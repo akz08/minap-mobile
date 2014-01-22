@@ -2,6 +2,7 @@
  * Takes in a Date object that represents the date a patients returns to a DGH after transfer to an interventional center.
  * This field becomes visible if Admission After STEMI is set to true
  * Must be displayed in dd/mm/yyyy format.
+ * Must be checked when changed per sanity checks. Changed to blank if invalid.
  * @param returnDate
  * @author david
  */

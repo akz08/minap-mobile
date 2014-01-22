@@ -8,6 +8,7 @@
  * 3 - Patient preference
  * 8 - Other
  * 9 - Unknown
+ * This field has no sanity checks associated with it
  * @param interHosProcedure
  * @author david
  */
