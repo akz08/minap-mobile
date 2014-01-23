@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,6 +27,8 @@ import com.ucl.appteam7.minapmobile.views.NavigationMapView;
 
 public class NavigationMapFragment extends Fragment {
 	private static final String CHECKPOINT_NAVIGATION_MAP = "Navigation Map"; 
+	
+	private static final String DIALOG_NEW_PATIENT = "new patient";
 	
 	private NavigationMapView view;
 	
@@ -132,6 +135,12 @@ public class NavigationMapFragment extends Fragment {
 		case R.id.menu_item_save_all:
 			//TODO: save all pages to server
 			Toast.makeText(getActivity(), R.string.saving_all, Toast.LENGTH_SHORT).show();
+			return true;
+		case R.id.menu_item_new_patient:
+			// Open create new patient dialog
+			FragmentManager fm = getActivity().getSupportFragmentManager();
+			CreateNewPatientDialogFragment dialog = new CreateNewPatientDialogFragment();
+			dialog.show(fm, DIALOG_NEW_PATIENT);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/menu_item_new_patient"
+        android:icon="@drawable/ic_action_add_person"
+        android:title="@string/new_patient"
+        android:showAsAction="ifRoom|withText" />
+    
     <item android:id="@+id/menu_item_save_all"
         android:icon="@drawable/ic_action_save"
         android:title="@string/save_all"
         android:showAsAction="ifRoom|withText" />
+    
+
 </menu>

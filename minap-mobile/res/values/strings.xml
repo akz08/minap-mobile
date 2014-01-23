@@ -336,6 +336,10 @@ Objectively innovate empowered manufactured products whereas parallel platforms.
     
     <string name="title_navigation_map">Navigation Map</string>
     
+    <string name="new_patient">New patient</string>
+    <string name="new_patient_label">Are you sure you want to create a new patient record?</string>
+    <string name="new_patient_confirm_text">You won\'t be able to modify the current patient record, and all unsaved data will be lost. Are you sure you want to do this?</string>
+    <string name="new_patient_created">New patient record created</string>
     <string name="save_all">Save all</string>
     <string name="save">Save</string>
     <string name="saving">Saved</string>
