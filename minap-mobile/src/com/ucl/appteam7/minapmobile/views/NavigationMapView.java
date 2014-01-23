@@ -42,6 +42,20 @@ public class NavigationMapView extends ImageView {
     private Rect rectExaminations = new Rect();
     private Rect rectMedicalHistory = new Rect();
 	
+    long timeDown = 0;
+    boolean insideBox = false;
+    PageBox initialTouchPage;
+    
+    public enum PageBox {
+    	INITIAL_DIAGNOSIS,
+    	DEMOGRAPHICS,
+    	PREHOSPITAL,
+    	REPERFUSION,
+    	ANGIOGRAPHY,
+    	EXAMINATIONS,
+    	MEDICAL_HISTORY,
+    	OTHER
+    }
     
 	public NavigationMapView(Context context) {
 		super(context);
@@ -187,23 +201,47 @@ public class NavigationMapView extends ImageView {
   
 	}
 
-//	@Override 
-//	public boolean onTouchEvent(MotionEvent event) {
-//		float x = event.getX();
-//		float y = event.getY();
-//		
-//		switch (event.getAction()) {
-//		case MotionEvent.ACTION_DOWN:
-//			Log.d("touch", "one finger down");
-//			break;
-//		case MotionEvent.ACTION_POINTER_UP:
-//			if (event.getPointerCount() == 1) {
-//				Log.d("touch", "one finger up");
-//			}
-//			break;
-//		}
-//		
-//		return true;
-//	}
+	@Override 
+	public boolean onTouchEvent(MotionEvent event) {
+		float x = event.getX();
+		float y = event.getY();
+		// get single touch events
+		if (event.getPointerCount() == 1) {
+			switch (event.getAction()) {
+			case MotionEvent.ACTION_DOWN:
+				Log.d("touch", "one finger down");
+				timeDown = System.currentTimeMillis();
+				
+				// check if inside a bounding box rect
+				if (x > rectInitialDiagnosis.left && x < rectInitialDiagnosis.right &&
+						y > rectInitialDiagnosis.top && y < rectInitialDiagnosis.bottom ) {
+					initialTouchPage = PageBox.INITIAL_DIAGNOSIS;
+				} else {
+					initialTouchPage = PageBox.OTHER;
+					
+				}
+				break;
+			case MotionEvent.ACTION_UP:
+				if (event.getPointerCount() == 1) {
+					long elapsed =System.currentTimeMillis() - timeDown;
+					Log.d("touch", "one finger up, and " + Long.toString(elapsed));
+					if (x > rectInitialDiagnosis.left && x < rectInitialDiagnosis.right &&
+							y > rectInitialDiagnosis.top && y < rectInitialDiagnosis.bottom) {
+						if (initialTouchPage == PageBox.INITIAL_DIAGNOSIS) {
+							Log.d("touch", "touched and let go in initial diagnosis");
+						} else {
+							initialTouchPage = PageBox.OTHER;
+							
+						}
+					}
+				}
+				break;
+			}
+		}
+		
+		
+		
+		return true;
+	}
 	
 }

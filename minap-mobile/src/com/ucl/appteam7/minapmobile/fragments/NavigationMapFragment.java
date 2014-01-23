@@ -35,20 +35,18 @@ public class NavigationMapFragment extends Fragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-		FrameLayout view = new FrameLayout(getActivity());
+//		FrameLayout view = new FrameLayout(getActivity());
 
-		FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.TOP | Gravity.LEFT);
+//		FrameLayout.LayoutParams fp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.TOP | Gravity.LEFT);
 		
 		
-		ImageView mapView = new NavigationMapView(getActivity());
-//		ImageView mapView = new ImageView(getActivity());
-//		mapView.setImageResource(R.drawable.sunflower);
-		mapView.setAdjustViewBounds(true);
-		mapView.setScaleType(ImageView.ScaleType.FIT_XY);
-		view.addView(mapView, fp);
-		view.setOnTouchListener(new PanAndZoomListener(view, mapView, Anchor.TOPLEFT));
+//		ImageView mapView = new NavigationMapView(getActivity());
+//		mapView.setAdjustViewBounds(true);
+//		mapView.setScaleType(ImageView.ScaleType.FIT_XY);
+//		view.addView(mapView, fp);
+//		view.setOnTouchListener(new PanAndZoomListener(view, mapView, Anchor.TOPLEFT));
 
-		return view;
+		return new NavigationMapView(getActivity());
 	}
 	
 	@Override
