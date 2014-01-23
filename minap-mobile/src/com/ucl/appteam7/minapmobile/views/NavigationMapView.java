@@ -1,6 +1,8 @@
 
 package com.ucl.appteam7.minapmobile.views;
 
+import com.ucl.appteam7.minapmobile.views.ExaminationsView.ViewListener;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -41,9 +43,17 @@ public class NavigationMapView extends ImageView {
     private Rect rectAngiography  = new Rect();
     private Rect rectExaminations = new Rect();
     private Rect rectMedicalHistory = new Rect();
+    
+    private boolean onInitialDiagnosis = false;
+    private boolean onDemographics = false;
+    private boolean onPrehospital = false;
+    private boolean onReperfusion = false;
+    private boolean onAngiography = false;
+    private boolean onExaminations = false;
+    private boolean onMedicalHistory = false;
 	
-    long timeDown = 0;
-    boolean insideBox = false;
+//    long timeDown = 0;
+//    boolean insideBox = false;
     PageBox initialTouchPage;
     
     public enum PageBox {
@@ -56,6 +66,25 @@ public class NavigationMapView extends ImageView {
     	MEDICAL_HISTORY,
     	OTHER
     }
+    
+	// Define methods that the fragment needs to implement
+	public static interface ViewListener {
+		
+		// open pages
+		public void gotoInitialDiagnosis();
+		public void gotoDemographics();
+		public void gotoPrehospital();
+		public void gotoReperfusion();
+		public void gotoAngiography();
+		public void gotoExaminations();
+		public void gotoMedicalHistory();
+	}
+	
+	// Set up view listener
+	private ViewListener viewListener;
+	public void setViewListener(ViewListener viewListener) {
+		this.viewListener = viewListener;
+	}
     
 	public NavigationMapView(Context context) {
 		super(context);
@@ -156,15 +185,51 @@ public class NavigationMapView extends ImageView {
         rectMedicalHistory.set(x2LevelArray[1] - radius, y4LevelArray[3] - radius, x2LevelArray[1] + radius, y4LevelArray[3] + radius);
         
         // draw the item boxes
+        // currently using a rather inefficient way of changing the fill of the boxes (should replace LinearGradient with GradientDrawable for object reuse & reduce repetition)
+        if (onInitialDiagnosis) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectInitialDiagnosis, paint);
         
+        if (onDemographics) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectDemographics, paint);
+        if (onPrehospital) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectPrehospital, paint);
         
+        if (onReperfusion) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectReperfusion, paint);
+        if (onAngiography) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectAngiography, paint);
         
+        if (onExaminations) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectExaminations, paint);
+        if (onMedicalHistory) {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxDarkColor), Color.parseColor(boxLightColor), Shader.TileMode.REPEAT));
+        } else {
+        	paint.setShader(new LinearGradient(0, 0, 0, height/4, Color.parseColor(boxLightColor), Color.parseColor(boxDarkColor), Shader.TileMode.REPEAT));
+        }
         canvas.drawRect(rectMedicalHistory, paint);
         
         // reset shader
@@ -209,30 +274,117 @@ public class NavigationMapView extends ImageView {
 		if (event.getPointerCount() == 1) {
 			switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
-				Log.d("touch", "one finger down");
-				timeDown = System.currentTimeMillis();
+//				Log.d("touch", "one finger down");
+//				timeDown = System.currentTimeMillis();
 				
-				// check if inside a bounding box rect
+				// check if inside a bounding box Rect
 				if (x > rectInitialDiagnosis.left && x < rectInitialDiagnosis.right &&
 						y > rectInitialDiagnosis.top && y < rectInitialDiagnosis.bottom ) {
 					initialTouchPage = PageBox.INITIAL_DIAGNOSIS;
+					onInitialDiagnosis = true;
+					
+				} else if (x > rectDemographics.left && x < rectDemographics.right &&
+						y > rectDemographics.top && y < rectDemographics.bottom ) {
+					initialTouchPage = PageBox.DEMOGRAPHICS;
+					onDemographics = true;
+
+					
+				} else if (x > rectPrehospital.left && x < rectPrehospital.right &&
+						y > rectPrehospital.top && y < rectPrehospital.bottom ) {
+					initialTouchPage = PageBox.PREHOSPITAL;
+					onPrehospital = true;
+					
+				} else if (x > rectReperfusion.left && x < rectReperfusion.right &&
+						y > rectReperfusion.top && y < rectReperfusion.bottom ) {
+					initialTouchPage = PageBox.REPERFUSION;
+					onReperfusion = true;
+					
+					
+				} else if (x > rectAngiography.left && x < rectAngiography.right &&
+						y > rectAngiography.top && y < rectAngiography.bottom ) {
+					initialTouchPage = PageBox.ANGIOGRAPHY;
+					onAngiography = true;
+					
+					
+				} else if (x > rectExaminations.left && x < rectExaminations.right &&
+						y > rectExaminations.top && y < rectExaminations.bottom ) {
+					initialTouchPage = PageBox.EXAMINATIONS;
+					onExaminations = true;
+					
+					
+				} else if (x > rectMedicalHistory.left && x < rectMedicalHistory.right &&
+						y > rectMedicalHistory.top && y < rectMedicalHistory.bottom ) {
+					initialTouchPage = PageBox.MEDICAL_HISTORY;
+					onMedicalHistory = true;
+					
+					
 				} else {
+					
 					initialTouchPage = PageBox.OTHER;
 					
 				}
+				invalidate();
 				break;
 			case MotionEvent.ACTION_UP:
 				if (event.getPointerCount() == 1) {
-					long elapsed =System.currentTimeMillis() - timeDown;
-					Log.d("touch", "one finger up, and " + Long.toString(elapsed));
+//					long elapsed =System.currentTimeMillis() - timeDown;
+//					Log.d("touch", "one finger up, and " + Long.toString(elapsed));
+					
+					setAllBoxesFalse();
+					invalidate();
+					
+					// check if touch started and ended in the same box, and also left within same box (probably overkill code...)
+					// if yes, go to that page
 					if (x > rectInitialDiagnosis.left && x < rectInitialDiagnosis.right &&
-							y > rectInitialDiagnosis.top && y < rectInitialDiagnosis.bottom) {
-						if (initialTouchPage == PageBox.INITIAL_DIAGNOSIS) {
-							Log.d("touch", "touched and let go in initial diagnosis");
-						} else {
-							initialTouchPage = PageBox.OTHER;
-							
-						}
+							y > rectInitialDiagnosis.top && y < rectInitialDiagnosis.bottom 
+							&& initialTouchPage == PageBox.INITIAL_DIAGNOSIS) {
+						// open initial diagnosis
+						viewListener.gotoInitialDiagnosis();
+						
+					} else if (x > rectDemographics.left && x < rectDemographics.right &&
+							y > rectDemographics.top && y < rectDemographics.bottom 
+							&& initialTouchPage == PageBox.DEMOGRAPHICS) {
+						// open demographics
+						viewListener.gotoDemographics();
+						
+					} else if (x > rectPrehospital.left && x < rectPrehospital.right &&
+							y > rectPrehospital.top && y < rectPrehospital.bottom 
+							&& initialTouchPage == PageBox.PREHOSPITAL) {
+						// open prehospital events
+						viewListener.gotoPrehospital();
+						
+					} else if (x > rectReperfusion.left && x < rectReperfusion.right &&
+							y > rectReperfusion.top && y < rectReperfusion.bottom 
+							&& initialTouchPage == PageBox.REPERFUSION) {
+						// open initial reperfusion
+						viewListener.gotoReperfusion();
+						
+						
+					} else if (x > rectAngiography.left && x < rectAngiography.right &&
+							y > rectAngiography.top && y < rectAngiography.bottom 
+							&& initialTouchPage == PageBox.ANGIOGRAPHY) {
+						// open angiography
+						viewListener.gotoAngiography();
+						
+						
+					} else if (x > rectExaminations.left && x < rectExaminations.right &&
+							y > rectExaminations.top && y < rectExaminations.bottom 
+							&& initialTouchPage == PageBox.EXAMINATIONS) {
+						// open examinations
+						viewListener.gotoExaminations();
+						
+						
+					} else if (x > rectMedicalHistory.left && x < rectMedicalHistory.right &&
+							y > rectMedicalHistory.top && y < rectMedicalHistory.bottom 
+							&& initialTouchPage == PageBox.MEDICAL_HISTORY) {
+						// open medical history
+						viewListener.gotoMedicalHistory();
+						
+						
+					} else {
+						
+						initialTouchPage = PageBox.OTHER;
+						
 					}
 				}
 				break;
@@ -244,4 +396,14 @@ public class NavigationMapView extends ImageView {
 		return true;
 	}
 	
+	// sets all box "on touch" booleans to false
+	private void setAllBoxesFalse() {
+	    onInitialDiagnosis = false;
+	    onDemographics = false;
+	    onPrehospital = false;
+	    onReperfusion = false;
+	    onAngiography = false;
+	    onExaminations = false;
+	    onMedicalHistory = false;
+	}
 }

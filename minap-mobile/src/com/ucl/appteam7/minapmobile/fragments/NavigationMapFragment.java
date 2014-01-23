@@ -1,28 +1,33 @@
 package com.ucl.appteam7.minapmobile.fragments;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.testflightapp.lib.TestFlight;
 import com.ucl.appteam7.minapmobile.R;
+import com.ucl.appteam7.minapmobile.activities.AngiographyActivity;
+import com.ucl.appteam7.minapmobile.activities.DemographicsAndAdmissionActivity;
+import com.ucl.appteam7.minapmobile.activities.ExaminationsActivity;
+import com.ucl.appteam7.minapmobile.activities.InitialDiagnosisActivity;
+import com.ucl.appteam7.minapmobile.activities.InitialReperfusionActivity;
+import com.ucl.appteam7.minapmobile.activities.MedicalHistoryActivity;
+import com.ucl.appteam7.minapmobile.activities.PrehospitalEventsActivity;
 import com.ucl.appteam7.minapmobile.views.NavigationMapView;
-import com.ucl.appteam7.minapmobile.views.PanAndZoomListener;
-import com.ucl.appteam7.minapmobile.views.PanAndZoomListener.Anchor;
 
 
 public class NavigationMapFragment extends Fragment {
 	private static final String CHECKPOINT_NAVIGATION_MAP = "Navigation Map"; 
+	
+	private NavigationMapView view;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -46,8 +51,62 @@ public class NavigationMapFragment extends Fragment {
 //		view.addView(mapView, fp);
 //		view.setOnTouchListener(new PanAndZoomListener(view, mapView, Anchor.TOPLEFT));
 
-		return new NavigationMapView(getActivity());
+		view = new NavigationMapView(getActivity());
+		view.setViewListener(viewListener);
+		
+		return view;
 	}
+	
+	private NavigationMapView.ViewListener viewListener = new NavigationMapView.ViewListener() {
+		
+		@Override
+		public void gotoReperfusion() {
+			Intent intent = new Intent(getActivity(), InitialReperfusionActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void gotoPrehospital() {
+			Intent intent = new Intent(getActivity(), PrehospitalEventsActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void gotoMedicalHistory() {
+			Intent intent = new Intent(getActivity(), MedicalHistoryActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void gotoInitialDiagnosis() {
+			Intent intent = new Intent(getActivity(), InitialDiagnosisActivity.class);
+			startActivity(intent);			
+		}
+		
+		@Override
+		public void gotoExaminations() {
+			Intent intent = new Intent(getActivity(), ExaminationsActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void gotoDemographics() {
+			Intent intent = new Intent(getActivity(), DemographicsAndAdmissionActivity.class);
+			startActivity(intent);
+			
+		}
+		
+		@Override
+		public void gotoAngiography() {
+			Intent intent = new Intent(getActivity(), AngiographyActivity.class);
+			startActivity(intent);
+			
+		}
+	};
 	
 	@Override
 	public void onSaveInstanceState(Bundle savedInstanceState) {
