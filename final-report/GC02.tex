@@ -28,7 +28,7 @@ The project's primary point of contact is Lucia Gavalova, Project Manager for th
 
 \newpage
 \section{Requirements}
-\textit{The following requirements have been formulated from a series of client meetings and e-mail communication, available in brief under Client Communication.}
+\textit{The following requirements have been formulated from a series of client meetings and e-mail communication, available in brief in ~\cref{sec:client}.}
 
 \subsection{Overview}
 Patient data record creation is currently restricted to when the nurses and other clinical audit staff are sitting in front of a computer. This would often be quite some time after a patient has been identified as being eligible for being entered into the MINAP dataset. A reduced-function mobile solution of the current web app was proposed by our client as a means of starting a patient record in MINAP's data set, allowing for prospective data collection. Completion of the record is expected to be done later on using the web app (using a full sized keyboard and screen).
@@ -70,6 +70,9 @@ Although we have reached an agreement that we will not actually need to touch th
 
 \newpage
 \section{Target Mobile Platform}
+\subsection{Client Preference}
+\subsection{Preliminary Research}
+\subsection{User Survey}
 THIS SECTION IS TO BE REWRITTEN
 \\ \\
 Our client has been unsure about the preferred target platform of the audience of our mobile app. To help better inform this decision, we have designed a user device survey which the client has agreed to running over the period of a few months, with a suggested completion date within 3 weeks of rolling out. The primary purpose of pushing out this survey is to better inform decisions of what secondary platforms should be supported to increase mobile app uptake by hospital staff. Despite this, due to the short time-frame imposed on us by GC01, we have mutually agreed to target Android mobile phones as the primary platform. More details regarding the device survey can be found in the Appendix.
@@ -78,13 +81,13 @@ THIS SECTION IS TO BE REWRITTEN
 
 \newpage
 \section{User Interface}
+\subsection{Preliminary UI Design}
 As part of ensuring our understanding of the requirements were in line with the client's expectations, we sketched out a preliminary user interface (UI) and presented our ideas to our client. The order in which each page was presented is indicated by red arrows. A summary of the key points relating to UI during our conversation are included below.
 
-\subsection{Initial User Interface Feedback}
+\subsubsection{Initial User Interface Feedback}
 Client response:
 \begin{itemize}
 	\item happy with proposal of similar design to web app
-	\item current (web app) record search criteria is non-specifiable (simple text match); this behaviour is sufficient for the mobile app
 	\item request for an application tutorial for "non-techie" users
 	\item navigation menu: a simplified version of the map could be used for mobile
 	\item an 'auto-save' feature would be useful ("like Microsoft Word") in case of battery loss, device breakage, or more pressing matters to attend to (i.e. emergency)
@@ -93,6 +96,9 @@ Client response:
 We have accepted the feedback from the client as being in line with our initial requirements. However, the request for an auto-save feature in the app would violate the privacy requirements of having volatile local data. A way to mitigate this would be to save the record to a 'draft' database when auto-saving (i.e. "submitting" a record without performing validation-on-send), but is a low-priority feature at this point.
 \subsubsection{UI Tweaking}
 After taking these comments on board, we have more formally modelled the user's flow of use through the app, mapping each UI element to Java's graphical implementation classes. It is worth noting that the UI is still in its initial stages, pending further adaptation for mobile use.
+
+\subsection{Android UI Design}
+Following the decision of designing for the Android platform,  ... more details on the design process can be found on the team's HCI blog.  General process and final product shown here with rationale to major design decisions.
 
 \newpage
 \section{Software Design}
@@ -124,6 +130,10 @@ The columns on our patient table have all been set to be Text. This decision fac
 
 \newpage
 \section{Testing \& Analytics}
+\subsection{Automated Testing}
+
+\subsection{Usage Analytics}
+Although our mobile app is unlikely to be used by actual end-users in the near future, simple usage analytics were 
 
 \newpage
 \section{Application Limitations}
@@ -137,9 +147,6 @@ Still, the need for a further study onto the networking technologies used at MIN
 \section{Client Feedback}
 
 \newpage
-\section{User Feedback} 
-
-\newpage
 \section{Future Plans}
 \subsection{Use of XML/Portable Data Files}
 The application rules are currently defined by a series of data fields stored across two excel spreadsheets. From what we understand (20/11/13 Meeting), these rules are implemented in client-side Javascript for the current web app. Ideally, these rules would need to be stored in a standard machine-readable format which can be easily translated to validation code in any programming language.
@@ -148,12 +155,12 @@ The application rules are currently defined by a series of data fields stored ac
 \section{Project Management}
 
 
-\subsubsection{Work Packages}
+\subsection{Work Packages}
 
 
 
 \begin{landscape}
-\subsubsection{Gantt Chart}
+\subsection{Gantt Chart}
 \begin{ganttchart}[
 	hgrid,
 	vgrid,
@@ -165,6 +172,7 @@ The application rules are currently defined by a series of data fields stored ac
 	\ganttgroup{InitialDevelopment}{2013-11-16}{2013-11-30} \\
 \end{ganttchart}
 
+\newpage
 
 \begin{ganttchart}[
 	hgrid,
@@ -172,15 +180,18 @@ The application rules are currently defined by a series of data fields stored ac
 	time slot format=isodate
 	]{2013-12-01}{2013-12-31}
 	\gantttitlecalendar{year, month=name, day} \\
+	\ganttmilestone{GC01 Milestone 2}{2013-12-20} \ganttnewline
 \end{ganttchart}
 
+\newpage
 
 \begin{ganttchart}[
 	hgrid,
 	vgrid,
 	time slot format=isodate
-	]{2014-01-01}{2014-01-25}
+	]{2014-01-01}{2014-01-28}
 	\gantttitlecalendar{year, month=name, day} \\
+	\ganttmilestone{GC02 Final Milestone}{2014-01-27} 
 \end{ganttchart}
 
 \end{landscape}
@@ -1450,6 +1461,7 @@ $<<$import$>>$ com.ucl.appteam7.minapmobile.model.Value	&  \\ \hline \hline
 
 \newpage
 \section{Client Communication}
+\label{sec:client}
 Our first contact with the client was on Monday 28th October, with a short meeting outlining the aims of the MINAP project the following day. We have had 3 meetings with the client and other members of MINAP/NICOR so far. All meetings have been recorded (audio) with the consent of those present. A brief summary of the people present and key talking points are outlined below.
 \subsection{Project Introduction \& Requirements (1/11/13)}
 \subsubsection{Meeting Agenda}

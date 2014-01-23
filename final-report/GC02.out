@@ -1,0 +1,65 @@
+\BOOKMARK [1][-]{section.1}{Background}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{MINAP/NICOR}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Web Application}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Client}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Requirements}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Overview}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Use Cases}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Functional Requirements}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{User Authentication and Security}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Data Collection}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Data Validation}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Data Submission}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Mobile Usability}{subsection.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.4}{Architectural Requirements}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Web Services}{subsection.2.4}% 15
+\BOOKMARK [1][-]{section.3}{Target Mobile Platform}{}% 16
+\BOOKMARK [2][-]{subsection.3.1}{Client Preference}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.2}{User Survey}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{User Interface}{}% 19
+\BOOKMARK [2][-]{subsection.4.1}{Preliminary UI Design}{section.4}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Initial User Interface Feedback}{subsection.4.1}% 21
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Commentary and Response}{subsection.4.1}% 22
+\BOOKMARK [3][-]{subsubsection.4.1.3}{UI Tweaking}{subsection.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Android UI Design}{section.4}% 24
+\BOOKMARK [1][-]{section.5}{Software Design}{}% 25
+\BOOKMARK [2][-]{subsection.5.1}{Systems Design}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{Designing for Android}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.3}{Data Model \046 Validation}{section.5}% 28
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Designing the patient singleton}{subsection.5.3}% 29
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Designing and implementing field classes and the Value superclass}{subsection.5.3}% 30
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Designing and implementing the DB}{subsection.5.3}% 31
+\BOOKMARK [1][-]{section.6}{Testing \046 Analytics}{}% 32
+\BOOKMARK [1][-]{section.7}{Application Limitations}{}% 33
+\BOOKMARK [1][-]{section.8}{Client Feedback}{}% 34
+\BOOKMARK [1][-]{section.9}{Future Plans}{}% 35
+\BOOKMARK [2][-]{subsection.9.1}{Use of XML/Portable Data Files}{section.9}% 36
+\BOOKMARK [1][-]{section.10}{Project Management}{}% 37
+\BOOKMARK [2][-]{subsection.10.1}{Work Packages}{section.10}% 38
+\BOOKMARK [2][-]{subsection.10.2}{Gantt Chart}{section.10}% 39
+\BOOKMARK [1][-]{section.11}{Teamwork}{}% 40
+\BOOKMARK [2][-]{subsection.11.1}{Team Roles}{section.11}% 41
+\BOOKMARK [2][-]{subsection.11.2}{Teamwork Commentary}{section.11}% 42
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Team Workflow}{subsection.11.2}% 43
+\BOOKMARK [3][-]{subsubsection.11.2.2}{Task Assignment}{subsection.11.2}% 44
+\BOOKMARK [3][-]{subsubsection.11.2.3}{Meetings}{subsection.11.2}% 45
+\BOOKMARK [1][-]{appendix.A}{Data Dictionary}{}% 46
+\BOOKMARK [2][-]{subsection.A.1}{Patient Class}{appendix.A}% 47
+\BOOKMARK [1][-]{appendix.B}{Client Communication}{}% 48
+\BOOKMARK [2][-]{subsection.B.1}{Project Introduction \046 Requirements \(1/11/13\)}{appendix.B}% 49
+\BOOKMARK [3][-]{subsubsection.B.1.1}{Meeting Agenda}{subsection.B.1}% 50
+\BOOKMARK [3][-]{subsubsection.B.1.2}{People Present}{subsection.B.1}% 51
+\BOOKMARK [3][-]{subsubsection.B.1.3}{Discussion}{subsection.B.1}% 52
+\BOOKMARK [3][-]{subsubsection.B.1.4}{Outcomes}{subsection.B.1}% 53
+\BOOKMARK [2][-]{subsection.B.2}{UI Feedback \(15/11/13\)}{appendix.B}% 54
+\BOOKMARK [3][-]{subsubsection.B.2.1}{Meeting Agenda}{subsection.B.2}% 55
+\BOOKMARK [3][-]{subsubsection.B.2.2}{People Present}{subsection.B.2}% 56
+\BOOKMARK [3][-]{subsubsection.B.2.3}{Discussion}{subsection.B.2}% 57
+\BOOKMARK [3][-]{subsubsection.B.2.4}{Outcomes}{subsection.B.2}% 58
+\BOOKMARK [2][-]{subsection.B.3}{Developer Session \(20/11/13\)}{appendix.B}% 59
+\BOOKMARK [3][-]{subsubsection.B.3.1}{Meeting Agenda}{subsection.B.3}% 60
+\BOOKMARK [3][-]{subsubsection.B.3.2}{People Present}{subsection.B.3}% 61
+\BOOKMARK [3][-]{subsubsection.B.3.3}{Discussion}{subsection.B.3}% 62
+\BOOKMARK [3][-]{subsubsection.B.3.4}{Outcomes}{subsection.B.3}% 63
+\BOOKMARK [2][-]{subsection.B.4}{Device Survey}{appendix.B}% 64
+\BOOKMARK [1][-]{appendix.C}{Internal Meetings and Documentation}{}% 65
