@@ -10,7 +10,9 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+// Analytics
 import com.testflightapp.lib.TestFlight;
+import com.crashlytics.android.Crashlytics;
 
 public class MinapMobile extends Application {
 	private static final String FIRST_RUN = "firstRun";
@@ -27,9 +29,11 @@ public class MinapMobile extends Application {
         // '0' means only this app can read the prefs (mode private)
         mPrefs = mContext.getSharedPreferences("minapAppPrefs", 0);
         
-        //Initialize TestFlight with the MINAP Mobile app token.
+        // Initialize TestFlight with the MINAP Mobile app token.
         TestFlight.takeOff(this, "58489a02-ee35-4ca4-881e-c25687252e1a");
         
+        // Initialise Crashlytics
+        Crashlytics.start(this);
     }
 	
 	public boolean getFirstRun() {

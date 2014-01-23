@@ -76,5 +76,8 @@
                   <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.NavigationMapActivity" />
     	</activity>
+    	
+    	 <meta-data android:name="com.crashlytics.ApiKey" android:value="d18dd25305c4d17bf2b6324f0bf1a7d331c74b5e"/>
+    	
     </application>
 </manifest>
