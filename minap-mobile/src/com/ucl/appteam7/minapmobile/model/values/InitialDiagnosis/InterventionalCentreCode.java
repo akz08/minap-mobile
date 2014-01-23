@@ -1,5 +1,6 @@
 /** Field 4.20 - Interventional Centre Code
  * Takes in 3 digit string that represents the Interventional Centre
+ * Field has no sanity checks associated with it. Values should come from drop-down list
  * @param iCode
  * @author david  
  */

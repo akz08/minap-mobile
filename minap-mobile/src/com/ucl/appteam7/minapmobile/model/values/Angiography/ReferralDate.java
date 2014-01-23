@@ -1,6 +1,10 @@
  /** Field 4.15 - Referral Date
  * Takes in a Date object that represents this patient's date of referral for investigation
  * rDate must be a valid date displayed in dd/mm/yyyy format.
+ * rTime must be a valid time displayed in HH:mm format.
+ * referDateTime will display dd/mm/yyyy HH:mm format
+ * This field must be checked when focus is lost or the page is saved.
+ * A failed check should result in emptying the field. Leaving it blank is allowed
  * @param rDate
  * @author david
  */

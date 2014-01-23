@@ -1,3 +1,6 @@
+/**
+ * Must be checked when changed as part of sanity checks
+ */
 package com.ucl.appteam7.minapmobile.model.values.Examinations;
 
 import com.ucl.appteam7.minapmobile.model.Value;
@@ -15,7 +18,7 @@ public class SystolicBP extends Value {
 	}
 		// check if valid entry
 	public static boolean setSystolicBP (double sBP){//2.20, n3, systolic blood pressure
-		if (0.00<=sBP && sBP<=999.99){
+		if (50.00<=sBP && sBP<=150.00){
 			systolicBP = sBP;
 			return true;
 		}

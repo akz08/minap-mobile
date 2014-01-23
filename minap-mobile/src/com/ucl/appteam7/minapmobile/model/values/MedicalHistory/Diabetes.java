@@ -1,3 +1,7 @@
+/**
+ * This field has no sanity checks associated with it
+ */
+
 package com.ucl.appteam7.minapmobile.model.values.MedicalHistory;
 
 import com.ucl.appteam7.minapmobile.model.Value;

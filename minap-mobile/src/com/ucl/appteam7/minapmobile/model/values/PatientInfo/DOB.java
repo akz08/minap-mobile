@@ -2,6 +2,8 @@
  * Takes in a Date object that represents this patient's date of birth
  * bDate must be within current date and the year 1880; must be displayed in dd/mm/yyyy format.
  * This field is encrypted.
+ * 
+ * Must be checked when saving the page
  * @param bDate
  */
 	

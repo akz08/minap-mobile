@@ -1,3 +1,6 @@
+/**
+ * Must be checked when changed per sanity checks
+ */
 package com.ucl.appteam7.minapmobile.model.values.Examinations;
 
 import com.ucl.appteam7.minapmobile.model.Value;
@@ -14,7 +17,7 @@ public class HeartRate extends Value {
 	}
 		// check if valid entry
 	public static boolean setHeartRate (double hRate){//2.21, n3,Heart rate
-		if (0.00<=hRate && hRate<=999.99){
+		if (30.00<=hRate && hRate<=180.00){
 			heartRate = hRate;
 			return true;
 		}

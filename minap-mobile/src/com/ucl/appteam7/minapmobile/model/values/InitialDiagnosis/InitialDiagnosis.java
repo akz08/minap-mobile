@@ -6,6 +6,7 @@
  * 4 - Chest pain? cause
  * 5 - Other Initial Diagnosis.
  * If option 3 (Acute Coronary Syndrome) is chosen, field 4.32 (High Risk nSTEMI) becomes visible
+ * if options 3, 4 or 5 are chosen, field 3.08 (Reason Treatment not Given) is set to 1	
  * @param iniDiagnosis
  * @author david  
  */

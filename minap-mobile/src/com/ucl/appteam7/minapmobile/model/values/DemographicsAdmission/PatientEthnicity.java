@@ -8,6 +8,7 @@
  * 6 - Not Stated
  * 8 - Other
  * 9 - Unknown
+ * This field is not checked as a part of sanity checks
  * @param ethnic
  * @author david
  */

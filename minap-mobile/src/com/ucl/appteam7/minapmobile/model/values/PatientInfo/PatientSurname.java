@@ -1,6 +1,9 @@
 /** Field 1.04 - Patient surname
  * Takes in an alphanumeric string that represents a patient's surname(s).
  * sName must be no more than 35 characters long. This field is encrypted
+ * 
+ * This field has no sanity checks associated with it.
+ * It must be checked when changed
  * @param sName
  * @author david
  */

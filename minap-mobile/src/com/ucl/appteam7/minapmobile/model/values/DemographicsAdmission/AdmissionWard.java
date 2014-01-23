@@ -10,6 +10,7 @@
  * 7 - Cardiac Ward (non CCU)
  * 8 - Stepdown Ward
  * 9 - Unknown
+ * This field is not checked as part of sanity checks
  * @param admWard
  * @author david
  */

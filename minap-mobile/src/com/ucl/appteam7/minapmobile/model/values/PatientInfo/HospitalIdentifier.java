@@ -1,5 +1,7 @@
 /** Field 1.01 - Hospital Identifier
  * Takes in 3 character String that represents the Hospital's Code
+ * 
+ * Cannot be empty. Must be checked when exiting the field or saving the page
  * @param hospId
  * @author david  
  */

@@ -1,6 +1,7 @@
 /** No Field Number - Admission After STEMI
  * Takes in a boolean value to represent admission after STEMI for this patient
  * If set to true, fields 4.29, 4.26 and Interventional Center become available
+ * This field has no sanity checks associated with it
  * @param admASTEMI
  * @author david
  */

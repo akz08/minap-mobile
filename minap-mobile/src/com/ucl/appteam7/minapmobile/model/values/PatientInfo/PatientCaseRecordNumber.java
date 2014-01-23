@@ -1,6 +1,8 @@
 /** Field 1.02 - Patient Case Record Number
  * Takes in an alphanumeric string that uniquely identifies this particular patient's data.
  * cNumber must be 10 characters long. This field is encrypted.
+ * 
+ * Cannot be empty. It must be checked when exiting the field.
  * @param cNumber
  * @author david
  */

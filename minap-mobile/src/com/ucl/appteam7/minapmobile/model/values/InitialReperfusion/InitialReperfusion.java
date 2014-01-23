@@ -1,3 +1,7 @@
+/**
+ * if Initial Reperfusion = 0, set Reason Treatment not Given (3.08) to 1
+ * Must be checked when exiting field
+ */
 package com.ucl.appteam7.minapmobile.model.values.InitialReperfusion;
 
 import com.ucl.appteam7.minapmobile.model.Value;

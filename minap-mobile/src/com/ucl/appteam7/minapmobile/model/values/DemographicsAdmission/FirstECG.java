@@ -5,6 +5,7 @@
  * 2 - In Hospital
  * 3 - Other Healthcare Facility
  * 9 - Unknown
+ * This field is not checked as part of sanity checks
  * @param fECG
  */
 

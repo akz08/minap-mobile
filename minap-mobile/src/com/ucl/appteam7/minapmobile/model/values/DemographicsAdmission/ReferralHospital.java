@@ -1,5 +1,7 @@
 /** Field 4.21 - Referral Hospital
  * Takes in 3 character String that represents the Referral Hospital's Code
+ * This field is not a part of sanity checks. Should only contain values from drop-down list.
+ * Cross dependent with 2.39 (Admission Method)
  * @param rId
  * @author david  
  */
