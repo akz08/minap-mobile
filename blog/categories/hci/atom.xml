@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCI | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/hci/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T10:24:44+00:00</updated>
+  <updated>2014-01-25T20:12:49+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -121,6 +121,8 @@
     <updated>2013-12-20T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
     <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post detailing the process of UI paper prototyping and client feedback.</em></p>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div></p>
 ]]></content>
   </entry>
   
@@ -129,7 +131,21 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements/"/>
     <updated>2013-12-19T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve owned an Android smartphone for three years before switching over to a hand-me-down iPhone, and went through Gingerbread and Ice Cream Sandwich(4.0). Having spent the first 2 years dealing with Gingerbread, switching to the new interface of Android 4.0 was a breath of fresh air. ICS introduced a cleaner UI with a clearer design language. Our decision to only support devices from ICS onwards are primarily due to security concerns, but the availability of more (intuitive) UI elements and ways to present our app is really just the icing on the cake.</p>
+
+<p>To get a clearer idea of the UI elements available to us, I had a look through the official Android UI website, identifying the main elements available for use. This was just a very brief run through, as I realised the documentation regarding the recommended use of the elements by Google were quite thorough &ndash; which I intend to constantly refer to throughout the building of the app UI.</p>
+
+<p>Platform specific UI patterns of interest (images taken from the <a href="http://developer.android.com/design/patterns/index.html">Android developer website</a>:</p>
+
+<h4>Action Bar</h4>
+
+<p><img src="/images/action_bar_basics.png" title="Action Bar image from the Android Developer website" >
+The action bar acts as a persistent UI pattern that can be used across all pages. Less important functionality such as Logging out could be kept in the &lsquo;overflow&rsquo; (3 vertical dots) menu, and key features such as saving could use prominent icons (the classical floppy disk). The icon (labelled 1) for ancestral navigation could also be made contextual, such that it could change to be a compass icon when the user navigates to a data entry page.</p>
+
+<h4>Navigation drawer</h4>
+
+<p><img src="/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
+Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. As such, we would like to include as many shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 ]]></content>
   </entry>
   
@@ -138,9 +154,7 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
     <updated>2013-12-19T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 2/12</em></p>
-
-<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
+    <content type="html"><![CDATA[<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
 
 <h3>Simplify My Life</h3>
 

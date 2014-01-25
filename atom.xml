@@ -4,7 +4,7 @@
   <title><![CDATA[App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T10:24:44+00:00</updated>
+  <updated>2014-01-25T20:12:49+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -120,6 +120,9 @@
     <updated>2013-12-20T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
     <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post detailing the process of UI paper prototyping and client feedback.</em></p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div>
+
 ]]></content>
   </entry>
   
@@ -128,7 +131,21 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements/"/>
     <updated>2013-12-19T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 2/12, pending review.</em></p>
+    <content type="html"><![CDATA[<p>I&rsquo;ve owned an Android smartphone for three years before switching over to a hand-me-down iPhone, and went through Gingerbread and Ice Cream Sandwich(4.0). Having spent the first 2 years dealing with Gingerbread, switching to the new interface of Android 4.0 was a breath of fresh air. ICS introduced a cleaner UI with a clearer design language. Our decision to only support devices from ICS onwards are primarily due to security concerns, but the availability of more (intuitive) UI elements and ways to present our app is really just the icing on the cake.</p>
+
+<p>To get a clearer idea of the UI elements available to us, I had a look through the official Android UI website, identifying the main elements available for use. This was just a very brief run through, as I realised the documentation regarding the recommended use of the elements by Google were quite thorough &ndash; which I intend to constantly refer to throughout the building of the app UI.</p>
+
+<p>Platform specific UI patterns of interest (images taken from the <a href="http://developer.android.com/design/patterns/index.html">Android developer website</a>:</p>
+
+<h4>Action Bar</h4>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/action_bar_basics.png" title="Action Bar image from the Android Developer website" >
+The action bar acts as a persistent UI pattern that can be used across all pages. Less important functionality such as Logging out could be kept in the &lsquo;overflow&rsquo; (3 vertical dots) menu, and key features such as saving could use prominent icons (the classical floppy disk). The icon (labelled 1) for ancestral navigation could also be made contextual, such that it could change to be a compass icon when the user navigates to a data entry page.</p>
+
+<h4>Navigation drawer</h4>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
+Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. As such, we would like to include as many shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 ]]></content>
   </entry>
   
@@ -137,9 +154,7 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
     <updated>2013-12-19T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 2/12</em></p>
-
-<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
+    <content type="html"><![CDATA[<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
 
 <h3>Simplify My Life</h3>
 
@@ -182,22 +197,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Platform Choice]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice/"/>
-    <updated>2013-12-18T18:01:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/18/platform-choice</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 18/12, pending review.</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Finding Competition]]></title>
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition/"/>
     <updated>2013-12-17T14:01:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition</id>
-    <content type="html"><![CDATA[<p><em>First draft completed 3/12</em></p>
-
-<p>Medical data entry applications are a new concept (and also likely to be distributed solely within the company), so direct competitors are hard to come by on all major mobile app stores. One element of our app solution that could be used as a basis for finding similar solutions is the navigation panel. On a 1024 x 768 desktop browser, the user can easily read all the text and possible pathways at a glance. Directly mapping this onto a small device (smartphone) would yield unreadable text if naively shrunk to fit the screen; enabling a simple zoom-in and out approach would require too much scrolling in arbitrary directions to view the complete navigation map.</p>
+    <content type="html"><![CDATA[<p>Medical data entry applications are a new concept (and also likely to be distributed solely within the company), so direct competitors are hard to come by on all major mobile app stores. One element of our app solution that could be used as a basis for finding similar solutions is the navigation panel. On a 1024 x 768 desktop browser, the user can easily read all the text and possible pathways at a glance. Directly mapping this onto a small device (smartphone) would yield unreadable text if naively shrunk to fit the screen; enabling a simple zoom-in and out approach would require too much scrolling in arbitrary directions to view the complete navigation map.</p>
 
 <p>To get some ideas on how we could best represent this tree-navigation structure, we had a look through the apps on our own smartphones. Interestingly enough, a language learning app had the closest representation of the current MINAP navigation tree.</p>
 
@@ -227,11 +231,42 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Platform Choice]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/16/platform-choice/"/>
+    <updated>2013-12-16T14:10:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/16/platform-choice</id>
+    <content type="html"><![CDATA[<p>For our MINAP mobile application, we have chosen to go with the Android mobile platform. One of the main reasons behind this choice of platform (as opposed to the option of creating a mobile web app) was due to the <a href="http://www.sencha.com/products/space/" title="Sencha Space">issues of security</a> if the app is developed further in the future for actual use in the hospital. A native application would be the ideal choice, to ensure full utilisation of the platform&rsquo;s security features.</p>
+
+<p>A bonus of choosing the Android platform (or any native platform, really) helps lock down the user interface to the design standards in place, rather than trying to reinvent the wheel. Most apps would conform to these standards, and so it would help with reducing the cognitive load when learning to use our mobile app.</p>
+
+<p>Although this would mean a departure from the current web app&rsquo;s structure (programming-wise), the benefits of following UI standards and security will hopefully far outweigh the initial cost of time (and effort) in programming.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Looking Deeper]]></title>
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper/"/>
     <updated>2013-12-16T14:01:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper</id>
-    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post looking into information organisation and design conventions used in current web app.</em></p>
+    <content type="html"><![CDATA[<p>From the previous blog post, we can see that the current web app page flow could can be modelled into a page navigation flow, as shown below.</p>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/page-navigation-flow.png" title="Page Navigation Flow" ></p>
+
+<p>This interface flow diagram maps the current flow of use in the web app, with the exception of a new page addition &ndash; patient details. Patient details are currently displayed on each page in the web app, reminding the user who the current patient being entered into the database is. For mobile, we would need to separate this section into its own page due to size constraints. The downside of doing this, would mean that there would be no feedback on the page to remind the user of the current patient details &ndash; something that needs to be addressed when the UI is more thoroughly fleshed out.</p>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/patient-details.png" title="Patient Details" ></p>
+
+<p>We will keep the current web app&rsquo;s navigation behaviour and visual signifiers (usage of back, next, and compass icon) for consistency across the whole system, to ensure that existing users can use their preexisting mental model for the mobile app.</p>
+
+<p>Beyond the navigation flow, the MINAP web app makes use of question mark icons ( ? ) as points of help for the user (e.g. clicking on the ( ? ) icon next to the value &ldquo;Administrative Status&rdquo; will open a dialog box containing help relevant to the input box)</p>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/help-box.png" title="Help Box" ></p>
+
+<p>Our mobile app will also retain these help icons and dialog boxes, ensuring the user can obtain help within the data collection process, whenever there is relevant information to display &ndash; especially since our mobile app would ideally be used by a far wider audience than the current web app.</p>
+
+<p>Not shown in the flow diagram (for simplicity&rsquo;s sake) is the ability to log out from every page (with the exception of the log in page), and the ability to save. The save icon should be prominently be displayed on each value page, though the log out button can possibly be hidden from view for small screen sizes.</p>
+
+<p>To get a better idea on just how we can represent these functions, we would need to further explore the visual affordances provided to us by our target mobile platform to ensure consistency across their app ecosystem.</p>
 ]]></content>
   </entry>
   
@@ -285,11 +320,11 @@
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out</id>
     <content type="html"><![CDATA[<p>The team has come to realize that in order to continue the objectives this blog is to meet, it must come clean. Up to this point, information regarding our client and project has been, to a point, redacted. This is a practice that will hinder rather than help from this point on.</p>
 
-<h3>Our Client: Lucia Gavalova, Project Manager for MINAP</h3>
+<h3>Our Client: Project Manager for MINAP</h3>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/minap-logo.png" title="MINAP logo" ></p>
 
-<p>The Myocardial Ischaemia National Audit Project (MINAP) investigates the management of heart attacks. Participating hospitals and ambulance services are to provide a record of their management practices. These records are then compared to national and international clinical standards. The National Institute of Cardiovascular Outcomes Research (NICOR) is a partnership of clinicians, IT experts, analysts, academics and managers. Its mission is to &ldquo;provide information to improve heart disease patients&#8217; quality of care and outcomes&rdquo;. Using different audits, MINAP being one of them, NICOR aims to provide the NHS, government and regulatory bodies real world data to be used in patient care. The team&rsquo;s primary point of contact is Lucia Gavalova, Project Manager for MINAP, who we have referred to as the &lsquo;client&rsquo; in previous posts.</p>
+<p>The Myocardial Ischaemia National Audit Project (MINAP) investigates the management of heart attacks. Participating hospitals and ambulance services are to provide a record of their management practices. These records are then compared to national and international clinical standards. The National Institute of Cardiovascular Outcomes Research (NICOR) is a partnership of clinicians, IT experts, analysts, academics and managers. Its mission is to &ldquo;provide information to improve heart disease patients&#8217; quality of care and outcomes&rdquo;. Using different audits, MINAP being one of them, NICOR aims to provide the NHS, government and regulatory bodies real world data to be used in patient care. The team&rsquo;s primary point of contact is the Project Manager for MINAP, who we have referred to as the &lsquo;client&rsquo; in previous posts.</p>
 
 <h3>Our Project: A mobile solution</h3>
 

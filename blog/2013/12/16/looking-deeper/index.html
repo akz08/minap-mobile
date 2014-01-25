@@ -63,7 +63,25 @@
 
 <time datetime="2013-12-16T14:01:00+00:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time></div>
 	</header>
-	<div class="entry-content"><p><em>Placeholder text for Kamil&rsquo;s blog post looking into information organisation and design conventions used in current web app.</em></p>
+	<div class="entry-content"><p>From the previous blog post, we can see that the current web app page flow could can be modelled into a page navigation flow, as shown below.</p>
+
+<p><img src="/minap-mobile/images/page-navigation-flow.png" title="Page Navigation Flow" ></p>
+
+<p>This interface flow diagram maps the current flow of use in the web app, with the exception of a new page addition &ndash; patient details. Patient details are currently displayed on each page in the web app, reminding the user who the current patient being entered into the database is. For mobile, we would need to separate this section into its own page due to size constraints. The downside of doing this, would mean that there would be no feedback on the page to remind the user of the current patient details &ndash; something that needs to be addressed when the UI is more thoroughly fleshed out.</p>
+
+<p><img src="/minap-mobile/images/patient-details.png" title="Patient Details" ></p>
+
+<p>We will keep the current web app&rsquo;s navigation behaviour and visual signifiers (usage of back, next, and compass icon) for consistency across the whole system, to ensure that existing users can use their preexisting mental model for the mobile app.</p>
+
+<p>Beyond the navigation flow, the MINAP web app makes use of question mark icons ( ? ) as points of help for the user (e.g. clicking on the ( ? ) icon next to the value &ldquo;Administrative Status&rdquo; will open a dialog box containing help relevant to the input box)</p>
+
+<p><img src="/minap-mobile/images/help-box.png" title="Help Box" ></p>
+
+<p>Our mobile app will also retain these help icons and dialog boxes, ensuring the user can obtain help within the data collection process, whenever there is relevant information to display &ndash; especially since our mobile app would ideally be used by a far wider audience than the current web app.</p>
+
+<p>Not shown in the flow diagram (for simplicity&rsquo;s sake) is the ability to log out from every page (with the exception of the log in page), and the ability to save. The save icon should be prominently be displayed on each value page, though the log out button can possibly be hidden from view for small screen sizes.</p>
+
+<p>To get a better idea on just how we can represent these functions, we would need to further explore the visual affordances provided to us by our target mobile platform to ensure consistency across their app ecosystem.</p>
 </div>
 	
 
