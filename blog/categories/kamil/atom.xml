@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Kamil | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/kamil/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T20:12:49+00:00</updated>
+  <updated>2014-01-25T23:05:03+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -18,7 +18,18 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
     <updated>2013-12-20T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
-    <content type="html"><![CDATA[<p><em>Placeholder text for Kamil&rsquo;s blog post detailing the process of UI paper prototyping and client feedback.</em></p>
+    <content type="html"><![CDATA[<p>During the early development phases, David made some sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was mostly happy with our design decisions, but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to.
+<img src="/images/david-paper-ui.png" title="One of David&rsquo;s preliminary UI sketches" ></p>
+
+<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a blank slate (piece of paper).</p>
+
+<p><img src="/images/blank-sheet.JPG" title="Blank page template" ></p>
+
+<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent the space</p>
+
+<p><img src="/images/ui-sketch-initial.jpg" title="Initial UI sketches" ></p>
+
+<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
 
 <p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div></p>
 ]]></content>
