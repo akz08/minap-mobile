@@ -9,13 +9,10 @@
 	<string name="no">No</string>
     
     <string name="legal_label">Legal Disclaimer</string>
-    <string name="legal_contents">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-
-Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-\n \n
-Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-\n \n
-Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.</string>
+    <string name="legal_contents">This mobile app is a proof-of-concept, and should not be used for any actual patient data collection. All data entered into this app is only stored locally on the device, with no communication with the MINAP server.
+        \n\n
+        If you have installed this app via TestFlight as a beta tester, basic analytics data will be collected on your usage to enable us to better improve your app experience.
+        Data pertaining to application crashes are also recorded and sent to the developers of this app.</string>
     <string name="accept">Accept</string>
     <string name="close">Close</string>
     <string name="login">Log in</string>
