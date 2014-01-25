@@ -107,6 +107,12 @@ Following the decision of designing for the Android platform,  ... more details 
 \subsection{Data Model \& Validation}
 In order to capture the functional requirements previously explained, three major steps were to be completed for the inner workings of the mobile application.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.45]{img/database-class-diagram.png}
+\caption{Database workflow class diagram}
+\end{figure}
+
 \subsubsection{Designing the patient singleton}
 The Patient class would, in essence, capture the entirety of the dataset for this project. For security reasons, the team agreed with the client (5/12/13 Meeting) that the application should not hold more than one record per session. As such, the patient class was deemed fit to be designed as a Singleton. A call to a Patient object will return either an existent instance of the class or create one if such instance does not exist. Furthermore, the clone method of the Patient class has been overridden to throw a CloneNotSupported exception in order prevent stray clones from being created. All fields from the dataset are then declared as part of the patient class.
 
