@@ -53,6 +53,114 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/minap-mobile/blog/2014/01/25/kes-heuristic-evaluation/">
+			
+				Ke&#8217;s Heuristic Evaluation</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-25T10:09:00+00:00" pubdate data-updated="true">Jan 25<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>The following evaluation is based on Nielsen’s 10 principles of heuristic evaluation:</p>
+
+<h3>Visibility of system status (Feedback)</h3>
+
+<p>The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.</p>
+
+<h4>Selection</h4>
+
+<p>The box that was clicked by user will be highlighted with blue line, makes it easier for user to know where they have selected</p>
+
+<p><img src="/minap-mobile/images/ke-selection.jpg" title="Selection" ></p>
+
+<h4>Save indicator</h4>
+
+<p>A feedback message is displayed when an action is performed, in case, when save button is clicked, the app will save completed fields and give feedback to user.</p>
+
+<p><img src="/minap-mobile/images/ke-save.jpg" title="Save" ></p>
+
+<h3>Match between system and the real world(METHAPHOR)</h3>
+
+<p>The system should speak the users&#8217; language, with words, phrases and concepts familiar to the user, rather than system-oriented terms. Follow real-world conventions, making information appear in a natural and logical order.</p>
+
+<p>The design of navigation page on the app is very similar to the one that the current MINAP web solution has, expect the simplified structure, the essential feature which is the tree diagram was kept, and the logical relations between pages are inherited as well. For those who are new to our app, they can easily find their way by using the familiar navigation page.</p>
+
+<p>Navigation page on the app</p>
+
+<p><img src="/minap-mobile/images/ke-system-1.jpg" title="Current app" ></p>
+
+<p>Navigation page on the old web solution</p>
+
+<p><img src="/minap-mobile/images/ke-system-2.jpg" title="Web app" ></p>
+
+<h3>User control and freedom (NAVIGATION)</h3>
+
+<p>Users often choose system functions by mistake and will need a clearly marked &ldquo;emergency exit&rdquo; to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.</p>
+
+<p>The app provides excellent navigation supports. Both an easy navigation side bar and a navigation page are offered to user. For those who are new to our app, they can easily find their way by using the familiar navigation page, for those who want quickly switch from page to page, the navigation bar will meet their need.</p>
+
+<p>The navigation page</p>
+
+<p><img src="/minap-mobile/images/ke-control-1.jpg" title="Navigation map" ></p>
+
+<p>The navigation bar</p>
+
+<p><img src="/minap-mobile/images/ke-control-2.jpg" title="Navigation drawer" ></p>
+
+<h3>Consistency and standards</h3>
+
+<p>Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions.</p>
+
+<h4>Input method</h4>
+
+<p>In order to make the user as comfortable as possible, the app inherited the way user input the information from the old web solution, the ratio button, drop down list, the types of the fields were all kept as they were.</p>
+
+<p><img src="/minap-mobile/images/ke-consistency.jpg" title="Input methods" ></p>
+
+<h3>Error prevention</h3>
+
+<p>Even better than good error messages is a careful design which prevents a problem from occurring in the first place. Either eliminate error-prone conditions or check for them and present users with a confirmation option before they commit to the action.</p>
+
+<p>The log out and create new record functions both will discard the current record, in order to prevent user mistakenly touched those buttons and lose their input, a warming sign will pop up to confirm whether user wants to proceed.</p>
+
+<p><img src="/minap-mobile/images/ke-error.jpg" title="Error handling" ></p>
+
+<h3>Recognition rather than recall</h3>
+
+<p>Minimize the user&rsquo;s memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another. Instructions for use of the system should be visible or easily retrievable whenever appropriate.</p>
+
+<p>In case the user need help with understanding certain fields, most of the fields are come with notes, if you click the exclamation mark next to the field name, the note which contains explanation for the field will appear.</p>
+
+<p><img src="/minap-mobile/images/ke-recog.jpg" title="Recognition" ></p>
+
+<h3>Flexibility and efficiency of use</h3>
+
+<p>Accelerators &mdash; unseen by the novice user &mdash; may often speed up the interaction for the expert user such that the system can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.</p>
+
+<p>The reason why the app has two navigation methods is not only the new user could get use to the app very quickly(with navigation page), but also those experienced user, who wants be more efferent, could switch from page to page more quickly(with navigation bar).</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/minap-mobile/blog/2014/01/21/davids-heuristic-evaluation/">
 			
 				David&#8217;s Heuristic Evaluation</a>
@@ -450,40 +558,6 @@
 <p>Participating facilities are requested to enter all patients with suspected heart attack. Data is collected by nurses and other clinical audit staff and entered in a dedicated web application. This web application collects all patient data, from demographics to diagnosis and release information. As it stands, the web application contains a 130 field dataset that is updated every two years (latest revision, June 2013). The data is then validated against a set of rules which include, but are not limited to, value range checks, date range checks, data type checks and encryption rules. Once completed, records are stored on MINAP&rsquo;s Domino server. A further look into the web application will be posted in a later post.</p>
 
 <p>The app dev team has been tasked to produce a mobile application that will serve as a starting point for the data capture process, thus relieving clinicians of some of the burden of data entry. This project will retain the major functionality of the web application while working with a slightly reduced dataset. Validation and storage must be taken into account, as well as maintaining a semblance of familiarity for the current user base. The target platform for this mobile solution is the Android OS for smartphones.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/minap-mobile/blog/2013/12/13/running-commentary/">
-			
-				Running Commentary</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-13T18:46:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2013</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Comments are now enabled on all posts!</p>
-
-<p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
 
 		
 		
