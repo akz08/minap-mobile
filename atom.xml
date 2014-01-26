@@ -4,7 +4,7 @@
   <title><![CDATA[App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-26T16:52:23+00:00</updated>
+  <updated>2014-01-26T18:54:39+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -21,6 +21,14 @@
 
 <div class="embed-video-container"><iframe src="http://www.youtube.com/embed/tAtqj-iezts "></iframe></div>
 
+
+<p>The app summary can be found through the youtube link.</p>
+
+<p>Final screenshots:</p>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/screenshots-1.png" title="Screenshots part 1" ></p>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/screenshots-2.png" title="Screenshots part 2" ></p>
 ]]></content>
   </entry>
   
@@ -502,6 +510,45 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Having the right story]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/having-the-right-story/"/>
+    <updated>2013-12-13T18:40:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/13/having-the-right-story</id>
+    <content type="html"><![CDATA[<p>As part of our client meeting on the 12th, I also presented a series of storyboards of my vision for future MINAP data collection (based on our client&rsquo;s own stories). I though I should probably share it on this blog. Our client didn&rsquo;t have much to comment on it &ndash; so it must be pretty good (or unspeakably horrible).</p>
+
+<p>Present:
+<img src="http://akz08.github.io/minap-mobile/images/current-storyboard.png" title="Current situation storyboard" ></p>
+
+<ul>
+<li>Julie goes on her usual rounds in the hospital</li>
+<li>She meets a patient</li>
+<li>She checks and records the patient&rsquo;s data</li>
+<li>She leaves to see another patient</li>
+<li>The cycle continues until much later</li>
+<li>Julie then passes on her records to a dedicated &lsquo;data aggregator&rsquo; who inputs the data into the MINAP web app (as seen in one of MINAP&rsquo;s public reports)</li>
+</ul>
+
+
+<p>Future:
+<img src="http://akz08.github.io/minap-mobile/images/future-storyboard.png" title="Future situation storyboard" ></p>
+
+<ul>
+<li>Edwards goes on his usual rounds in the hospital</li>
+<li>He meets a patient</li>
+<li>He checks and records the patient&rsquo;s data</li>
+<li>He realises that the patient is eligible to be entered into the MINAP dataset</li>
+<li>He whips out his phone and creates a quick record of the patient&rsquo;s details</li>
+<li>He then leaves and does his usual rounds</li>
+<li>When Edward has a bit more time to himself, he logs on to the MINAP web app</li>
+<li>Eligible patients have been created in the MINAP dataset as &lsquo;stubs&rsquo; which he can now quickly fill in with the relevant information</li>
+</ul>
+
+
+<p>This would be our ideal scenario upon completion of our app &ndash; however unrealistic that may be.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Why so savvy?]]></title>
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/why-so-savvy/"/>
     <updated>2013-12-13T12:09:00+00:00</updated>
@@ -621,49 +668,6 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
 <p>All posts will be tagged with the name of the author, with the tags always being visible when viewing the &lsquo;Archives&rsquo; section of this blog. You can always return to the main view by clicking (or tapping) on the title at the top of the page.</p>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/click_title.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Week 4]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/02/week-4/"/>
-    <updated>2013-12-02T14:44:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/02/week-4</id>
-    <content type="html"><![CDATA[<h3>Monday &ndash; Nov. 25th</h3>
-
-<hr />
-
-<p>The App Dev team decided it would be in everyone&rsquo;s best interest if no coding took place the day after the University&rsquo;s deadline. Instead, the team looked ahead to the second deadline three weeks away. Wiki resources were updated, Milestone 2 requirements were read and understood. Finally, we presented our client with a possible survey to be used for data gathering / analytics.</p>
-
-<h3>Tuesday &ndash; Nov. 26th</h3>
-
-<hr />
-
-<p>Per our client&rsquo;s wishes, the dataset has been reduced to 60 fields from 130 fields. The team first fleshed out how these reduced dataset would interact within the application. Abstraction was taken into account as all most of these fields would require alike functionality.</p>
-
-<p>After separating the fields into logical &ldquo;pages,&rdquo; the meeting focused on the transition from Java coding to integrating SQL and XML into the product&rsquo;s code.</p>
-
-<h3>Wednesday &ndash; Nov. 27th</h3>
-
-<hr />
-
-<p>The team reviewed extra documents from client that further helped with dataset rules. Sample decisions trees were sketched as per the new validation logic. Meeting was adjourned after an email to client with some questions for clarifications was sent.</p>
-
-<h3>Thursday &ndash; Nov. 28th</h3>
-
-<hr />
-
-<p>The client&rsquo;s reply cleared all questions from previous meeting. After discussing this new information, the team focused on University tasks, namely the GC02 poster that would be due next Wednesday (the 4th).</p>
-
-<p>After a brief discussion. It was decided that meetings for Friday and the weekend (the 29th through Dec 1st) would be unnecessary. As such, the team divvied up work packages to clear during these days including:</p>
-
-<ul>
-<li>Making sure Java validation works on a command line level</li>
-<li>Making sure XML parsing works on a command line level</li>
-<li>Making sure SQL connection / read / write capabilities work on a command line level</li>
-<li>Further insight into Android programming, HCI requirements</li>
-</ul>
-
 ]]></content>
   </entry>
   
