@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCI | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/hci/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T23:05:03+00:00</updated>
+  <updated>2014-01-26T12:50:57+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -120,20 +120,38 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
     <updated>2013-12-20T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
-    <content type="html"><![CDATA[<p>During the early development phases, David made some sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was mostly happy with our design decisions, but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to.
+    <content type="html"><![CDATA[<h3>Standing on the shoulders</h3>
+
+<p>During the early development phases, David made several sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was happy with our design decisions &ndash; with some suggestions for functionality &ndash; but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to (Android). Despite this, much of the new UI design is based off these preliminary sketches.
 <img src="/images/david-paper-ui.png" title="One of David&rsquo;s preliminary UI sketches" ></p>
 
-<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a blank slate (piece of paper).</p>
+<h3>New beginnings</h3>
+
+<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a clean slate (piece of paper).</p>
 
 <p><img src="/images/blank-sheet.JPG" title="Blank page template" ></p>
 
-<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent the space</p>
+<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent Android&rsquo;s &ldquo;soft buttons&rdquo; for navigation on newer phones without menu keys built into the hardware (as seen on the <a href="http://developer.android.com/design/get-started/ui-overview.html" title="Android Navigation Bar">developer website under the heading &ldquo;System Bars&rdquo;</a>). For this case, phones with the soft navigation bar primarily differ from older phones (like the <a href="http://en.wikipedia.org/wiki/Nexus_S" title="Nexus S">Nexus S</a>) in that they move the roles of the hardware &ldquo;menu&rdquo; button to an &ldquo;overflow&rdquo; soft-button on the Android action bar. I assumed the newer behaviour when designing the interface.</p>
+
+<h3>First steps</h3>
 
 <p><img src="/images/ui-sketch-initial.jpg" title="Initial UI sketches" ></p>
 
-<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
+<p><img src="/images/ui-part-1.JPG" title="Part 1" >
+<img src="/images/ui-part-2.JPG" title="Part 2" >
+<img src="/images/ui-part-3.JPG" title="Part 3" ></p>
+
+<h3>Cleaning up</h3>
+
+<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" >
+<img src="/images/ui-part-4.JPG" title="Part 4" >
+<img src="/images/ui-part-5.JPG" title="Part 5" ></p>
+
+<h3>A touch of magic</h3>
 
 <p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div></p>
+
+<h3>Getting feedback</h3>
 ]]></content>
   </entry>
   
@@ -156,7 +174,7 @@ The action bar acts as a persistent UI pattern that can be used across all pages
 <h4>Navigation drawer</h4>
 
 <p><img src="/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
-Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. As such, we would like to include as many shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
+Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. With tech savvy users such as Julie, we would like to include as many time-saving shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 ]]></content>
   </entry>
   

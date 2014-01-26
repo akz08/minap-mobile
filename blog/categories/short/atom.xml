@@ -4,7 +4,7 @@
   <title><![CDATA[Category: short | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/short/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T23:05:03+00:00</updated>
+  <updated>2014-01-26T12:50:57+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -21,6 +21,19 @@
     <content type="html"><![CDATA[<p>Comments are now enabled on all posts!</p>
 
 <p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why so savvy?]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/why-so-savvy/"/>
+    <updated>2013-12-13T12:09:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/13/why-so-savvy</id>
+    <content type="html"><![CDATA[<p>The two personas we&rsquo;ve introduced are pretty tech savvy, currently owning smartphones for a considerable amount of time. Where are all the non-savvy users?</p>
+
+<p>The MINAP dataset and interface is a very complicated system to the first-time user (as we have experienced first hand), and reducing this complexity to a mobile device whilst still retaining most (if not all) the functionality of the web app is (I think) a monumental task. Whilst we will keep in mind that not all users have used smartphones before, I believe the requirement of the user having had previous experience with mobile apps is necessary to avoid them being overwhelmed by the experience of entering data into the MINAP system on a mobile device.</p>
+
+<p>Obviously, the easiest way to mitigate this problem is to include a tutorial (which was also suggested by our client). I personally believe that most users tend to skip tutorials anyway, and that the time is better spent trying to make the app as intuitive as possible for the more experienced users. We will however provide a tutorial for our app in the near future &ndash; if time permits.</p>
 ]]></content>
   </entry>
   

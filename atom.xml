@@ -4,7 +4,7 @@
   <title><![CDATA[App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-25T23:05:03+00:00</updated>
+  <updated>2014-01-26T12:50:57+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -119,21 +119,39 @@
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
     <updated>2013-12-20T14:02:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
-    <content type="html"><![CDATA[<p>During the early development phases, David made some sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was mostly happy with our design decisions, but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to.
+    <content type="html"><![CDATA[<h3>Standing on the shoulders</h3>
+
+<p>During the early development phases, David made several sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was happy with our design decisions &ndash; with some suggestions for functionality &ndash; but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to (Android). Despite this, much of the new UI design is based off these preliminary sketches.
 <img src="http://akz08.github.io/minap-mobile/images/david-paper-ui.png" title="One of David's preliminary UI sketches" ></p>
 
-<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a blank slate (piece of paper).</p>
+<h3>New beginnings</h3>
+
+<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a clean slate (piece of paper).</p>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/blank-sheet.JPG" title="Blank page template" ></p>
 
-<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent the space</p>
+<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent Android&rsquo;s &ldquo;soft buttons&rdquo; for navigation on newer phones without menu keys built into the hardware (as seen on the <a href="http://developer.android.com/design/get-started/ui-overview.html" title="Android Navigation Bar">developer website under the heading &ldquo;System Bars&rdquo;</a>). For this case, phones with the soft navigation bar primarily differ from older phones (like the <a href="http://en.wikipedia.org/wiki/Nexus_S" title="Nexus S">Nexus S</a>) in that they move the roles of the hardware &ldquo;menu&rdquo; button to an &ldquo;overflow&rdquo; soft-button on the Android action bar. I assumed the newer behaviour when designing the interface.</p>
+
+<h3>First steps</h3>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/ui-sketch-initial.jpg" title="Initial UI sketches" ></p>
 
-<p><img src="http://akz08.github.io/minap-mobile/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
+<p><img src="http://akz08.github.io/minap-mobile/images/ui-part-1.JPG" title="Part 1" >
+<img src="http://akz08.github.io/minap-mobile/images/ui-part-2.JPG" title="Part 2" >
+<img src="http://akz08.github.io/minap-mobile/images/ui-part-3.JPG" title="Part 3" ></p>
+
+<h3>Cleaning up</h3>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" >
+<img src="http://akz08.github.io/minap-mobile/images/ui-part-4.JPG" title="Part 4" >
+<img src="http://akz08.github.io/minap-mobile/images/ui-part-5.JPG" title="Part 5" ></p>
+
+<h3>A touch of magic</h3>
 
 <div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div>
 
+
+<h3>Getting feedback</h3>
 ]]></content>
   </entry>
   
@@ -156,7 +174,7 @@ The action bar acts as a persistent UI pattern that can be used across all pages
 <h4>Navigation drawer</h4>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
-Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. As such, we would like to include as many shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
+Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. With tech savvy users such as Julie, we would like to include as many time-saving shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 ]]></content>
   </entry>
   
@@ -259,7 +277,7 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper/"/>
     <updated>2013-12-16T14:01:00+00:00</updated>
     <id>http://akz08.github.io/minap-mobile/blog/2013/12/16/looking-deeper</id>
-    <content type="html"><![CDATA[<p>From the previous blog post, we can see that the current web app page flow could can be modelled into a page navigation flow, as shown below.</p>
+    <content type="html"><![CDATA[<p>From the previous blog post, we can see that the current web app page flow can be modelled into a simple page navigation flow, as shown below.</p>
 
 <p><img src="http://akz08.github.io/minap-mobile/images/page-navigation-flow.png" title="Page Navigation Flow" ></p>
 
@@ -325,27 +343,6 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Coming Out]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out/"/>
-    <updated>2013-12-14T12:09:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/14/coming-out</id>
-    <content type="html"><![CDATA[<p>The team has come to realize that in order to continue the objectives this blog is to meet, it must come clean. Up to this point, information regarding our client and project has been, to a point, redacted. This is a practice that will hinder rather than help from this point on.</p>
-
-<h3>Our Client: Project Manager for MINAP</h3>
-
-<p><img src="http://akz08.github.io/minap-mobile/images/minap-logo.png" title="MINAP logo" ></p>
-
-<p>The Myocardial Ischaemia National Audit Project (MINAP) investigates the management of heart attacks. Participating hospitals and ambulance services are to provide a record of their management practices. These records are then compared to national and international clinical standards. The National Institute of Cardiovascular Outcomes Research (NICOR) is a partnership of clinicians, IT experts, analysts, academics and managers. Its mission is to &ldquo;provide information to improve heart disease patients&#8217; quality of care and outcomes&rdquo;. Using different audits, MINAP being one of them, NICOR aims to provide the NHS, government and regulatory bodies real world data to be used in patient care. The team&rsquo;s primary point of contact is the Project Manager for MINAP, who we have referred to as the &lsquo;client&rsquo; in previous posts.</p>
-
-<h3>Our Project: A mobile solution</h3>
-
-<p>Participating facilities are requested to enter all patients with suspected heart attack. Data is collected by nurses and other clinical audit staff and entered in a dedicated web application. This web application collects all patient data, from demographics to diagnosis and release information. As it stands, the web application contains a 130 field dataset that is updated every two years (latest revision, June 2013). The data is then validated against a set of rules which include, but are not limited to, value range checks, date range checks, data type checks and encryption rules. Once completed, records are stored on MINAP&rsquo;s Domino server. A further look into the web application will be posted in a later post.</p>
-
-<p>The app dev team has been tasked to produce a mobile application that will serve as a starting point for the data capture process, thus relieving clinicians of some of the burden of data entry. This project will retain the major functionality of the web application while working with a slightly reduced dataset. Validation and storage must be taken into account, as well as maintaining a semblance of familiarity for the current user base. The target platform for this mobile solution is the Android OS for smartphones.</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Running Commentary]]></title>
     <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/running-commentary/"/>
     <updated>2013-12-13T18:46:00+00:00</updated>
@@ -353,6 +350,76 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
     <content type="html"><![CDATA[<p>Comments are now enabled on all posts!</p>
 
 <p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Why so savvy?]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/13/why-so-savvy/"/>
+    <updated>2013-12-13T12:09:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/13/why-so-savvy</id>
+    <content type="html"><![CDATA[<p>The two personas we&rsquo;ve introduced are pretty tech savvy, currently owning smartphones for a considerable amount of time. Where are all the non-savvy users?</p>
+
+<p>The MINAP dataset and interface is a very complicated system to the first-time user (as we have experienced first hand), and reducing this complexity to a mobile device whilst still retaining most (if not all) the functionality of the web app is (I think) a monumental task. Whilst we will keep in mind that not all users have used smartphones before, I believe the requirement of the user having had previous experience with mobile apps is necessary to avoid them being overwhelmed by the experience of entering data into the MINAP system on a mobile device.</p>
+
+<p>Obviously, the easiest way to mitigate this problem is to include a tutorial (which was also suggested by our client). I personally believe that most users tend to skip tutorials anyway, and that the time is better spent trying to make the app as intuitive as possible for the more experienced users. We will however provide a tutorial for our app in the near future &ndash; if time permits.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meet Edward]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/12/meet-edward/"/>
+    <updated>2013-12-12T11:15:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/12/meet-edward</id>
+    <content type="html"><![CDATA[<h3>Why we need Edward</h3>
+
+<p>As part of our effort to better know our end users, we ran a quick survey with our client to find out just how many MINAP users own a smartphone, and their willingness to use their personal devices for work. Our client deployed the survey via SurveyMonkey to MINAP&rsquo;s current user-base, and encouraged them to forward the link around. The survey has been running for about a week now, and will be left open for several more weeks to allow more responses, but 79 responses have been collected so far.</p>
+
+<p>As the questions in the survey primarily involved more technical questions (such as &ldquo;what brand is your phone/tablet?&rdquo;), a more in depth commentary will be included in the report associated with this development blog. However, we have included questions such as :</p>
+
+<blockquote><p>Do you currently use your smartphone/tablet for work-related activities during work hours? (Yes / No)</p></blockquote>
+
+<p>and</p>
+
+<blockquote><p>Would you use an app on your smartphone/tablet if it helped supplement your work? (Yes / No)</p></blockquote>
+
+<p>with a section at the end for freeform comments to allow further feedback.</p>
+
+<p>So far, 72.4% of surveyed users responded No to using their personal devices for work-related activities, but 75.3% answered Yes to the possibility of using an app for supplementing their work. From these two responses alone, it looks like people are willing to use new technology &ndash; just not their own. The picture becomes clearer when having a look at the comments left by the users:</p>
+
+<blockquote><p> We are not allowed to use our phones on wards so not sure how this would work. Our trust is very unlikely to buy a tablet for use by MINAP [&hellip;] If I had the equipment and an App available, I would be very happy to use it.</p></blockquote>
+
+<p>and</p>
+
+<blockquote><p> I would be more than willing to use a smartphone / table for work related activities if it was provided by work. Currently I use a personal iPhone only and would breach confidentiality / clinical governance issues if this was used for work related activities.</p></blockquote>
+
+<p>and</p>
+
+<blockquote><p>Any devices used in the workplace would have to be procured by our IM&amp;T Dept.</p></blockquote>
+
+<p>show obvious concerns with regards to data protection and security, preventing the use of personal devices for work from both a personal and work perspective.</p>
+
+<p>This is a key factor that has convinced us to ensure that our application will <em>not</em> be used in any real-life setting until a proper security audit has been performed. However, from a usability perspective, we need to ensure that users concerned about security are being reminded that the data entered into our mobile app is stored, transmitted, and securely deleted from the device when completing a record.</p>
+
+<p>To help remind us of this issue, we have created Edward &ndash; a security conscious 30 year old clinician. Unlike Julie, who was born of feedback from the client, Edward reflects the more privacy-concerned users.</p>
+
+<h3>So who is Edward anyway?</h3>
+
+<p><img src="http://placekitten.com/300/200" title="Place Kitten" ></p>
+
+<ul>
+<li>(extremely) tech savvy single 30 year old clinician</li>
+<li>owns a (personal) tablet and smartphone</li>
+<li>enjoys a good work-life balance</li>
+<li>frequent reader of <a href="http://www.theguardian.com/world/edward-snowden" title="The Guardian">The Guardian</a></li>
+<li>works in a hospital trust on a tight budget</li>
+<li>loves efficiency</li>
+<li>is professional with his patients, and respects their privacy</li>
+<li>constantly saves his work and is meticulous with organising files</li>
+</ul>
+
+
+<p>Edward would love to streamline his workflow for entering patients into the MINAP dataset, but is well aware of data privacy laws governing patient data. As such, he begrudgingly enters patients into MINAP on Internet Explorer, but knows full well of the dangers of data leaks. He checks the application privileges on his tablet and smartphone before installing any new apps, and has helped some of his friends remove obnoxious apps from their own devices. He is distrusting of how secure mobile apps are, but can see their potential as time savers at work&hellip;</p>
 ]]></content>
   </entry>
   
@@ -372,6 +439,27 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
 <p>Julie is tech-savvy in that she owns a smartphone, she has never used it for work, though. However, as she has some time with the patient while they are being admitted, Julie wonders if she could at least flag the patient for later input to MINAP&rsquo;s database through her smartphone.</p>
 
 <p>As she checks in a new patient, Julie wonders&hellip; &ldquo;Is there an app for that?&rdquo;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Coming Out]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/02/coming-out/"/>
+    <updated>2013-12-02T17:30:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2013/12/02/coming-out</id>
+    <content type="html"><![CDATA[<p>The team has come to realize that in order to continue the objectives this blog is to meet, it must come clean. Up to this point, information regarding our client and project has been, to a point, redacted. This is a practice that will hinder rather than help from this point on.</p>
+
+<h3>Our Client: Project Manager for MINAP</h3>
+
+<p><img src="http://akz08.github.io/minap-mobile/images/minap-logo.png" title="MINAP logo" ></p>
+
+<p>The Myocardial Ischaemia National Audit Project (MINAP) investigates the management of heart attacks. Participating hospitals and ambulance services are to provide a record of their management practices. These records are then compared to national and international clinical standards. The National Institute of Cardiovascular Outcomes Research (NICOR) is a partnership of clinicians, IT experts, analysts, academics and managers. Its mission is to &ldquo;provide information to improve heart disease patients&#8217; quality of care and outcomes&rdquo;. Using different audits, MINAP being one of them, NICOR aims to provide the NHS, government and regulatory bodies real world data to be used in patient care. The team&rsquo;s primary point of contact is the Project Manager for MINAP, who we have referred to as the &lsquo;client&rsquo; in previous posts.</p>
+
+<h3>Our Project: A mobile solution</h3>
+
+<p>Participating facilities are requested to enter all patients with suspected heart attack. Data is collected by nurses and other clinical audit staff and entered in a dedicated web application. This web application collects all patient data, from demographics to diagnosis and release information. As it stands, the web application contains a 130 field dataset that is updated every two years (latest revision, June 2013). The data is then validated against a set of rules which include, but are not limited to, value range checks, date range checks, data type checks and encryption rules. Once completed, records are stored on MINAP&rsquo;s Domino server. A further look into the web application will be posted in a later post.</p>
+
+<p>The app dev team has been tasked to produce a mobile application that will serve as a starting point for the data capture process, thus relieving clinicians of some of the burden of data entry. This project will retain the major functionality of the web application while working with a slightly reduced dataset. Validation and storage must be taken into account, as well as maintaining a semblance of familiarity for the current user base. The target platform for this mobile solution is the Android OS for smartphones.</p>
 ]]></content>
   </entry>
   

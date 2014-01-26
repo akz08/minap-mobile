@@ -220,21 +220,39 @@
 <time datetime="2013-12-20T14:02:00+00:00" pubdate data-updated="true">Dec 20<span>th</span>, 2013</time></div>
 	</header>
 	<div class="entry-content">
-		<p>During the early development phases, David made some sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was mostly happy with our design decisions, but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to.
+		<h3>Standing on the shoulders</h3>
+
+<p>During the early development phases, David made several sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was happy with our design decisions &ndash; with some suggestions for functionality &ndash; but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to (Android). Despite this, much of the new UI design is based off these preliminary sketches.
 <img src="/minap-mobile/images/david-paper-ui.png" title="One of David's preliminary UI sketches" ></p>
 
-<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a blank slate (piece of paper).</p>
+<h3>New beginnings</h3>
+
+<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a clean slate (piece of paper).</p>
 
 <p><img src="/minap-mobile/images/blank-sheet.JPG" title="Blank page template" ></p>
 
-<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent the space</p>
+<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent Android&rsquo;s &ldquo;soft buttons&rdquo; for navigation on newer phones without menu keys built into the hardware (as seen on the <a href="http://developer.android.com/design/get-started/ui-overview.html" title="Android Navigation Bar">developer website under the heading &ldquo;System Bars&rdquo;</a>). For this case, phones with the soft navigation bar primarily differ from older phones (like the <a href="http://en.wikipedia.org/wiki/Nexus_S" title="Nexus S">Nexus S</a>) in that they move the roles of the hardware &ldquo;menu&rdquo; button to an &ldquo;overflow&rdquo; soft-button on the Android action bar. I assumed the newer behaviour when designing the interface.</p>
+
+<h3>First steps</h3>
 
 <p><img src="/minap-mobile/images/ui-sketch-initial.jpg" title="Initial UI sketches" ></p>
 
-<p><img src="/minap-mobile/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
+<p><img src="/minap-mobile/images/ui-part-1.JPG" title="Part 1" >
+<img src="/minap-mobile/images/ui-part-2.JPG" title="Part 2" >
+<img src="/minap-mobile/images/ui-part-3.JPG" title="Part 3" ></p>
+
+<h3>Cleaning up</h3>
+
+<p><img src="/minap-mobile/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" >
+<img src="/minap-mobile/images/ui-part-4.JPG" title="Part 4" >
+<img src="/minap-mobile/images/ui-part-5.JPG" title="Part 5" ></p>
+
+<h3>A touch of magic</h3>
 
 <div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div>
 
+
+<h3>Getting feedback</h3>
 
 		
 		
@@ -280,7 +298,7 @@ The action bar acts as a persistent UI pattern that can be used across all pages
 <h4>Navigation drawer</h4>
 
 <p><img src="/minap-mobile/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
-Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. As such, we would like to include as many shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
+Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. With tech savvy users such as Julie, we would like to include as many time-saving shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 
 		
 		
@@ -475,7 +493,7 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
 <time datetime="2013-12-16T14:01:00+00:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time></div>
 	</header>
 	<div class="entry-content">
-		<p>From the previous blog post, we can see that the current web app page flow could can be modelled into a page navigation flow, as shown below.</p>
+		<p>From the previous blog post, we can see that the current web app page flow can be modelled into a simple page navigation flow, as shown below.</p>
 
 <p><img src="/minap-mobile/images/page-navigation-flow.png" title="Page Navigation Flow" ></p>
 
@@ -572,9 +590,9 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
 	<header>
 		<h2 class="title">
 			
-			<a href="/minap-mobile/blog/2013/12/14/coming-out/">
+			<a href="/minap-mobile/blog/2013/12/13/running-commentary/">
 			
-				Coming Out</a>
+				Running Commentary</a>
 		</h2>
 		<div class="meta date">
 
@@ -588,22 +606,12 @@ Our mobile app&rsquo;s key purpose is to allow for quick data collection at the 
   
 
 
-<time datetime="2013-12-14T12:09:00+00:00" pubdate data-updated="true">Dec 14<span>th</span>, 2013</time></div>
+<time datetime="2013-12-13T18:46:00+00:00" pubdate data-updated="true">Dec 13<span>th</span>, 2013</time></div>
 	</header>
 	<div class="entry-content">
-		<p>The team has come to realize that in order to continue the objectives this blog is to meet, it must come clean. Up to this point, information regarding our client and project has been, to a point, redacted. This is a practice that will hinder rather than help from this point on.</p>
+		<p>Comments are now enabled on all posts!</p>
 
-<h3>Our Client: Project Manager for MINAP</h3>
-
-<p><img src="/minap-mobile/images/minap-logo.png" title="MINAP logo" ></p>
-
-<p>The Myocardial Ischaemia National Audit Project (MINAP) investigates the management of heart attacks. Participating hospitals and ambulance services are to provide a record of their management practices. These records are then compared to national and international clinical standards. The National Institute of Cardiovascular Outcomes Research (NICOR) is a partnership of clinicians, IT experts, analysts, academics and managers. Its mission is to &ldquo;provide information to improve heart disease patients&#8217; quality of care and outcomes&rdquo;. Using different audits, MINAP being one of them, NICOR aims to provide the NHS, government and regulatory bodies real world data to be used in patient care. The team&rsquo;s primary point of contact is the Project Manager for MINAP, who we have referred to as the &lsquo;client&rsquo; in previous posts.</p>
-
-<h3>Our Project: A mobile solution</h3>
-
-<p>Participating facilities are requested to enter all patients with suspected heart attack. Data is collected by nurses and other clinical audit staff and entered in a dedicated web application. This web application collects all patient data, from demographics to diagnosis and release information. As it stands, the web application contains a 130 field dataset that is updated every two years (latest revision, June 2013). The data is then validated against a set of rules which include, but are not limited to, value range checks, date range checks, data type checks and encryption rules. Once completed, records are stored on MINAP&rsquo;s Domino server. A further look into the web application will be posted in a later post.</p>
-
-<p>The app dev team has been tasked to produce a mobile application that will serve as a starting point for the data capture process, thus relieving clinicians of some of the burden of data entry. This project will retain the major functionality of the web application while working with a slightly reduced dataset. Validation and storage must be taken into account, as well as maintaining a semblance of familiarity for the current user base. The target platform for this mobile solution is the Android OS for smartphones.</p>
+<p>To comment, just click on the title of the post you want to add your thoughts to. We&rsquo;re using the DISQUS comment system, so you can login with any of the compatible services.</p>
 
 		
 		
