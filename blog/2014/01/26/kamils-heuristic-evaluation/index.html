@@ -1,0 +1,182 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<title>Kamil's Heuristic Evaluation  | App Team 7</title>
+
+	<meta name="author" content="David, Kamil, Ke">
+
+<meta name="description" content="A blog documenting the development process for App Team 7 for GC02"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/minap-mobile/atom.xml" rel="alternate" title="App Team 7" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/minap-mobile/favicon.png" rel="shortcut icon">
+	<link href="/minap-mobile/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/minap-mobile/">App Team 7</a></h1>
+<span class="tagline">A GC02 Blog</span>
+<nav id="main-nav"><ul>
+	<li><a href="/minap-mobile/about">About</a></li>
+	<li><a href="/minap-mobile/archives">Archives</a></li>
+	<li><a href="/minap-mobile/contact">Contact</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/minap-mobile/about">About</a></li>
+	<li><a href="/minap-mobile/archives">Archives</a></li>
+	<li><a href="/minap-mobile/contact">Contact</a></li>
+</ul>
+</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Kamil's Heuristic Evaluation</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-26T16:14:00+00:00" pubdate data-updated="true">Jan 26<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><h3>Defining tasks</h3>
+
+<p>The tasks with which I assigned the team and myself to base our heuristic evaluations around are as shown below:</p>
+
+<ul>
+<li>Creating a patient stub with only the mandatory information</li>
+<li>Creating a full patient record &ndash; navigating around most, if not all sections in a directed manner</li>
+<li>Making amendments to data already entered into the app</li>
+<li>Discarding a bad entry (before saving to server)</li>
+</ul>
+
+
+<p>These were based around tasks which were commonly discussed by our client during meetings. It should be noted however that due to time constraints, not all of our target features have are visibly completed &ndash; but the functionality exists in the raw code (needing to be &ldquo;wired up&rdquo;).</p>
+
+<h3>Being critical</h3>
+
+<h4>visibility of system status</h4>
+
+<p>Android&rsquo;s action bar helped give a space for each page to be given a label, and so it&rsquo;s pretty easy to see where in the app the user is with a quick glance. However, one important sub-task that is currently lacking any visual indicator is saving. In the early stages of paper prototyping, I intended the save icon to change colour on first click, indicating that all items on the page have been saved &ndash; and disabling it from being touched again. Changing an item would then revert the icon to its original state. This would significantly reduce behaviour such as pressing the save button several times, in fear of losing data (which our client admits to doing).</p>
+
+<h4>user control and freedom</h4>
+
+<p>In designing the application, I ensured that most &ndash; if not all &ndash; key pages are accessible within 3 taps. This was made possible by allowing the navigation drawer to be accessed from all data entry pages within the app. However, as I have noticed in preliminary user feedback from colleagues and our client, accessing the Patient Details page to correct a value was not entirely intuitive, and could be improved.</p>
+
+<h4>error prevention</h4>
+
+<p>Unfortunately, the system does not prevent you from &ldquo;submitting&rdquo; an incomplete record at present (MINAP requires the completion of 4 mandatory fields before submission). This was primarily due to lack of time to integrate this business logic, but is admittedly a key feature for MINAP.</p>
+
+<p>Data destroying activities such as discarding bad entries are however accompanied by easy to understand warnings before being carried out.</p>
+
+<h4>aesthetic and minimalist design</h4>
+
+<p>The app looks absolutely brilliant for its purpose as a proof of concept app. The grey look was kept to allow for future styling by MINAP after the application has been fully handed over. I&rsquo;ve also found that people can spend hours trying to decide how things should be coloured and how images should look &ndash; something I decided to avoid in creating the app design.</p>
+
+<p>Of course, I&rsquo;m biased&hellip;</p>
+</div>
+	
+
+</article>
+
+	
+	<div class="share">
+		<ul>
+			<li>
+  <a href="https://twitter.com/intent/tweet?text=Kamil's Heuristic Evaluation by @&url=http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/" title="Share Kamil's Heuristic Evaluation on Twitter">
+    <img src="/minap-mobile/images/social/twitter.png" />
+  </a>
+</li>
+
+			<li>
+  <a href="https://www.facebook.com/sharer.php?u=http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/" title="Share Kamil's Heuristic Evaluation on Facebook">
+    <img src="/minap-mobile/images/social/facebook.png" />
+  </a>
+</li>
+
+			<li>
+  <a href="https://plus.google.com/share?url=http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/" title="Share Kamil's Heuristic Evaluation on Google Plus">
+    <img src="/minap-mobile/images/social/google.png" />
+  </a>
+</li>
+
+		</ul>
+	</div>
+
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">&copy; 2014
+
+    David, Kamil, Ke
+
+</footer>
+	<script src="/minap-mobile/javascripts/slash.js"></script>
+<script src="/minap-mobile/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'minapmobile';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/';
+        var disqus_url = 'http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45479714-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+</html>

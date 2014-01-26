@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Kamil | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/kamil/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-26T15:25:38+00:00</updated>
+  <updated>2014-01-26T16:42:53+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Kamil's Heuristic Evaluation]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/"/>
+    <updated>2014-01-26T16:14:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation</id>
+    <content type="html"><![CDATA[<h3>Defining tasks</h3>
+
+<p>The tasks with which I assigned the team and myself to base our heuristic evaluations around are as shown below:</p>
+
+<ul>
+<li>Creating a patient stub with only the mandatory information</li>
+<li>Creating a full patient record &ndash; navigating around most, if not all sections in a directed manner</li>
+<li>Making amendments to data already entered into the app</li>
+<li>Discarding a bad entry (before saving to server)</li>
+</ul>
+
+
+<p>These were based around tasks which were commonly discussed by our client during meetings. It should be noted however that due to time constraints, not all of our target features have are visibly completed &ndash; but the functionality exists in the raw code (needing to be &ldquo;wired up&rdquo;).</p>
+
+<h3>Being critical</h3>
+
+<h4>visibility of system status</h4>
+
+<p>Android&rsquo;s action bar helped give a space for each page to be given a label, and so it&rsquo;s pretty easy to see where in the app the user is with a quick glance. However, one important sub-task that is currently lacking any visual indicator is saving. In the early stages of paper prototyping, I intended the save icon to change colour on first click, indicating that all items on the page have been saved &ndash; and disabling it from being touched again. Changing an item would then revert the icon to its original state. This would significantly reduce behaviour such as pressing the save button several times, in fear of losing data (which our client admits to doing).</p>
+
+<h4>user control and freedom</h4>
+
+<p>In designing the application, I ensured that most &ndash; if not all &ndash; key pages are accessible within 3 taps. This was made possible by allowing the navigation drawer to be accessed from all data entry pages within the app. However, as I have noticed in preliminary user feedback from colleagues and our client, accessing the Patient Details page to correct a value was not entirely intuitive, and could be improved.</p>
+
+<h4>error prevention</h4>
+
+<p>Unfortunately, the system does not prevent you from &ldquo;submitting&rdquo; an incomplete record at present (MINAP requires the completion of 4 mandatory fields before submission). This was primarily due to lack of time to integrate this business logic, but is admittedly a key feature for MINAP.</p>
+
+<p>Data destroying activities such as discarding bad entries are however accompanied by easy to understand warnings before being carried out.</p>
+
+<h4>aesthetic and minimalist design</h4>
+
+<p>The app looks absolutely brilliant for its purpose as a proof of concept app. The grey look was kept to allow for future styling by MINAP after the application has been fully handed over. I&rsquo;ve also found that people can spend hours trying to decide how things should be coloured and how images should look &ndash; something I decided to avoid in creating the app design.</p>
+
+<p>Of course, I&rsquo;m biased&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A quick update...]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2014/01/20/a-quick-update-dot-dot-dot/"/>
+    <updated>2014-01-20T15:30:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2014/01/20/a-quick-update-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t quite had the time to update this blog over the holiday season and since our last client meeting due to large amounts of Android coding. I can however safely say that all the outlined interactions have been implemented in its final form, pending hooking up to David&rsquo;s back-end. The app should currently serve its main purpose as a tool to gather feedback on the concept of data collection for MINAP on a mobile phone.</p>
+
+<p>A run-through of how our app functions will be outlined in a future video, but here&rsquo;s a collage of screenshots to update you on the progress of the overall interactions the user can have with the app (note: for clarity, many pages have been left out):</p>
+
+<p><img src="/images/app-screenshots.png" title="MINAP mobile app screenshots" ></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Trying to be responsive]]></title>
@@ -146,90 +202,6 @@ The action bar acts as a persistent UI pattern that can be used across all pages
 
 <p><img src="/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
 Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. With tech savvy users such as Julie, we would like to include as many time-saving shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android Design]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design/"/>
-    <updated>2013-12-19T14:02:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-design</id>
-    <content type="html"><![CDATA[<p>To create a truly native application that users of the mobile platform can easily navigate, I figured that I needed to understand the common design language of the operating system (OS). So in preparation for mapping information and navigation of the current MINAP web app onto Android, I had a look through the <a href="http://developer.android.com/design/get-started/principles.html">official design principles of Android OS</a>. At first glance, the Android design principles don&rsquo;t seem to relate to our medical data entry app at all (&ldquo;delight me in surprising ways&rdquo;?), but specific points can be picked out. From the three main principles (Enchant me, Simplify my life, Make me amazing), some outlined sub-principles of the document can be taken onboard in the design of the app:</p>
-
-<h3>Simplify My Life</h3>
-
-<h4>Keep it brief:</h4>
-
-<p>Although the core content of the app cannot be changed due to the precise nature of medical data input, we can keep our tutorials short with simple language</p>
-
-<h4>Only show what I need when I need it:</h4>
-
-<p>Breaking down the tasks of using the application strikes me as an area which we could improve on the current app, with a wealth of possible options available to me upon opening the web app. If we expect the app to have more widespread usage, the process of record creation should be fairly intuitive to someone with limited prior knowledge.</p>
-
-<h4>I should always know where I am:</h4>
-
-<p>There are two main &lsquo;modes&rsquo; which our user would be most active in during use: navigation mode, and page data entry mode. It should be clear how the user will navigate back and forth through the app, allowing for multiple possible ways (i.e. back button, or a navigator icon)</p>
-
-<h4>Never lose my stuff:</h4>
-
-<p>Due to security concerns and data protection, we shouldn&rsquo;t retain a local copy of entered data beyond the duration of the session. Despite this, we could &lsquo;autosave&rsquo; the entered data into a &lsquo;draft&rsquo; database on the central server, with visual indicators to let the user know the data has been submitted for storing (the expected web app behaviour is manual saving).</p>
-
-<h4>If it looks the same, it should act the same:</h4>
-
-<p>We should keep in mind what we mean when using Android UI elements (i.e. if it looks like a text box, it should act like one) to ensure they retain the same meaning throughout the app.</p>
-
-<h3>Make Me Amazing</h3>
-
-<h4>Give me tricks that work everywhere:</h4>
-
-<p>Gestures such as swiping from the edge for menus aren&rsquo;t good for a primary interface due to discoverability issues for novice users, but can serve to speed up the workflow of more experienced users.</p>
-
-<h4>It&rsquo;s not my fault:</h4>
-
-<p>When informing the user of validation errors, it would be helpful to consider if the warnings could be reworded for clarity and &lsquo;niceness&rsquo;.</p>
-
-<h4>Make important things fast:</h4>
-
-<p>The ability to switch between pages and the mode of data entry and navigation should be effortless. It should also be relatively easy to check details of the session such as the current logged in username and patient core details.</p>
-
-<p>To make UI decisions easier, I will be aiming to follow these principles as closely as possible in conjunction with the core Android UI elements and more detailed design guidelines which I hope to cover in a future post.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Finding Competition]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition/"/>
-    <updated>2013-12-17T14:01:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/17/finding-competition</id>
-    <content type="html"><![CDATA[<p>Medical data entry applications are a new concept (and also likely to be distributed solely within the company), so direct competitors are hard to come by on all major mobile app stores. One element of our app solution that could be used as a basis for finding similar solutions is the navigation panel. On a 1024 x 768 desktop browser, the user can easily read all the text and possible pathways at a glance. Directly mapping this onto a small device (smartphone) would yield unreadable text if naively shrunk to fit the screen; enabling a simple zoom-in and out approach would require too much scrolling in arbitrary directions to view the complete navigation map.</p>
-
-<p>To get some ideas on how we could best represent this tree-navigation structure, we had a look through the apps on our own smartphones. Interestingly enough, a language learning app had the closest representation of the current MINAP navigation tree.</p>
-
-<h3>Duolingo</h3>
-
-<p>Duolingo, a language learning mobile app, relies on a central &lsquo;learning tree&rsquo; to show the user&rsquo;s progress of language learning. The user progresses through different levels, clearly separated by horizontal rules, containing individual units of activities.</p>
-
-<p><img src="/images/duolingo-main.png" title="Duolingo main screen" ></p>
-
-<p>Each unit is an icon, associated with a short description of its associated meaning. Colour is used to signify the ability to access the units: with greyscale to mean inactive, and a coloured icon to mean active. User progress in the units are indicated as well, through use of fractions and &lsquo;level bars&rsquo; (which is puzzling), using colours and greyscale again to indicate level of completeness. As with most modern designs, Duolingo has done away with scroll bars to signify the ability to scroll downwards, but overcomes this problem by having an icon &lsquo;peeking&rsquo; out from the bottom of the screen &ndash; indicating that there is more content below.</p>
-
-<p>Due to the working environment that our app would be used in, we need to ensure a professional look &ndash; so we can&rsquo;t use vibrant colours and iconography as extensively as Duolingo. However, the use of very distinct colours to indicate level of completeness and access could be adopted for quick recognition of the completion &lsquo;status&rsquo; of each page on the navigation map, to suit the quick nature of patient record creation intended in our mobile app. The current (MINAP) web app employs the same colouring strategy, though using more subtle hues, compatible with the more relaxed and slow process of data entry at the computer.</p>
-
-<p>Additionally, the organisation of levels in Duolingo lack a sense of coherence, with the utilitarian grey divider not conveying any sign of connection between the different levels. The MINAP web app has the problem of dealing with &lsquo;levels&rsquo; containing up to 7 pages, which unfortunately won&rsquo;t fit with Duolingo&rsquo;s method of mapping.</p>
-
-<h3>Reddit Sync</h3>
-
-<p>Reddit Sync is a (3rd-party) mobile client app for a popular online community sharing website, Reddit. Its primary purpose is for consuming content quickly and giving feedback on posted content by votes or comments. The app makes heavy use of the card metaphor, with card metadata and actionable items prominently featured.</p>
-
-<p><img class="left" src="/images/reddit-sync-main.png" title="Reddit Sync main screen" ></p>
-
-<p>What I found most interesting about Reddit Sync however, was its use of the Android navigation drawer. Reddit is divided into separate interest groups/sections called &lsquo;subreddits&rsquo;, which contain posts related to a particular topic. These sections are analogous to the pages in the MINAP dataset, and could be used as a quick alternative way (a navigation list) to traverse through the many pages.</p>
-
-<p><img src="/images/sync-drawer.png" title="Reddit Sync navigation drawer" ></p>
-
-<p>One other interesting feature is how the app deals with multiple logins. It is common practice on Reddit for users to manage multiple accounts for their different online personas. Reddit Sync prominently displays your currently logged in username at the top of the navigation drawer, with a &lsquo;spinner&rsquo; &ndash; an Android signifier indicating the ability to choose between several options. Touching this spinner allows the user to switch between accounts on the fly. Such an interface could be useful in the near future to allow MINAP users to switch between accounts registered to different hospitals under their name.</p>
-
-<p><img src="/images/sync-spinner.png" title="Reddit Sync user spinner" ></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCI | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/hci/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-26T15:25:38+00:00</updated>
+  <updated>2014-01-26T16:42:53+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Kamil's Heuristic Evaluation]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation/"/>
+    <updated>2014-01-26T16:14:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2014/01/26/kamils-heuristic-evaluation</id>
+    <content type="html"><![CDATA[<h3>Defining tasks</h3>
+
+<p>The tasks with which I assigned the team and myself to base our heuristic evaluations around are as shown below:</p>
+
+<ul>
+<li>Creating a patient stub with only the mandatory information</li>
+<li>Creating a full patient record &ndash; navigating around most, if not all sections in a directed manner</li>
+<li>Making amendments to data already entered into the app</li>
+<li>Discarding a bad entry (before saving to server)</li>
+</ul>
+
+
+<p>These were based around tasks which were commonly discussed by our client during meetings. It should be noted however that due to time constraints, not all of our target features have are visibly completed &ndash; but the functionality exists in the raw code (needing to be &ldquo;wired up&rdquo;).</p>
+
+<h3>Being critical</h3>
+
+<h4>visibility of system status</h4>
+
+<p>Android&rsquo;s action bar helped give a space for each page to be given a label, and so it&rsquo;s pretty easy to see where in the app the user is with a quick glance. However, one important sub-task that is currently lacking any visual indicator is saving. In the early stages of paper prototyping, I intended the save icon to change colour on first click, indicating that all items on the page have been saved &ndash; and disabling it from being touched again. Changing an item would then revert the icon to its original state. This would significantly reduce behaviour such as pressing the save button several times, in fear of losing data (which our client admits to doing).</p>
+
+<h4>user control and freedom</h4>
+
+<p>In designing the application, I ensured that most &ndash; if not all &ndash; key pages are accessible within 3 taps. This was made possible by allowing the navigation drawer to be accessed from all data entry pages within the app. However, as I have noticed in preliminary user feedback from colleagues and our client, accessing the Patient Details page to correct a value was not entirely intuitive, and could be improved.</p>
+
+<h4>error prevention</h4>
+
+<p>Unfortunately, the system does not prevent you from &ldquo;submitting&rdquo; an incomplete record at present (MINAP requires the completion of 4 mandatory fields before submission). This was primarily due to lack of time to integrate this business logic, but is admittedly a key feature for MINAP.</p>
+
+<p>Data destroying activities such as discarding bad entries are however accompanied by easy to understand warnings before being carried out.</p>
+
+<h4>aesthetic and minimalist design</h4>
+
+<p>The app looks absolutely brilliant for its purpose as a proof of concept app. The grey look was kept to allow for future styling by MINAP after the application has been fully handed over. I&rsquo;ve also found that people can spend hours trying to decide how things should be coloured and how images should look &ndash; something I decided to avoid in creating the app design.</p>
+
+<p>Of course, I&rsquo;m biased&hellip;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ke's Heuristic Evaluation]]></title>
@@ -116,6 +159,19 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[A quick update...]]></title>
+    <link href="http://akz08.github.io/minap-mobile/blog/2014/01/20/a-quick-update-dot-dot-dot/"/>
+    <updated>2014-01-20T15:30:00+00:00</updated>
+    <id>http://akz08.github.io/minap-mobile/blog/2014/01/20/a-quick-update-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t quite had the time to update this blog over the holiday season and since our last client meeting due to large amounts of Android coding. I can however safely say that all the outlined interactions have been implemented in its final form, pending hooking up to David&rsquo;s back-end. The app should currently serve its main purpose as a tool to gather feedback on the concept of data collection for MINAP on a mobile phone.</p>
+
+<p>A run-through of how our app functions will be outlined in a future video, but here&rsquo;s a collage of screenshots to update you on the progress of the overall interactions the user can have with the app (note: for clarity, many pages have been left out):</p>
+
+<p><img src="/images/app-screenshots.png" title="MINAP mobile app screenshots" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Trying to be responsive]]></title>
     <link href="http://akz08.github.io/minap-mobile/blog/2014/01/13/trying-to-be-responsive/"/>
     <updated>2014-01-13T17:33:00+00:00</updated>
@@ -143,111 +199,6 @@
 <p><img src="/images/tablet-2.png" title="Tablet data entry view" ></p>
 
 <p>The design process for our app to best fit a tablet view evidently boils down to just mimicking the current web app interface. Future work on this should be fairly straightforward (layouts can be separated to allow for this).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Playing With Paper]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper/"/>
-    <updated>2013-12-20T14:02:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/20/playing-with-paper</id>
-    <content type="html"><![CDATA[<h3>Standing on the shoulders</h3>
-
-<p>During the early development phases, David made several sketches of a preliminary UI to show to our client to ensure we had captured all the functionality that we had agreed on. The focus was more on functionality, rather than specific UI decisions, since we had yet to nail down our target mobile platform. The client was happy with our design decisions &ndash; with some suggestions for functionality &ndash; but our requirements have significantly changed since then, and we now have a mobile platform that we have decided to stick to (Android). Despite this, much of the new UI design is based off these preliminary sketches.</p>
-
-<p><img src="/images/david-paper-ui.png" title="One of David&rsquo;s preliminary UI sketches" ></p>
-
-<h3>New beginnings</h3>
-
-<p>To help with the redesign, I took over the process of creating the new GUI, and started off with a clean slate (piece of paper).</p>
-
-<p><img src="/images/blank-sheet.JPG" title="Blank page template" ></p>
-
-<p>I printed out several templates (made in MS Word) around the size of a typical Android smartphone&rsquo;s screen to keep myself within the constraints of a phone. The black bar at the bottom is meant to represent Android&rsquo;s &ldquo;soft buttons&rdquo; for navigation on newer phones without menu keys built into the hardware (as seen on the <a href="http://developer.android.com/design/get-started/ui-overview.html" title="Android Navigation Bar">developer website under the heading &ldquo;System Bars&rdquo;</a>). For this case, phones with the soft navigation bar primarily differ from older phones (like the <a href="http://en.wikipedia.org/wiki/Nexus_S" title="Nexus S">Nexus S</a>) in that they move the roles of the hardware &ldquo;menu&rdquo; button to an &ldquo;overflow&rdquo; soft-button on the Android action bar. I assumed the newer behaviour when designing the interface.</p>
-
-<h3>First steps</h3>
-
-<p>Based on the information I gleaned from the Android developer website, I started to piece together a rough idea of a mobile interface for MINAP. The purpose of this initial sketch was as a personal brainstorming session &ndash; the notes aren&rsquo;t meant to be legible to anybody else.</p>
-
-<p><img src="/images/ui-sketch-initial.jpg" title="Initial UI sketches" >
-The process of starting the app and logging in was initially designed to closely match the current web app&rsquo;s interface. The legal disclaimer, login screen, and the options menu to create a new record was included to make the longtime MINAP user comfortable with the interface.</p>
-
-<p>The process of creating a record would first prompt the user to enter in patient details, with a button labelled &ldquo;Confirm&rdquo;, to give weight to the importance of information entered on that page. As mobile screens rarely give signifiers for scrolling (unlike most desktop interfaces), confirmation and navigation buttons are located at the bottom of the page&rsquo;s content. This forces the average user to view all data entry fields before progressing further, hopefully helping with data completeness.</p>
-
-<p>The concept of using a navigation drawer to give feedback on the current session and &ldquo;quick navigation&rdquo; is also explored here. The navigation drawer would animate in from the left when the user transitions into the navigation page from touching the &ldquo;Confirm&rdquo; button (on Patient Details). Since the navigation drawer is typically hidden with (few) visual signifiers, this acts as both a reminder and introduction of its existence.</p>
-
-<p><img src="/images/ui-part-1.JPG" title="Part 1" ></p>
-
-<p>The overflow button (3 vertical dots) should be used for less-used features, such as logging out, settings, and help. Ideally, we would like to have the &ldquo;Log out&rdquo; option more prominently displayed, but space on the action bar is at a premium, and is used for more important tasks such as saving (classic floppy icon). More concerned users such as Edward are however more likely to explore the app in its entirety. Despite this, I&rsquo;ve explored the option of &ldquo;auto log out&rdquo; as a default in the settings. There are however implications of making this a default behaviour (e.g. data loss), so the concept should be explored a bit more.</p>
-
-<p>In the future, the navigation map would be pretty big, so I&rsquo;ve explored some methods of manipulating the map with touch inputs as well.</p>
-
-<p><img src="/images/ui-part-2.JPG" title="Part 2" ></p>
-
-<p>As a final touch, I&rsquo;ve tried to get a feel on how the help tooltips would be represented in the mobile app. The current web app uses a question mark for its icon, but I figured that since most users of a mobile version would likely be new to MINAP data entry, a more widely used &ldquo;i&rdquo; for &ldquo;information&rdquo; would be better recognised.</p>
-
-<p><img src="/images/ui-part-3.JPG" title="Part 3" ></p>
-
-<h3>Cleaning up</h3>
-
-<p>To ensure I was making reasonably informed decisions with the UI, I redrew my preliminary sketches whilst consciously culling unnecessary features.</p>
-
-<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
-
-<p>One of the major changes I made was the culling of the page where users are given the option to create a record or a &lsquo;stub&rsquo;. To help with the focus of our app on record creation, we should remove all options that may deviate away from this core purpose. Creating patient record stubs could instead be handled in a more streamlined fashion (automated, perhaps) to avoid the users from making a mistake of choosing the wrong option on first opening the app.</p>
-
-<p><img src="/images/ui-part-4.JPG" title="Part 4" ></p>
-
-<p>The concepts about keeping navigation buttons at the end of the page previously discussed can be seen more clearly in the photo below. Information buttons are also clearly associated with each value label, triggering a dialog box which can be easily dismissed with a clearly labelled button.</p>
-
-<p><img src="/images/ui-part-5.JPG" title="Part 5" ></p>
-
-<p>My sketches, though more legible was still not quite in a state that would allow me to clearly illustrate my ideas for the mobile interface to our client. To better do this, I had to employ the power of technology &ndash; and a bit of magic (i.e. imagination).</p>
-
-<h3>A touch of magic</h3>
-
-<p>A rather nifty app that helped with this process was <a href="https://popapp.in/" title="POP app">&ldquo;POP&rdquo; (Prototyping on Paper)</a>. The app is an Android/iOS solution to converting paper prototypes to semi-functional Wizard of Oz prototypes. Unfortunately, the Android version was very buggy, so I had to create my pseudo-app on an iPhone &ndash; hence the added imagination.</p>
-
-<p>It&rsquo;s somewhat hard to describe how exactly I transformed the sketches into an interactive prototype, so I&rsquo;ll let the video below demonstrate.</p>
-
-<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div></p>
-
-<p>The fake &lsquo;swiping&rsquo; on the Patient Details page was intentional, as the app only allows capturing touches on bounding boxes. This was pretty much how I presented the app to our client &ndash; using a bit of magic to convince our client it was running on an Android device (I think it worked&hellip;).</p>
-
-<h3>Getting feedback</h3>
-
-<p>Having a tangible product to show to the client helped with getting more concrete feedback. The comments from our client were pretty positive overall, with some key points of concern:</p>
-
-<ul>
-<li>despite owning an Android phone herself, she had not encountered the use of the navigation drawer before</li>
-<li>she would <em>really</em> appreciate a tutorial for less experienced users (we will if time permits&hellip;)</li>
-</ul>
-
-
-<p>Despite the concerns about the navigation drawer, I think the concept would probably be better demonstrated with an actual working prototype. Although our client had a go at &lsquo;running&rsquo; our app, it was limited in scope due to the input limitations of the system. I aim to continually gather client feedback once we have a semi-functional app running on Android.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android UI Elements]]></title>
-    <link href="http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements/"/>
-    <updated>2013-12-19T14:02:00+00:00</updated>
-    <id>http://akz08.github.io/minap-mobile/blog/2013/12/19/android-ui-elements</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve owned an Android smartphone for three years before switching over to a hand-me-down iPhone, and went through Gingerbread and Ice Cream Sandwich(4.0). Having spent the first 2 years dealing with Gingerbread, switching to the new interface of Android 4.0 was a breath of fresh air. ICS introduced a cleaner UI with a clearer design language. Our decision to only support devices from ICS onwards are primarily due to security concerns, but the availability of more (intuitive) UI elements and ways to present our app is really just the icing on the cake.</p>
-
-<p>To get a clearer idea of the UI elements available to us, I had a look through the official Android UI website, identifying the main elements available for use. This was just a very brief run through, as I realised the documentation regarding the recommended use of the elements by Google were quite thorough &ndash; which I intend to constantly refer to throughout the building of the app UI.</p>
-
-<p>Platform specific UI patterns of interest (images taken from the <a href="http://developer.android.com/design/patterns/index.html">Android developer website</a>:</p>
-
-<h4>Action Bar</h4>
-
-<p><img src="/images/action_bar_basics.png" title="Action Bar image from the Android Developer website" >
-The action bar acts as a persistent UI pattern that can be used across all pages. Less important functionality such as Logging out could be kept in the &lsquo;overflow&rsquo; (3 vertical dots) menu, and key features such as saving could use prominent icons (the classical floppy disk). The icon (labelled 1) for ancestral navigation could also be made contextual, such that it could change to be a compass icon when the user navigates to a data entry page.</p>
-
-<h4>Navigation drawer</h4>
-
-<p><img src="/images/navigation_drawer_overview.png" title="Navigation Drawer image from the Android Developer website" >
-Our mobile app&rsquo;s key purpose is to allow for quick data collection at the point of contact with the patient. With tech savvy users such as Julie, we would like to include as many time-saving shortcuts to frequently accessed features as possible. The navigation drawer could be introduced as an alternative way to navigate around the pages, as opposed to constantly visiting the navigation map. The typical way of navigation (according to our client) involves the user &lsquo;hopping&rsquo; around different pages when entering information (making the back and next buttons redundant &ndash; but we are keeping them for familiarity). A good use of the drawer would be to allow quick navigation around pages, as well as maybe giving the user feedback on who they are logged in as, and who the current patient being recorded is.</p>
 ]]></content>
   </entry>
   
