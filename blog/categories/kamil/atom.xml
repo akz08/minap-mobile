@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Kamil | App Team 7]]></title>
   <link href="http://akz08.github.io/minap-mobile/blog/categories/kamil/atom.xml" rel="self"/>
   <link href="http://akz08.github.io/minap-mobile/"/>
-  <updated>2014-01-26T12:50:57+00:00</updated>
+  <updated>2014-01-26T14:19:35+00:00</updated>
   <id>http://akz08.github.io/minap-mobile/</id>
   <author>
     <name><![CDATA[David, Kamil, Ke]]></name>
@@ -33,23 +33,62 @@
 
 <h3>First steps</h3>
 
-<p><img src="/images/ui-sketch-initial.jpg" title="Initial UI sketches" ></p>
+<p>Based on the information I gleaned from the Android developer website, I started to piece together a rough idea of a mobile interface for MINAP. The purpose of this initial sketch was as a personal brainstorming session &ndash; the notes aren&rsquo;t meant to be legible to anybody else.
+<img src="/images/ui-sketch-initial.jpg" title="Initial UI sketches" >
+The process of starting the app and logging in was initially designed to closely match the current web app&rsquo;s interface. The legal disclaimer, login screen, and the options menu to create a new record was included to make the longtime MINAP user comfortable with the interface.</p>
 
-<p><img src="/images/ui-part-1.JPG" title="Part 1" >
-<img src="/images/ui-part-2.JPG" title="Part 2" >
+<p>The process of creating a record would first prompt the user to enter in patient details, with a button labelled &ldquo;Confirm&rdquo;, to give weight to the importance of information entered on that page. As mobile screens rarely give signifiers for scrolling (unlike most desktop interfaces), confirmation and navigation buttons are located at the bottom of the page&rsquo;s content. This forces the average user to view all data entry fields before progressing further, hopefully helping with data completeness.</p>
+
+<p>The concept of using a navigation drawer to give feedback on the current session and &ldquo;quick navigation&rdquo; is also explored here. The navigation drawer would animate in from the left when the user transitions into the navigation page from touching the &ldquo;Confirm&rdquo; button (on Patient Details). Since the navigation drawer is typically hidden with (few) visual signifiers, this acts as both a reminder and introduction of its existence.</p>
+
+<p><img src="/images/ui-part-1.JPG" title="Part 1" ></p>
+
+<p>The overflow button (3 vertical dots) should be used for less-used features, such as logging out, settings, and help. Ideally, we would like to have the &ldquo;Log out&rdquo; option more prominently displayed, but space on the action bar is at a premium, and is used for more important tasks such as saving (classic floppy icon). More concerned users such as Edward are however more likely to explore the app in its entirety. Despite this, I&rsquo;ve explored the option of &ldquo;auto log out&rdquo; as a default in the settings. There are however implications of making this a default behaviour (e.g. data loss), so the concept should be explored a bit more.</p>
+
+<p>In the future, the navigation map would be pretty big, so I&rsquo;ve explored some methods of manipulating the map with touch inputs as well.</p>
+
+<p><img src="/images/ui-part-2.JPG" title="Part 2" ></p>
+
+<p>As a final touch, I&rsquo;ve tried to get a feel on how the help tooltips would be represented in the mobile app. The current web app uses a question mark for its icon, but I figured that since most users of a mobile version would likely be new to MINAP data entry, a more widely used &ldquo;i&rdquo; for &ldquo;information&rdquo; would be better recognised.
 <img src="/images/ui-part-3.JPG" title="Part 3" ></p>
 
 <h3>Cleaning up</h3>
 
-<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" >
-<img src="/images/ui-part-4.JPG" title="Part 4" >
-<img src="/images/ui-part-5.JPG" title="Part 5" ></p>
+<p>To ensure I was making reasonably informed decisions with the UI, I redrew my preliminary sketches whilst consciously culling unnecessary features.</p>
+
+<p><img src="/images/ui-sketch-final.jpg" title="Final (initial) UI sketches" ></p>
+
+<p>One of the major changes I made was the culling of the page where users are given the option to create a record or a &lsquo;stub&rsquo;. To help with the focus of our app on record creation, we should remove all options that may deviate away from this core purpose. Creating patient record stubs could instead be handled in a more streamlined fashion (automated, perhaps) to avoid the users from making a mistake of choosing the wrong option on first opening the app.</p>
+
+<p><img src="/images/ui-part-4.JPG" title="Part 4" ></p>
+
+<p>The concepts about keeping navigation buttons at the end of the page previously discussed can be seen more clearly in the photo below. Information buttons are also clearly associated with each value label, triggering a dialog box which can be easily dismissed with a clearly labelled button.</p>
+
+<p><img src="/images/ui-part-5.JPG" title="Part 5" ></p>
+
+<p>My sketches, though more legible was still not quite in a state that would allow me to clearly illustrate my ideas for the mobile interface to our client. To better do this, I had to employ the power of technology &ndash; and a bit of magic (i.e. imagination).</p>
 
 <h3>A touch of magic</h3>
 
+<p>A rather nifty app that helped with this process was <a href="https://popapp.in/" title="POP app">&ldquo;POP&rdquo; (Prototyping on Paper)</a>. The app is an Android/iOS solution to converting paper prototypes to semi-functional Wizard of Oz prototypes. Unfortunately, the Android version was very buggy, so I had to create my pseudo-app on an iPhone &ndash; hence the added imagination.</p>
+
+<p>It&rsquo;s somewhat hard to describe how exactly I transformed the sketches into an interactive prototype, so I&rsquo;ll let the video below demonstrate.</p>
+
 <p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/yi91OxmUkG8 "></iframe></div></p>
 
+<p>The fake &lsquo;swiping&rsquo; on the Patient Details page was intentional, as the app only allows capturing touches on bounding boxes. This was pretty much how I presented the app to our client &ndash; using a bit of magic to convince our client it was running on an Android device (I think it worked&hellip;).</p>
+
 <h3>Getting feedback</h3>
+
+<p>Having a tangible product to show to the client helped with getting more concrete feedback. The comments from our client were pretty positive overall, with some key points of concern:</p>
+
+<ul>
+<li>despite owning an Android phone herself, she had not encountered the use of the navigation drawer before</li>
+<li>she would <em>really</em> appreciate a tutorial for less experienced users (we will if time permits&hellip;)</li>
+</ul>
+
+
+<p>Despite the concerns about the navigation drawer, I think the concept would probably be better demonstrated with an actual working prototype. Although our client had a go at &lsquo;running&rsquo; our app, it was limited in scope due to the input limitations of the system. I aim to continually gather client feedback once we have a semi-functional app running on Android.</p>
 ]]></content>
   </entry>
   
