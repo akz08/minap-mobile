@@ -149,6 +149,49 @@ Our main priority during the second half of this project was to produce somethin
 
 Still, the need for a further study onto the networking technologies used at MINAP was necessary. If not for our project, for future hands to grapple with.
 
+\subsection{Client-Server Communication}
+As mentioned in the 20/11/13 Meeting, the team confirmed that making our app communicate with a Domino Server is not a key priority, and that spinning off another web server (e.g. Apache, + MSFT SQL Server) with a similar capabilities will satisfy the requirements. Therefore finding compatibility solutions between Java/Android and the Domino Server was reassigned as a research topic.
+
+The aim of the research was to understand the domino web server communication protocol, to some degree, as it could help explore the possibility of making our app cross-platform and future-proof. With little understanding on the topic, I started with searching through the user guide for Domino 8.5 (IBM.COM) and found out that Domino supports Web services as defined in the W3C documents Simple Object Access Protocol (SOAP) 1.1 and Web Services Description Language (WSDL) 1.1.
+
+SOAP (Simple Object Access Protocol) is a protocol specification for exchanging structured information in the implementation of Web Services within computer networks. It relies on the XML Information Set for its message format, and usually makes use of other Application Layer protocols, most notably Hypertext Transfer Protocol (HTTP) or Simple Mail Transfer Protocol (SMTP), for message negotiation and transmission.
+
+The official SOAP Version 1.1 specification document has been added to resources used (W3.com). It provides not only background informations of SOAP, but also extensive knowledge how a SOAP message is constructed, how to use SOAP in HTTP, and examples of SOAP messages.
+
+As an example of how SOAP procedures can be used, a SOAP message could be sent to a web service-enabled site; such as a real-estate price database, with the parameters needed for a search. The site would then return an XML-formatted document with the resulting data, e.g., prices, location, features. With the data being returned in a standardized machine-parsable format, it can then be integrated directly into a third-party web site or application.
+\\ \\
+A SOAP message is simply an XML file which contains the following elements:
+
+\begin{itemize}
+	\item An Envelope element that identifies the XML document as a SOAP message
+	\item A Header element that contains header information
+	\item A Body element that contains call and response information
+	\item A Fault element containing errors and status information
+\end{itemize}
+A basic structure of a SOAP message is offered (w3schools.com): 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{img/soap-1.jpg}
+\caption{Basic structure of a SOAP message \cite{soap1}}
+\end{figure}
+
+Examples of SOAP Messages (w3schools.com): In this example, a "GetStockPrice" was sent to the test server (\url{http://www.example.org/stock}). As a response, the "Price" value was returned.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{img/soap-2.jpg}
+\caption{Example HTTP Request}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{img/soap-3.jpg}
+\caption{Example HTTP Response}
+\end{figure}
+
+In terms of the real world implementation of the communication between Domino and Android device, many sources were found online, however few of them were actually helpful to this research. In the end, an interesting web page called How to Call Web Service in Android Using SOAP was found (c-sharpcorner.com). From what I have gathered so far, it seems Android does not provide any sort of SOAP library; according to the web page, our best bet is kSOAP 2. It is a SOAP web service client library for constrained Java environments such as Applets or J2ME applications (CLDC / CDC / MIDP). In the webpage that was mentioned before, a connection between an Android device and a non-Domino web service was established through SOAP. Since the Domino web server supports SOAP, with modifications it should be possible to establish a connection between an Android device and the Domino web server. In future research, this should be attempted.
+
 \newpage
 \section{Client Feedback}
 
@@ -254,6 +297,26 @@ The service proved to be especially useful in tracking the progress of work pack
 Team members typically were assigned work packages by the team leader, based on their current capabilities. These tended to be general work outlines, and were negotiable in their scope. The decisions on work packages at any given time were strongly influenced by ongoing technology research, the current state of the overall system, and client feedback.
 \subsubsection{Meetings}
 The team typically met every workday to complete work together up to the first academic milestone. Most meetings since then have been conducted informally online using Flowdock, with occasional in-person catch-up meetings. This structure was more suited to the team once working on the final product, as work by each member was mostly independent of each other. Snapshots of early team meetings can be found in ~\cref{sec:internal_meetings}. 
+
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{soap1}
+w3schools.com, Example of SOAP message: \url{http://www.w3schools.com/webservices/ws_soap_syntax.asp}
+
+\bibitem{domino}
+ibm.com, Domino 8.5 user guide: \url{http://publib.boulder.ibm.com/infocenter/domhelp/v8r0/index.jsp?topic=%2Fcom.ibm.designer.domino.main.doc%2FH_EXAMPLES_WEB_SERVICES.html}
+
+\bibitem{soap2}
+w3.org, SOAP document from W3: \url{http://www.w3.org/TR/2000/NOTE-SOAP-20000508/}
+
+\bibitem{ksoap}
+kSOAP: \url{http://ksoap2.sourceforge.net/}
+
+\bibitem{csharpc}
+C\# Corner, How to Call Web Service in Android Using SOAP: \url{http://www.c-sharpcorner.com/UploadFile/88b6e5/how-to-call-web-service-in-android-using-soap/}
+
+\end{thebibliography}
 
 \newpage
 \appendix
@@ -1549,6 +1612,158 @@ App Team 7, Lucia Gavalova, Sue Manuel (Developer), Fabian D'Souza
 \end{enumerate}
 \subsubsection{Outcomes}
 The team is now confident in delivering an application with the scaled-down specifications (fewer than 130 validations and Domino Server compatibility not being a priority). A link to the SurveyMonkey device survey was sent to the team, pending approval (by the team). However, due to the reduction of requirements occurring so close to the first report milestone (24/11/13), the team was unable to fully capture this more manageable system in Java.
+
+\subsection{UI \& Features Demonstration (05/12/13)}
+
+\subsubsection{Meeting Purpose}
+To present the User Interface to the client as well as to show the features that will be in the Android app.
+
+\subsubsection{People Present} 
+App Team 7, Lucia Gavalova
+
+\subsubsection{Discussion}
+\begin{enumerate}
+	\item Kamil presented the UI and app features to Lucia
+	\begin{enumerate}
+		\item Confirmed there will be a tutorial for the app after the user logged in 
+		\begin{enumerate}
+			\item Lucia suggested that the tutorial should be before the logging in 
+		\end{enumerate}				
+		\item Confirmed that the disclaimer will be only shown once when the app is launched the first time 
+		\item Lucia liked the way Kamil presented the UI of the app 
+		\item Lucia suggested the hospital name should be auto-filled when creating patient records, the team promised to look into it 
+		\item Lucia promised to get different people to test the app, and gather feedback 
+		\item Lucia asked some questions about the saving features of the app 
+		\item A question from Kamil about an indicator on the current web app, which turned out to be a completion indicator, which is not working properly on the web service 
+		\begin{enumerate}
+			\item Confirmed the colours should be used as indicators as to whether the section has been filled 
+		\end{enumerate}
+	\item Lucia suggested the compulsory fields should be highlighted 
+	\item Lucia is happy with the UI 
+	\end{enumerate}
+	\item David mentioned to Lucia that the app does not have the read record function at the moment for connection and security reasons 
+	\begin{enumerate}
+	\item Lucia concurred that this is satisfactory enough at this stage 
+	\item The time-out/log-out functions were presented 
+	\item Lucia asked about the notification sound 
+	\item Lucia mentioned her security concerns, an application with only record creation function is simple and secure 
+	\end{enumerate}
+	\item Lucia promised to give us an update on the survey
+\end{enumerate}
+\subsubsection{Outcomes} 
+The main features and UI for the app were shown, an update for the survey will be sent, team is continuing with the current app development schedule.
+
+\subsection{Progress Updates \& Post-Holiday Arrangement (12/12/2013)}
+
+\subsubsection{Meeting Purpose}
+Questions about data sets, ask for survey update, introducing the team blog, arrange next meeting
+
+\subsubsection{People Present}
+App Team 7, Lucia Gavalova
+
+\subsubsection{Discussion}
+\begin{enumerate}
+	\item Questions from David about ‘complication’ data set 
+	\begin{enumerate}
+		\item Lucia said she will take a look later 
+	\end{enumerate}
+	\item Asked for further survey updates 
+	\begin{enumerate}
+		\item Lucia mentioned that the security concern stood out in the survey, tablets rather than mobile phones are used more, iOS devices are used more than other devices etc. 
+		\item Lucia was also very encouraged that survey indicated that potential users are considering purchasing mobile devices for medical record use if the app works well 
+		\item Lucia mentioned the difficulties when trying to convince potential users to complete the survey 
+	\end{enumerate}
+	\item Arrangements for the next meeting 
+	\item Introducing our blog to Lucia 
+	\begin{enumerate}
+		\item Lucia is generally happy with the contents of the blog, however she mentioned few amendments may be needed 
+		\item Lucia said she will offer feedback to us once she has read it 
+	\end{enumerate}
+	\item Lucia suggested if we could turn off the auto remember/fill in function on the keyboard that Android provides on the app in order to protect patients’ confidentiality 
+	\begin{enumerate}
+		\item Kamil explained to her that the function is offered by the native Android keyboard app not our app so we are unable to disable it
+\end{enumerate}		
+	\item Ke explained a use case to Lucia with Kamil's story board 
+	\begin{enumerate}
+		\item Lucia suggested that the app could have a section which stores all the records that were created by the app, which allows the nurse go back to the app and continue to work on the records 
+	\end{enumerate}
+	\item David gave updates to Lucia, the team will go on holiday and work separately, gave a promise as to what each member of the team will deliver by the next meeting 
+	\begin{enumerate}
+		\item David will be working on the local database and the validation rules 
+		\item Ke will be working on how to communicate with the domino server 
+		\item Kamil will be working on the UI, the navigation map may not be done by then 
+	\end{enumerate}
+	\item Reminded Lucia of the deadline of the project, informed her that what will be presented to her in the next meeting will be very close to what we will be handing in by the project deadline 
+	\item Reminded Lucia that the development of the app helped the organisation in terms of mobilising the current web solution 
+	\begin{enumerate}
+		\item Lucia agreed to view the app as a proof of concept
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsubsection{Outcomes} 
+The next meeting is set for 10th Jan, 2014; the team will be working separately during holiday, client has agreed to view the app as a proof of concept.
+
+\subsection{Post-Holiday Meeting (13/01/2014)}
+
+\subsubsection{Meeting Purpose}
+Give updates on the app, show the UI skeleton on Android phone , and gather feedback
+
+\subsubsection{People Present}
+App Team 7, Lucia Gavalova, Sue Manuel
+
+\subsubsection{Discussion}
+\begin{enumerate}
+	\item Remind Lucia the agreement between the team and client in terms of the app, the app is a proof of concept on the Android phones 
+	\item Gave updates to Lucia 
+	\begin{enumerate}
+		\item Ke was researching for the communication of the Domino server, SOAP and WSDL as communication protocols were found, he asked for access for a test Domino database in case a real test is needed 
+		\item Lucia promised to hold another meeting with tech team to sort that out 
+		\item David is working on the database, it was not fully implemented, but nearly done 
+	\end{enumerate}
+	\item Kamil presented the UI skeleton on Android phone and installed it on Lucia’s phone in order for her to try it out and offer feedback as quickly as possible 
+	\begin{enumerate}
+		\item Lucia is pleased with the skeleton of the app 
+		\item Lucia raised a question about just keeping the side bar as a main navigation section instead of a separate navigation page 
+		\item Kamil explained the thinking behind it – to help users that are accustomed to the web page solution to navigate their way in the app 
+	\end{enumerate}
+	\item Sue came into the meeting 
+	\begin{enumerate}
+		\item Sue was presented the app skeleton as well 
+		\item She asked for handover documents, team promised they will produce them
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsubsection{Outcomes}
+Client is happy with the skeleton of the app as well as the outcome of the app, handover documents will be provided for the future development of the app, a meeting will be set up with the tech group for Ke’s research on the domino communication.
+
+
+\subsection{Domino Communication (17/01/2014)}
+
+\subsubsection{Meeting Purpose}
+To show the research findings to the tech group and find out more information about Domino communication protocol
+
+\subsubsection{People Present}
+Ke, the tech group(Fabian, Andy, Nadeem, David)
+
+\subsubsection{Discussion}
+\begin{enumerate}
+	\item Ke presented the research findings to the group 
+	\item the group thought the research is going in the right direction, and more time is needed before testing 
+	\item one of the tech guys asked if third party plugins need to be installed on the server, because for security reasons they cannot do that 
+	\begin{enumerate}
+		\item  Ke assured the tech team that no plugins or any types of software will be installed on the server 
+	\end{enumerate}
+	\item The tech team showed their interest to make use of the web service functions that are provided by Domino 
+	\begin{enumerate}
+		\item Fabian promised to send more information regarding the Domino web server to Ke 
+	\end{enumerate}
+	\item Tech team told Ke once he thinks a real test is needed he should come back and they will arrange it
+\end{enumerate}
+
+\subsubsection{Outcomes}
+The tech team agreed that the research is going the right direction and looking forward to see further results from it, the research continues, depending on the progress of the research, further meeting will be arranged.
 
 \newpage
 \subsection{Device Survey}
