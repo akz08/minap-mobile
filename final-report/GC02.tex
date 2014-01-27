@@ -7,7 +7,9 @@
 \usepackage{verbatim}
 \usepackage{cleveref}
 
+
 \usepackage[a4paper]{geometry}
+
 
 \begin{document}
 \title{GC02 Team 7 Project Report \\ MINAP Mobile Application}
@@ -71,18 +73,33 @@ Although we have reached an agreement that we will not actually need to touch th
 \newpage
 \section{Target Mobile Platform}
 \subsection{Client Preference}
-\subsection{Preliminary Research}
+Our client was unable to give us a clear answer as to which mobile platform she wanted us to develop for during the early stages of development. Due to this, the team decided to choose the Android mobile platform, primarily due to reasons of security and programming a native app. However, to help better inform future decisions, we released a survey to MINAP users with the help of our client.
+
 \subsection{User Survey}
-THIS SECTION IS TO BE REWRITTEN
-\\ \\
-Our client has been unsure about the preferred target platform of the audience of our mobile app. To help better inform this decision, we have designed a user device survey which the client has agreed to running over the period of a few months, with a suggested completion date within 3 weeks of rolling out. The primary purpose of pushing out this survey is to better inform decisions of what secondary platforms should be supported to increase mobile app uptake by hospital staff. Despite this, due to the short time-frame imposed on us by GC01, we have mutually agreed to target Android mobile phones as the primary platform. More details regarding the device survey can be found in the Appendix.
-\\ \\
-THIS SECTION IS TO BE REWRITTEN
+We have designed a user device survey which the client has agreed to running over the period of a few months, with a suggested completion date within 3 weeks of rolling out. The primary purpose of pushing out this survey was to better inform decisions of what secondary platforms should be supported to increase mobile app uptake by hospital staff. This was not meant to affect which platform we would develop for, but was instead meant to be used as research to direct future work. More details regarding the contents of the device survey can be found in ~\cref{sec:client}.
+
+\subsubsection{Survey Results}
+Perhaps unsurprisingly, the majority (60.9\%) of the 82 user responses replied "Apple" when asked the brand of their smartphone/tablet, with only 33.3\% responding to "Android" when asked what their mobile operating system was. 
+
+
+Despite the bias towards iOS, 72.4\% of respondents answered "No" to using their smartphone or tablet during work hours. User comments also indicated that they were unwilling to use their own devices for work purposes, with comments indicating that they would be more likely to use work-related mobile apps with a device provided by their institution.
+
+
+Security was also a key issue that was discussed in user comments - something that we were aware of in the initial stages of our requirements gathering. This highlights the issue that we are unable to deploy our app in the near future, as a proper security audit would have to be performed before any actual patient data is used with the app.
+
+\subsubsection{Discussion}
+Unfortunately, 82 responses are not enough to have a thorough statistical analysis of user preferences, but the survey has given us a good sense of user concerns with regards to patient data entry on mobile devices.  
 
 \newpage
 \section{User Interface}
 \subsection{Preliminary UI Design}
 As part of ensuring our understanding of the requirements were in line with the client's expectations, we sketched out a preliminary user interface (UI) and presented our ideas to our client. The order in which each page was presented is indicated by red arrows. A summary of the key points relating to UI during our conversation are included below.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.33]{img/ui-sketch.png}
+\caption{Preliminary UI sketches}
+\end{figure}
 
 \subsubsection{Initial User Interface Feedback}
 Client response:
@@ -97,14 +114,64 @@ We have accepted the feedback from the client as being in line with our initial 
 \subsubsection{UI Tweaking}
 After taking these comments on board, we have more formally modelled the user's flow of use through the app, mapping each UI element to Java's graphical implementation classes. It is worth noting that the UI is still in its initial stages, pending further adaptation for mobile use.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{img/app-flow.png}
+\caption{Java GUI}
+\end{figure}
+
 \subsection{Android UI Design}
-Following the decision of designing for the Android platform,  ... more details on the design process can be found on the team's HCI blog.  General process and final product shown here with rationale to major design decisions.
+Shortly after our first milestone, the team managed to nail down Android as our target platform. With a specific mobile platform in mind, we could now use design elements native to the mobile operating system, that existing users should already be familiar with. This design process involved heavy research into the Android design guidelines, and several prototypes, before coming to the final design that was implemented in our app. The entire design process has been documented extensively, and can be found on the team's development blog\footnote{\url{http://akz08.github.io/minap-mobile/}}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.15]{img/progress.JPG}
+\caption{Snapshot of the Android UI design output}
+\end{figure}
+
+As we had agreed to provide our client with a proof-of-concept app for demonstration purposes, the UI took up a significant portion of development time, and it had the most direct client input throughout the project duration.
 
 \newpage
 \section{Software Design}
-\subsection{Systems Design}
+\subsection{Proposed System Design}
+As part of our initial requirements gathering process, we designed a proposed system in which our mobile app could possibly reside in (see whiteboard sketches in ~\cref{sec:internal_meetings}). This infrastructure should contain all the necessary components that would allow the app to function as part of the MINAP data entry ecosystem, if fully implemented. It is however important to note that only the items marked red in \cref{system} are actually covered by our agreed specifications with the client and have been implemented.
+
+\subsubsection{Overview}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.45]{img/system-design.png}
+\caption{Sketch of proposed system design}
+\label{system}
+\end{figure}
+
+We have modelled our system as consisting of a mobile app and intermediate server. This system could theoretically be developed on its own, without having to deal with any current MINAP servers, during the development process. This helps defer the need to communicate with any Domino server, until a reasonably complete has been built. 
+
+\subsubsection{Intermediate Server}
+The use of an intermediate server removes the necessity to deal with the processing overhead of using protocols such as SOAP and WSDL with a mobile app. Instead, communication with the actual MINAP Domino server can be done via the more powerful intermediate server, allowing the app to use a more lightweight RESTful service for communication. As a minimum, this server should implement a secure module for authentication, and use a standard SQL database for data storage. Processing of data stored in the SQL database to an IBM Domino-compatible data format could be done in batches to reduce processing load.
+
+\subsubsection{Network Communication}
+To retain the same level of security as the MINAP web app, authentication and patient data should be transmitted over HTTPS. 
+
+\subsubsection{Mobile App}
+To enable our app to function with our intermediate server, it would require the existence of a networking and authentication module. If designed correctly, these two modules could be developed on top of the core mobile app (indicated in red in \cref{system}). The core app should primarily consist of a solid data model foundation (as discussed in \cref{model}), with a GUI layer to interact with it. 
+
 \subsection{Designing for Android}
+The Android base application mostly follows a typical Android project structure, making use of elements such as Intents and Fragments - but with a few key differences:
+
+\begin{itemize}
+
+\item Throughout the process of creating the app, the book \emph{Android Programming: The Big Nerd Ranch Guide}\cite{nerd_ranch} was used extensively as learning material and reference. The book advocated the use of Fragments everywhere to allow for flexibility in the overall screen design. For our particular specifications, this flexibility would make development for tablets much easier in the near future, and thus it was adopted.
+
+\item A typical Android project is divided into 3 main parts: the model, Activities, and screen layout XML files. For our mobile app, there was a considerable amount of screens to model, with associated logic for hiding and showing input boxes. This would cause the underlying Activities (in our case, Fragments) to easily grow in size, making readability and maintainability difficult as the project develops. To avoid this, research was done to find a design pattern that would best fit our needs to maintain a decent level of organisation within our programming workspace. A variation of MVC was finally chosen at the most appropriate candidate\cite{mvc}, separating the code into the model, Fragments, and Views.
+
+\item XML layout files were extensively used to design all the base data input views, as well as the data input views that are hidden by MINAP's conditional logic (based on the web app). Despite the large number of layout files, a naming convention has been followed to allow these layouts to be distinguished from each other.
+
+\end{itemize}
+
+Following the key resources mentioned and understanding the above design decisions, a developer with prior experience with Android should be able to understand and continue the development of the base app with considerable ease.
+
 \subsection{Data Model \& Validation}
+\label{model}
 In order to capture the functional requirements previously explained, three major steps were to be completed for the inner workings of the mobile application.
 
 \begin{figure}[h!]
@@ -137,9 +204,22 @@ The columns on our patient table have all been set to be Text. This decision fac
 \newpage
 \section{Testing \& Analytics}
 \subsection{Automated Testing}
+As preparation for integrating the data model into the base Android app, MonkeyTalk\footnote{\url{https://www.cloudmonkeymobile.com/monkeytalk}} was included in the app to allow for automated testing of features. This allowed us to create simple scripts that would simulate touch events on our app, removing the need to perform the same tasks repeatedly to check for any bugs that may occur during the integration process. A side effect of doing this, meant that our Android project had to be converted to AspectJ - something that must be noted when trying to compile the app from the source code.
 
-\subsection{Usage Analytics}
-Although our mobile app is unlikely to be used by actual end-users in the near future, simple usage analytics were 
+
+Unfortunately, due to time and resource constraints, the data model was not fully connected to the base Android app, and so MonkeyTalk was only used for very basic tests.
+
+\subsection{User Testing}
+As part of keeping our client informed of our progress, TestFlight\footnote{\url{https://www.testflightapp.com/}} was used to deploy new Android app builds, starting from the first meeting of the year (13/1/14). This gave out client an easy UI to download new builds straight to her Android smartphone. To help ease the process, a pre-existing account was installed on our client's smartphone (with prior consent). New builds were uploaded every 3-4 days, and an e-mail was sent out to the client to notify her to download the new app. A final feedback document was produced by our client based off these app builds (see \cref{client_final}).
+
+
+Our app was also casually tested by our peers. The initial lengthy explanation that was necessary to get them to understand how our app should be used indicates the possibility that it may be reasonable to have some expectation of prior experience with the MINAP dataset as a minimum requirement for users of our app.
+
+\subsection{Analytics}
+Although our mobile app is unlikely to be used by actual end-users in the near future, TestFlight enabled us to place checkpoints in various places in our app, flagging up if the tester triggers them. This allowed us to see how thoroughly the app was tested, and what features were least used (or not even discovered) through TestFlight's web app dashboard. 
+
+
+Crashlytics was also added to our app for future crash reporting, but was unable to be fully utilised with the current userbase of one (our client).
 
 \newpage
 \section{Application Limitations}
@@ -193,21 +273,59 @@ Examples of SOAP Messages (w3schools.com): In this example, a "GetStockPrice" wa
 In terms of the real world implementation of the communication between Domino and Android device, many sources were found online, however few of them were actually helpful to this research. In the end, an interesting web page called How to Call Web Service in Android Using SOAP was found (c-sharpcorner.com). From what I have gathered so far, it seems Android does not provide any sort of SOAP library; according to the web page, our best bet is kSOAP 2. It is a SOAP web service client library for constrained Java environments such as Applets or J2ME applications (CLDC / CDC / MIDP). In the webpage that was mentioned before, a connection between an Android device and a non-Domino web service was established through SOAP. Since the Domino web server supports SOAP, with modifications it should be possible to establish a connection between an Android device and the Domino web server. In future research, this should be attempted.
 
 \newpage
-\section{Client Feedback}
+\section{Final Client Feedback}
+\label{client_final}
+As part of our beta testing with out client using TestFlight, we requested our client to provide us with written feedback on our final app (and earlier builds). This document serves as both a "sign off" sheet and a last-minute feature wish-list (our client sent the document on 23/01/14). This document is included in an unedited state (with the exception of formatting in LaTeX) in the section below.
+
+\subsection{Unedited Client Feedback Document}
+Comments on MINAP App
+
+\begin{itemize}
+
+	\item	The app allowed me to save the record even though initial diagnosis and hospital number sections have not been completed. I think in terms of design the compulsory 4 fields requirement must be built in to prevent occurrence of essential missing data. 
+	\item	Initial reperfusion treatment – check if agreed to complete limited number of fields and not the entire section, although that makes sense. 
+	\item	Date and time formats – I have no problem with using the widget as presented as long as on transmission on to the servers, the information appears in the correct format. 
+	\item	All buttons are easy to use. Although the side panel is not visible it is very easily picked up, yet not in an annoying sort of way.
+	\item	Save button on every page is a great idea
+	\item	There is no close button for when I have completed one record and a nurse is moving onto another patient…
+	\item	In principle, it would be helpful to address in your report whether data would be accessible for editing – even if for a limited period of time, e.g. 24 hours. It is possible that a user has made a mistake and wishes to correct it while he/she remembered it using the mobile device
+	\item	I wonder whether hospital fields needs to be on the first, patient page. After all the hospital is selected by default based on the user ID. If there is a way of replacing it with the initial diagnosis with drop down menu options, then all the core fields are on one page. They could be marked in a different colour so that the user is aware that without this information there is no point to go any further as a record will not be saved. This is not negotiable part of saving a MINAP record. Then the other parts of the initial diagnosis e.g. whether patient returned after treatment for STEMI elsewhere or if ACS is selected, whether it is a high risk or not could appear on the same page as initial diagnosis does at present. 
+	\item	It took me a little while to figure out how to go back to the patient details i.e. via edit button but got there in the end.
+\end{itemize}
+
+Overall very good design indeed, easy to navigate, with logical order and intuitive for someone as impatient as me. Really well done. The font works really well. Having tried the app I am even more convinced that prospective data collection is not such a mad idea as it seemed at the beginning. 
+
+\subsection{Discussion}
+Most of the problems with the mobile app are due to the fact that the data model has yet to be hooked up to the core Android app. However, the comment regarding the creation of a new patient record from an existing session was flagged as a key item to be dealt with, and a button for patient record creation was added to the navigation map home screen. The issue regarding the placement of Initial Diagnosis together with Patient Details, and the difficulty of finding out how to edit the patient details are also important from a usability perspective, but we were unable to rectify this issue with the given time.
 
 \newpage
 \section{Future Plans}
 \subsection{Use of XML/Portable Data Files}
-The application rules are currently defined by a series of data fields stored across two excel spreadsheets. From what we understand (20/11/13 Meeting), these rules are implemented in client-side Javascript for the current web app. Ideally, these rules would need to be stored in a standard machine-readable format which can be easily translated to validation code in any programming language.
+The application rules are currently defined by a series of data fields stored across two excel spreadsheets. From what we understand (20/11/13 Meeting), these rules are implemented in client-side Javascript for the current web app. Ideally, these rules would need to be stored in a standard machine-readable format which can be easily translated to validation code in any programming language. This would also serve as a more structured form of the current documentation available for the MINAP dataset validation rules.
+
+\subsection{UI Tweaks and The Tablet}
+As mentioned in the discussion of our final client feedback document (\cref{client_final}), the current UI requires some adjustments to the layout and underlying structure to correct some usability issues that are integral to how the MINAP dataset works as a system. These should be addressed before attempting any other redesign when the opportunity arises.
+
+Additionally, a tablet UI should be explored in the near future if mobile data entry is being seriously considered. As most of the business logic has already been implemented, creating a tablet layout would consist mainly of creating new XML layouts for Android\footnote{\url{http://akz08.github.io/minap-mobile/blog/2014/01/13/trying-to-be-responsive/}}. 
 
 \newpage
 \section{Project Management}
-
-
 \subsection{Work Packages}
+Throughout the duration of the project, work packages were assigned to each team member informally, and documented on Trello. A list of key work packages for our second stage of development are listed below, with the time and resources that were necessary to complete them:
+
+\begin{itemize}
+\item MINAP Data Modelling (2 people, 21 days)
+\item Android UI Skeleton (1 person, 35 days)
+\item SQLite Design (1 person, 33 days)
+\end{itemize}
+
+These core work packages were essential to the development of the MINAP mobile app, with delays in their completion causing a knock-on effect on all other work. It must be noted however that the delay in MINAP data modelling is primarily due to our lack of experience with the MINAP dataset, and the creation of the Android UI Skeleton and SQLite design due to our inexperience with handling those systems.
 
 
+One core work package that was unable to be completed was the integration between the Android core application and the SQLite model. We estimate that the completion of the work package would be approximately 1 week for someone with previous knowledge of the Android project code.
 
+\newgeometry{left=1cm, right=0.5cm}
+\newpage
 \begin{landscape}
 \subsection{Gantt Chart}
 \begin{ganttchart}[
@@ -217,8 +335,26 @@ The application rules are currently defined by a series of data fields stored ac
 	]{2013-11-01}{2013-11-30}
 	\gantttitlecalendar{year, month=name, day} \\
 	\ganttgroup{Requirements Gathering}{2013-11-01}{2013-11-15} \\
+	\ganttbar{Model Existing System}{2013-11-01}{2013-11-04} \\
+	\ganttbar{Domino Server Research}{2013-11-04}{2013-11-20} \\
+	\ganttbar{Draft Proposed System Design}{2013-11-05}{2013-11-06} \\
+	\ganttbar{Set Up Coding Environments}{2013-11-05}{2013-11-13} \\
+	\ganttbar{Initial Class Design}{2013-11-07}{2013-11-08} \\
+	\ganttbar{XML Research \& Data Design}{2013-11-08}{2013-11-23} \\
+	\ganttbar{Initial UI Design}{2013-11-12}{2013-11-15} \\
+	\ganttmilestone{Client UI Feedback Meeting}{2013-11-15} \ganttnewline
+	\ganttgroup{Initial Development}{2013-11-16}{2013-11-30} \\
+	\ganttbar{Java Validation Model Programming}{2013-11-16}{2013-11-30} \\
+	\ganttbar{Report Documentation}{2013-11-20}{2013-11-24} \\
+	\ganttbar{Java GUI Modelling}{2013-11-21}{2013-11-23} \\
 	\ganttmilestone{GC01 Milestone 1}{2013-11-24} \ganttnewline
-	\ganttgroup{InitialDevelopment}{2013-11-16}{2013-11-30} \\
+	\ganttbar{SQLite Research}{2013-11-28}{2013-11-30} 
+	\ganttlink{elem1}{elem3}
+	\ganttlink{elem3}{elem5}
+	\ganttlink{elem5}{elem7}
+	\ganttlink{elem7}{elem8}
+	\ganttlink{elem8}{elem10}
+	\ganttlink{elem11}{elem13}
 \end{ganttchart}
 
 \newpage
@@ -229,7 +365,17 @@ The application rules are currently defined by a series of data fields stored ac
 	time slot format=isodate
 	]{2013-12-01}{2013-12-31}
 	\gantttitlecalendar{year, month=name, day} \\
-	\ganttmilestone{GC01 Milestone 2}{2013-12-20} \ganttnewline
+	\ganttgroup{Initial Development}{2013-12-01}{2013-12-12} \\
+	\ganttbar{SQLite Research}{2013-12-01}{2013-12-12} \\ 
+	\ganttbar{Java Validation Model Programming}{2013-12-01}{2013-12-09} \\
+	\ganttbar{Android UI Research \& Development}{2013-12-01}{2013-12-05} \\
+	\ganttmilestone{Client Android UI Feedback Meeting}{2013-12-05} \ganttnewline
+	\ganttbar{Android Learning/Research}{2013-12-06}{2013-12-20} \\
+	\ganttgroup{Android Development}{2013-12-13}{2013-12-31} \\
+	\ganttbar{Android GUI Skeleton}{2013-12-13}{2013-12-31} \\
+	\ganttbar{Android SQLite \& Data Modelling}{2013-12-13}{2013-12-31} \\
+	\ganttmilestone{GC01 Milestone 2}{2013-12-20} 
+	\ganttlink{elem3}{elem4}
 \end{ganttchart}
 
 \newpage
@@ -240,26 +386,37 @@ The application rules are currently defined by a series of data fields stored ac
 	time slot format=isodate
 	]{2014-01-01}{2014-01-28}
 	\gantttitlecalendar{year, month=name, day} \\
+	\ganttgroup{Android Development}{2014-01-01}{2014-01-23} \\
+	\ganttbar{Android GUI Skeleton}{2014-01-01}{2014-01-17} \\
+	\ganttbar{Android SQLite \& Data Modelling}{2014-01-01}{2014-01-15} \\	
+	\ganttmilestone{Client UI Update Meeting}{2014-01-13} \ganttnewline
+	\ganttbar{Merge Git Branches}{2014-01-18}{2014-01-19} \\
+	\ganttbar{Analytics \& Model Integration}{2014-01-19}{2014-01-23} \\
+	\ganttmilestone{Client Final Feedback}{2014-01-23} \ganttnewline
+	\ganttbar{Final Report Documentation}{2014-01-15}{2014-01-27} \\
 	\ganttmilestone{GC02 Final Milestone}{2014-01-27} 
+	\ganttlink{elem1}{elem4}
+	\ganttlink{elem2}{elem4}
 \end{ganttchart}
 
 \end{landscape}
+\restoregeometry
 
 \newpage
 \section{Teamwork}
 \subsection{Team Roles}
-Team roles were initially assigned based on the recommended list provided in the GC01 document requirements. These team roles were useful as a set of guidelines leading up to the first project milestone, but we quickly found that the assignment of multiple formal roles to team members was unrealistic for such a fast-paced project with team members at various skill levels. This meant that roles previously assigned to team members were not always reflective of their current work package, as the rest of the team pitched in to complete critical unfinished packages. As such, only the roles which the team member was most active in are tabulated below:
+Team roles were initially assigned based on the recommended list provided in the GC01 document requirements. These team roles were useful as a set of guidelines leading up to the first project milestone, but we quickly found that the assignment of multiple formal roles to team members was unrealistic for such a fast-paced project with team members at various skill levels. This meant that roles previously assigned to team members were not always reflective of their current work package, as the rest of the team pitched in to complete critical unfinished packages. As such, the currently assigned roles are reflective of the work that was mostly completed by the team member, rather than a formally assigned role.
 \\ \\
 \begin{table}[h]
 \centering
-    \begin{tabular}{ | p{5cm} | p{5.4cm} |}
+    \begin{tabular}{ | l | p{5.3cm} | p{5cm} |}
     \hline
-    Name & Active Roles \\ \hline
-    Marco \textbf{David} Corrales \newline (Secondary Team Lead) & Secondary Developer \newline Data/Database Designer \newline \\ \hline
-     Amer \textbf{Kamil} Zainal \newline (Primary Team Lead)  & Primary Developer \newline Systems Designer \& Analyst \newline Documentation Lead \newline \\ \hline
-     \textbf{Ke} Wei & Networking Researcher \newline \\ \hline
+    Name & Primary Roles & Secondary Roles \\ \hline
+    Marco \textbf{David} Corrales & Secondary Team Lead \newline Secondary Developer \newline Data/Database Designer \newline & Background Researcher \\ \hline
+     Amer \textbf{Kamil} Zainal  & Primary Team Lead \newline Primary Developer \newline Systems Designer \& Analyst \newline Documentation Lead \newline & Technology Researcher \newline Software Tester \newline Client Main Contact \\ \hline
+     \textbf{Ke} Wei & Networking Researcher \newline & \\ \hline
     \end{tabular}
-    \caption{Team Member Active Roles}
+    \caption{Team Member Roles}
     \end{table}
 
 \newpage
@@ -277,7 +434,7 @@ Team roles were initially assigned based on the recommended list provided in the
 \paragraph{GitHub} ~\\
 To further consolidate our memory of team progress, David updated a \href{http://akz08.github.io/minap-mobile/}{blog} \\(http://akz08.github.io/minap-mobile/) on \href{http://pages.github.com/}{GitHub Pages} using \href{http://octopress.org/}{Octopress}, summarising our meeting outcomes up to our first academic milestone. Due to the public nature of blogs, we initially ensured to omit any client identifying information to avoid any potential privacy problems, however we later decided that this was unnecessarily restrictive. This openness of communication was also necessary for us to write about our design process for the HCI requirement of our blog. All of the blog posts created are tagged with the author's name for attribution.
 
-For source code collaboration, we used a private \href{https://github.com}{GitHub} repository which was worked on by all members of the team. GitHub's repository wiki functionality was used for collaboration of more long-form documentation (e.g. writing this report) and structured ordering of resources. Due to the varying experience levels with git, the team mostly made use of simple git branches for each person. A full copy of the git repository is included in the project source code submission for closer inspection, contributing to the large file size. 
+For source code collaboration, we used a private \href{https://github.com}{GitHub} repository which was worked on by all members of the team. GitHub's repository wiki functionality was used for collaboration of more long-form documentation (e.g. writing this report) and structured ordering of resources. Due to the varying experience levels with git, the team mostly made use of simple git branches for each person.
 
 \begin{figure}[h!]
 \centering
@@ -300,6 +457,13 @@ The team typically met every workday to complete work together up to the first a
 
 \newpage
 \begin{thebibliography}{9}
+
+\bibitem{nerd_ranch}
+Bill Phillips and Brian Hardy, \emph{Android Programming: The Big Nerd Ranch Guide}. Big Nerd Ranch Guides, 28 Mar 2013.
+
+\bibitem{mvc}
+ Android Architecture: Part 10, The Activity Revisited,
+ \url{http://www.therealjoshua.com/2012/07/android-architecture-part-10-the-activity-revisited/}
 
 \bibitem{soap1}
 w3schools.com, Example of SOAP message: \url{http://www.w3schools.com/webservices/ws_soap_syntax.asp}
@@ -1880,7 +2044,7 @@ Further work on the class construction, the team also started thinking about the
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.13]{img/internal-4.jpg}
-\caption{More classes}
+\caption{Key system architecture design}
 \end{figure}
 
 \newpage
